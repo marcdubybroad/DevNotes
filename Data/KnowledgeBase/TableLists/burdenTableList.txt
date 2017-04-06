@@ -1,0 +1,12 @@
+SAMPLE                     
+SAMPLES_DATASET            
+SAMPLES_ID_PH              
+SAMPLES_PROP               
+SAMPLES_PROP_ID            
+SAMPLES_PROP_ID_PH         
+SAMPLES_common_dv1         
+SAMPLE_13k                 
+SAMPLE_17k                 
+SAMPLE_26k                 
+SAMPLE_26kbackup    
+SAMPLE_STROKE

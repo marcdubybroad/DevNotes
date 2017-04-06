@@ -1,0 +1,138 @@
+{
+    "is_error": false,
+    "numRecords": 1,
+    "experiments": [
+        {
+            "name": "GOT2D",
+            "version": "mdv44",
+            "technology": "WGS",
+            "sample_groups": [
+                {
+                    "name": "GOT2D",
+                    "id": "WGS_GOT2D_mdv44",
+                    "ancestry": "Mixed",
+                    "cases": 1657,
+                    "controls": 1000,
+                    "subjects": 2657,
+                    "sort_order": 50,
+                    "properties": [
+                        {
+                            "name": "MAC",
+                            "type": "FLOAT",
+                            "searchable": "FALSE",
+                            "meaning": [
+                                "FMISS_17k"
+                            ],
+                            "displayable": "FALSE",
+                            "sort_order": 270
+                        },
+                        {
+                            "name": "F_MISS",
+                            "type": "FLOAT",
+                            "searchable": "FALSE",
+                            "meaning": [
+                                "F_MISS"
+                            ],
+                            "displayable": "FALSE",
+                            "sort_order": 270
+                        },
+                        {
+                            "name": "HWE",
+                            "type": "FLOAT",
+                            "searchable": "FALSE",
+                            "meaning": [
+                                "HWE"
+                            ],
+                            "displayable": "FALSE",
+                            "sort_order": 270
+                        },
+                        {
+                            "name": "MAC",
+                            "type": "INTEGER",
+                            "searchable": "TRUE",
+                            "meaning": [
+                                "MAC"
+                            ],
+                            "displayable": "TRUE",
+                            "sort_order": 240
+                        },
+                        {
+                            "name": "MAF",
+                            "type": "FLOAT",
+                            "searchable": "TRUE",
+                            "meaning": [
+                                "MAF"
+                            ],
+                            "displayable": "TRUE",
+                            "sort_order": 230
+                        }
+                    ],
+                    "phenotypes": [
+                        {
+                            "name": "T2D",
+                            "group": "GLYCEMIC",
+                            "sort_order": 1,
+                            "properties": [
+                                {
+                                    "name": "p_value",
+                                    "type": "FLOAT",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "P_VALUE"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 213,
+                                    "trusted_property": "TRUST_GOT2D"
+                                }
+                            ]
+                        }
+                    ],
+                    "sample_groups": [
+                    ]
+                }
+            ]
+        }
+    ],
+    "properties": [
+        {
+            "name": "chrom",
+            "type": "STRING",
+            "searchable": "TRUE",
+            "meaning": [
+                "CHROM"
+            ],
+            "displayable": "TRUE",
+            "sort_order": 103
+        },
+        {
+            "name": "pos",
+            "type": "INTEGER",
+            "searchable": "TRUE",
+            "meaning": [
+                "POS"
+            ],
+            "displayable": "TRUE",
+            "sort_order": 104
+        },
+        {
+            "name": "ref",
+            "type": "STRING",
+            "searchable": "TRUE",
+            "meaning": [
+                "Reference_Allele"
+            ],
+            "displayable": "TRUE",
+            "sort_order": 105
+        },
+        {
+            "name": "alt",
+            "type": "STRING",
+            "searchable": "TRUE",
+            "meaning": [
+                "Effect_Allele"
+            ],
+            "displayable": "TRUE",
+            "sort_order": 106
+        }
+    ]
+}

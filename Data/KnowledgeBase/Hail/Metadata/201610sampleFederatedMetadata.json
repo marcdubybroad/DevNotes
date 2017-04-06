@@ -1,0 +1,1046 @@
+
+{
+    "is_error": false,
+    "numRecords": 6,
+    "experiments": [
+        {
+            "name": "ExSeq_17k",
+            "version": "mdv2",
+            "technology": "ExSeq",
+            "sample_groups": [
+                {
+                    "name": "17k",
+                    "id": "ExSeq_17k_mdv2",
+                    "ancestry": "Mixed",
+                    "cases": 8379,
+                    "controls": 8478,
+                    "subjects": 16857,
+                    "sort_order": 50,
+                    "properties": [
+                        {
+                            "name": "FMISS_17k",
+                            "type": "FLOAT",
+                            "searchable": "FALSE",
+                            "meaning": [
+                                "FMISS_17k"
+                            ],
+                            "displayable": "FALSE",
+                            "sort_order": 270
+                        },
+                        {
+                            "name": "F_MISS",
+                            "type": "FLOAT",
+                            "searchable": "FALSE",
+                            "meaning": [
+                                "F_MISS"
+                            ],
+                            "displayable": "FALSE",
+                            "sort_order": 270
+                        },
+                        {
+                            "name": "HWE",
+                            "type": "FLOAT",
+                            "searchable": "FALSE",
+                            "meaning": [
+                                "HWE"
+                            ],
+                            "displayable": "FALSE",
+                            "sort_order": 270
+                        },
+                        {
+                            "name": "MAC",
+                            "type": "INTEGER",
+                            "searchable": "TRUE",
+                            "meaning": [
+                                "MAC"
+                            ],
+                            "displayable": "TRUE",
+                            "sort_order": 240
+                        },
+                        {
+                            "name": "MAF",
+                            "type": "FLOAT",
+                            "searchable": "TRUE",
+                            "meaning": [
+                                "MAF"
+                            ],
+                            "displayable": "TRUE",
+                            "sort_order": 230
+                        }
+                    ],
+                    "phenotypes": [
+                        {
+                            "name": "T2D",
+                            "group": "GLYCEMIC",
+                            "sort_order": 1,
+                            "properties": [
+                                {
+                                    "name": "HETA",
+                                    "type": "INTEGER",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "HETA"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 250
+                                },
+                                {
+                                    "name": "HETU",
+                                    "type": "INTEGER",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "HETU"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 250
+                                },
+                                {
+                                    "name": "HOMA",
+                                    "type": "INTEGER",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "HOMA"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 250
+                                },
+                                {
+                                    "name": "HOMU",
+                                    "type": "INTEGER",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "HOMU"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 250
+                                },
+                                {
+                                    "name": "MINA",
+                                    "type": "INTEGER",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "MINA"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 250
+                                },
+                                {
+                                    "name": "MINU",
+                                    "type": "INTEGER",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "MINU"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 250
+                                },
+                                {
+                                    "name": "OBSA",
+                                    "type": "INTEGER",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "OBSA"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 270
+                                },
+                                {
+                                    "name": "OBSU",
+                                    "type": "INTEGER",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "OBSU"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 270
+                                },
+                                {
+                                    "name": "OR_FIRTH_FE_IV",
+                                    "type": "FLOAT",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "ODDS_RATIO"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 220,
+                                    "trusted_property": "OR_TRUST_17k"
+                                },
+                                {
+                                    "name": "OR_TRUST",
+                                    "type": "FLOAT",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "OR_TRUST"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 270,
+                                    "trusted_property": "OR_TRUST_17k"
+                                },
+                                {
+                                    "name": "P_EMMAX_FE_IV_17k",
+                                    "type": "FLOAT",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "P_VALUE"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 213,
+                                    "trusted_property": "TRUST_17k"
+                                },
+                                {
+                                    "name": "P_FIRTH_FE_IV",
+                                    "type": "FLOAT",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "P_VALUE"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 210,
+                                    "trusted_property": "TRUST_17k"
+                                },
+                                {
+                                    "name": "P_MISSING",
+                                    "type": "FLOAT",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "P_MISSING"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 210,
+                                    "trusted_property": "TRUST"
+                                }
+                            ]
+                        }
+                    ],
+                    "sample_groups": [
+                        {
+                            "name": "17k_eu",
+                            "id": "ExSeq_17k_eu_mdv2",
+                            "ancestry": "European",
+                            "cases": 2369,
+                            "controls": 2196,
+                            "subjects": 4565,
+                            "sort_order": 51,
+                            "properties": [
+                                {
+                                    "name": "F_MISS",
+                                    "type": "FLOAT",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "F_MISS"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 270
+                                },
+                                {
+                                    "name": "HWE",
+                                    "type": "FLOAT",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "HWE"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 270
+                                },
+                                {
+                                    "name": "MAC",
+                                    "type": "INTEGER",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "MAC"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 240
+                                },
+                                {
+                                    "name": "MAF",
+                                    "type": "FLOAT",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "MAF"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 230
+                                }
+                            ],
+                            "phenotypes": [
+                                {
+                                    "name": "T2D",
+                                    "group": "GLYCEMIC",
+                                    "sort_order": 1,
+                                    "properties": [
+                                        {
+                                            "name": "HETA",
+                                            "type": "INTEGER",
+                                            "searchable": "FALSE",
+                                            "meaning": [
+                                                "HETA"
+                                            ],
+                                            "displayable": "FALSE",
+                                            "sort_order": 250
+                                        },
+                                        {
+                                            "name": "HETU",
+                                            "type": "INTEGER",
+                                            "searchable": "FALSE",
+                                            "meaning": [
+                                                "HETU"
+                                            ],
+                                            "displayable": "FALSE",
+                                            "sort_order": 250
+                                        },
+                                        {
+                                            "name": "HOMA",
+                                            "type": "INTEGER",
+                                            "searchable": "FALSE",
+                                            "meaning": [
+                                                "HOMA"
+                                            ],
+                                            "displayable": "FALSE",
+                                            "sort_order": 250
+                                        },
+                                        {
+                                            "name": "HOMU",
+                                            "type": "INTEGER",
+                                            "searchable": "FALSE",
+                                            "meaning": [
+                                                "HOMU"
+                                            ],
+                                            "displayable": "FALSE",
+                                            "sort_order": 250
+                                        },
+                                        {
+                                            "name": "MINA",
+                                            "type": "INTEGER",
+                                            "searchable": "TRUE",
+                                            "meaning": [
+                                                "MINA"
+                                            ],
+                                            "displayable": "TRUE",
+                                            "sort_order": 250
+                                        },
+                                        {
+                                            "name": "MINU",
+                                            "type": "INTEGER",
+                                            "searchable": "TRUE",
+                                            "meaning": [
+                                                "MINU"
+                                            ],
+                                            "displayable": "TRUE",
+                                            "sort_order": 250
+                                        },
+                                        {
+                                            "name": "OBSA",
+                                            "type": "INTEGER",
+                                            "searchable": "FALSE",
+                                            "meaning": [
+                                                "OBSA"
+                                            ],
+                                            "displayable": "FALSE",
+                                            "sort_order": 270
+                                        },
+                                        {
+                                            "name": "OBSU",
+                                            "type": "INTEGER",
+                                            "searchable": "FALSE",
+                                            "meaning": [
+                                                "OBSU"
+                                            ],
+                                            "displayable": "FALSE",
+                                            "sort_order": 270
+                                        },
+                                        {
+                                            "name": "OR_FIRTH_FE_IV",
+                                            "type": "FLOAT",
+                                            "searchable": "TRUE",
+                                            "meaning": [
+                                                "ODDS_RATIO"
+                                            ],
+                                            "displayable": "TRUE",
+                                            "sort_order": 220,
+                                            "trusted_property": "OR_TRUST_17k"
+                                        },
+                                        {
+                                            "name": "OR_TRUST",
+                                            "type": "FLOAT",
+                                            "searchable": "FALSE",
+                                            "meaning": [
+                                                "OR_TRUST"
+                                            ],
+                                            "displayable": "FALSE",
+                                            "sort_order": 270,
+                                            "trusted_property": "OR_TRUST_17k"
+                                        },
+                                        {
+                                            "name": "P_EMMAX_FE_IV_17k",
+                                            "type": "FLOAT",
+                                            "searchable": "FALSE",
+                                            "meaning": [
+                                                "P_VALUE"
+                                            ],
+                                            "displayable": "FALSE",
+                                            "sort_order": 213,
+                                            "trusted_property": "TRUST_17k"
+                                        },
+                                        {
+                                            "name": "P_FIRTH_FE_IV",
+                                            "type": "FLOAT",
+                                            "searchable": "TRUE",
+                                            "meaning": [
+                                                "P_VALUE"
+                                            ],
+                                            "displayable": "TRUE",
+                                            "sort_order": 210,
+                                            "trusted_property": "TRUST_17k"
+                                        },
+                                        {
+                                            "name": "P_MISSING",
+                                            "type": "FLOAT",
+                                            "searchable": "FALSE",
+                                            "meaning": [
+                                                "P_MISSING"
+                                            ],
+                                            "displayable": "FALSE",
+                                            "sort_order": 210,
+                                            "trusted_property": "TRUST"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "sample_groups": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "GWAS_DIAGRAM",
+            "version": "mdv2",
+            "technology": "GWAS",
+            "sample_groups": [
+                {
+                    "name": "DIAGRAM",
+                    "id": "GWAS_DIAGRAM_mdv2",
+                    "ancestry": "Mixed",
+                    "cases": 26488,
+                    "controls": 83964,
+                    "subjects": 110452,
+                    "sort_order": 0,
+                    "properties": [],
+                    "phenotypes": [
+                        {
+                            "name": "T2D",
+                            "group": "GLYCEMIC",
+                            "sort_order": 1,
+                            "properties": [
+                                {
+                                    "name": "DIR",
+                                    "type": "INTEGER",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "DIR"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 270
+                                },
+                                {
+                                    "name": "ODDS_RATIO",
+                                    "type": "FLOAT",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "ODDS_RATIO"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 220
+                                },
+                                {
+                                    "name": "P_VALUE",
+                                    "type": "FLOAT",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "P_VALUE"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 218,
+                                    "trusted_property": "TRUST"
+                                }
+                            ]
+                        }
+                    ],
+                    "sample_groups": []
+                }
+            ]
+        },
+        {
+            "name": "GWAS_DIAGRAM",
+            "version": "mdv5",
+            "technology": "GWAS",
+            "sample_groups": [
+                {
+                    "name": "DIAGRAM",
+                    "id": "GWAS_DIAGRAM_mdv5",
+                    "ancestry": "Mixed",
+                    "cases": 26488,
+                    "controls": 83964,
+                    "subjects": 110452,
+                    "sort_order": 0,
+                    "properties": [],
+                    "phenotypes": [
+                        {
+                            "name": "T2D",
+                            "group": "GLYCEMIC",
+                            "sort_order": 1,
+                            "properties": [
+                                {
+                                    "name": "DIR",
+                                    "type": "INTEGER",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "DIR"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 270
+                                },
+                                {
+                                    "name": "ODDS_RATIO",
+                                    "type": "FLOAT",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "ODDS_RATIO"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 220
+                                },
+                                {
+                                    "name": "P_VALUE",
+                                    "type": "FLOAT",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "P_VALUE"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 218,
+                                    "trusted_property": "TRUST"
+                                }
+                            ]
+                        }
+                    ],
+                    "sample_groups": []
+                }
+            ]
+        },
+        {
+            "name": "GWAS_MAGIC",
+            "version": "mdv1",
+            "technology": "GWAS",
+            "sample_groups": [
+                {
+                    "name": "MAGIC",
+                    "id": "GWAS_MAGIC_mdv1",
+                    "ancestry": "Mixed",
+                    "cases": -1,
+                    "controls": -1,
+                    "subjects": 58074,
+                    "sort_order": 0,
+                    "properties": [
+                        {
+                            "name": "EAF",
+                            "type": "FLOAT",
+                            "searchable": "TRUE",
+                            "meaning": [
+                                "EAF"
+                            ],
+                            "displayable": "TRUE",
+                            "sort_order": 240
+                        },
+                        {
+                            "name": "MAF",
+                            "type": "FLOAT",
+                            "searchable": "TRUE",
+                            "meaning": [
+                                "MAF"
+                            ],
+                            "displayable": "TRUE",
+                            "sort_order": 230
+                        }
+                    ],
+                    "phenotypes": [
+                        {
+                            "name": "FG",
+                            "group": "GLYCEMIC",
+                            "sort_order": 3,
+                            "properties": [
+                                {
+                                    "name": "BETA",
+                                    "type": "FLOAT",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "BETA"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 220
+                                },
+                                {
+                                    "name": "P_VALUE",
+                                    "type": "FLOAT",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "P_VALUE"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 218,
+                                    "trusted_property": "TRUST"
+                                },
+                                {
+                                    "name": "SE",
+                                    "type": "FLOAT",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "SE"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 270
+                                }
+                            ]
+                        },
+                        {
+                            "name": "FI",
+                            "group": "GLYCEMIC",
+                            "sort_order": 6,
+                            "properties": [
+                                {
+                                    "name": "BETA",
+                                    "type": "FLOAT",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "BETA"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 220
+                                },
+                                {
+                                    "name": "DIR",
+                                    "type": "INTEGER",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "DIR"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 270
+                                },
+                                {
+                                    "name": "P_VALUE",
+                                    "type": "FLOAT",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "P_VALUE"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 218,
+                                    "trusted_property": "TRUST"
+                                }
+                            ]
+                        }
+                    ],
+                    "sample_groups": []
+                }
+            ]
+        },
+        {
+            "name": "GWAS_MAGIC",
+            "version": "mdv2",
+            "technology": "GWAS",
+            "sample_groups": [
+                {
+                    "name": "MAGIC",
+                    "id": "GWAS_MAGIC_mdv2",
+                    "ancestry": "Mixed",
+                    "cases": -1,
+                    "controls": -1,
+                    "subjects": 58074,
+                    "sort_order": 0,
+                    "properties": [
+                        {
+                            "name": "EAF",
+                            "type": "FLOAT",
+                            "searchable": "TRUE",
+                            "meaning": [
+                                "EAF"
+                            ],
+                            "displayable": "TRUE",
+                            "sort_order": 240
+                        },
+                        {
+                            "name": "MAF",
+                            "type": "FLOAT",
+                            "searchable": "TRUE",
+                            "meaning": [
+                                "MAF"
+                            ],
+                            "displayable": "TRUE",
+                            "sort_order": 230
+                        }
+                    ],
+                    "phenotypes": [
+                        {
+                            "name": "FG",
+                            "group": "GLYCEMIC",
+                            "sort_order": 3,
+                            "properties": [
+                                {
+                                    "name": "BETA",
+                                    "type": "FLOAT",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "BETA"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 220
+                                },
+                                {
+                                    "name": "P_VALUE",
+                                    "type": "FLOAT",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "P_VALUE"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 218,
+                                    "trusted_property": "TRUST"
+                                },
+                                {
+                                    "name": "SE",
+                                    "type": "FLOAT",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "SE"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 270
+                                }
+                            ]
+                        },
+                        {
+                            "name": "FI",
+                            "group": "GLYCEMIC",
+                            "sort_order": 6,
+                            "properties": [
+                                {
+                                    "name": "BETA",
+                                    "type": "FLOAT",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "BETA"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 220
+                                },
+                                {
+                                    "name": "DIR",
+                                    "type": "INTEGER",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "DIR"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 270
+                                },
+                                {
+                                    "name": "P_VALUE",
+                                    "type": "FLOAT",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "P_VALUE"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 218,
+                                    "trusted_property": "TRUST"
+                                }
+                            ]
+                        }
+                    ],
+                    "sample_groups": []
+                }
+            ]
+        },
+        {
+            "name": "GWAS_MAGIC",
+            "version": "mdv5",
+            "technology": "GWAS",
+            "sample_groups": [
+                {
+                    "name": "MAGIC",
+                    "id": "GWAS_MAGIC_mdv5",
+                    "ancestry": "Mixed",
+                    "cases": -1,
+                    "controls": -1,
+                    "subjects": 58074,
+                    "sort_order": 0,
+                    "properties": [
+                        {
+                            "name": "EAF",
+                            "type": "FLOAT",
+                            "searchable": "TRUE",
+                            "meaning": [
+                                "EAF"
+                            ],
+                            "displayable": "TRUE",
+                            "sort_order": 240
+                        },
+                        {
+                            "name": "MAF",
+                            "type": "FLOAT",
+                            "searchable": "TRUE",
+                            "meaning": [
+                                "MAF"
+                            ],
+                            "displayable": "TRUE",
+                            "sort_order": 230
+                        }
+                    ],
+                    "phenotypes": [
+                        {
+                            "name": "FG",
+                            "group": "GLYCEMIC",
+                            "sort_order": 3,
+                            "properties": [
+                                {
+                                    "name": "BETA",
+                                    "type": "FLOAT",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "BETA"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 220
+                                },
+                                {
+                                    "name": "P_VALUE",
+                                    "type": "FLOAT",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "P_VALUE"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 218,
+                                    "trusted_property": "TRUST"
+                                },
+                                {
+                                    "name": "SE",
+                                    "type": "FLOAT",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "SE"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 270
+                                }
+                            ]
+                        },
+                        {
+                            "name": "FI",
+                            "group": "GLYCEMIC",
+                            "sort_order": 6,
+                            "properties": [
+                                {
+                                    "name": "BETA",
+                                    "type": "FLOAT",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "BETA"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 220
+                                },
+                                {
+                                    "name": "DIR",
+                                    "type": "INTEGER",
+                                    "searchable": "FALSE",
+                                    "meaning": [
+                                        "DIR"
+                                    ],
+                                    "displayable": "FALSE",
+                                    "sort_order": 270
+                                },
+                                {
+                                    "name": "P_VALUE",
+                                    "type": "FLOAT",
+                                    "searchable": "TRUE",
+                                    "meaning": [
+                                        "P_VALUE"
+                                    ],
+                                    "displayable": "TRUE",
+                                    "sort_order": 218,
+                                    "trusted_property": "TRUST"
+                                }
+                            ]
+                        }
+                    ],
+                    "sample_groups": []
+                }
+            ]
+        }
+    ],
+    "properties": [
+        {
+            "name": "VAR_ID",
+            "type": "STRING",
+            "searchable": "FALSE",
+            "meaning": [
+                "VAR_ID"
+            ],
+            "displayable": "FALSE",
+            "sort_order": 101
+        },
+        {
+            "name": "DBSNP_ID",
+            "type": "STRING",
+            "searchable": "TRUE",
+            "meaning": [
+                "DBSNP_ID"
+            ],
+            "displayable": "TRUE",
+            "sort_order": 102
+        },
+        {
+            "name": "DISPLAY_NAME",
+            "type": "STRING",
+            "searchable": "TRUE",
+            "meaning": [
+                "DISPLAY_NAME"
+            ],
+            "displayable": "FALSE",
+            "sort_order": 199
+        },
+        {
+            "name": "CHROM",
+            "type": "STRING",
+            "searchable": "TRUE",
+            "meaning": [
+                "CHROM"
+            ],
+            "displayable": "TRUE",
+            "sort_order": 103
+        },
+        {
+            "name": "CLOSEST_GENE",
+            "type": "STRING",
+            "searchable": "TRUE",
+            "meaning": [
+                "CLOSEST_GENE"
+            ],
+            "displayable": "TRUE",
+            "sort_order": 108
+        },
+        {
+            "name": "Condel_PRED",
+            "type": "STRING",
+            "searchable": "TRUE",
+            "meaning": [
+                "Condel_PRED"
+            ],
+            "displayable": "TRUE",
+            "sort_order": 111
+        },
+        {
+            "name": "Consequence",
+            "type": "STRING",
+            "searchable": "TRUE",
+            "meaning": [
+                "Consequence"
+            ],
+            "displayable": "TRUE",
+            "sort_order": 110
+        },
+        {
+            "name": "GENE",
+            "type": "STRING",
+            "searchable": "TRUE",
+            "meaning": [
+                "GENE"
+            ],
+            "displayable": "TRUE",
+            "sort_order": 107
+        },
+        {
+            "name": "MOST_DEL_SCORE",
+            "type": "INTEGER",
+            "searchable": "TRUE",
+            "meaning": [
+                "MOST_DEL_SCORE"
+            ],
+            "displayable": "TRUE",
+            "sort_order": 114
+        },
+        {
+            "name": "POS",
+            "type": "INTEGER",
+            "searchable": "TRUE",
+            "meaning": [
+                "POS"
+            ],
+            "displayable": "TRUE",
+            "sort_order": 104
+        },
+        {
+            "name": "Reference_Allele",
+            "type": "STRING",
+            "searchable": "TRUE",
+            "meaning": [
+                "Reference_Allele"
+            ],
+            "displayable": "TRUE",
+            "sort_order": 105
+        },
+        {
+            "name": "Effect_Allele",
+            "type": "STRING",
+            "searchable": "TRUE",
+            "meaning": [
+                "Effect_Allele"
+            ],
+            "displayable": "TRUE",
+            "sort_order": 106
+        },
+        {
+            "name": "PolyPhen_PRED",
+            "type": "STRING",
+            "searchable": "TRUE",
+            "meaning": [
+                "PolyPhen_PRED"
+            ],
+            "displayable": "TRUE",
+            "sort_order": 112
+        },
+        {
+            "name": "Protein_change",
+            "type": "STRING",
+            "searchable": "TRUE",
+            "meaning": [
+                "Protein_change"
+            ],
+            "displayable": "TRUE",
+            "sort_order": 109
+        },
+        {
+            "name": "SIFT_PRED",
+            "type": "STRING",
+            "searchable": "TRUE",
+            "meaning": [
+                "SIFT_PRED"
+            ],
+            "displayable": "TRUE",
+            "sort_order": 113
+        },
+        {
+            "name": "TRANSCRIPT_ANNOT",
+            "type": "STRING",
+            "searchable": "FALSE",
+            "meaning": [
+                "TRANSCRIPT_ANNOT"
+            ],
+            "displayable": "FALSE",
+            "sort_order": 198
+        }
+    ]
+}

@@ -1,0 +1,2 @@
+ExChip_SIGMA1_dv1__T2D
+GWAS_MAGIC_dv1__FG

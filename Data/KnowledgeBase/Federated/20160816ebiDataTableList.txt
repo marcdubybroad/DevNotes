@@ -1,0 +1,9 @@
+GWAS_DIAGRAM_dv2
+GWAS_DIAGRAM_dv2__T2D
+GWAS_MAGIC_dv1
+GWAS_MAGIC_dv1__FG
+GWAS_MAGIC_dv1__FI
+ExSeq_17k_dv2
+ExSeq_17k_eu_dv2
+ExSeq_17k_eu_dv2__T2D
+ExSeq_17k_dv2__T2D
