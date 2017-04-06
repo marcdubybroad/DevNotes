@@ -1,0 +1,50 @@
+{
+    "entities":
+    [
+        {"gene": {
+            "id": ["gene"],
+            "properties": ["gene_id", "name", "chrom", "start_pos", "end_pos"]
+            }
+        },
+        {"variant": {
+            "id": ["variant"],
+            "properties": ["var_id", "gene_id", "dbsnp_id", "closest_gene_id", "chrom", "pos"]
+            }
+        },
+        {"annotation": {
+            "id": ["annotation"],
+            "properties": ["annotation_id", "name", "effect"]
+            }
+        },
+        {"expression": {
+            "id": ["expression"],
+            "properties": ["gene_id", "tissue_id", "median_rpkm", "number_subjects"]
+            }
+        },
+        {"tissue": {
+            "id": ["tissue"],
+            "properties": ["tissue_id", "name", "tissue_type"]
+            }
+        },
+        {"ancestry": {
+            "id": ["ancestry"],
+            "properties": ["ancestry_id", "name"]
+            }
+        },
+        {"phenotype": {
+            "id": ["phenotype"],
+            "properties": ["phenotype_id", "name", "group_name"]
+            }
+        },
+        {"experiment_type": {
+            "id": ["experiment_type"],
+            "properties": ["experiment_type_id", "name"]
+            }
+        },
+        {"cohort": {
+            "id": ["cohort"],
+            "properties": ["cohort_id", "name", "institution"]
+            }
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+
+
+
+{
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "count": false,
+    "properties":    {
+                          "cproperty": [],
+                          "orderBy":    [],
+"dproperty" : {  "AGE":["samples_stroke_mdv5"], "ln":["samples_stroke_mdv5"], "Hours":["samples_stroke_mdv5"], "AGE":["samples_stroke_mdv5"], "ln":["samples_stroke_mdv5"], "Hours":["samples_stroke_mdv5"], "ID":["samples_stroke_mdv5"] } ,
+      "pproperty" : { }} ,
+        "filters":    [
+                    {"dataset_id": "samples_stroke_mdv5", "phenotype": "b", "operand": "AGE", "operator": "LT", "value": 50, "operand_type": "FLOAT"}
+            ]
+}
+
+
+
+{
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "count": false,
+    "properties":    {
+                           "cproperty": [],
+                          "orderBy":    [],
+"dproperty" : { "AGE" : [ "samples_stroke_mdv5"], 
+               "ID" : [ "samples_stroke_mdv5"], 
+               "ln_ICH_Volume" : [ "samples_stroke_mdv5"], 
+               "Hours_from_Symptoms_to_CT" : [ "samples_stroke_mdv5"], 
+               "Lobar_ICH" : [ "samples_stroke_mdv5"], 
+               "Deep_ICH" : [ "samples_stroke_mdv5"], 
+               "SEX" : [ "samples_stroke_mdv5"] } , 
+      "pproperty" : { }} ,
+
+    "filters":    [
+      {"dataset_id": "samples_stroke_mdv5", "phenotype": "blah", "operand": "AGE", "operator": "LT", "value": 50, "operand_type": "FLOAT"}
+                ]
+}
+
+

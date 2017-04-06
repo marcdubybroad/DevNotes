@@ -1,0 +1,34 @@
+{
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "count": false,
+    "properties":    {
+                           "cproperty": [],
+                          "orderBy":    [],
+"dproperty" : { "ID" : [ "samples_17k_mdv2"] } , 
+      "pproperty" : { }} ,
+
+    "filters":    [
+ {"operand_type":"ORBLOCK","value":
+    [{"operand_type":"ANDBLOCK","value":
+        [{"operand_type":"ORBLOCK","value":
+            [{"operand_type":"STRING","value":"African-American","dataset_id":"samples_17k_mdv2","phenotype":"b","operand":"origin","operator":"EQ"},
+                {"operand_type":"STRING","value":"East-Asian","dataset_id":"samples_17k_mdv2","phenotype":"b","operand":"origin","operator":"EQ"},
+                {"operand_type":"STRING","value":"European","dataset_id":"samples_17k_mdv2","phenotype":"b","operand":"origin","operator":"EQ"},
+                {"operand_type":"STRING","value":"Hispanic","dataset_id":"samples_17k_mdv2","phenotype":"b","operand":"origin","operator":"EQ"},
+                {"operand_type":"STRING","value":"South-Asian","dataset_id":"samples_17k_mdv2","phenotype":"b","operand":"origin","operator":"EQ"}
+            ],
+        "dataset_id":"blah","phenotype":"b","operand":"blah","operator":"EQ"},
+        {"operand_type":"ORBLOCK","value":
+            [{"operand_type":"STRING","value":"null","dataset_id":"samples_17k_mdv2","phenotype":"b","operand":"SEX_readable","operator":"EQ"},
+                {"operand_type":"STRING","value":"Female","dataset_id":"samples_17k_mdv2","phenotype":"b","operand":"SEX_readable","operator":"EQ"},
+                {"operand_type":"STRING","value":"Male","dataset_id":"samples_17k_mdv2","phenotype":"b","operand":"SEX_readable","operator":"EQ"}
+            ],
+        "dataset_id":"blah","phenotype":"b","operand":"blah","operator":"EQ"}
+        ],
+    "dataset_id":"blah","phenotype":"b","operand":"blah","operator":"EQ"}
+    ],
+"dataset_id":"blah","phenotype":"b","operand":"blah","operator":"EQ"}
+]
+}

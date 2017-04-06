@@ -1,0 +1,7 @@
+
+- notes
+  - every dataset
+    - has unique characteristics (experiment type, ancestry, institution, etc)
+    - is an intersection of multiple entities
+
+

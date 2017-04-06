@@ -1,0 +1,18 @@
+{
+        "passback": "123abc",
+        "entity": "variant",
+        "limit": 20,
+        "count": false,
+        "properties":   {
+                                        "cproperty": ["TRANSCRIPT_ANNOT","MOST_DEL_SCORE","VAR_ID","DBSNP_ID"],
+                                "orderBy":      [],
+          "dproperty":    {"MAF" : [ "ExSeq_17k_mdv2"] },
+                                "pproperty":    { }
+                        },
+        "filters":      [
+        {"dataset_id": "blah", "phenotype": "blah", "operand": "CHROM", "operator": "EQ", "value": "19", "operand_type": "STRING"},
+        {"dataset_id": "blah", "phenotype": "blah", "operand": "POS", "operator": "GT", "value": 2405409, "operand_type": "INTEGER"},
+        {"dataset_id": "blah", "phenotype": "blah", "operand": "POS", "operator": "LT", "value": 2405429, "operand_type": "INTEGER"},
+        {"dataset_id": "ExSeq_17k_mdv2", "phenotype": "blah", "operand": "MAF", "operator": "LT", "value": 0.001, "operand_type": "FLOAT"}
+]
+}

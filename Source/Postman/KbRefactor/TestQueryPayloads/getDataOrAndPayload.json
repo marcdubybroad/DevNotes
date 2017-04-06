@@ -1,0 +1,21 @@
+{
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+  "limit": 104,
+    "count": false,
+    "properties":    {
+                                        "cproperty": ["MOST_DEL_SCORE","VAR_ID","DBSNP_ID"],
+                          "orderBy":    [],
+"dproperty" : { "ID" : [ "ExSeq_34k_mdv2"] } , 
+      "pproperty" : { "P_FIRTH_FE_IV" : {  "ExSeq_34k_mdv2" : [ "T2D"] }}} ,
+
+    "filters":    [
+                {"operand_type":"FLOAT","value":0.001,"dataset_id":"ExSeq_34k_mdv2","phenotype":"T2D","operand":"P_FIRTH_FE_IV","operator":"LT"},
+        {"operand_type":"ORBLOCK","value":
+            [{"operand_type":"STRING","value":"8","dataset_id":"blah","phenotype":"b","operand":"CHROM","operator":"EQ"},
+                {"operand_type":"STRING","value":"10","dataset_id":"blah","phenotype":"b","operand":"CHROM","operator":"EQ"}
+            ],
+        "dataset_id":"blah","phenotype":"b","operand":"blah","operator":"EQ"}
+]
+}

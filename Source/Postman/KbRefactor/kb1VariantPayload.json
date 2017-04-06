@@ -1,0 +1,25 @@
+
+{
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "page_size": 100,
+    "limit": 1000,
+    "count": false,
+    "properties":    {
+        "cproperty": ["VAR_ID" , "CLOSEST_GENE" , "DBSNP_ID" , "Consequence" , "CHROM" , "POS"],
+        "orderBy":    ["CHROM"],
+        "dproperty" : { "MAC" : [ "ExSeq_17k_mdv2"] } ,
+        "pproperty" : { "P_FIRTH_FE_IV" : {
+                            "ExSeq_17k_mdv2" : [ "T2D"] } ,
+                        "OR_FIRTH_FE_IV" : {
+                            "ExSeq_17k_mdv2" : [ "T2D"] } ,
+                        "MINU" : {
+                            "ExSeq_17k_mdv2" : [ "T2D"] }  } } ,
+    "filters":
+    [
+        {"dataset_id": "ExSeq_17k_mdv2", "phenotype": "T2D", "operand": "MAC", "operator": "GT", "value": 5, "operand_type": "FLOAT"},
+        {"dataset_id": "ExSeq_17k_mdv2", "phenotype": "T2D", "operand": "P_FIRTH_FE_IV", "operator": "LT", "value": 0.0001, "operand_type": "FLOAT"},
+        {"dataset_id": "blah", "phenotype": "blah", "operand": "MOST_DEL_SCORE", "operator": "EQ", "value": 2, "operand_type": "FLOAT"}
+     ]
+}

@@ -1,0 +1,21 @@
+{
+    "datasets":
+    [
+        {"ExSeq_17k_eu_t2d": {
+            "id": "ExSeq_17k_eu_t2d",
+            "relationships": [{"included_in": ["ExSeq_17k_eu"]}, {"overlaps_with": ["ExSeq_26k_eu_t2d", "ExSeq_55k_eu_t2d"]}],
+            "definition": [{"ancestry": "eu"}, {"phenotype": "t2d"}, {"experiment_type": "ExSeq"}, {"cohort": "17k"}, {"cases": 1234}, {"controls": 3456}, {"subjects": 4690}],
+            "entity": ["variant"],
+            "property": ["var_id", "p_value", "maf", "mac"]
+        }},
+        
+        {"UCSD_gene_expression_Seq_55k": {
+            "id": "UCSD_gene_expression_55k",
+            "relationships": [{"included_in": []}, {"overlaps_with": []}],
+            "definition": [{"cohort": "55k"}],
+            "entity": ["gene", "tissue", "expression"],
+            "property": ["gene_id", "tissue_id", "expression_id", "expression_p_value", "expression_p_count"]
+        }}
+    ]
+
+}

@@ -1,0 +1,17 @@
+{
+        "passback": "123abc",
+        "entity": "variant",
+        "limit": 50,
+        "count": false,
+        "properties":   {
+                                        "cproperty": ["MOST_DEL_SCORE","VAR_ID","DBSNP_ID"],
+                                "orderBy":      [],
+                                "dproperty":    {"MAF" : [ "ExSeq_17k_mdv2"], "HWE" : [ "ExSeq_17k_mdv2"]  },
+          "pproperty":    { "P_EMMAX_FE_IV_17k" : {  "ExSeq_17k_mdv2" : [ "T2D"]}}
+                        },
+        "filters":      [
+        {"dataset_id": "blah", "phenotype": "blah", "operand": "CHROM", "operator": "EQ", "value": "20", "operand_type": "STRING"},
+          {"dataset_id": "ExSeq_17k_mdv2", "phenotype": "blah", "operand": "MAF", "operator": "GT", "value": 0, "operand_type": "FLOAT"},
+          {"dataset_id": "ExSeq_17k_mdv2", "phenotype": "T2D", "operand": "P_EMMAX_FE_IV_17k", "operator": "LT", "value": 0.5, "operand_type": "FLOAT"}
+]
+}

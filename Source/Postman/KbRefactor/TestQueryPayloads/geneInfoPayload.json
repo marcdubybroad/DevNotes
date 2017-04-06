@@ -1,0 +1,11 @@
+{
+"gene_symbol": "SLC30A8",
+"user_group": "ui",
+"columns": [
+            "ID","CHROM","BEG","END","Function_description",
+            "_13k_T2D_VAR_TOTAL","_13k_T2D_ORIGIN_VAR_TOTALS","_17k_T2D_lof_NVAR","_17k_T2D_lof_MINA_MINU_RET",
+            "_17k_T2D_lof_P_METABURDEN","_13k_T2D_GWS_TOTAL","_13k_T2D_LWS_TOTAL","_13k_T2D_NOM_TOTAL","_17k_T2D_lof_OBSA",
+            "_17k_T2D_lof_OBSU","EXCHP_T2D_VAR_TOTALS","EXCHP_T2D_GWS_TOTAL","EXCHP_T2D_LWS_TOTAL","EXCHP_T2D_NOM_TOTAL","GWS_TRAITS",
+            "GWAS_T2D_GWS_TOTAL","GWAS_T2D_LWS_TOTAL","GWAS_T2D_NOM_TOTAL","GWAS_T2D_VAR_TOTAL"
+            ]
+}

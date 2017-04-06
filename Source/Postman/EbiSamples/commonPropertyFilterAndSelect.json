@@ -1,0 +1,15 @@
+{
+        "passback": "123abc",
+        "entity": "variant",
+        "limit": 50,
+        "count": false,
+        "properties":   {
+                                        "cproperty": ["MOST_DEL_SCORE","VAR_ID","DBSNP_ID"],
+                                "orderBy":      [],
+                                "dproperty":    { },
+                                "pproperty":    { }
+                        },
+        "filters":      [
+        {"dataset_id": "blah", "phenotype": "blah", "operand": "CHROM", "operator": "EQ", "value": "20", "operand_type": "STRING"}
+]
+}

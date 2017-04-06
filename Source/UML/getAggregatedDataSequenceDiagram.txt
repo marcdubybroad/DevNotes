@@ -1,0 +1,20 @@
+#![getAggregatedData call]
+
+controller:DccServicesController
+service:DccKnowledgeBaseService
+parser:JsonGetAggregatedDataQueryParser
+dao:GetAggregatedDataDaoImpl
+builder:JsonGetDataAggregatedResultBuilder
+
+controller:service.getAggregatedData(jsonString)
+service:return=parser.parseJsonString(jsonString)
+service:return=dao.getResult(query)
+service:return=builder.translateQueryResult(result)
+
+
+
+
+
+
+
+

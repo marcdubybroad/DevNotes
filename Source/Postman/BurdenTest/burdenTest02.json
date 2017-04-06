@@ -1,0 +1,16 @@
+
+{"covariates":["C1","C2","C3","C4"],
+"mdv":"mdv2",
+"variants":["8_118184783_C_T"],
+"ci_level":0.95,
+"phenotype":"t2d",
+"calc_ci":true,
+"filters":[{"operand_type":"STRING","value":"Hispanic","dataset_id":"mydataset","phenotype":"b","operand":"origin","operator":"EQ"},
+           {"operand_type":"FLOAT","value":20,"dataset_id":"mydataset","phenotype":"b","operand":"BMI","operator":"LT"},
+           {"operand_type":"STRING","value":"Hispanic","dataset_id":"mydataset","phenotype":"b","operand":"origin","operator":"EQ"},
+           {"operand_type":"STRING","value":"No","dataset_id":"mydataset","phenotype":"b","operand":"T2D_readable","operator":"EQ"}],
+"samples":["C1030::CLICO0014","C1030::CLICO0048","C1030::CLICO0077","C1030::CLICO0149","C1030::CLICO0211","C1030::CLICO0253","C1030::CLICO0304",
+           "C1030::CLICO698","C1030::CLICO777","C1031::NUCO0315","C1033::EC022647","C1033::EC023859","C1033::EC025130","C1033::EC033314",
+           "C1033::EC033863","C1033::EC041094","C857::CD3026","C857::CD3084","C857::CD3109","C857::CD3145","C857::CD3156","C857::CD3253",
+           "C857::CD3293","C857::CD3309","C857::CD3404","C857::CD3505","C857::CD3753","C857::CD3932","C996::SA1029-1","C996::SA1039-1",
+           "C996::SA2107-1","C996::SA3195-1"]}

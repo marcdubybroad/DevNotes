@@ -1,0 +1,26 @@
+
+{
+    "COMMENT": "QUERY FOR ALL LOF VARIANTS IN GENES EXPRESSED IN ADIPOSE TISSUE",
+    
+    "passback": "123abc",
+    "page_number": 0,
+    "page_size": 100,
+    "limit": 1000,
+    "count": false,
+    "properties": [
+        {"id": "gene", "property": ["gene_id"]},
+        {"id": "tissue", "property": ["name"]},
+        {"id": "UCSD_gene_expression_Seq_55k", "property": ["medium_rpkm", "number_subjects"]}
+    ],
+    "join" : [
+        ["gene", "UCSD_gene_expression_Seq_55k"], 
+        ["tissue", "UCSD_gene_expression_Seq_55k"] 
+    ],
+    "filters":
+    [
+        {"id": "tissue", "property": "tissue_type", "operator": "EQ", "value": "adipose"},
+        {"id": "UCSD_gene_expression_Seq_55k", "property": "medium_rpkm", "operator": "GT", "value": 14}
+     ]
+}
+
+

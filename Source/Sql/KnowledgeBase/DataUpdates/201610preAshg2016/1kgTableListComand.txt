@@ -1,0 +1,15 @@
+show tables like '%1kg%';
+show tables like 'GWAS_CADISP%';
+show tables like 'GWAS_CKDGenConsortium_dv1%';
+show tables like 'GWAS_DIAGRAM%';
+show tables like 'GWAS_GIANT%_dv3%';
+show tables like 'GWAS_GLGC_dv2%';
+show tables like 'GWAS_MAGIC_dv2%';
+show tables like 'GWAS_MAGIC_dv3%';
+show tables like 'GWAS_SIGN%';
+
+-- show tables like 'GWAS_DIAGRAM%';
+-- show tables like 'GWAS_DIAGRAM%';
+-- show tables like 'GWAS_GLGC_dv1%';
+
+

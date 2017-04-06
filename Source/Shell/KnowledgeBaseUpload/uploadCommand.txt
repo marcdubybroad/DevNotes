@@ -1,0 +1,1 @@
+java -jar build/libs/dig-genome-store-0.1.jar --configFile src/main/resources/config.properties mysql_upload --entity kaan --primaryKey ID --keyType STRING --mysqlConfigFile mysql.config.properties --schemaList /Users/mduby/Data/Broad/GenomeStore/Stroke/Burden/26k/schema_files.list --fileList /Users/mduby/Data/Broad/GenomeStore/Stroke/Burden/26k/data_files.list

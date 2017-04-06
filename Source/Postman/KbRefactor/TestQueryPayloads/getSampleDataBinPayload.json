@@ -1,0 +1,17 @@
+{
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "count": false,
+    "distribution": true,
+  "bin_number": 4,
+    "properties":    {
+                           "cproperty": [],
+                          "orderBy":    [],
+"dproperty" : { "DBP" : [ "samples_17k_mdv2"] } , 
+      "pproperty" : { }} ,
+
+    "filters":    [
+                    {"dataset_id": "samples_17k_mdv2", "phenotype": "blah", "operand": "DBP", "operator": "LT", "value": 60, "operand_type": "FLOAT"}
+                ]
+}
