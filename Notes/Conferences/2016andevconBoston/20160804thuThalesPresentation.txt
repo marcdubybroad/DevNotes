@@ -1,0 +1,25 @@
+
+- Thales
+
+- inflight entertainment platform running on Android
+  - good way to market ew apps
+  - 380k seats
+  - 2.3million passengers per day; total 7 million hours
+  
+- IFEC market
+  - app portal, get access to sdk
+  - dev app based on Thanmes requirements
+  - testing, 2 weeks
+  - then available to airlines
+  
+- InFluyt experience
+
+- Thles deeloper solutions portal
+  - look
+  
+- www.ifec-thames.com
+- https://apps.thales-inflyt.com/index1.php
+  - register
+  
+
+  

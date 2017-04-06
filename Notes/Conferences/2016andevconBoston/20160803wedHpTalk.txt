@@ -1,0 +1,15 @@
+
+
+- HPE mobile center
+
+  - can download apk frm play stpe
+  - the upload to mobile cenyer
+    - run nre unit tests on it
+    
+- in intellij
+  - add in lean lft plugin
+  - can also connet to rdp winfdows for mobile center
+  
+- object spy tool in mobile center
+  - 
+

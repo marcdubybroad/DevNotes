@@ -1,0 +1,201 @@
+
+
+Ntes:
+
+- chpter 6, resource and qualifiers
+ - to enable different layput depending on orientation
+   - layout, layout-land
+   - docs: https://developer.android.com/guide/topics/resources/providing-resources.html
+     - for qualifiers, can also chain the together
+     - layout-hdpi-fr
+     - nut there is no tablet/phone qualifier
+     
+- chaptr 7, activities
+  - adb, android debugging bridge
+  - am, activity manager
+  -
+  
+- misc
+  - apps are stopped by android directly, code has no way to do this
+  - views will now \quickly write out their data when orientation change happens before activity is recreated
+    - we coly have to do this ourselves if we created a new type of viw
+  - android does not support RMI or jdbc clients
+  - fragments
+    - activity manages fragments, and gfragments manage the UI
+    - ragments only useful if you're going to reuse them throughout multiple activities
+    - but fragments have a more complicated lifecycle
+      - so some trade offs
+      
+- gradle tricks
+  - org.gradle.parrallel=true setting
+  - org.gradle.jvmargs=-Xmx2014m -XX:MaxPermSize=512m -XX:+HeapDumpPnOutOfMemoryError
+  
+- in android device
+  - does not run java byte code in device
+  - it gets converted to davlik, using dex byte code
+  
+- proguard
+  - removes librarues that it deems not used by the application
+  - does change byte code, so new apk has to be fully retested
+  - sometimes there are libs that are removed by mistake
+    - especially if using reflection
+  - free software; there is also androidguard which is paid
+  
+
+- sql lite database
+  - look at lab 9.3
+    - 
+  
+
+
+
+
+
+
+
+
+
+
+Screen copy
+===========
+
+Welcome to Android Bootcamp
+
+Wifi:   Sheraton Meeting  / BlueStacks
+https://public.etherpad-mozilla.org/p/android-bootcamp
+
+ https://www.dropbox.com/sh/ehpi1nwq9v2w1c4/AAD8vrQio4B7z58r7lPs9Nyha?dl=0
+ 
+James Harmon
+jamesharmon@gmail.com
+630-344-9059 (voice or text)
+ 
+Logistics
+ 
+   9:00 - 5:00   - Start and End Times
+   10:45??? break
+   12:30 - 1:30 - Lunch 
+   3:00 - 3:15   - Coffee Break, Ballroom Foyer
+   
+Outline
+
+See slide
+
+Experience
+
+University of Illinois at Urbana-Champaign
+BS in Computer Science
+
+Accenture
+Developer
+
+http://www.andevcon.com/boston/speakers#JamesHarmon
+
+http://dss7000.midtronics.com/en-us/
+
+My LinkedIn profile
+https://www.linkedin.com/in/jamesharmonandroid
+
+
+You?  (show of hands)
+- Java
+- Mobile Web
+- iOS
+- Android
+- App in Play Store
+- what are you looking for?
+
+
+ Download and Install Android Studio using instructions at this site:
+ 
+      http://developer.android.com/sdk/index.html
+      
+ DropBox     
+ 
+ https://www.dropbox.com/sh/ehpi1nwq9v2w1c4/AAD8vrQio4B7z58r7lPs9Nyha?dl=0
+ 
+
+    
+
+
+
+Resources
+
+========
+
+Microsoft Android Emulator
+https://www.visualstudio.com/en-us/features/msft-android-emulator-vs.aspx
+
+
+# android
+
+
+http://developer.samsung.com/technical-doc/view.do?v=T000000117
+
+
+
+
+Cheap Development Phone:
+Link to buy: http://www.amazon.com/LG-Optimus-Exceed-Verizon-Prepaid/dp/B00K2XX4OY/ref=sr_1_1?s=wireless&ie=UTF8&qid=1447470821&sr=1-1&keywords=android+phone
+
+
+Setting up new mac
+
+- http://www.javacodegeeks.com/2015/11/software-development.html
+- install homebrew
+- show hidden files ... http://www.howtogeek.com/211496/how-to-hide-files-and-view-hidden-files-on-mac-os-x/
+- allow terminal from finder ... http://stackoverflow.com/questions/420456/open-terminal-here-in-mac-os-finder
+- changes to .bash_profile
+
+
+=======
+build.gradle (in root)
+=======
+allprojects {
+    repositories {
+        jcenter()
+    }
+    // fix for problem with testing library use of annotation library
+    }
+======
+
+
+
+========
+Resources
+========
+http://www.developer.android.com
+http://stackoverflow.com
+http://github.com
+http://commonsware.com
+http://fragmentedpodcast.com/
+https://www.packtpub.com/
+http://www.amazon.com/Head-First-Java-Kathy-Sierra/dp/0596009208/
+http://www.amazon.com/Embedded-Android-Porting-Extending-Customizing
+
+
+
+http://eventmobi.com/andevconsc/
+
+
+
+https://github.com/bizzguy/garage-library
+
+put the following in <user>/.bash_profile
+
+# android
+export ANDROID_SDK="~/Library/Android/sdk"
+export PATH=$ANDROID_SDK/tools:$ANDROID_SDK/platform-tools:$PATH
+
+# add current directory to path
+export PATH=.:$PATH
+
+   image.setImageBitmap(bitmap);
+} catch (IOException e) {
+   e.printStackTrace();
+}
+##############
+
+
+
+

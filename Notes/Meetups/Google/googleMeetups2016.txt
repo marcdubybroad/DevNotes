@@ -1,0 +1,54 @@
+
+
+GDG 20160614 - Google I/O recap @ Kayak
+- Announcements
+  - Google VR hackathon, at MIT media lab, Columbus day 2016
+  
+- new Android Studio features
+  - gui builder
+    - has blueprint mode
+  - Firebase integration
+    - http://firebase.google.com
+  - Espresso testing
+    - a way to record a gui test that is then converted into JUnit class
+    
+- Google VR
+  - new Daydream
+  - new Google VR banding
+  - can drop in 360 degree media in apps
+    - just another media type (like video, audio, etc)
+  - cardboard designed to have to hold, so can turn slower, avoid nausea
+  - 
+
+- voice access
+  - for accessibility
+  - also can be used for hands free work (driving, phone in pocket)
+  - Espresso
+    - DSL
+  
+- Espresso
+  - part of Android support testing library
+  - write UI tests
+    - perform actions on views
+    - verify view state
+    - support for intents
+    
+    
+Things to study
+- python ML
+- python Flask
+- data structures, coding interview
+- Spark
+- 
+
+Review
+- possibles
+    - principal engineer
+    - sr engineer, 4 days week
+    - sr engineer, one day to work on what I want
+- if
+    - hard ot fidn other
+    - start looking immediately
+    
+
+

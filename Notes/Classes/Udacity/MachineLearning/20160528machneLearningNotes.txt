@@ -1,0 +1,57 @@
+
+
+- supervised learning
+
+- scratter plots
+  - decision surface
+    - when straight line, it is seen as linear
+    
+- naive Bayes
+  - algortigh to find boundary surface
+  - pythin library, sklearn
+    - http://scikit-learn.org/stable/modules/naive_bayes.html
+    - http://scikit-learn.org/stable/modules/generated/sklearn.naive_bayes.GaussianNB.html
+    
+  - always keep 10% of yuor training data as test data
+    - or else can overfit your data
+    
+  - accuracy is properly predicted poits divided by all points
+  
+Bayes Rule
+  - rev Thomas Bayees
+  - ex:
+    - have cancer risk of P(c) = 0.01
+    - have cancer test that is 90% positive if you have cancer
+      - sensitivity
+    - but also some false positives
+      - 90% negative if you don't have cancer
+        - specitivity
+    - what is probability of cancer if have positive test?
+      - result:
+        - Joint:
+          - P(c | Pos) = P(c) * P(Pos | c) = 0.01 * 0.9 = 0.009
+          - P(!c | Pos) = P(!c) * P(Pos | !c) = 0.99 * 0.1 = 0.099
+        - to normalize, compute sum: Pc | Pos) + P(!c | Pos) = 0.009 + 0.099 = 0.108
+        - so new posterior, which is joint divided by normalizer
+          - P(c | Pos) = joint / normalizer = 0.009 / 0.108 = 0.0833
+          - P(!c | Pos) = joint / norlizer = 0.099 / 0.108 = 0.9167
+  - rule is: Prior probability * test evidence = posterior 
+  
+  - other example:
+    - if two prople can send email, chris and sara
+    - if chrid uses 3 words with prob: love 0.1, deal 0.8, and life 0.1
+    - if sarah uses love 0.5, deal 0.2, life 0.3
+    - if there is 50% chance email comes from chris, and also from sarah
+      - if email is life deal,
+        - chris: 0.1 * 0.8 * 0.5 = 0.04
+        - sara: 0.3 * 0.2 * 0.5 = 0.03
+        - so P(chris | "life deal") = 0.04 / (0.07)
+        - P(sara | "life deal") = 0.03 / 0.07
+      - if email is "love deal"
+        - Joint(chris) = 0.1 * 0.8 * 0.5 = 0.08 * 0.5 = 0.04
+        - Joint(sara) = 0.5 * 0.2 * 0.5 = 0.1 * 0.5 = 0.05
+        - P(chris | "love deal") = 0.04 / 0.09 =
+        - P(sara | "love deal") = 0.05 / 0/09 = 
+        
+  
+  

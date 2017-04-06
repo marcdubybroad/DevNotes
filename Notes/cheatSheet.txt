@@ -1,0 +1,275 @@
+
+
+Screen notes:
+-------------
+- to scroll, CTRL-A, [
+- to detach, CTRL-A, CTRL-D
+- to reattach, screen -d -r
+- to name a screen, screen -S <name>
+  - to rename afterwards, screen -X sessionname foobars
+- to rename, (<ctrl>-a, :), followed by 'sessionname <name>'
+
+- tmux
+  - list: tmux ls
+  - detach: CTRL-b d
+  - new: tmux new -s session-name
+  - attach: tmx a -t session-name
+  - kill session: tmux kill -session -t session-name
+  
+Spring Boot:
+------------
+- build and test: gradle build
+  - w/o tests: gradle build -x test
+- run: gradle bootRun
+- build application
+  - use http://start.spring.io/ (spring 1.3.8)
+  - then unzip into workspace directory
+  - 
+Git:
+----
+- git stash
+  - git stash pop (to apply to code and delete stashed changes)
+
+- git clone for VMs/diguserx  
+  - git clone git@github.com:broadinstitute/dig-genome-store.git
+ 
+- remove DS_store files
+  - find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+
+- reset file
+  - git reset HEAD src/main/java/org/broadinstitute/genomestore/rest/Server.java (unstage)
+  - git checkout origin/master -- src/main/java/org/broadinstitute/genomestore/rest/Server.java (remove changes)
+  
+- git flow
+  - during rebase step, command is 'pick <hash>'. with hash being collapsed commit of all branch commits
+  
+- authentication
+  - for information
+    - ssh -T git@github.com
+  - for adding read-only user for repository checkout
+    - ssh-keygen -t rsa -b 4096 -C "email"
+    - eval "$(ssh-agent -s)"
+    - ssh-add ~/.ssh/id_rsa_t2d (name of file created in first step)
+    - cat ~/.ssh/id_rsa_t2d.pub (public key to provide github)
+
+- add command line repo
+  echo "# dig-genome-services" >> README.md
+  git init
+  git add README.md
+  git commit -m "first commit"
+  git remote add origin https://github.com/broadinstitute/dig-genome-services.git
+  git push -u origin master
+
+Mysql commands:
+---------------
+- mysqldump --host=<host_name> --user=<db_user> -p <db_name> `cat 20150625dbTables.txt` > 20150625dbDump.sql
+- mysqldump -u [user] -p[password] databasename `echo "show tables like 'table_name_%';" | mysql -u[user] -p[password] databasename | sed '/Tables_in/d'` > [target_file]
+- show tables like 'SAMPLE%';
+- get last 30 days updates in DB:
+  - select TABLE_NAME, UPDATE_TIME, CREATE_TIME, CHECK_TIME, TABLE_SCHEMA from information_schema.TABLES where TABLE_SCHEMA = 'dig_dev'
+    and  ((UPDATE_TIME > DATE_SUB(NOW(), INTERVAL 30 DAY)) or (CREATE_TIME > DATE_SUB(NOW(), INTERVAL 30 DAY)))
+- mysqldump -u root -p burden $(mysql -u root -p -D burden -Bse "show tables like 'SAMPLE%'") > 20170312bBurdenLocalhostDump.sql
+
+- SHOW GLOBAL VARIABLES LIKE '%version%';
+
+AWS ssh:
+--------
+- ssh -i ~/OTS/blah.pem ec2-user@blah.compute-1.amazonaws.com
+- scp -r -i <key pair>.pem backup.sql.gz ec2-user@<EC2 DNS>:/<target_directory>/backup.sql.gz
+
+Unix from Mac:
+--------------
+- ifconfig
+- zip -r archive_name.zip folder_to_compress
+
+
+AWS EC2:
+--------
+- fix server timeout issues for long running ajax processes
+  - modify /etc/httpd/conf/httpd.conf file
+  - command: sudo service httpd restart
+- to log tomcat
+  - tail -f /usr/share/tomcat8/logs/catalina.out 
+- to make portal and add in groovy config file
+  - sudo cp dig-diabetes-portal-commons-config.groovy /usr/share/tomcat8/.grails/dig-diabetes-portal/
+  
+Stats:
+------
+/home/unix/sripke/plink_src/plink_1.9_newest/plink --bfile  /humgen/atgu1/fs03/weisburd/1kg/ALL_chr8 --r2 dprime --ld-snp rs13266634 --ld-window-kb 1000 --ld-window-r2 0.6 --ld-window 99999 --out test.output 
+
+https://bootstrap.pypa.io/get-pip.py
+
+IntelliJ:
+---------
+- Generate executable for IntelliJ IDEA project: gradle idea
+
+Portal servers:
+---------------
+- to create dis in non ec2-user directories, use sudo
+- to build portal
+  - build EB
+  - punch hole in security group for RDS
+  - load RDS DB from dump
+  - add oauth file to /usr/share/tomcat8 directory
+  - add new VM to AWS KB security group, Broad VM access list
+
+
+REST servers:
+-------------
+- ssh -l mduby dig-qa-01
+- sudo -u diguser -i /bin/bash
+- script /dev/null
+- screen -r
+- <ctrl-C>
+- git pull
+- /humgen/diabetes/users/dig/gradle/gradle jettyRunWar
+- tail -f /humgen/diabetes/users/dig/mysqlserver/qa-02/qa/out/genomeStore.log
+
+Broad VM
+--------
+- /broad/software/free/Linux/redhat_6_x86_64/pkgs/gradle_2.11/bin/gradle
+
+Mounts:
+-------
+- smb://argon-cifs.broadinstitute.org/humgen_diabetes
+- \\argon-cifs.broadinstitute.org\humgen_diabetes
+
+Beacon:
+-------
+- server: broad-beacon
+- dir: /humgen/diabetes/users/dig/mysqlserver/beacon/dev
+
+Burden test:
+------------
+- mounts:
+  - ln -s /Volumes/humgen_diabetes/users/dig/analysis_engine/CollapsedPathwayBurdenTestForUnitTests/BurdenFiles /Users/mduby/Mounts/BurdenTestFiles
+  - smb://argon/humgen_diabetes
+- command
+- libraries paths needed
+  - export R_HOME=/broad/software/free/Linux/redhat_6_x86_64/pkgs/r_3.2.1/lib64/R
+  - export LD_LIBRARY_PATH=/broad/software/free/Linux/redhat_6_x86_64/pkgs/r_3.2.1/lib64/R/lib:$LD_LIBRARY_PATH
+  - export LD_LIBRARY_PATH=/broad/software/free/Linux/redhat_6_x86_64/pkgs/gcc_5.1.0/lib:/broad/software/free/Linux/redhat_6_x86_64/pkgs/gcc_5.1.0/lib64:$LD_LIBRARY_PATH
+  
+- server diirectories
+  - /humgen/diabetes/users/dig/pathway_burden_rest_server/prod (8090)
+  - /humgen/diabetes/users/dig/pathway_burden_rest_server/prod01 (8090)
+  - /humgen/diabetes/users/dig/pathway_burden_rest_server/stage (8087)
+  - /humgen/diabetes/users/dig/pathway_burden_rest_server/dev (8888)
+  - /humgen/diabetes/users/dig/pathway_burden_rest_server/intel (8091)
+  
+- commands to check cvcf files
+  - zcat /humgen/diabetes/users/dig/analysis_engine/CollapsedPathwayBurdenTest.31.0.17.101/camp.biallelic.chr1-22.clean.GT.cvcf.gz | head -n50 | cut -c1-100
+
+R_HOME = /usr/local/Cellar/r/3.3.0/R.framework/Versions/3.3/Resources/
+
+- DOS/GT/NALT
+  - DOS is dosage, calculating the 0/1/2 value overa probability distribution; GT is genotype (0/1/2). NALT is number of alternate alleles
+  
+Foghorn:
+--------
+  - use branch: tj_burden_pathway_preprocessing
+  - https://github.com/broadinstitute/foghorn/tree/tj_burden_pathway_preprocessing
+  - ./foghorn -l error -f DOS -s 0 -t vnc -i /humgen/diabetes/users/dig/foghorn_debug/intel.slc30a8.smaller.vcf.gz
+    -o /humgen/diabetes/users/dig/foghorn_debug/intel.slc30a8.smallerMarcAlso.cvcf
+  - tabix -s 1 -b 2 -e 2 -c "#" some.vcf.gz
+  - use commands
+use .gcc-4.9.1
+use .cmake-3.0.0
+use .boost-1.55
+use .boost-build-2.0
+use .fftw-3.3.4
+  
+  
+Intellij
+http://jetbrains.broadinstitute.org:8080/
+
+Linux Shell Commands:
+---------------------
+- tar one directory to another untar
+  - tar cf - . | (cd ../ReCopy && tar xvf - )
+  
+Bash shortcuts:
+---------------
+- move start of line: ctrl-a
+- move end of line: ctrl-e
+- move back one word: meta-b
+- move forward one word: meta-f
+
+Burden PED upload:
+------------------
+- use code /Users/mduby//Apps/WorkspaceScratch/dig-genome-uploader
+  - create data_files.list and schema_files.list
+  - do 'head -1 <ped file> > <data>.schema' to get the header list'; use :%s/\r/\r/g in vi if have ^M as opposed to CR
+  - check in Excel ped file to see what columns have what kind of data
+  - add start of file (#SKIP_HEADER	1 /n #SKIP_COLUMN	DUMMY); add types to header list file (STRING, INTEGER, FLOAT)
+  - run command:
+   - java -jar build/libs/my_clone-0.1.jar
+      --configFile src/main/resources/config.properties mysql_upload
+      --entity kaan --primaryKey ID --keyType STRING --mysqlConfigFile mysql.config.properties
+      --schemaList /v3_t2d_file_list/schema_file.list
+      --fileList /v3_t2d_file_list/data_file.list
+  - if get any error, make sure the scema file is all tab delimited (expecially the HEADER 1 part)
+      
+Burden add new dataset:
+-----------------------
+- copy cvcf.gz, cvcf.gz.tbi and ped file to directory
+- in dig-analisys-engine code
+  - add new mdv version to src/main/resources/config.properties
+  - add new phenotype to Phenotypes.java file
+  
+Burden PED file creation from MySQL:
+------------------------------------
+- echo 'select *, ID from SAMPLE_26k' | mysql -u root -p dig_kb > e26k.covar.fromMysql.ped
+- add #I (turn ID to IID) to first line; header line must start wiht # character and there can only be one ID field in header line
+- replace NULL with NA entries in vi: :%s/search_string/replacement_string/g
+
+Android:
+--------
+- to run phone for debuging
+  - find 'build number' in settings menu, tap 7 times
+  - after dev options enabled, flid 'usb debugging' flag
+  
+ExAC beacon:
+------------
+- server is broad-beacon
+- directory is:  /humgen/diabetes/users/dig/beacon_server/dev/out/
+- to count lines by date is: uniq -w10 -c query.log
+
+Management:
+-----------
+  - RACI: responsible - accountable - consulted - informed
+  
+Google OAuth:
+-------------
+  - create new key
+  - add new client key to Config.groovy
+  - put server key in .grails/dig-diabetes-portal/*.groovy file
+  - make sure new auth account has plugins available: google+, identity, blogger
+
+Sql Developer:
+--------------
+- create ERD pdf
+  - File -> Data Modeler -> Import
+  
+Burden tables to back up:
+-------------------------
+SAMPLE                     
+SAMPLES_DATASET            
+SAMPLES_ID_PH              
+SAMPLES_PROP               
+SAMPLES_PROP_ID            
+SAMPLES_PROP_ID_PH         
+SAMPLES_common_dv1         
+SAMPLE_13k                 
+SAMPLE_17k                 
+SAMPLE_26k                 
+SAMPLE_26kbackup    
+SAMPLE_STROKE
+
+DATASET
+ID_PH
+PH
+PROP
+PROP_ID
+PROP_ID_PH
+common_dv1

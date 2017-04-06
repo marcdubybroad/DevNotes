@@ -1,0 +1,42 @@
+
+- How to cloudify app
+
+
+- to avoid putting tokens in code
+  - identity pool
+  - pushing configs into the cloud
+  
+  
+- cognito service
+  - cognito verifies fb and goog services
+  - cognito then creates token and returns to app the token
+  - can use 'mobile hub' service to use wizards to create the cognito users
+  - options
+    - manage federated identities
+      - save goog auth creds?
+    -manage user profiles
+      - managed directory of users
+      - can also help to manage user devices
+      -
+  - ery similar to Firebase auth
+  
+- best to use nosql vs relational for very dynamic data
+
+- serverless
+  - instead of standing up VM and db + back end app
+    - just have code to get stood up as needed
+    - lambda (aws) + cloud functions (gcp)
+    - lambda demo
+      - can load jsr/zip in s3 bucket
+      
+- twitter - taraw
+  - code will be there
+    - github.com/taraw
+    
+  
+  
+  
+  
+  
+  
+  

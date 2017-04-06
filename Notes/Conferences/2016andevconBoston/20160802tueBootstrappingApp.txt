@@ -1,0 +1,96 @@
+
+- presentation at:
+  - http://www.slideshare.net/CraigPhares/bootstrapping-an-app-for-launch
+
+- developped sample biityPic app in 5 hours on train to andevcon
+  - what helped with quick dev
+    - same arch as used normally
+    - have exp with fb libs, firebase
+    
+- startups
+  - if just improving on an idea, go from 1 to n
+    - if build something new, go from 0 to 1
+    
+- product market fit: being in a good maerkeet
+  - andreesen
+
+- how much to build an app
+  - avg: 150k to 250k
+  - howmuchtomakeanapp.com
+  
+- costs nationwide
+  - staff
+    - graphic designeer, 51k, $25 an hour
+    - back end eng, 90k
+    - android, 85k,
+    - pm, 110k,
+  - aws servers, 60 a month
+    - heroku 125 a mont
+    
+- example app
+  - social login, user profile, frinships, user generated content, push notif, location,
+  - if take out back end (server, back dev, pm), take out 1/2 costs
+  - theleanstartup.com
+    - start with mvp (min viablee product)
+    
+- amazon lambda
+  - on demand instance service
+  - 'serverless' is a framework woth working with ambda
+    - http://serverless.com/
+    
+- if use server less approach
+  - use mutiple services to replace your own back end
+  
+- free tier back end services
+  - file storage: cloudinary, filestack
+  - analytics: flurry, segment, localytics, fabric
+  - push noti: urban airship, pubnub, onesignal (totally free, but read privacy policy)
+  -
+  
+- mobile bass (back end as a setvice)
+  - parse, github repo
+    - github.com/ParsePlatform/parse-server
+    - kinvey (auth, data, file, push, sms, analytics)
+    - amazon (auth, data, cloud logic, nsql, push, analysitncs)
+    - firebase (db, auth, push, file, remote config, analytics)
+    
+- demo
+  - github.com/sixoverground/bittypic-android
+  
+- Notes
+  - sql vs nosql
+    - with sql, big queries to avoid too many calls to db
+    - nosql, not as big a deal; multiple calls is good
+   
+- tools
+  - sketch for design
+    - just for mac
+    
+- after launch, how to get product market fit
+   - create a landing page, before launch
+     - worry less about people stealing idea
+       - best to get word out asap
+  - mailchimp, collect emails
+  - have social precense
+    - fb, twitter, lokedin, snapchat, instagram, vine
+  - launch date
+    - thunderclap.it
+      - service to generate buzz
+  - test, test, test
+    - services to test beta; submit 3 months early due to lag
+      - beta list
+      - preapps
+  - slacklist.info
+    - currated lists
+  - reddit
+    - /r/startups, /r/sideproject, /r/apps
+  - hacker news
+    - news.ycombinator.com
+  - helpareporter.com
+  - socialrank.com
+    - helps mine your online networks for the biggest influendcers
+  - uberhunters.com
+    - product hunt
+  - 
+
+

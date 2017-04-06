@@ -1,0 +1,80 @@
+
+- Android design patterns
+
+- mvc dead in android now
+  - rx better
+  - mvp good for small procets
+  - MVVM bad for data binfing
+  - clean arch: from book 'clean code' o 'cleaner code'
+  
+- mvp or not
+  - some startups junk the code after a certain stage
+    - FB for example
+    
+- pair programming
+  - switch people, never same pair of eyes on the code
+  - one way to get newbies up to speed quickly
+  
+- process
+  - use sonarqube to look over code
+  - also codecheera (sp?)
+  
+- seperation of concerns
+  - don't cross the streams
+  
+- MVC
+  - model: what to render
+  - view: how to render it
+  - controller: what to do with ser inputs
+  
+- MVP (model view presenter)
+  - does seeperate more into layers than MVC
+  - model now takes business logic
+    - con: if the data model changes, since the transfer object is shared, view and presenter have to change
+  - view and presenter very light
+  - example: https://github.com/erikcaffrey/Android-Spotify-MVP
+  
+- MVVM
+  - con: data binding might not be appropriate
+  
+- rxJava
+  - an alternative for AsyncTask
+  - publish/subscribe queue based library
+  
+- MVC with rxJava
+  - https://github.com/yigit/dev-summit-architecture-demo
+  
+- CLEAN architecture
+  - pros: better decoupling, reusability
+  - cons: a lot more layers
+  - for cirsle diagram, only comminucate between circles if they have a shared boundary
+    - 'do not cross the streans'
+  - look at Kotlin as a good example
+  - con: steep leraning curve
+  
+- http://www.sonarqube.org/
+
+- code reviews
+  - can have teacher/student interaction
+    - causes friction
+    
+- YAGNI
+  - you ain't gonna need it
+    - keep it simple
+    
+- books
+  - smaller faster java
+  - cleaner code
+    - https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882
+  - agile android
+  
+- speaker
+  - https://www.amazon.com/Godfrey-Nolan/e/B00IJ63RGQ/ref=ntt_dp_epwbk_1
+  
+  
+- SOLID
+  - https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)
+  
+  
+
+

@@ -1,0 +1,68 @@
+
+
+- Unit testing android
+
+- ecommend using expresso
+- gui testing always hard,epecially when it changes
+  - tests may fail
+  
+- unit tests
+  - group tests between small/medium/large tests
+  - apply same refactoring techniques to test code as normal code
+    - use parameetsr
+  - best
+    - command lone
+    - setup and teardown
+      - setup data, then remove it in teardown
+    - grouping tests by size
+      - table on ghow to rank tests
+    - parameters
+    - assertions
+    - code coverage
+      - sonarqube; display stats screen on walls
+      
+- tools
+  - hamcrest
+    - extension of assert framework
+  - mockito
+    - for mocking
+  - roboelectric
+    - still a little bit flaky
+    - good for testing activities without firing up emulator
+  - jenkins
+    - continuous integrtion server
+    - alt: bodybuild, travis
+    - con: can be hard to set up it running emaulator
+      - isue on defautl install
+      - will need to modify config, bt can be done
+    - used to be hudson
+   - sonarqube
+     - code analysis; makes a more objective conversation for code reviews
+       - avoid conflicts
+    - an hour or 2 to get up an running
+    - can slaos write own rules
+    
+- TDD
+  -
+  
+- Espresso
+  - gui testing
+  - ex animated gif: split person doing puchups and in place jog -> funny
+  -
+  
+- Code
+  - use interfaces
+  - shrink activities, avoid huge activities
+  
+- working effectively writing code
+  - https://www.amazon.co.uk/Working-Effectively-Legacy-Michael-Feathers/dp/0131177052
+  - https://www.amazon.co.uk/Working-Effectively-Unit-Tests-Fields-ebook/dp/B00QS2HXUO/ref=sr_1_3?s=books&ie=UTF8&qid=1470242137&sr=1-3
+  
+
+  
+  
+  
+  
+      
+    
+    

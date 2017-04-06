@@ -1,0 +1,7 @@
+
+20160719 - prod AE, dig-dev port 8090
+- change
+  - was - master, 78ff9fd1078981547ff3679eacb5868572737085, meta endpoint merge
+  - now - master, 02471f8c853e0f8d244648e177b3064a4298dd44, sample filter merge
+  
+  

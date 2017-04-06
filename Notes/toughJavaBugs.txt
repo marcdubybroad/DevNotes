@@ -1,0 +1,17 @@
+
+
+
+20170227 - get 'did not find common sample group' error
+  - mysqldb wasn't loading, so caught exception lead to empty list
+  
+
+20170221 - had TreeSet trim given list of Property objects from 28 to 10
+- error
+  - was using comparator in TreeSet constructor that had compareTo() method that compared on name if same property type (common vs sg property)
+  - HashSet didn't have this issue
+- fix
+  - compare on getId() of property instead
+  - does not sort by data set, through, but not needed
+  
+  
+  

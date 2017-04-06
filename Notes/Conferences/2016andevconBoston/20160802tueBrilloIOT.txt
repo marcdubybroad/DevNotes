@@ -1,0 +1,33 @@
+
+
+- IOT
+
+- advantages of android
+  - sdk/ndk
+  - ndb
+  - fastboot
+  - very rich APIs
+  
+- headless android
+
+- brillo/weave
+  - new google platform for IOT
+  - still not officially released
+  - can sign up for developer preview
+  - weave
+    - network protocol
+    - to help comm with google cloud
+    
+- to fetch brillo
+  - repo init -u https://android/googlesource.com/brillo/manifest
+  - repo init -u https://android/googlesource.com/platform/manifest
+  
+- android vs embedded linux
+  - everything abve llinux kernel in android is differnet
+    - c library, called 'bionic', bsd license
+
+  - there is a hardwrae abstraction layer
+  
+  
+  
+  

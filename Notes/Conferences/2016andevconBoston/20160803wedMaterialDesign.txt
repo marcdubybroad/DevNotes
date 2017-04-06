@@ -1,0 +1,25 @@
+
+
+- Material design
+
+- color and theme
+  - have backgorund color and accent color
+  
+- typography
+  
+- custom fonts
+  - googlefonts.com; lots of open source foonts
+  
+- pallete api
+  - good way to pick colors from existing images
+  - can then real time customiize look of app based on content
+  
+- raster (specific number of pixels) vs vector (uses math)
+  - android now supprts vector graphics
+  
+  
+
+  
+  
+  
+  

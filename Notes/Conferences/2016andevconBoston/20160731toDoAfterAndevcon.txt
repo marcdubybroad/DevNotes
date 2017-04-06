@@ -1,0 +1,17 @@
+
+- personal
+  - read bootstrap notes from tues and look at all linsks
+  - go throgh bitty pic code; document, get keys, run
+  - try Firebase app
+    - location storing, auth, database
+    
+
+- work
+  - look at aws lambda
+  - for fed: https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)
+  - look at free tier nosql providers
+  
+  
+
+
+

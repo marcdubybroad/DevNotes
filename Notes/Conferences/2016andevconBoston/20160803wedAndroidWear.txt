@@ -1,0 +1,71 @@
+
+- Android Wear
+
+- left to right interactions
+  - new way to do this in 2.0
+  - easier to go back to start
+    - research
+    
+- move to dark colors
+  - better for social env
+  - etter for battery life
+  
+- https://www.google.com/design/spec-wear
+
+- standalone apps
+  - idea to go running without my ohone
+  - not worry about bluetooth
+  - enable watch with simm cards
+  - watch can do own http rest calls
+  - watch can do own auth
+  - notifications can now be sent through Firebase from the phone to the watch
+    - can also specify of send app notifications only to one device
+    - can end up with 2 notifications if send to both
+      - can disable phone to watch notif bridginh
+        - will only diable notif if there is a watch component to it and it is installed
+      - also synchronized dismissal API
+        - when dismissed on one device, will also be dismissed on the other as well
+  - apps downloaded from play store
+    - do not necessarily have to install on phone as well
+    - so wear app is like a phone app
+      - independent device now
+    - so now move away from bundling the phone/wear apks together
+      - but still backward compatible
+      
+- smart replies
+  - please enable these
+    - good for tensor flow work
+  - setAllowGeneratedReplies()
+      
+- watch activities
+  - activity recognition for activity
+    - can recognize deadlift,pushups,squats, etc
+    - individual to lots of others
+  - available in 1.0 now, in fit app
+    - will be api in 2.0
+    
+- what makes good wear app
+  - activity
+    - fit cat
+  - games
+    - 
+  - nutrition
+    - 
+  - coaching
+    -
+    
+- wear preview docs
+  - g.co/wearpreview
+  - https://developer.android.com/wear/preview/index.html
+  
+- firebase on wear
+  - emote config
+  - analytics
+  - crash recording
+  
+  
+- 60 mins code labs
+  - codelabs.developers.google.com/
+    
+
+

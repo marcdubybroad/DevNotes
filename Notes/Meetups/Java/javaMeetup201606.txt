@@ -1,0 +1,117 @@
+
+
+Pivotal roadhow - cloud native applications
+- micro services
+  - solid contracts between each service
+  - can deploy at any time
+  - automted testing is necessary
+  -
+  
+- CF architecture
+  - BOSH release
+    - deploy, upgrade, patch, have version
+    - lifecycle management for distributed architecture
+
+- http://cloudfoundry.org
+- pcfdev.io
+
+  
+- sprng boot
+- spring cloud
+  
+  
+- distributed tracing
+  - track request from edge (end user) then traverse micro services tree
+  - Zipkin tracing
+  
+- elements
+  - rapid provisioning
+  - scale horizontally
+  - no downtime platform
+  - 
+
+- Minimum Viable Platform (MVP)
+  - dynamic dns, routing and LB
+  - backing services broker
+    - reddis cluster
+  - infrastructure orchestration
+  - health management, monitoring and recovery
+    - self healing systems
+  - immutable artifact repository
+    - snapshot of point in time of a service
+    - CF usses containers for this; containers are immutable artifacts
+    
+- brew install ponysay
+
+- resourcess
+  - start.pring.io
+  
+- example
+  - manifest.yml
+    - set max memeory; if exceeds, then new is started
+    
+  - use maven wrapper for build environment
+  
+- spring boot demo - code
+  - shop app, 10 services
+    - web (1)
+      - order service web
+    - middle (4)
+      - user service
+      - edge service
+      - configuration service
+      - discovery service
+    - bottom (5)
+      - cart service
+      - order service
+      - 
+
+- spring boot
+  - provides health endpoint
+  - env endpoint
+  - metrics endpoint
+  
+- spring session for Reddis cache db
+
+- cloud roadblocks
+  - legacy apps
+  - legacy culture of devs
+  - 
+- demo notes
+  - public interface UserRepository extends JPARepository {}
+  - Arrays.asList()
+  - @EnableDiscoveryClient
+  - @EnableZuulProxy
+  - @EnableBinding(Processor.class)   -> for pipelibne micri service
+  
+  
+  
+- spring loud
+  - service discovery
+  - api gateway
+  - config server
+    - can push configs here, get distributed out
+  - circuit breakers
+    - allow specify default fall back functionality in case of breakage
+    - reroutes calls to safe path until missing servic is back
+  - distributed tracing
+  
+- spring cloud stream
+  - could use for transport options: rabiitmq, kafka, apache geode, reddis
+  
+- spring data flow
+- spring boot app that uses spark
+
+  
+- how to split into services
+  - online banking (web)
+  - discovery service, configuration service (web service)
+  - customer service (data service)
+  
+- 12 factor methodology
+
+- preenters
+  - kenny bastani
+  
+      
+      

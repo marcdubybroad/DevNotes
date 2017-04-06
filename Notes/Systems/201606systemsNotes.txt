@@ -1,0 +1,23 @@
+
+20160913 - burden merge of conf file changes
+- comit t- rebase to: 02471f8c853e0f8d244648e177b3064a4298dd44
+- deciode to skip since 
+
+
+
+20160608 - aws deployment for ADA
+- ToDo
+  + update code
+  - copy metadata (data and samples) from qa to aws
+  - copy 2 data tables from qa to AWS
+- Done
+  - updated git from md_samples_rest to master
+    - use work git account to log in and pull
+- State
+    # On branch md_sample_rest
+    nothing to commit, working directory clean
+    
+    
+    
+    
+    

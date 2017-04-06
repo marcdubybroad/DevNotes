@@ -1,0 +1,99 @@
+
+- Google keynote
+
+- new and awesome
+  - multi window mode
+    - can have multiple activities up
+  - drag and drop between activities
+  - notifications
+    - also bundled notifications
+    - direct reply in notification
+  - quick settings
+    - can also create own settings tile in your app
+  - diaply size
+    - everything gets bigger, navbar as well, not just font
+  - project svelte
+  - data saver
+    - limit data usage on per application basis
+  - scoped riectory access permission
+  - android for work
+    - good way to turn off apps for the weekend
+    - can also make work apps moe secure, extra password, than the lock screen
+  - vulkan
+    - low overhead 3d api
+  -
+  
+- android studio
+  - new 2.0
+    - instant run, swap code in real time
+    - lot faster
+  - 2.1
+    - n developer previw
+  - 2.2
+    - still faster
+    - android platform supprt
+    - more firebase integration
+  - emulators
+    - 3x faster
+    - faster than device
+    - also build with instant run
+      - how instant run work
+        - hot swap: pointer to new bin changed
+        - warm swap: when
+        - cold swap: restart all app (inherirance changes)
+  - new layout editor
+    - no longer required to go into xml
+    
+- Firebase
+  - development
+    - realtime database
+    - authentication
+    - hosting, static file assets, ssl encrypted by default
+    - storage, google cloud storage
+    - cloud messaging, cross platform messaging solution
+    - remote config: put app config vars intot he cloud; can modify app withotu redeploying
+    - test lab for android
+    - crash reporting
+  - to grow user base
+    - invites
+    - dynamic links, single url to manage installation and provide deep links into app contents
+    - google adwords
+    - app indexing: gets app into google search
+    - notifications: targetted user notifications
+  - earn
+    - admob:
+    
+- machine learning
+  - tensor flow (tensorflow.org)
+    - face detector for face landmarks
+    - expecially good for deep learning
+    - deep query
+    - supprt for android
+  - steps for ml example
+    - get data set, 'mnist' data set
+    - split 90% traning data, 10% test data
+    - pick stats model, classigier
+      - linear classifier (LinearClassifer) picked, so 28x28 image becomes a 784 array
+      - assign a weight for each 784 postions
+        - start with random weights
+        - as learn, weights will change -> learning of the weights
+          - this is done by the fit method
+            - uses gradient descent
+            - back propagaion algorithm
+    - train classifer, then test and eevaluate
+      - got 92% accuracy
+      - can gtet better accuracy with DNNNClassifier (deep neural networ classifier)
+    - to pick this up
+      - tensorflow.org
+      - start with tensor flow for poets
+      - then go to tensor flow for android
+      
+  - gcp
+    - ml models for speech, vision, translation
+      - label detection, face detection ocr, landmark detection, logo detection, exhibit content detection
+    
+  
+    
+
+
+  

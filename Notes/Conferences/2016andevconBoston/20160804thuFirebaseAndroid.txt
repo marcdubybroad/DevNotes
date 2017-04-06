@@ -1,0 +1,77 @@
+
+
+- Firebase services
+
+- database
+  - nosql database
+  - json file with nodes and children, key value
+  -
+
+- firebase ui lib
+
+- start
+  - go to console
+    - console.firebase.google.com
+    - will show cloud projects
+  - create project
+    - create json credentials file
+    - add the library to the project
+    -
+  - security rules
+    - ex:
+      {
+        "rules": {
+          "read": true,
+          "write" : "auth!= null"
+        }
+      }
+  
+  - add manifest internet permissions
+  - add code to activity
+    - ex:
+        database = FirebaseDatabase.getInstance();
+        DatabaseReference messageReference = database.getReference().child(MESSAGE_CHILD);
+        messageReference.setValue("Hello, World!");
+
+  - read from the database
+    - listener
+      - ChildEventListener
+        - onChildAdded(), onChildMoved(), onChildUpdated(), onChildDeleted()
+        
+  - firebase UI model
+    - POJO
+    - will handle all the layout
+      - will display login buttons by itslef
+      - bbeter than doing it yourself
+      - does not support twitter for layout, so will have to do that yourself if use that for login
+      
+  - aithentication
+    - ex:
+        FirebaseAuth auth = FirebaseAuth.getInstance();
+        
+  - write perm
+    "$itemid": {
+      "read" : "auth!= null",
+      "write": "auth != null &&
+                    {!data.exists() || data.child("user_id").val() == auth.uid)"},
+                    ".validate": "newData.hasChild('user_id')"
+    }
+  
+- there are 15 features in Firebase
+  - veru good documentation
+  - code lab is very good
+  - free tiers for all features
+  
+  
+- other libraryes
+  - ButterKnife
+    - good lib for the view handling, finding, event handling
+    
+  
+- quote
+  - life is what happens when you wait for a build to compile
+  
+      
+      
+      
+      

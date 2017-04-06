@@ -1,0 +1,20 @@
+use .gcc-4.9.1
+use .cmake-3.0.0
+use .boost-1.55
+use .boost-build-2.0
+use .fftw-3.3.4
+rm -rf build
+mkdir build
+cd build
+cmake .. -DCMAKE_C_COMPILER=`which gcc` -DCMAKE_CXX_COMPILER=`which g++`
+make
+
+
+
+fixing gzipped file
+
+```zcat BIOME_AFFY.CLUSTERED.clean.chr1-22.epacts.compressed.vcf.gz | tail -n +7 | bgzip > BIOME_AFFY.CLUSTERED.clean.chr1-22.epacts.compressed.fixed.vcf.gz
+```
+but `zcat` seemed to be a problem; perhaps
+```bgzip -d -c BIOME_AFFY.CLUSTERED.clean.chr1-22.epacts.compressed.vcf.gz | tail -n +7 | bgzip > BIOME_AFFY.CLUSTERED.clean.chr1-22.epacts.compressed.fixed.vcf.gz```
+

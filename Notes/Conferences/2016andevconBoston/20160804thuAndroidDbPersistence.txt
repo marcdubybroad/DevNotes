@@ -1,0 +1,41 @@
+
+
+- How to better do database in Andoird
+
+- Realm
+  - written in C, runs on device
+  - very fast
+  - 2x faster than sql lite for inserts
+    - evenn faster when look at ORMs on top of sql lite
+    - queries 5x
+    - count, 10x
+  - open spurce
+  - how it works
+    - extend RealmObject
+  - async
+    - cann return Promise (similar to Java Future) for some queires
+      - this keeps the app from blocking waiting on query
+  - can insert json directly
+    - will parse automatically
+  - can encrypt data file
+    - good for healthcare apps
+  - there is a realm browser that orks on mac
+  
+  
+- RoboGuice
+  - dependency injection for Android using Google Guice library
+  - 7 annotations to be useful
+  - non invasive
+    - @Inject on constructor -> can only specify one constructor with this annot
+    - but can add non annotated constructors as well, possibly for ttesting
+  - can create providers
+    - default scope is new instance for evey call
+    - can also specify as singleton (ContextSingleton.class)
+    
+   
+  
+- author
+  - worked for cardibal health
+  
+  
+  

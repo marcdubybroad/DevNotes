@@ -1,0 +1,67 @@
+
+- see https://github.com/colintheshots/AnDevCon-RxPatterns
+
+- https://github.com/ReactiveX/RxJava
+
+- https://github.com/ReactiveX/RxJava/wiki
+
+
+
+
+
+            mGitHubClient = new RestAdapter.Builder()
+                    .setRequestInterceptor(new RequestInterceptor() {
+                        @Override
+                        public void intercept(RequestFacade request) {
+                            request.addHeader("Authorization", "token " + Secrets.GITHUB_PERSONAL_ACCESS_TOKEN);
+                        }
+                    })
+                    .setEndpoint(GITHUB_BASE_URL)
+                    .setLogLevel(RestAdapter.LogLevel.HEADERS).build()
+                    .create(GitHubClient.class);
+        }
+        
+        
+        
+                mGitHubClient.gists()
+                .flatMap(new Func1<List<Gist>, Observable<GistDetail>>() {
+                    @Override
+                    public Observable<GistDetail> call(List<Gist> gists) {
+                        return mGitHubClient.gist(gists.get(0).getId());
+                    }
+                })
+                .flatMap(new Func1<GistDetail, Observable<CallResponse>>() {
+
+                    @Override
+                    public Observable<CallResponse> call(GistDetail gistDetail) {
+                        try {
+                            List<String> keysAsArray = new ArrayList<String>(gistDetail.getFiles().keySet());
+                            String content = gistDetail.getFiles().get(keysAsArray.get(0)).getContent();
+                            return mTwilioInterface.makeCall(
+                                    Secrets.twilio_accountsid,
+                                    Secrets.twilio_from_number,
+                                    Secrets.twilio_to_number,
+                                    "http://twimlets.com/menu?Message="
+                                            + URLEncoder.encode(content, "UTF-8")
+                            );
+                        } catch (UnsupportedEncodingException e) {
+                            e.printStackTrace();
+                            return null;
+                        }
+                    }
+                }).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(new Action1<CallResponse>() {
+                    @Override
+                    public void call(CallResponse callResponse) {
+                        // Do nothing really
+                    }
+                }, new Action1<Throwable>() {
+                    @Override
+                    public void call(Throwable throwable) {
+                        throwable.printStackTrace();
+                    }
+                });
+                
+                
+                
+                

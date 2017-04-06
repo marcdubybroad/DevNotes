@@ -1,0 +1,121 @@
+
+
+- why services
+  - seperate from UI
+  
+- to be service
+  - subclass android.os.Service
+  - be declared in the manifest
+  - must define onBind() method
+    - can return null if want to
+
+- servive
+  - be default not expotable
+    - will not be seen outside application
+  - never instantiate service yourself
+    - android will use no args constructor to do it
+  - don'tdo things in the constructor
+    - the service is not stable until created
+    - use the onCreate() method
+  - android stops application by 'kill -9'
+    - so some cleanup in onDestroy() will not happen
+  - service priority number
+    - android assigns this number
+    - 0 or below, applicatill not be killed
+    - uses this number to conserve battery, most precious resource
+    - -17 to 15
+      - >0 likely to be killed
+    - if put in service, less likely to be killed
+
+  - marshalling/unmarshalling
+    - translate an operation that is a method call ito a generic methd call
+      - the argument will be what you need ot do
+      
+  - the only way to send an intent to a service is to call startService()
+  
+  
+  - start
+    - Context.startService(intent)
+    - Context.stopService(intent)
+
+- code demo
+  - 3 things needed for service
+    - default constructor
+    - onBind() override
+    - added to manifest
+  - add onStart() override method
+    - keep the @override annotation
+    
+  
+- problems with demo code
+  - onStart() command runs on the UI thread
+  - can use AsyncTask to get things off the UI thread
+  - for demo, add asynctask, works as bridge between 2 threads
+    - Thread.currentThread(), get the thread number
+    - try to figure out how to stop the service when it is idle
+    
+- asynTasks
+  - safe to use in services
+  - problems in activities, since they hold a handle to the activity
+  - there's no way to return a value
+  
+- task services
+  - executeOnExceutor(NETWORK_QUERY_EXECUTOR, intent);
+  - runs in background?
+  
+- intent service
+  - similar to the async task service
+  - one thread per service
+  - tasks can communicate w/o synchronizatyion
+  - in order exceution
+  
+- bound services
+
+- local service trick
+  - extend binder
+    - can return itself
+    - the thing that the binder returns, appears in the onServiceConnected() method argument
+    - then cast what got returned to (LocalService1.ServiceHolder)
+    - now have a reference to the singleton instance of the LocalService object that Android created
+  - can't create a service, but can bind to it
+  
+- app0 code review
+  -
+  
+- security for services
+  - for 2 processes to have access to the same data, they must have the same user id
+  - this is linux user secutiry
+  
+    
+- best practices
+  - when soemthing goes wrong, fail as fast as possiblr
+    - bets way to debug
+    - 'fail fast'
+    
+- demo01 solution code
+
+  public int onStart() {
+    new AsyncTask<Intent, Void, Void> {
+      protected Void doInBackgrond(Intent... intent) {
+        try {
+          runnin++;
+          processIntent(intent[0]);
+        }
+        finally {
+          if (0 >= --running) {
+          
+          }
+        }
+      }
+      
+      void processIntent(Intent intent) {
+      
+      }
+    }
+  }
+    
+    
+    
+    
+    
+  
