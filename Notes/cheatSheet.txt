@@ -54,16 +54,21 @@ Git:
   - during rebase step, command is 'pick <hash>'. with hash being collapsed commit of all branch commits
   
 - authentication
-  - for information
+  - for information -> checks that key is installed correctly for that VM
     - ssh -T git@github.com
   - for adding read-only user for repository checkout
-    - ssh-keygen -t rsa -b 4096 -C "email"
-    - eval "$(ssh-agent -s)"
-    - ssh-add ~/.ssh/id_rsa_t2d (name of file created in first step)
-    - cat ~/.ssh/id_rsa_t2d.pub (public key to provide github)
-
+    - ssh-keygen -t rsa -b 4096 -C "diguser@broadinstitute.org"
+      - then type in pass pharse (pass phrase will be linked to key that is given to github account, not linked to individual repositories)
+    - for mac
+      - eval "$(ssh-agent -s)"
+      - ssh-add ~/.ssh/id_rsa_t2d (name of file created in first step)
+      - cat ~/.ssh/id_rsa_t2d.pub (public key to provide github)
+    - for linux
+      - copy .ssh/id_rsa.pub to mac, then pbcopy < <copied file>
+      - add to github account under settings/ssh keys
+      
 - switch repo so use ssh (for 2FA)
-  - git remote set-url git@github.com:<group>/<repository>.git
+  - git remote set-url origin git@github.com:broadinstitute/dig-services-permissions.git
   
 - add command line repo
   echo "# dig-genome-services" >> README.md
@@ -82,6 +87,7 @@ Mysql commands:
   - select TABLE_NAME, UPDATE_TIME, CREATE_TIME, CHECK_TIME, TABLE_SCHEMA from information_schema.TABLES where TABLE_SCHEMA = 'dig_dev'
     and  ((UPDATE_TIME > DATE_SUB(NOW(), INTERVAL 30 DAY)) or (CREATE_TIME > DATE_SUB(NOW(), INTERVAL 30 DAY)))
 - mysqldump -u root -p burden $(mysql -u root -p -D burden -Bse "show tables like 'SAMPLE%'") > 20170312bBurdenLocalhostDump.sql
+- mysqldump -u diguser -p --no-create-info -h rest-dev.cxrzznxifeib.us-east-1.rds.amazonaws.com --extended-insert=FALSE --where="COM_DS='TRUE'" dev PROP > 20170607newCommonProperties.sql
 
 - SHOW GLOBAL VARIABLES LIKE '%version%';
 

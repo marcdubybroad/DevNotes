@@ -1,0 +1,16 @@
+
+Lesson 02: Naive Bayes
+
+- classification from supervised learning
+  - take features and turn them into labels
+
+- scatter plots
+  - take dataa and transform into a decision surface
+  - dcision srface will seperate 2 classes of points
+    - can be linear
+
+- Python code
+  - sklearn library
+    - ml libarys
+    - use sklearn Gaussian naive bayes
+    

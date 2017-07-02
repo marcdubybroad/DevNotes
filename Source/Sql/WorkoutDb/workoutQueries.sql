@@ -69,7 +69,7 @@ where wactivity.workout_id = workout.workout_id
     and wday.week_id = week.week_id
     and week.period_id = period.period_id
     and period.year_id = wyear.year_id
-    and wyear.name = 2016
+    and wyear.name = 2017
     and wactivity.swim > 0
 order by wday.date;
 
