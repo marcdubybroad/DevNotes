@@ -13,7 +13,8 @@ from sklearn.naive_bayes import GaussianNB
 # create classifier
 clf = GaussianNB()
 
-# fit the classifier, with features and labels
+# fit/train the classifier, with features X and labels Y
+# lear the patterns
 clf.fit(X, Y)
 
 # predict new point, and predict lahel

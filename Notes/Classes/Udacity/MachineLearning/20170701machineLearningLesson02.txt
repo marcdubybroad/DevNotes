@@ -14,3 +14,41 @@ Lesson 02: Naive Bayes
     - ml libarys
     - use sklearn Gaussian naive bayes
     
+- fitting
+  - always train and tets on seperate sets of daat
+    - if data overloaps, you can overfit to your data
+    - so always save 10% of your data to use as your testing set
+      - use the test result to report progress of your ML
+      
+- bayes rule
+  - rev thomas bayes
+  - cancer exampe
+    - P(c) = 0.01 probability of cancer
+    - test:
+      - 90% correct if positive and you have cancer
+        - called sensitivity
+      - 90% correct if negative and do not have cancer
+        - called specitivity
+    - question: if you test is positive, what is the probability that you have cancer
+  - explained
+    - prior: prob before you run a test
+    - then get test evidence when you run the test
+    - result in posterior prob
+    - so bayes incorporates some information from a test into your prior to arrive to your posterior
+    - in cancer
+      - prior is cancer chance
+      - posterior is prob of cancer given positive test
+      - P(have cancer | positive test) = P(c) x P(positive | have cancer)
+        - P(c | pos) = 0.01 x 0.9 = 0.009
+      - P(no cancer | positive test) = P(!c) x (positive | no cancer)
+        - P(!c | pos) = P(!c) x P(pos | !c) = 0.99 x 0.1 = 0.099
+    - normalize
+      - need both probs to add up to 1; grow them keeping ratio consistent
+      - P(c | pos) + P(!c | pos) = 0.009 + 0.099 = 0.108
+      - P(pos) = P(c | pos) + P(!c | pos) = 0.108
+      
+    
+    
+    
+      
+    

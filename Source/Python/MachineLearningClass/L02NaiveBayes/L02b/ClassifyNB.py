@@ -6,9 +6,16 @@ def classify(features_train, labels_train):
     
         
     ### your code goes here!
+    # import library
     from sklearn.naive_bayes import GaussianNB
+    
+    # create the fitter
     clf = GaussianNB()
+    
+    # train/fit the data
     clf.fit(features_train, labels_train)
+    
+    # return
     return clf
 
 

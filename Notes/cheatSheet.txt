@@ -4,7 +4,7 @@ Screen notes:
 -------------
 - to scroll, CTRL-A, [
 - to detach, CTRL-A, CTRL-D
-- to reattach, screen -d -r
+- to force reattach, screen -d -r
 - to name a screen, screen -S <name>
   - to rename afterwards, screen -X sessionname foobars
 - to rename, (<ctrl>-a, :), followed by 'sessionname <name>'
@@ -26,8 +26,15 @@ Spring Boot:
 - build application
   - use http://start.spring.io/ (spring 1.3.8)
   - then unzip into workspace directory
-  -
   
+- to run application with mem config
+  - java -Xmx512m -Dspring.profiles.active=dev -jar app.jar
+  - also add .conf file where your .jar file ism with same name
+    - cat: export JAVA_OPTS="-Xmx1024m -Xms256m"
+    - setting
+      -Xms<size>        set initial Java heap size
+      -Xmx<size>        set maximum Java heap size
+      
 Git:
 ----
 - git stash
@@ -50,6 +57,13 @@ Git:
   - git reset HEAD src/main/java/org/broadinstitute/genomestore/rest/Server.java (unstage)
   - git checkout origin/master -- src/main/java/org/broadinstitute/genomestore/rest/Server.java (remove changes)
   
+- reset file
+  - git reset foo/bar.txt
+  - git checkout foo/bar.txt
+  
+- reset file after merge conflict
+  - git checkout HEAD src/main/resources/application.properties
+
 - git flow
   - during rebase step, command is 'pick <hash>'. with hash being collapsed commit of all branch commits
   
@@ -66,6 +80,8 @@ Git:
     - for linux
       - copy .ssh/id_rsa.pub to mac, then pbcopy < <copied file>
       - add to github account under settings/ssh keys
+  - dual factor
+    - https://sites.google.com/broadinstitute.org/2sv/github-2fa-for-jetbrains-ides?authuser=1
       
 - switch repo so use ssh (for 2FA)
   - git remote set-url origin git@github.com:broadinstitute/dig-services-permissions.git
@@ -104,6 +120,10 @@ Unix from Mac:
 - remove directories more than 300 days old
   - find * -type d -ctime +300 | xargs rm -rf
   
+EhCache:
+--------
+- logging.level.org.ehcache=INFO
+- add 'public org.ehcache.CacheManager cacheManager()' method to main class
 
 
 AWS EC2:
@@ -134,10 +154,10 @@ Portal servers:
 - to build portal
   - build EB
   - punch hole in security group for RDS
-  - load RDS DB from dump
+  - load RDS DB from dump for EC back end
   - add oauth file to /usr/share/tomcat8 directory
   - add new VM to AWS KB security group, Broad VM access list
-
+  - add new portal address to google redirector
 
 REST servers:
 -------------
@@ -149,6 +169,12 @@ REST servers:
 - git pull
 - /humgen/diabetes/users/dig/gradle/gradle jettyRunWar
 - tail -f /humgen/diabetes/users/dig/mysqlserver/qa-02/qa/out/genomeStore.log
+
+New KB2 REST server and VM:
+---------------------------
+- yum install mysql-server mysql
+- copy bashrc, java.tar, gradle.tar
+  
 
 Broad VM
 --------
@@ -184,6 +210,7 @@ Burden test:
   
 - commands to check cvcf files
   - zcat /humgen/diabetes/users/dig/analysis_engine/CollapsedPathwayBurdenTest.31.0.17.101/camp.biallelic.chr1-22.clean.GT.cvcf.gz | head -n50 | cut -c1-100
+  - tabix -H v4.clean.all.cvcf.DOS.150717.gz
 
 R_HOME = /usr/local/Cellar/r/3.3.0/R.framework/Versions/3.3/Resources/
 
@@ -204,14 +231,29 @@ use .boost-1.55
 use .boost-build-2.0
 use .fftw-3.3.4
   
+Python:
+-------
+- get env from python shell
+  - import os; print(os.environ.get('SPARK_CLASSPATH'))
   
-Intellij
+  
+Intellij:
+---------
 http://jetbrains.broadinstitute.org:8080/
 
 Linux Shell Commands:
 ---------------------
 - tar one directory to another untar
   - tar cf - . | (cd ../ReCopy && tar xvf - )
+  
+- what version and distribution running
+  - cat /etc/issue
+  - cat /etc/*release
+  - uname -a
+  
+- curl/get query
+  - wget -S -X POST --content-on-error --post-file=/CacheQuery/payload.json --header=Content-Type:application/json http://localhost:8090/dccservices/getData
+  
   
 Bash shortcuts:
 ---------------
@@ -247,6 +289,7 @@ Burden PED file creation from MySQL:
 - echo 'select *, ID from SAMPLE_26k' | mysql -u root -p dig_kb > e26k.covar.fromMysql.ped
 - add #I (turn ID to IID) to first line; header line must start wiht # character and there can only be one ID field in header line
 - replace NULL with NA entries in vi: :%s/search_string/replacement_string/g
+  - :%s/NULL/NA/g
 
 Android:
 --------
