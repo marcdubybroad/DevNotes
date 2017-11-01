@@ -1,0 +1,9 @@
+
+
+-- add row to SAMPLES_DATASET table
+insert into SAMPLES_DATASET
+select ID, EXP, SG, 'mdv91', PARENT, ANCESTRY, TECH, TBL, SORT, CASES, CONTROLS, SUBJECTS, MEANING
+  from SAMPLES_DATASET
+  where VER = 'mdv90';
+  
+  

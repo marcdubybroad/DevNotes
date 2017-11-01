@@ -34,6 +34,9 @@ Spring Boot:
     - setting
       -Xms<size>        set initial Java heap size
       -Xmx<size>        set maximum Java heap size
+
+- memory profiler
+  - Java mission control
       
 Git:
 ----
@@ -106,6 +109,11 @@ Mysql commands:
 - mysqldump -u diguser -p --no-create-info -h rest-dev.cxrzznxifeib.us-east-1.rds.amazonaws.com --extended-insert=FALSE --where="COM_DS='TRUE'" dev PROP > 20170607newCommonProperties.sql
 
 - SHOW GLOBAL VARIABLES LIKE '%version%';
+- show processlist;
+- show open tables where in_use > 0;
+- show full columns from GWAS_BioMe_dv1__BMI;
+- explain <sql query>
+
 
 AWS ssh:
 --------
@@ -318,6 +326,17 @@ Sql Developer:
 --------------
 - create ERD pdf
   - File -> Data Modeler -> Import
+  
+AWS VMs:
+--------
+- prod
+  - ec2-52-90-97-40.compute-1.amazonaws.com
+- prod backup/stage
+  - ec2-52-207-40-241.compute-1.amazonaws.com
+- qa
+  - ec2-34-228-247-254.compute-1.amazonaws.comuname
+- dev
+  - ec2-34-228-247-254.compute-1.amazonaws.com
   
 Burden tables to back up:
 -------------------------
