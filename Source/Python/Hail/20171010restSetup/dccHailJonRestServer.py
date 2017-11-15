@@ -52,9 +52,16 @@ hc = HailContext()
 vcf_path = "/home/ubuntu/Data/Hail/Camp/camp.biallelic.chr1-22.clean.vcf"
 campVds = hc.import_vcf(vcf_path)
 
+# load in phenotypes
+# use impute = True to let hail determine the type of the columns
+ped_path = "/home/ubuntu/Data/Hail/Camp/camp.phenotypes.epacts.withId.modified.ped"
+phenotypes = hc.import_table(ped_path, impute=True).key_by("ID")
+
 
 # export the VDS
-vds_path = vcf_path.replace(".vcf.gz",".vds")
+vds_path = vcf_path.replace(".vcf",".vds")
+print vds_path
+
 
 
 
