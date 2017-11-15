@@ -58,9 +58,17 @@ ped_path = "/home/ubuntu/Data/Hail/Camp/camp.phenotypes.epacts.withId.modified.p
 phenotypes = hc.import_table(ped_path, impute=True).key_by("ID")
 
 
+# annotate the loaded vds
+campVdsAnnotated = campVds.annotate_samples_table(phenotypes, root="sa.phenotypes")
+
+
 # export the VDS
+# build path
 vds_path = vcf_path.replace(".vcf",".vds")
 print vds_path
+
+# save the annotated vcf data
+campVdsAnnotated.write(vds_path)
 
 
 
