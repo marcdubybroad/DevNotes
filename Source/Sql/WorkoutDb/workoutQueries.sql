@@ -82,9 +82,22 @@ where wactivity.workout_id = workout.workout_id
     and wday.week_id = week.week_id
     and week.period_id = period.period_id
     and period.year_id = wyear.year_id
-    and wyear.name = 2017
+    and wyear.name = 2015
     and wactivity.x_ski > 0
 order by wday.date;
+
+-- first ski day by year
+select min(wday.date), wactivity.x_ski, workout.description, wyear.name
+select min(wday.date), wyear.name
+from wkt_day wday, wkt_activity wactivity, wkt_workout workout, wkt_week week, wkt_period period,
+    wkt_year wyear
+where wactivity.workout_id = workout.workout_id
+    and workout.day_id = wday.day_id
+    and wday.week_id = week.week_id
+    and week.period_id = period.period_id
+    and period.year_id = wyear.year_id
+    and wactivity.x_ski > 0
+group by wyear.name;
 
 -- last workout by type
 select wday.date, workout.description

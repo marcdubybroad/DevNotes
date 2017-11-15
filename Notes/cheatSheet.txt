@@ -114,6 +114,10 @@ Mysql commands:
 - show full columns from GWAS_BioMe_dv1__BMI;
 - explain <sql query>
 
+- collation issues with indexes
+  - select TABLE_NAME from information_schema.columns where TABLE_SCHEMA = 'digkb' and COLUMN_NAME = 'VAR_ID' and COLLATION_NAME != 'utf8mb4_unicode_ci';
+  - select COLLATION_NAME, TABLE_NAME, COLUMN_NAME from information_schema.columns where TABLE_SCHEMA = 'digkb' and COLLATION_NAME != 'utf8mb4_unicode_ci';
+  - ALTER TABLE GWAS_CADISP_dv1 MODIFY VAR_ID text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
 AWS ssh:
 --------

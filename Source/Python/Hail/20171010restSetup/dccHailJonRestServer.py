@@ -7,9 +7,9 @@ from glob import glob
 # set up Hail home
 #  entries, one for the packaged distribution that works, another for the REST branch compiled distribution that doesn't
 # packaged Hail
-HAIL_HOME = "/home/ubuntu/hail_server/distribHail"
+# HAIL_HOME = "/home/ubuntu/hail_server/distribHail"
 # REST branch compiled hail
-# HAIL_HOME = "/home/ubuntu/hail_server/jonHailTree"
+HAIL_HOME = "/home/ubuntu/hail_server/jonHailTree20171114"
 
 # Setup HAIL and PYTHONPATH
 SPARK_HOME = "/home/ubuntu/Software/spark-2.0.2-bin-hadoop2.7"
@@ -23,9 +23,12 @@ sys.path = PYTHON_LIBS + sys.path
 
 # set the Spark classpath; one line each for distribution Hail and one for Jon's branch of the code
 # for distribution of Hail
-SPARK_CLASSPATH = "{}/jars/hail-all-spark.jar".format(HAIL_HOME)
+# SPARK_CLASSPATH = "{}/jars/hail-all-spark.jar".format(HAIL_HOME)
 # for REST code branch
+# SPARK_CLASSPATH = "{}/build/install/hail/lib/*".format(HAIL_HOME)
+# Iteration 1 - old Jon path that didn't work 
 # SPARK_CLASSPATH = "{}/build/libs/hail-all-spark.jar".format(HAIL_HOME)
+SPARK_CLASSPATH = "{}/build/install/hail/lib/*".format(HAIL_HOME)
 print SPARK_CLASSPATH
 
 
@@ -51,7 +54,7 @@ campVds = hc.import_vcf(vcf_path)
 
 
 # export the VDS
-vds_path = vcf_path.replace(".vcf",".vds")
+vds_path = vcf_path.replace(".vcf.gz",".vds")
 
 
 
