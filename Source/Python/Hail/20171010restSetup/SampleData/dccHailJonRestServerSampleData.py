@@ -3,6 +3,7 @@ import os, sys
 # import os, sys, IPython - from Ryan@UM
 from os import path
 from glob import glob
+from pprint import pprint
 
 # set up Hail home
 #  entries, one for the packaged distribution that works, another for the REST branch compiled distribution that doesn't
@@ -49,22 +50,24 @@ hc = HailContext()
 
 
 # import the CVF
-vcf_path = "/home/ubuntu/Data/Hail/Camp/camp.biallelic.chr1-22.clean.vcf"
-campVds = hc.import_vcf(vcf_path)
+vds_path = "/home/ubuntu/Data/Hail/Tutorial/1kg.vds"
+tutorialVds = hc.read(vds_path)
 
 # load in phenotypes
 # use impute = True to let hail determine the type of the columns
-ped_path = "/home/ubuntu/Data/Hail/Camp/camp.phenotypes.epacts.withId.modified.ped"
-phenotypes = hc.import_table(ped_path, impute=True).key_by("ID")
+ped_path = "/home/ubuntu/Data/Hail/Tutorial/1kg_annotations.txt"
+phenotypes = hc.import_table(ped_path, impute=True).key_by("Sample")
+pprint(phenotypes.schema)
 
 
 # annotate the loaded vds
-campVdsAnnotated = campVds.annotate_samples_table(phenotypes, root="sa")
-
+# campVdsAnnotated = campVds.annotate_samples_table(phenotypes, root="sa.phenotypes")
+tutorialVdsAnnotated = tutorialVds.annotate_samples_table(phenotypes, root="sa")
+pprint(tutorialVdsAnnotated.sample_schema)
 
 # load covariates
-# covariates = map(lambda c: 'sa.phenotypes.' + c, phenotypes.columns[1:])
-covariates = map(lambda c: 'sa.' + c, phenotypes.columns[1:])
+# use only the last 3 (need to be either boolean or integer)
+covariates = map(lambda c: 'sa.' + c, phenotypes.columns[3:])
 pprint(covariates)
 
 
@@ -73,16 +76,10 @@ tutorialVdsAnnotated.rest_server_linreg(covariates, True, 6062)
 
 
 
-# export the VDS
-# build path
-vds_path = vcf_path.replace(".vcf",".vds")
-print vds_path
-
-# save the annotated vcf data
-campVdsAnnotated.write(vds_path)
 
 
-
+# rest get call (for testing from command shell)
+# wget -S -X POST --content-on-error --post-file=/Users/jbloom/data/rest_api/test.json http://localhost:6060/getStats
 
 
 # Scratch for now, from Ryan @ UM; get this done once REST server works
@@ -91,3 +88,4 @@ campVdsAnnotated.write(vds_path)
 # vds = vds.annotate_samples_table(cov,root="sa")
 # vds.write(vds_path)
 
+# cov2 = ['sa.C1', 'sa.C2', 'sa.C3']
