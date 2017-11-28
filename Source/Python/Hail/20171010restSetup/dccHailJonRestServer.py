@@ -3,6 +3,7 @@ import os, sys
 # import os, sys, IPython - from Ryan@UM
 from os import path
 from glob import glob
+from pprint import pprint
 
 # set up Hail home
 #  entries, one for the packaged distribution that works, another for the REST branch compiled distribution that doesn't
@@ -56,20 +57,25 @@ campVds = hc.import_vcf(vcf_path)
 # use impute = True to let hail determine the type of the columns
 ped_path = "/home/ubuntu/Data/Hail/Camp/camp.phenotypes.epacts.withId.modified.ped"
 phenotypes = hc.import_table(ped_path, impute=True).key_by("ID")
+pprint(phenotypes)
 
 
 # annotate the loaded vds
 campVdsAnnotated = campVds.annotate_samples_table(phenotypes, root="sa")
+pprint(campVdsAnnotated.sample_schema)
 
 
 # load covariates
 # covariates = map(lambda c: 'sa.phenotypes.' + c, phenotypes.columns[1:])
-covariates = map(lambda c: 'sa.' + c, phenotypes.columns[1:])
+covariateColumns = phenotypes.columns[5:]
+pprint(covariateColumns)
+
+covariates = map(lambda c: 'sa.' + c, covariateColumns)
 pprint(covariates)
 
 
 # start the server
-tutorialVdsAnnotated.rest_server_linreg(covariates, True, 6062)
+campVdsAnnotated.rest_server_linreg(covariates, True, 6063)
 
 
 
