@@ -46,7 +46,7 @@ from hail import *
 
 
 # create the Hail context
-hc = HailContext()
+hc = HailContext(log='/home/ubuntu/Logs/HailServers/hail6063.log')
 
 
 # import the CVF
