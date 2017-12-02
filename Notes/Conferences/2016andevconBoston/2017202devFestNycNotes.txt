@@ -1,0 +1,46 @@
+
+
+20171202 - cancer screening with tensor floe
+- keras ML
+- approach for TF
+  - use sliding pixel box
+  - box is 299x299 pixels
+  - how physicisans/pathologists use
+    - zoom out, then zoom in, then zoom out
+    - do same zoom in/out for the same 299x299 box
+    - trained 4 different networks
+      - 40x, 20x, 10x, 5x
+      - prediction on centers 128x128 of original 40x input
+      
+- tips
+  - when training model, randomize the data
+  - problems with rotation
+    - apply augmentations to it for training data
+     - colors, rotate by random degrees, contrast
+  - use multiple holdout sets
+    - collected by different institutions
+  - generate actionalble insights
+  - datadet size >> tuning model
+  - data gains are worth more than model gains
+    - model tweaking ~ 3%
+    
+      
+- diabetes
+  - study diabetest
+  - swelling blood vessels, indi ate early onset blindness
+  - earlietr diagnosis can help prevent disease
+  - try to provide free 2nd opinion
+  - how
+    - conv network, 26 layers
+    
+  - dataset train/test splits
+    dev
+      - 80% train, 20 tune
+        - 
+      - 130k images
+      
+- look up
+  - inception, other image classifier
+    - low parameetrs, high accuracy
+  - look at image classifier models in TF
+  
