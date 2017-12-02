@@ -1,5 +1,106 @@
 
 
+20171202 - firebase intro
+- one  by nosql database
+  - hierarchical key value oairs
+  - when one client writes to db, other listening devides get call backs
+  - client sdk will work when app is offline
+  - 100k concurrent connections per paying customr
+  - multiple DBs per project
+  
+- new
+  - cloud firestore
+    - similar sync and security models as firebase
+    - organized by collections of documents
+    - more expressive queries
+    - effortless scaling
+
+- firebase authentication
+  - can use federated login
+    - decide how to log in (phone, password, etc)
+    
+- cloud functions for firebase
+  - cannot schedule timed fuunctions
+  - can use cronjob.org schedyuler
+  - supports only JS
+  
+- firebase hosting
+  - serve static assets
+  - free ssl certificate
+  - custom domains
+   - dynamic content using cloud functions for firebase
+   
+- cloud storage for firebase
+  - same as Google Cloud Storage
+  - client sdk for mobile clients
+  - handes poor connectivity
+  
+- firebase test labs
+  - logs, screenshots, performance
+  - espresso and UIAutomator instumented tests
+  
+- firebase crash reporting
+
+- firebase crashlytics
+  - primary crash reporter for firebase
+  - firebase performance monitoring
+    
+- google analytics for firebase
+  - designed for mobile apps
+  - event and user centric
+  - connects across firebase
+  - free and unlimited
+  - has concept of audience; grouped by how they use their app
+    - group users by behavior
+  - look at
+    - streamview, see what people doing in apps in real time, anonymous
+    - debug view, debug what is appening on an actual app
+    
+- bigquery integration
+
+- firebase cloud messaging
+  - psh notifications, cross platform messaging solution
+  - target messaging, can go off audinece from analytics
+  - 
+  
+- firebase remote config
+
+- firebase dynamic links
+  - preserves url state, even through app install flow
+  - analytics insight
+  -
+  
+- firebase invites
+  - drop in widget for app sharing
+  - support sms and email
+  
+- app indexing
+  - integrates with google search
+  
+- firebase predictions
+  - analytics and ML
+  - take analytics adat and applying ML to it
+    - segments into grouops
+    
+- google adwords
+  - place ad in search results for your app
+  
+- admob by google
+  - plkace ads in your app
+  - integrated with firebazse sdk
+  
+- resources
+  - firebase.google.com
+  - github.com/firebase
+  - youtibe.com/firecbase
+  - udacity firenase in a weekend course
+  
+  
+  
+  
+
+
+
 20171202 - android things, sentinel home security robot
 - why
   - have roaming camera in the house
@@ -27,6 +128,8 @@
   
 - resources
   - androidrobocar.com
+  
+  - https://goo.gl/MJckKw
   
   
 2171202 - andorid things
