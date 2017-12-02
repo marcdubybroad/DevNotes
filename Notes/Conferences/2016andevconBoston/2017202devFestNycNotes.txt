@@ -1,5 +1,34 @@
 
 
+20171202 - android things, sentinel home security robot
+- why
+  - have roaming camera in the house
+  
+- parts - $180 total cost
+  - rover 5 platform, $35
+  - raspberry pi 3, 32gb - sd card with anddroid things
+  - adafruit DC and stepper motor
+    - HAT for RPi
+  - adafruit 16-channel PWM
+    - Servo HAT for rPi
+  - Raspberry Pi camera
+  - pan/tilt bracket
+  - 3d printed camera mount
+  
+- how
+  - alerts are through firebase mesaging
+  - photos go to google cloud
+  - sends commad to firebase, then robot down,oads commands from firebase and executes
+  - google function to take high quality image and shrink to thumbnail
+  
+- tinyLIDAR
+  - use to follow hand
+  - look for youtube video
+  
+- resources
+  - androidrobocar.com
+  
+  
 2171202 - andorid things
 - differences between android and nadroid things
   - no play store
