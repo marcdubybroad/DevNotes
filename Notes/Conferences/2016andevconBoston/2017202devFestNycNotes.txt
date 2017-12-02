@@ -1,6 +1,59 @@
 
 
+2171202 - andorid things
+- differences between android and nadroid things
+  - no play store
+    - here you ship the device and software
+  - subset of APIs
+    - no contacts, messaging, system ui, wallpaers
+    - but added i/o, dev management, user drivers, connectivity (Things Support Library)
+    
+  - custom hardware
+  - single purpose device
+  - no updates, deploy OTAs
+  
+- how
+  - deveop on bigger board than deployment board
+    - dev board might have ethernet port
+  - hardware
+    - NPX or raspberry pi
+  - hardware integration
+    - peripheral driver library - github
+      - bit.ly/androidthings-github      
+    - pripheral I/O - low level access
+    
+- distribution
+  - managed by google
+    - android framework, hardware livbs, linux
+  - manager by devs
+    - apps, your app
+
+- adndorid things console
+  - mange your android things iOT product
+  download and install latest and iot image
+  - build factory images that contain oem
+  - push over the airs OTAs
+  
+- info
+  - signed images
+  - verified bot
+  - A/B rollback protection
+  - automatic security updates
+  
+- example, build a motion sensing camera
+  - use android studio
+    - check android things box at end, uncheck pheone/tablet
+    
+- resources
+  - bit.ly/androidthings
+  - bit/ly/hack-at-motion-camera
+  
+  
+
+
 20171202 - cancer screening with tensor floe
+- josh gordon, @random_forests
+
 - keras ML
 - approach for TF
   - use sliding pixel box
@@ -23,8 +76,24 @@
   - datadet size >> tuning model
   - data gains are worth more than model gains
     - model tweaking ~ 3%
+
+- 90% of ML is surervised
+  - because it works well, it's more mature
+  
+- 8 weeks to train on 8 gpus
     
-      
+- how to learn more
+  - accessible books
+  
+    - deep learning with pythin, chollet
+    - hands on deep leartning with scikit learn and TF, geron
+    - python machine learning
+  - videos
+    - ML  recipes
+  - web
+    - research.googleblog.com/2016/11/deep-learnring-for-detection-of-diabeteic.html
+    - research.googleblog.com/2017/03/assisting-pathologists-in-detecting.html
+    
 - diabetes
   - study diabetest
   - swelling blood vessels, indi ate early onset blindness
@@ -32,7 +101,6 @@
   - try to provide free 2nd opinion
   - how
     - conv network, 26 layers
-    
   - dataset train/test splits
     dev
       - 80% train, 20 tune
@@ -43,4 +111,7 @@
   - inception, other image classifier
     - low parameetrs, high accuracy
   - look at image classifier models in TF
-  
+  - tensorflow research cloud
+  - cpus vs gps
+    - cpu good at if/else, gpu good at matrix
+    
