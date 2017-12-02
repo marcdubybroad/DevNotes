@@ -1,6 +1,15 @@
 
 
 20171202 - flutter talk at NYC dev fest
-- 
+- author
+  - GDG expert for flutter
+  - works for zoom.ai
+  
+- www.dartlang.org
+  - dart is a powerful modern web language
+  - still in preview release
+  
+  
+  
 
 
