@@ -1,0 +1,70 @@
+
+
+20171202 - native script ML, @jenlooper
+- NativeScript
+  - OS frameworrk build new native mobile apps with JS
+  - best tool for cross platform app dev
+  - building native app usign JS
+  
+- how to use NativeScripts
+  - craft UI with xml
+  - build plugins with native librarues
+    - also marketplace where cn download
+    
+- example
+  - quickNoms - smart recipe app (5 ingredients limit)
+  - powered by firebase and NativeScript
+  - quicknoms.com
+  - features
+    - firwenase remote config marquee
+      - all content is coming from firebase
+    - algolia search
+      -
+      
+- ML
+  - ML + mobile ideal
+  - tom mitchell 1997 quote on what machine learnig is
+  - who is using it in the wild
+    - stitch fix (just got IPO)
+      - combines ML with human curation
+    - M$
+      - snowleaopard int he wild
+      - AI for earth
+      
+- shortcuts
+  - use prettrained modeld
+    - clarifai
+      - specialists in image analysis
+      - took top 5 prizes in ImageNet challenge
+      - inno tech in training models to analyze imags
+    - google cloud platform
+    - google vision api
+      - label detection
+      - explicit content detection
+      - logo
+      - landmark
+      - face
+      - web detection
+      
+    
+- next
+  - machine leearning on device
+    - ios 11 -> core ML
+    - tensor flow mobile
+      - designed for low wend androids
+    - tensor flow lite
+      - developer release
+      - 200-300kb footprint
+    - TF powers google translate
+    
+  
+- notes
+  - angular decoupled from DOM in 2
+    - so can use with nativeScript
+    
+  - use quicktime player to show mobile screen
+  
+    
+    
+    
+    

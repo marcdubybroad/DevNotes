@@ -21,8 +21,11 @@
     
 - cloud functions for firebase
   - cannot schedule timed fuunctions
+    - have to be called by REST?
   - can use cronjob.org schedyuler
   - supports only JS
+    - no Java yet
+    
   
 - firebase hosting
   - serve static assets
