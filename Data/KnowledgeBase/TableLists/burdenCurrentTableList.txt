@@ -14,3 +14,4 @@ SAMPLE_STROKE
 SAMPLE_camp
 SAMPLE_mi
 SAMPLE_biome
+SAMPLE_metsim

@@ -1,0 +1,54 @@
+
+
+20171202 - instant apps for mobile by @YuliyaKaleda
+- what
+  - downloaded when lnk is klicked
+  - will be wiped from phone if under memory pressurre
+  
+- what
+  - break your application into mutiple modules
+  - 4mb size constraint
+  - shared code base, muti module
+  
+- make sure instant app url matches web url
+
+- 2 types of instant apps
+  - mu;lti feature instant app
+    - break down your app module into mutiple independent single feature modules
+      - keeps them below 4mb
+      - but they all share a base module with shared code
+    - ex:
+      - product list page
+      - product detail page
+      - shopping cart page
+      - order detail page
+    - so will get 1 apk for each module, the one apk for the shared module
+      - they all get zipped up into a zipped bundle
+        - this will go to the play store
+        - this will be the instant app release channel
+  - single feature
+    - build one component as a foundation of your application
+    
+- tips
+  - slim down your app
+    - review dependencies
+    - enable proguard
+    - shrink resources
+    - use vector drawables
+      - PNG -> webpg
+  - use https, requoirement
+  
+- gains/benefits
+  - size reduction from 17mb to 7 mb
+  - modularization
+    - scalable, maintainable, testable
+  -  ode clean up
+  - new features (smart lock, google payments)
+  - conversion rate went up 27%
+    - was surprised, so they added more analytics to make sure
+  - cart size +7%
+  
+
+  
+
+

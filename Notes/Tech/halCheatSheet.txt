@@ -1,0 +1,33 @@
+
+- combine VCFs
+vds = hc.read(args.vds_in)
+kg = hc.import_vcf(args.kg_vcf_in, force_bgz=True)
+kg = kg.split_multi().deduplicate()
+vds = vds.join(kg)
+
+
+- jon hail install (REST server)
+
+ 1045  cd hail_server/
+ 1046  ls -la
+ 1047  git clone https://github.com/jbloom22/hail.git jonHailTree20171114
+ 1048  cd jonHailTree20171114/
+ 1049  git checkout rest_server3
+ 1050  gradle installDist
+ 1051  ls -la
+ 1052  ls build
+ 1053  mkdir badJar
+ 1054  mv build/install/hail/lib/asm-3.1.jar badJar/
+ 1055  pythin
+ 1056  python
+ 1057  history
+ 1058  env
+ 1059  python
+ 1060  exit
+ 1061  ls -la /home/ubuntu/hail_server/jonHailTree20171114/build/install/hail/lib/
+ 1062  exit
+
+
+
+
+

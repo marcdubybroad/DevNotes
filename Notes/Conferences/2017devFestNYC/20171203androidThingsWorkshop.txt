@@ -1,0 +1,12 @@
+
+20171203 -
+
+- electronics
+  - ohm's law
+    - ressistance = voltage / amps
+    
+    
+- GPIO
+  - if on, treu values, if none, false
+  
+

@@ -1,0 +1,65 @@
+
+
+20171205 - intro
+- jay jenkins, natalie piucco
+
+
+20171205 - crash caourse in GCP machine mearning APIs
+- giphy
+- image stored in box, will do vision AI detection
+- cloud video intelligence
+  - label detection
+  shot change detection
+  - explicit content detection
+  
+- speech
+  - can get sentimemnt value for all text
+    - can also do entity based sentiment
+    
+    
+20171205 - TF
+- john barrus, zak stone
+- estimator and layer API
+
+
+201712206 - TF
+- yufeng guo
+- use census data
+- wide and deep columns
+  - dnnLinearCombinedClassifier
+- https://github.com/yufengg/widendeep
+
+- pandas input functions built into tf
+- pandas columns to analyze data
+- turn age to age buckets
+- dnn_hidden_units = [100, 75, 50, 25]
+  - 4 layers, with 100 neurons, 75, ect
+  
+- nm_epochs -> umber of passes of data
+  - shuffle false since go through only once
+  
+- can train on laptopm, then predict
+
+bit.ly/ai-adventures
+bit.ly/widendeep-code
+bit.ly/widendeep-census
+
+20171206 - ML lifecycle
+- dinesh kulkami
+
+- for preparing the data, figure out range, translate day into day of week, time into rush hour or not, etc
+- tensor board to keep track of tf
+
+- used 15 of data to quickly test model 
+- steps
+  - explore -> prepare -> preprocess -> train -> hypertune -> evaluate -> predict
+    - hypertune: have tool to let you loop through model parameter
+
+- commans
+  - ml evaluate regression
+  - ml explain
+    - helps you see what your ml data is using to train itself
+    - can determine bias
+      - ex: snow in wolf images vs no snow for dog images
+        - then make sure get dog in snow images
+    

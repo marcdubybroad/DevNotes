@@ -1,0 +1,52 @@
+
+
+20171202 - microservices, by @saturnism Ray Tsang
+- https://github.com/saturnism
+- dev advocate gcp
+
+- kunernetes master
+  - will watxch all your VMs for you
+  
+- commands
+  - kubectl apply -j blah.yaml -f bah2.yaml
+  
+  
+- services use grpc to communicate
+  - binary protocol
+  
+- beyond deployment
+  - LB
+  - fault tolerance
+  - observability and insight
+  - monitoring and tracing of inter service commnunications
+  - circuit breaking
+  
+- open spurce
+  - zuul, api gateway
+  - grafana, visualization
+  - prometheus
+  - zipkin, traces
+  - eureka, service registry
+  - archaius
+  
+- istio
+  - uses proxies in front of each individual service
+  - the proxy on a s=outgoing server intercepts the call, then forwards to other service proxy
+    - proxy can then apply extra rues to the request
+    
+    
+- code
+  - new server
+    HttpServer server = HttpServer.create(new InetSocketAddress(port: 8081));
+    server.setExcutor(Excutors.newCachedThreadPool());
+    server.createContext(path: "/meet), exchange -> {
+    try {
+        Thread,sleep(100);
+    
+    } catch (InterruptedExceptyion e) {
+    
+    }
+    }
+  
+
+

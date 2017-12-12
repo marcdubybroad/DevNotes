@@ -1,0 +1,76 @@
+
+
+20171202 - serververless with @pamasaur, Pam Selle, IOpipe
+- thewebivore.com
+  - soft eng lead on iopipe
+  - GDE
+  - Turing-Incomplete podcast
+  
+- biggest deal in cloud computing right now
+  - can get 5 million request for $5
+  - over how long? doesn't matter
+  - NoOPs environemnt
+  - allows you to focus on biz problems,
+  
+- Faas
+  - function as a service
+  - run code based on trigger
+  - came out late 2015
+  - what
+    - small building blocks (functions)
+    - auto scaling
+    - pay per usage
+    - availability and faut tolerance
+  - pricing
+    - cost = compute time + invocations + network
+  - providers
+    - aws lambda
+      - languages: go, java, nodejs, python
+      - aws will now charge by the second (probably due to serverless)
+      - architectures
+        - exec time 5 lmins
+        - if too much mem, function killed
+        - /tmp disk space
+        - request body limits
+      - can set concurrency limits on individual Lambdas
+      - CloudTrail for Lambda activity
+      - serverless Aurora
+    - google cloud functions
+      - only nodejs
+    - azure
+    - apache openwhisk
+      - run your own NoOps infrastrucure
+  - deploying
+    - upload the code (50mb limit on lambda)
+  - tips
+    - cold start will slower, since the code is loaded into a cold container
+      - JS load is faster than Java
+    
+- Baas
+  - back end as a service
+  - relying on other services for your back end needs
+  
+- how serverless is impating industry
+  - achitectures
+  - you must integrate operations into your development model
+  - managing state
+  - testing, netwrking
+  - 
+  
+
+- history
+  - iron age, server farms
+  - VMs in cloud
+  - serverless
+  
+- code
+  - https://github.com/iopipe/servers.lol
+  - https://servers.lol
+  - https://github.com/iopipe/slackbot-bionic-eye  
+  
+- aws lambda code
+  - ex
+    console.log('this prints coldstart');
+    exports.hello = function(event, context, callback) {
+      
+    }
