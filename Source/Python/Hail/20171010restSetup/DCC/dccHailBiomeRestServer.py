@@ -12,16 +12,16 @@ HAIL_HOME = "/home/ubuntu/hail_server/jonHailTree20171114"
 # set up SPARK home
 SPARK_HOME = "/home/ubuntu/Software/spark-2.0.2-bin-hadoop2.7"
 # set the REST server port
-SERVER_PORT = 6064
+SERVER_PORT = 6066
 pprint("server port: " + str(SERVER_PORT))
 # set the log file path
 LOG_FILE_PATH = "/home/ubuntu/Logs/HailServers/hail" + str(SERVER_PORT) + ".log"
 pprint("log file: " + LOG_FILE_PATH)
 # set the VCF path
-VCF_PATH = "/home/ubuntu/Data/Hail/Metsim/metsim.omni.clean.vcf.bgz"
+VCF_PATH = "/home/ubuntu/Data/Hail/Biome/BIOME_ILL.CLUSTERED.clean.epacts.vcf"
 pprint("vcf file: " + VCF_PATH)
 # set the phenotype file path and sample key
-PHENOTYPE_FILE_PATH = "/home/ubuntu/Data/Hail/Metsim/metsimFromMysql.ped"
+PHENOTYPE_FILE_PATH = "/home/ubuntu/Data/Hail/Biome/biome_illumina.ped"
 pprint("ped file: " + PHENOTYPE_FILE_PATH)
 SAMPLE_KEY = "ID"
 
@@ -61,7 +61,7 @@ vds = hc.import_vcf(VCF_PATH)
 
 # load in phenotypes
 # use impute = True to let hail determine the type of the columns
-phenotypes = hc.import_table(PHENOTYPE_FILE_PATH, impute=True, types={'ID': TString()}).key_by(SAMPLE_KEY)
+phenotypes = hc.import_table(PHENOTYPE_FILE_PATH, impute=True).key_by(SAMPLE_KEY)
 pprint(phenotypes)
 
 
@@ -72,7 +72,7 @@ pprint(vdsAnnotated.sample_schema)
 
 # load covariates
 # covariates = map(lambda c: 'sa.phenotypes.' + c, phenotypes.columns[1:])
-covariateColumns = phenotypes.columns[13:]
+covariateColumns = phenotypes.columns[5:]
 pprint(covariateColumns)
 
 covariates = map(lambda c: 'sa.' + c, covariateColumns)

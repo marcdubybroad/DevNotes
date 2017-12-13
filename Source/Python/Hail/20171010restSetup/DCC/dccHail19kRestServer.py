@@ -1,32 +1,19 @@
 
-# import os, sys, IPython - from Ryan@UM
 import os, sys
+# import os, sys, IPython - from Ryan@UM
 from os import path
 from glob import glob
 from pprint import pprint
 
-# set the constants
 # set up Hail home
+#  entries, one for the packaged distribution that works, another for the REST branch compiled distribution that doesn't
+# packaged Hail
+# HAIL_HOME = "/home/ubuntu/hail_server/distribHail"
 # REST branch compiled hail
 HAIL_HOME = "/home/ubuntu/hail_server/jonHailTree20171114"
-# set up SPARK home
-SPARK_HOME = "/home/ubuntu/Software/spark-2.0.2-bin-hadoop2.7"
-# set the REST server port
-SERVER_PORT = 6064
-pprint("server port: " + str(SERVER_PORT))
-# set the log file path
-LOG_FILE_PATH = "/home/ubuntu/Logs/HailServers/hail" + str(SERVER_PORT) + ".log"
-pprint("log file: " + LOG_FILE_PATH)
-# set the VCF path
-VCF_PATH = "/home/ubuntu/Data/Hail/Metsim/metsim.omni.clean.vcf.bgz"
-pprint("vcf file: " + VCF_PATH)
-# set the phenotype file path and sample key
-PHENOTYPE_FILE_PATH = "/home/ubuntu/Data/Hail/Metsim/metsimFromMysql.ped"
-pprint("ped file: " + PHENOTYPE_FILE_PATH)
-SAMPLE_KEY = "ID"
-
 
 # Setup HAIL and PYTHONPATH
+SPARK_HOME = "/home/ubuntu/Software/spark-2.0.2-bin-hadoop2.7"
 PY4J_ZIPS = glob(path.join(SPARK_HOME,"python/lib/py4j-*-src.zip"))
 PYTHON_LIBS = [
   "{}/python".format(HAIL_HOME),
@@ -36,6 +23,12 @@ PYTHONPATH = ":".join(PYTHON_LIBS)
 sys.path = PYTHON_LIBS + sys.path
 
 # set the Spark classpath; one line each for distribution Hail and one for Jon's branch of the code
+# for distribution of Hail
+# SPARK_CLASSPATH = "{}/jars/hail-all-spark.jar".format(HAIL_HOME)
+# for REST code branch
+# SPARK_CLASSPATH = "{}/build/install/hail/lib/*".format(HAIL_HOME)
+# Iteration 1 - old Jon path that didn't work 
+# SPARK_CLASSPATH = "{}/build/libs/hail-all-spark.jar".format(HAIL_HOME)
 SPARK_CLASSPATH = "{}/build/install/hail/lib/*".format(HAIL_HOME)
 print SPARK_CLASSPATH
 
@@ -53,26 +46,28 @@ from hail import *
 
 
 # create the Hail context
-hc = HailContext(log=LOG_FILE_PATH)
+hc = HailContext(log='/home/ubuntu/Logs/HailServers/hail6063.log')
 
 
 # import the CVF
-vds = hc.import_vcf(VCF_PATH)
+vcf_path = "/home/ubuntu/Data/Hail/Camp/camp.biallelic.chr1-22.clean.vcf"
+campVds = hc.import_vcf(vcf_path)
 
 # load in phenotypes
 # use impute = True to let hail determine the type of the columns
-phenotypes = hc.import_table(PHENOTYPE_FILE_PATH, impute=True, types={'ID': TString()}).key_by(SAMPLE_KEY)
+ped_path = "/home/ubuntu/Data/Hail/Camp/camp.phenotypes.epacts.withId.modified.ped"
+phenotypes = hc.import_table(ped_path, impute=True).key_by("ID")
 pprint(phenotypes)
 
 
 # annotate the loaded vds
-vdsAnnotated = vds.annotate_samples_table(phenotypes, root="sa")
-pprint(vdsAnnotated.sample_schema)
+campVdsAnnotated = campVds.annotate_samples_table(phenotypes, root="sa")
+pprint(campVdsAnnotated.sample_schema)
 
 
 # load covariates
 # covariates = map(lambda c: 'sa.phenotypes.' + c, phenotypes.columns[1:])
-covariateColumns = phenotypes.columns[13:]
+covariateColumns = phenotypes.columns[5:]
 pprint(covariateColumns)
 
 covariates = map(lambda c: 'sa.' + c, covariateColumns)
@@ -80,7 +75,7 @@ pprint(covariates)
 
 
 # start the server
-vdsAnnotated.rest_server_linreg(covariates, True, SERVER_PORT)
+campVdsAnnotated.rest_server_linreg(covariates, False, 6063)
 
 
 
