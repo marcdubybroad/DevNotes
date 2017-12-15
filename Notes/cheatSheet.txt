@@ -319,6 +319,11 @@ Management:
 -----------
   - RACI: responsible - accountable - consulted - informed
   
+Hail:
+-----
+- create bgz file from gz
+  - gunzip -c marathon.clean.all.vcf.gz | bgzip > marathon.clean.all.vcf.bgz
+  
 Google OAuth:
 -------------
   - create new key
