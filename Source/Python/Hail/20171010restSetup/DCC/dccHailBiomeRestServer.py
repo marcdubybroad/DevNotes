@@ -23,7 +23,7 @@ pprint("vcf file: " + VCF_PATH)
 # set the phenotype file path and sample key
 PHENOTYPE_FILE_PATH = "/home/ubuntu/Data/Hail/Biome/biome_illumina.ped"
 pprint("ped file: " + PHENOTYPE_FILE_PATH)
-SAMPLE_KEY = "ID"
+SAMPLE_KEY = "IID"
 
 
 # Setup HAIL and PYTHONPATH
@@ -61,7 +61,7 @@ vds = hc.import_vcf(VCF_PATH)
 
 # load in phenotypes
 # use impute = True to let hail determine the type of the columns
-phenotypes = hc.import_table(PHENOTYPE_FILE_PATH, impute=True).key_by(SAMPLE_KEY)
+phenotypes = hc.import_table(PHENOTYPE_FILE_PATH, impute=True, types={SAMPLE_KEY: TString()}).key_by(SAMPLE_KEY)
 pprint(phenotypes)
 
 
@@ -72,15 +72,25 @@ pprint(vdsAnnotated.sample_schema)
 
 # load covariates
 # covariates = map(lambda c: 'sa.phenotypes.' + c, phenotypes.columns[1:])
-covariateColumns = phenotypes.columns[5:]
+itemsForCovariates = ['C1', 'C2', 'C3', 'C4', 'C5', 'C6', 'BMI', 'CHOL', 'LDL', 'HDL', 'SBP', 'DBP', 'FAST_GLU', 'HBA1C', 'SEX', 'AGE']
+pprint(itemsForCovariates)
+
+covariateColumns = []
+for item in phenotypes.columns:
+  if item in itemsForCovariates:
+    covariateColumns.append(item)
+
+
 pprint(covariateColumns)
+# covariateColumns = phenotypes.columns[20:30]
+# pprint(covariateColumns)
 
 covariates = map(lambda c: 'sa.' + c, covariateColumns)
 pprint(covariates)
 
 
 # start the server
-vdsAnnotated.rest_server_linreg(covariates, True, SERVER_PORT)
+vdsAnnotated.rest_server_linreg(covariates, False, SERVER_PORT)
 
 
 
