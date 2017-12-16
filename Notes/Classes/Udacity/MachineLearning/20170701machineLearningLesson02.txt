@@ -5,8 +5,8 @@ Lesson 02: Naive Bayes
   - take features and turn them into labels
 
 - scatter plots
-  - take dataa and transform into a decision surface
-  - dcision srface will seperate 2 classes of points
+  - take data and transform into a decision surface
+  - decision surface will seperate 2 classes of points
     - can be linear
 
 - Python code
@@ -15,8 +15,8 @@ Lesson 02: Naive Bayes
     - use sklearn Gaussian naive bayes
     
 - fitting
-  - always train and tets on seperate sets of daat
-    - if data overloaps, you can overfit to your data
+  - always train and tets on seperate sets of data
+    - if data overlaps, you can overfit to your data
     - so always save 10% of your data to use as your testing set
       - use the test result to report progress of your ML
       
@@ -29,7 +29,7 @@ Lesson 02: Naive Bayes
         - called sensitivity
       - 90% correct if negative and do not have cancer
         - called specitivity
-    - question: if you test is positive, what is the probability that you have cancer
+    - question: if your test is positive, what is the probability that you have cancer
   - explained
     - prior: prob before you run a test
     - then get test evidence when you run the test
@@ -38,6 +38,14 @@ Lesson 02: Naive Bayes
     - in cancer
       - prior is cancer chance
       - posterior is prob of cancer given positive test
+      - so values are:
+        - P(c) = 0.01 - probability of having cancer
+        - P(!c) = 0.99 - prob of no cancer
+        - P(positive test | c) = 0.9 (prob of positive result given have cancer - sentivity)
+        - P(!positive | !c) = 0.9 (prob of negative result if no cancer - specitivity)
+        - P(pos | !c) = 1 - P(!pos | !c) = 0.1
+        
+      - question - if you pos, what chances you have cancer
       - P(have cancer | positive test) = P(c) x P(positive | have cancer)
         - P(c | pos) = 0.01 x 0.9 = 0.009
       - P(no cancer | positive test) = P(!c) x (positive | no cancer)
@@ -45,7 +53,9 @@ Lesson 02: Naive Bayes
     - normalize
       - need both probs to add up to 1; grow them keeping ratio consistent
       - P(c | pos) + P(!c | pos) = 0.009 + 0.099 = 0.108
-      - P(pos) = P(c | pos) + P(!c | pos) = 0.108
+      - P(pos) = P(c | pos) + P(!c | pos) = 0.108 -> should be 1, so normalize
+        - P(c | pos) = 0.009 / 0.108 = 0.0833
+        - P(!c | pos) = 0.099 / 0.108 = 0.9167
       
     
     
