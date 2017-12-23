@@ -1,0 +1,15 @@
+
+
+
+
+
+- links
+  - code lab to retrain Inception model
+    - bit.ly/tf-retrian
+  - mobile tensor flow
+    - will have raspberry pi example
+    - www.tensorflow.org/mobile
+  - cloud ML engine
+    - cloud.google.com/ml
+    
+    
