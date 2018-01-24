@@ -55,3 +55,14 @@ python -m scripts.label_image \
     --image=tf_files/flower_photos/roses/2414954629_3708a1a04d.jpg
 
 
+# less trainig rate, with seperate summaries directory
+python -m scripts.retrain \
+  --bottleneck_dir=tf_files/bottlenecks \
+  --how_many_training_steps=550 \
+  --model_dir=tf_files/models/ \
+  --summaries_dir=tf_files/training_summaries/"${ARCHITECTURE}_LR_0.5" \
+  --output_graph=tf_files/retrained_graph.pb \
+  --output_labels=tf_files/retrained_labels.txt \
+  --architecture="${ARCHITECTURE}" \
+  --image_dir=tf_files/flower_photos
+

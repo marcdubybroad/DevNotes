@@ -247,8 +247,11 @@ Python:
 -------
 - get env from python shell
   - import os; print(os.environ.get('SPARK_CLASSPATH'))
-  
-  
+
+- virtual environments  
+  - virtualenv --system-site-packages ~/Apps/PythonEnvs/TensorFlow01
+  - source ~/Apps/PythonEnvs/TensorFlow01/bin/activate
+
 Intellij:
 ---------
 http://jetbrains.broadinstitute.org:8080/
