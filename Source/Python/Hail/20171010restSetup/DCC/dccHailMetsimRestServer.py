@@ -72,7 +72,15 @@ pprint(vdsAnnotated.sample_schema)
 
 # load covariates
 # covariates = map(lambda c: 'sa.phenotypes.' + c, phenotypes.columns[1:])
-covariateColumns = phenotypes.columns[13:]
+itemsForCovariates = ['C1', 'C2', 'C3', 'C4', 'T2D_UNKNOWN', 'FAST_GLU', 'FAST_INS', 'Age', 'SEX', 'Warfarin']
+pprint(itemsForCovariates)
+
+covariateColumns = []
+for item in phenotypes.columns:
+  if item in itemsForCovariates:
+    covariateColumns.append(item)
+
+
 pprint(covariateColumns)
 
 covariates = map(lambda c: 'sa.' + c, covariateColumns)

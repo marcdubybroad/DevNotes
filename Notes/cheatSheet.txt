@@ -119,6 +119,9 @@ Mysql commands:
   - select COLLATION_NAME, TABLE_NAME, COLUMN_NAME from information_schema.columns where TABLE_SCHEMA = 'digkb' and COLLATION_NAME != 'utf8mb4_unicode_ci';
   - ALTER TABLE GWAS_CADISP_dv1 MODIFY VAR_ID text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
 
+- index
+  - SHOW INDEX FROM yourtable;
+  
 AWS ssh:
 --------
 - ssh -i ~/OTS/blah.pem ec2-user@blah.compute-1.amazonaws.com

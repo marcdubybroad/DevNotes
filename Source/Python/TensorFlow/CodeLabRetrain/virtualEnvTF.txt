@@ -1,0 +1,27 @@
+
+# install virtual env using anaconda
+conda install virtualenv
+which virtualenv
+python
+
+# create the TF virtual environment, specifying directory where the config will be stored
+virtualenv --system-site-packages ~/Apps/PythonEnvs/TensorFlow01
+
+# activate the envisonment
+source ~/Apps/PythonEnvs/TensorFlow01/bin/activate
+
+# use pip install packages within the virtual environment
+which pip
+easy_install -U pip
+pip -version
+pip -V
+pip install --upgrade tensorflow
+
+# get to work on TF
+# clone TF
+git clone https://github.com/googlecodelabs/tensorflow-for-poets-2 TensorFlowPoets02
+
+# get the model to work on
+curl http://download.tensorflow.org/example_images/flower_photos.tgz | tar xz -C tf_files
+
+
