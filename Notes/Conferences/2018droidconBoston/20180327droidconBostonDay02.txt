@@ -3,13 +3,49 @@
 20180327 - poor programming paradigms
 - alice yuan, company: pinterest, github.com/AliceYuan
 - issues
-  - protected vars View in abstract class
+  - prblem: protected vars View in abstract class
     - issue as they grow is that they can modified by any inheriting class
     - also inheritence hell
     - solve with inheritance vs comlposition
-    
-
-
+    - in kotlin, classes are final by default
+  - problem: events
+    - handling button push and GUI updates
+    - solution is observer/listener pattern
+      - implements FollowListener (for pinetersest gui update)
+  - problem: data consistensty issues, caching models on a per fragment basis
+    - models need to be centralized away fro m gragments
+    - keep model dependent logic in the models
+    - avoid singleton class to store model
+    - solution: store all data in repositories
+      - interface RepositoryListner<Model> {
+        onSuccess()
+        
+      }
+    - also RxJava
+      - at pinterest, use it for repository
+      - an Observable on steroids
+        - observable stream
+        
+  - problem: no unit tests
+    - roboelectric mockouts -
+    - sol: MVV, MVP, MVI (Moedl-View-ViewModel, Model-View-Presenter, Model-View-Intent)
+      - seperate concernes between entities that dont' know about each other
+      - pinterst uses MVP
+      - seperation of concersn makes it easier to test
+        - can easily mock out the interfaces
+        
+- seperation of concersn
+  - makes code cleaner
+    - easier to read classes si nce they are singularly focused
+  - increases reusability of the code base
+  - can also be used to build llibraries and modularizing the code base
+  
+- conclusog
+  - compostion over inheritance
+  - use tight couploing for eevnst with RxJava
+  - central location to retireve models
+  - seperation of concerns with interfaces
+  
 
 20180327 - REST security
 - potentil issues
