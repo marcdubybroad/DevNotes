@@ -159,6 +159,29 @@ where workout.day_id = wday.day_id
 group by wyear.name_text
 order by wyear.name;
 
+-- select sum of ski workouts by year, sorted by total
+select sum(activity.x_ski) as xski_total, wyear.name_text
+from wkt_workout workout, wkt_activity activity, wkt_day wday, wkt_week week, wkt_period period, wkt_year wyear
+where workout.day_id = wday.day_id
+    and activity.workout_id = workout.workout_id
+    and wday.week_id = week.week_id
+    and week.period_id = period.period_id
+    and period.year_id = wyear.year_id
+group by wyear.name_text
+order by xski_total desc;
+
+select sum(activity.x_ski) as xski_total, count(1) as ski_workouts, sum(activity.x_ski)/count(1) as workout_avg,
+    count(distinct wday.day_id) as ski_days, sum(activity.x_ski)/count(distinct wday.day_id) as day_avg, wyear.name_text
+from wkt_workout workout, wkt_activity activity, wkt_day wday, wkt_week week, wkt_period period, wkt_year wyear
+where workout.day_id = wday.day_id
+    and activity.workout_id = workout.workout_id
+    and wday.week_id = week.week_id
+    and week.period_id = period.period_id
+    and period.year_id = wyear.year_id
+    and activity.x_ski > 0
+group by wyear.name_text
+order by xski_total desc, ski_workouts desc;
+
 -- select sum of rowing/erg workouts by year, sorted by year
 select sum(activity.row) as row_total, sum(activity.erg) as erg_total, wyear.name_text
 from wkt_workout workout, wkt_activity activity, wkt_day wday, wkt_week week, wkt_period period, wkt_year wyear

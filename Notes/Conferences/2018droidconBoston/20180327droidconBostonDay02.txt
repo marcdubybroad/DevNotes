@@ -1,0 +1,100 @@
+
+
+20180327 - poor programming paradigms
+- alice yuan, company: pinterest, github.com/AliceYuan
+- issues
+  - protected vars View in abstract class
+    - issue as they grow is that they can modified by any inheriting class
+    - also inheritence hell
+    - solve with inheritance vs comlposition
+    
+
+
+
+20180327 - REST security
+- potentil issues
+  - GET calls with exposed params, using non encrypted http (not https), so human readable
+  - application saving username/password on cell phone in plain text
+    - issues: plain text, on device
+    - fix: use shared preference in private mode, so only accessible by your app
+      - tetString()
+      - also open files in private mode
+    - fix: AndroidKeyStore
+      - java cryptography implementation
+      
+  - OAUTH
+  - json web token
+    - combined with json web signature
+    - JWT + JWS (json web token + json web signature)
+      - can have limited tokens
+      - JWT can heps with:
+        - authenticatyion
+        - authorization
+        - federated identity
+        - information exchange
+        - client side sessions (stateless sessions)
+        - client side secrest
+       
+  - firebase auth
+    - federated auth providers
+    - passwordless login
+    - anonymous authentication
+    - mangement
+    
+  
+- good practices
+  - use mCAPTCHA
+    - can use in androd to make sure rest endpoint doesn't respond to robots
+    - since android app generates the captcha with the key you have, then can be verifies by REST service
+    
+- oath0.com/e-books/
+- github.com/itrjwyss
+
+
+20180327 - deisgn, develop and test
+- kelly shuster
+  - tools for better inter disciplinary team collaboration
+    - zeplin product
+      - good for design team to use
+      - pai dproduct
+    - style guide
+      - button states
+      - limit colors, how many different there are
+      - use svgs for buttons
+        - import with vector asset studio
+      -
+
+  - two types of testing
+    - in house user testing (design testing)
+      - usabilityhub tool
+        - select users to look at your design
+        - get heat map of clicks on image of screen design
+        -
+      - marvel
+        - takes image and create an app for it
+        
+    - types
+      - unit testing
+      - integration testing
+      - concept of dog fooding
+        - alweays use tour product
+        - open your own app during down time and play with your app
+      - create different emulatords and name them for day of the week
+        - different apis for each
+        - helps with fixing UI bugs
+        - use different emulator each day
+        
+        
+
+        
+        
+        
+        
+- to dos
+  - sign up to usability hub
+  
+
+
+  
+
+

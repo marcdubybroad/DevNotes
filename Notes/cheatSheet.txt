@@ -353,6 +353,10 @@ AWS VMs:
 - dev
   - ec2-34-228-247-254.compute-1.amazonaws.com
   
+Zoom:
+-----
+- https://broadinstitute.zoom.us/j/6806389968
+  
 Burden tables to back up:
 -------------------------
 SAMPLE                     

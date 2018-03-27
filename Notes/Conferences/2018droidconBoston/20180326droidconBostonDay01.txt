@@ -1,0 +1,182 @@
+
+
+20180326 - how to do a handstand
+- how to take risks, learn somethomg new
+  - do a test project
+  
+- books
+  - crushing it by Gary
+    - give 51% of the time; giving without expectation
+  - why we sleep, Mathew Walker
+    - creates mental connections
+    - action become subconscious
+    - need 8 hour sleep opportunity
+      - at least give yourself 8 hours for potential sleep, even if you don't sleep during the whole time
+      
+
+- how to help
+  - menyoring
+  - pair programming
+  - everyone is a student
+    - learn new things at conferences
+    - videos at conference
+    - newsletter and blogs (android weekly)
+    - twitter
+    - 
+    
+
+
+20180326 - android things workshop
+- adb shell am startservice -n com.google.wifisetup/.WifiSetupService -a WifiSetupService.Connect -e ssid $YOUR_SSID_HERE -e passphrase $YOUR_WIFI_PASSWORD_HERE
+
+# to connect to internet
+- adb shell am startservice -n com.google.wifisetup/.WifiSetupService -a WifiSetupService.Connect -e ssid "CP Rentals" -e passphrase CaldPav52716
+
+- adb devices
+- adb shell ping 8.8.8.8
+
+
+
+
+
+
+20180326 - TF talk
+- types of ML
+    - unsupervidsed
+      - clustreing
+    - supervised
+      - classification
+      - regression
+      
+- tensorboard
+  - keeps track of your model
+  - main ones
+    - accuracy
+    - loss rate
+    - tensorboard --logdir tf_files/training_summaries &
+    
+- training data steps/flags
+  - bottleneck_dir
+  - how_may_training_steps
+  - model_dir       -> model
+  - summaries_dir   -> where training logs sent
+  - output_graph
+  - architecture            -> only 2 architectres supprted for these computations (tradeoff between speed and accuracy)
+  - image_dir               -> training images
+  
+- tips
+  - look at the loss function a the steps are run
+    - might be running unnecessary training steps if loss is stable
+    
+- TF lite for mobile devices
+- optimizing the model
+  - for lite, run python script
+  
+- can add TF to android using gradle dependency
+  - val inteferenceInterfacee = TenforFlowInteferenceInterface(.., ..);
+  - inteferenceInterfacee.feed(inputName, FloatValues, 1, inputSize, inputSize, 3);
+  - inteferenceInterfacee.run(outputNames, false);
+  - inteferenceInterfacee.fetch(outputName, outputs);
+  - for (i in i=outputs.indices) {
+    if (outputs[i] > THRESHold) {
+        val lables = labels.get(i);
+        val output = 
+    }
+  }
+
+20180326 - firestorm workshop
+- https://codelabs.developers.google.com/codelabs/firestore-android/#0
+
+  
+  
+
+20180326 - lighning talk
+- browzine journal app, thirdiron.com
+  - browzine.com
+  - twitter.com/karlbecker_com
+  
+
+
+20180326 - 11am talk, pragmatic gradle
+- clive lee, company: ovia health, @CliveLeeHere
+- multi module
+  - why
+    - better architecture
+    - break it down by dependency tree
+    - use acyclic depencies
+    - faster builds
+      - gradle good at compilation avidance
+      - also loading better
+      -
+      
+- github.com/cliveleehere/multimodulegradle
+- update gradle
+  - modify gradle properties
+  - ./build.gradle
+  - andorid cache fix graddle plugin
+  - org.gradle.parallel=true
+  - org.gradle.caching=true
+  - org.gradle.configureondemand=true
+- parallel execution
+  - project must be modularized
+  -
+  
+- dependency ,anagement
+  - coordinates
+    - 'group:name:version'
+      - ie: 'com.google.dagger:dagger:2.15'
+      - problem is you need consistent version numbers for libs that are dependent
+        - sol: at root gradle file
+          - ext {DAGGER_VERSION= '2.15'}
+          - refernce with $DAGGER_VERSION
+        - sol: add versions.gradle file
+          - define map of versions
+          - then add buildScript{} include of that file in root build.gradle
+        - sol: add /buildSrc directory, can declare java files that manage dependencies
+          - define static strings in class
+          - in build.gradle, import class and use that, get code completion
+          
+- break up gradle files
+  - in setting.gdale
+    - include ':<dir>'
+    
+
+
+
+
+20180326 - 10am keynote, tips for library dev
+- lisa wray, @lisawrayz, company: present
+  - xkcd comic
+  - why
+    - modularity
+    - community help
+    -
+  - how
+    - start by focusig on single use case
+    - by honest in your library description
+      - make sure to describe accurately scope and size
+      - also stability and maturity
+      - use semantic versionning (standard of numbering) (ie: version 2.5.1)
+        - small number, buf fix
+        - middle number, new features
+        - left number
+        - can also add alpha/beta after the numbers
+    - robust test suite to help with testing pull requests
+    - if work at big company, company might own
+      - release as open source, then open to all
+    - deprecation
+      - 
+
+
+
+
+- tidbits
+  - parkinson's law
+    - work will expand to fill all available time
+     
+
+- look up
+  - appollo graphql
+  - square company
+    - retrofit
+    - chkp

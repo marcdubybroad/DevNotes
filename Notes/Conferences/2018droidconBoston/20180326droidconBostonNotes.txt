@@ -1,0 +1,55 @@
+
+
+
+20180326 - droidcon 2018
+- planned agenda
+  - day01
+    - 11am - gradle, stage02
+    - 1pm
+      - firestopre workshop, carold dean theater
+      - kotlin, stage01
+    - 2pm - TF, stage02
+    - 3pm
+      - IoT workshop, carold dean theater
+      - optimization, stage02
+    - 4pm
+      - kotlin bots, stage02
+      
+    
+- setup
+  - raspberri pi
+  - load iot code
+  - create firebase acct
+  - 
+
+- wifi
+  - CaldPav52176
+
+- after party
+  - FBBOS
+  -
+  
+- recruiters
+  - chewy
+  - firebase
+  - trip advisor
+  - rue lala
+  - wayfair
+  -
+- other companies
+  - ovia health
+  
+  
+- #sean, #marci, #droidconbos
+  
+
+20180326 - 10am keynote, tips for library dev
+- lisa wray, @lisawrayz, company: present
+  - xkcd comic
+  - why
+    - modularity
+    - community help
+    - 
+
+
+
