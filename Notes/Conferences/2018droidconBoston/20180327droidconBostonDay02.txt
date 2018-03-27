@@ -1,5 +1,37 @@
 
 
+
+20180327 - flux framework developed by facebook
+- shohei kawano, @shaunkawano
+- components
+  - view
+  - action helpper
+  - action
+  - dispatcher
+  - store
+    - state manager (the only one in the application)
+  
+- benefits
+  - makes application DRY
+  - code conistency with minimal boilerplates
+  -
+  
+- flux relates to the redux architecture
+  - diff is that redux only has one store in the app
+  - flux can create multiple stores
+  
+- other libs that he uses
+  -
+  - data binding
+  - RxJava
+  - greenrobot/eventbus
+  - uber/autodispose
+  - trello/navi
+  
+  
+
+
+
 20180327 - poor programming paradigms
 - alice yuan, company: pinterest, github.com/AliceYuan
 - issues
@@ -46,6 +78,10 @@
   - central location to retireve models
   - seperation of concerns with interfaces
   
+- slides:  bit.ly/2pN6pBM
+- rxjava marbles web site
+
+
 
 20180327 - REST security
 - potentil issues
