@@ -1,0 +1,83 @@
+
+
+- Lesson 12, UI design
+- design priciples
+  - users interact with objects directly, not using button ans menus
+  - use imagery and pictures in place of words and senetences
+  - allow users to customize app, while providing sensible defaults
+  - simple shortcuts for complex tasks
+  -
+  
+- good practices
+  - make mockup of how you see the application looking through al its screens
+    - specify what colors to use
+    - keylines: exact size and spacing for components
+  - materal design guidelines
+   - set of principles and guides for design
+
+- colors
+  - should go together
+  - help to distinguish views from interactive components
+    - have primary color (base color for the app) and accent color (brighter to draw attention to buttons in app)
+    - onlien tools to help choose color palette
+    - choose 3 shades of primary color and 1 accent color
+      - ie: 3 shade purlple, orange; they are near opposite colors, so have high conyracst
+    - so colors
+      - 3 primary
+      - 1 accent
+      - primary text, secondary test, text
+      - divider color
+      
+- fonts
+  - stick one font family
+  - modify size and weight for changes
+  - stay with a few consistent styles within font familuy
+  - text size units of sp (scale independent pixels)
+    - unit is dp (density independent pizxels)
+    - these will stay smae physical size across different screen resolutions
+    - also, any sp text will be largened if accessibility turned on
+      
+      
+      
+      
+      
+- notes
+  - create a view to test colors; can be hidden easter eggs
+     - see ex 12.01
+     
+     
+     
+     
+- styles.xml     
+    <!--  (2) Create a new style "folderStyle" to group properties for the mail folder text views -->
+    <!-- This style should group all the property values found in the inbox view, like layout_width, height, etc, that are meant to repeat -->
+    <style name="folderStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:textColor">@android:color/black</item>
+    </style>
+
+    <!-- TODO (4) Create a new "inboxStyle" that inherits from "folderStyle" and includes a bold textStyle property -->
+    <style name="inboxStyle" parent="folderStyle">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+- colors.xml
+    <!-- Base application colors -->
+    <color name="colorPrimary">#673AB7</color>
+    <color name="colorPrimaryDark">#512DA8</color>
+    <color name="colorAccent">#FF9100</color>
+    <!-- Create a new color, colorPrimaryLight that is #D1C4E9 -->
+    <color name="colorPrimaryLight">#D1C4E9</color>
+
+
+
+
+
+
+     
+    

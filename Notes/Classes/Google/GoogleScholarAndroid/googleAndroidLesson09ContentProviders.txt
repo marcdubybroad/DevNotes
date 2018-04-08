@@ -1,0 +1,237 @@
+
+
+
+- lesson 10 notes - notifications and services
+
+    //  TODO (11) Within that method, start the SunshineSyncIntentService
+    Intent intent = new Intent(context, SunshineSyncIntentService.class);
+    context.startService(intent);
+
+
+    //   (5) Add a static method called ignoreReminderAction
+    public static NotificationCompat.Action ignoreReminderAction(Context context) {
+        //       (6) Create an Intent to launch WaterReminderIntentService
+        Intent intent = new Intent(context, WaterReminderIntentService.class);
+
+        //       (7) Set the action of the intent to designate you want to dismiss the notification
+        intent.setAction(ReminderTasks.ACTION_DISMISS_WATER_COUNT);
+
+        //       (8) Create a PendingIntent from the intent to launch WaterReminderIntentService
+        PendingIntent pendingIntent = PendingIntent.getService(context, ACTION_WATER_CANCEL_INTENT_ID, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
+        //       (9) Create an Action for the user to ignore the notification (and dismiss it)
+        NotificationCompat.Action ignoreAction = new NotificationCompat.Action(R.drawable.ic_cancel_black_24px, "No Thanks", pendingIntent);
+
+        //       (10) Return the action
+        return ignoreAction;
+    }
+
+
+    public static void remindUserBecauseCharging(Context context) {
+        //  (8) Get the NotificationManager using context.getSystemService
+        NotificationManager notificationManager = (NotificationManager)context.getSystemService(context.NOTIFICATION_SERVICE);
+
+        //  (9) Create a notification channel for Android O devices
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            NotificationChannel notificationChannel = new NotificationChannel(NOTIFICATION_CHANNEL_ID, NOTIFICATION_CHANNEL_ID, NotificationManager.IMPORTANCE_HIGH);
+            notificationManager.createNotificationChannel(notificationChannel);
+        }
+
+        //  (10) In the remindUser method use NotificationCompat.Builder to create a notification
+        // that:
+        // - has a color of R.colorPrimary - use ContextCompat.getColor to get a compatible color
+        // - has ic_drink_notification as the small icon
+        // - uses icon returned by the largeIcon helper method as the large icon
+        // - sets the title to the charging_reminder_notification_title String resource
+        // - sets the text to the charging_reminder_notification_body String resource
+        // - sets the style to NotificationCompat.BigTextStyle().bigText(text)
+        // - sets the notification defaults to vibrate
+        // - uses the content intent returned by the contentIntent helper method for the contentIntent
+        // - automatically cancels the notification when the notification is clicked
+        NotificationCompat.Builder builder = new NotificationCompat.Builder(context, NOTIFICATION_CHANNEL_ID)
+                .setColor(ContextCompat.getColor(context, R.color.colorPrimary))
+                .setSmallIcon(R.drawable.ic_drink_notification)
+                .setLargeIcon(largeIcon(context))
+                .setContentTitle(context.getString(R.string.charging_reminder_notification_title))
+                .setContentText(context.getString(R.string.charging_reminder_notification_body))
+                .setStyle(new NotificationCompat.BigTextStyle().bigText(context.getString(R.string.charging_reminder_notification_body)))
+                .setDefaults(Notification.DEFAULT_VIBRATE)
+                .setContentIntent(contentIntent(context))
+                .setAutoCancel(true);
+
+        //  (11) If the build version is greater than JELLY_BEAN and lower than OREO,
+        // set the notification's priority to PRIORITY_HIGH.
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN && Build.VERSION.SDK_INT < Build.VERSION_CODES.O) {
+            builder.setPriority(NotificationCompat.PRIORITY_HIGH);
+        }
+
+        //  (12) Trigger the notification by calling notify on the NotificationManager.
+        // Pass in a unique ID of your choosing for the notification and notificationBuilder.build()
+        notificationManager.notify(NOTIFICATION_ID, builder.build());
+    }
+
+
+        Intent intent = new Intent(context, MainActivity.class);
+
+        //  (3) Create a PendingIntent using getActivity that:
+        // - Take the context passed in as a parameter
+        // - Takes an unique integer ID for the pending intent (you can create a constant for
+        //   this integer above
+        // - Takes the intent to open the MainActivity you just created; this is what is triggered
+        //   when the notification is triggered
+        // - Has the flag FLAG_UPDATE_CURRENT, so that if the intent is created again, keep the
+        // intent but update the data
+        PendingIntent pendingIntent = PendingIntent.getActivity(context, 101, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+        
+        Driver driver = new GooglePlayDriver(context);
+        FirebaseJobDispatcher dispatcher = new FirebaseJobDispatcher(driver);
+        
+        
+        
+        
+        
+        Job myJob = dispatcher.newJobBuilder()
+            // the JobService that will be called
+            .setService(MyJobService.class)
+            // uniquely identifies the job
+            .setTag("complex-job")
+            // one-off job
+            .setRecurring(false)
+            // don't persist past a device reboot
+            .setLifetime(Lifetime.UNTIL_NEXT_BOOT)
+            // start between 0 and 15 minutes (900 seconds)     
+            .setTrigger(Trigger.executionWindow(0, 900))
+            // overwrite an existing job with the same tag
+            .setReplaceCurrent(true)
+            // retry with exponential backoff 
+            .setRetryStrategy(RetryStrategy.DEFAULT_EXPONENTIAL)
+            // constraints that need to be satisfied for the job to run
+            .setConstraints(
+                // only run on an unmetered network
+                Constraint.ON_UNMETERED_NETWORK,
+                // only run when the device is charging
+                Constraint.DEVICE_CHARGING
+            )
+    .build();
+    
+    
+Helpful adb Commands
+To simulate the phone being unplugged from usb charging you can use:
+
+adb shell dumpsys battery set usb 0
+or if you're on a device Android 6.0 or higher you can use:
+
+adb shell dumpsys battery unplug
+To "plug" the phone back in, just reset it's charging status using:
+
+adb shell dumpsys battery reset
+
+
+
+
+- lesson 09 notes - ContentProviser
+    public static final Uri BASE_CONTENT_URI = Uri.parse("content://" + AUTHORITY);
+    public static final Uri CONTENT_URI = BASE_CONTENT_URI.buildUpon().appendPath(PATH_TASKS).build();
+
+    UriMatcher uriMatcher = new UriMatcher(UriMatcher.NO_MATCH);
+    uriMatcher.addURI(TaskContract.AUTHORITY, TaskContract.PATH_TASKS, TASKS);
+    uriMatcher.addURI(TaskContract.AUTHORITY, TaskContract.PATH_TASKS + "/#", TASKS_WITH_ID);
+
+        final SQLiteDatabase sqLiteDatabase = this.mTaskDbHelper.getWritableDatabase();
+
+        //  (2) Write URI matching code to identify the match for the tasks directory
+        uriIndex = sUriMatcher.match(uri);
+        Uri returnUri;
+
+        switch (uriIndex) {
+            case TASKS:
+                //  (3) Insert new values into the database
+                long id = sqLiteDatabase.insert(TaskContract.TaskEntry.TABLE_NAME, null, values);
+
+                if (id > 0) {
+                    // success
+                    //  (4) Set the value for the returnedUri and write the default case for unknown URI's
+                    returnUri = ContentUris.withAppendedId(TaskContract.TaskEntry.CONTENT_URI, id);
+
+                } else {
+                    throw new android.database.SQLException("Got error inserting task");
+                }
+                break;
+
+            default:
+                String message = "Got incorrect uri";
+                Log.e(this.getClass().getName(), message);
+                throw new UnsupportedOperationException(message);
+        }
+
+
+        //  (5) Notify the resolver if the uri has been changed, and return the newly inserted URI
+        this.getContext().getContentResolver().notifyChange(uri, null);
+
+
+
+    public void onClickAddTask(View view) {
+        // Not yet implemented
+        //  (6) Check if EditText is empty, if not retrieve input and store it in a ContentValues object
+        EditText editText = (EditText)this.findViewById(R.id.editTextTaskDescription);
+        String input = editText.getText().toString();
+
+        if (input != null && input.length() > 0) {
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(TaskContract.TaskEntry.COLUMN_DESCRIPTION, input);
+            contentValues.put(TaskContract.TaskEntry.COLUMN_PRIORITY, this.mPriority);
+
+            // insert through content provider
+            //  (7) Insert new task data via a ContentResolver
+            Uri uri = this.getContentResolver().insert(TaskContract.TaskEntry.CONTENT_URI, contentValues);
+
+            //  (8) Display the URI that's returned with a Toast
+            if (uri != null) {
+                Toast.makeText(this.getBaseContext(), uri.toString(), Toast.LENGTH_LONG).show();
+            }
+
+            // [Hint] Don't forget to call finish() to return to MainActivity after this insert is complete
+            this.finish();
+
+        } else {
+            return;
+        }
+    }
+
+
+
+            // start transaction
+            sqLiteDatabase.beginTransaction();
+            insertCount = 0;
+
+            // loop and insert
+            try {
+                for (ContentValues values1 : values) {
+                    long id = sqLiteDatabase.insert(WeatherContract.WeatherEntry.TABLE_NAME, null, values1);
+                    if (id != -1) {
+                        insertCount++;
+                    }
+                }
+
+                // set transaction successful
+                sqLiteDatabase.setTransactionSuccessful();
+
+            } finally {
+                // end transaction
+                sqLiteDatabase.endTransaction();
+            }
+
+//               (3) Return the number of rows inserted from our implementation of bulkInsert
+            if (insertCount > 0) {
+                this.getContext().getContentResolver().notifyChange(uri, null);
+            }
+            return insertCount;
+            
+            
+            
+
+- apps to keep for later
+  - quiz example, lesson 09, content providers
+  - todo list, lesson 10, content provider creation
+  
+  

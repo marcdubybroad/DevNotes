@@ -1,0 +1,65 @@
+
+
+- lesson 11, View and Groups
+  - views for all gui elements
+    - part of ViewGroup (layouts)
+      - view groups extends from view class
+      - so can nest view groups
+      
+- frame layout
+  - block out area of screen, single child
+- linear layout
+  - display children in horizontal or vertical list
+  - can add weight for space
+- relative layout
+  - view child align at any of 4 parent edges
+  - or view relative to other view
+- grd layout
+  - views fill out cells i grid
+  - views can also span multiple cells
+- constraint layout
+  - views positioned relative to parent or each other
+  - but uses constraints for position and scale
+    - at least one horizontal and one vertical constraint
+  - most performing layout
+  
+- width and height
+  - wrap content just take as much space as needed
+  - match paretn fills space
+- garvity
+  - within the vieew
+- layout gravity
+  - within the layout
+- padding
+  - within the vieew
+- layout_margin
+  - within the layout
+- visivility
+  - visible/invisible (still holds place)/gone (as if dint' exist)
+  
+- text view
+  - tools:text
+    - sets text for design mode but blank when run
+    - avoid using android:text for fake data
+    
+- rules of thumb
+  - 80 views max in single mayout
+  - never more than 10 nested view groups
+  
+  
+- redo
+  - the lanscape layout exercise, 11.03
+  - sunshine 11.01
+  
+- coole stuff learned
+  - use diff layout in list based on portrait or landscape and osition
+  - constraint layout
+  - data binding
+  
+  
+    
+  
+
+  
+    
+    

@@ -1,8 +1,44 @@
 
 
+20180327 - emojis in android
+- classes
+    - EmojiCompat
+    - EmojiTextViewHelper
+    - EmojiProcessor
+      - takes unicode char and returns EmojiSpan
+    - EmojiSpan
+      - subclass of ReplacementSpan
+      - helps draw images for characters
+      - draws emoji onto Canvas between characters
+- config
+  - BundledEmojiComaptConfig
+  
+
+
+20180327 - MVI (model view intent) pattern
+- garima jain
+(---)
+- why MVI
+  - MVP/MVVM -> MVI
+  - MVI -> similar to Satat View Intention
+  
+- MVPI?
+
+- reducer
+  - f(previous state, result) -> new state
+  
+- hannes dorfmann MVI series
+- jake wharton youtube talk, on state
+- Benoit Quenaudon youtube talk + github.com/oldergod
+- dan abramov egghead.io couse
+  - egghead.io/courses/getting-started-with-redux
+
+  
+
 
 20180327 - flux framework developed by facebook
 - shohei kawano, @shaunkawano
+(---)
 - components
   - view
   - action helpper
