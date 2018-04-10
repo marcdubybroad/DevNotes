@@ -37,13 +37,65 @@
     - these will stay smae physical size across different screen resolutions
     - also, any sp text will be largened if accessibility turned on
       
+- density: # pixels per sq inch
+  - 5 ranges
+    - mdpi (160 dpi)
+    - hdpi (240)
+    - xhdpi (320)
+    - xxhdpi (480)
+    - xxxhdpi (640)
+    
+- layouts are not based on smallest screen supported
+  - smallest width qualifier (regardless of arientation)
+    - ie: res
+      - layout
+      - layout-sw600dp
+      - layout-720dp
       
+    - if doesn't have layout file for activity in folder, defaults to next lowest folder that does
+    
+    
+- of use view width of 0dp, use layout_weight
+  - so for tablet layout, use linear layout, then widths of 0dp for columns, then layout weights to parse out screen size between views
+  
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="200dp"
+        android:layout_weight="1"
+        android:paddingBottom="8dp"
+        android:src="@drawable/ic_insert_image"
+        android:gravity="center"
+        android:contentDescription="@string/image_placeholder" />
+        
+- touch selectors
+  - will change look of layout when touched (or otherwise selectde based on android action configured for)
       
+      <?xml version="1.0" encoding="utf-8"?>
+<!-- TODO (1) Create a new drawable resource,named list_item_selector, choosing "selector" as the root element -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- TODO (2) Add the primary light color to three items for: pressed, activated, and selected states -->
+    <item android:drawable="@color/colorPrimaryLight" android:state_pressed="true"/>
+    <item android:drawable="@color/colorPrimaryLight" android:state_activated="true"/>
+    <item android:drawable="@color/colorPrimaryLight" android:state_selected="true"/>
+
+    <!-- TODO (3) Add one more item for the default (unselected) state -->
+    <!-- This should have a default drawable color = "@android:color/background_light" -->
+    <item android:drawable="@android:color/background_light"/>
+
+</selector>
       
+
+
       
 - notes
   - create a view to test colors; can be hidden easter eggs
      - see ex 12.01
+    
+- redo
+  - sunshine 12.01
+  - 
      
      
      
