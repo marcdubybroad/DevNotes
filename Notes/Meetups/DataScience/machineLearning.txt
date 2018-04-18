@@ -1,0 +1,117 @@
+
+
+20180416 - ML on edge devices like phones
+
+- open data
+  - imagenet, cifar
+
+- steps
+  - get data
+  - train matches to production
+    - can augment your model by duplicating images and rotate them
+    - can also update lighting
+  - input sizes
+    - berae large inputs
+    - explicit dimensions
+    -
+  - collect input/output samplig
+    - cache model inputs and outputs
+      - buffer size
+        - look out for network bandwidth
+      - sampling rate
+        - just get a few frames per second for video
+      - device characteristics
+    - send back to cloud
+      - connectivity
+      - bandwidth limitations
+      
+  - train
+    - make sure trai ing env matches production
+      - use numpi and pandas to massage data
+  - optimize -> google papaer for mobile nets, optimized formobile devices
+    - architecture
+      - depthwise separable convolutions
+      - hardware aware design
+      - architecture search
+    - prning
+      - mobile nets width mutiplier (threw away a fractio of params)
+      - also steps
+        - compute importamce of features (can see how much they contribute to the model)
+        - prune
+        - rewire
+        - fine tune
+    - compression
+      - quantization
+        - all the weight in CNN are floating point (and rather large)
+          - can convert them to 8 bit integer
+          - so bin weights in 256 bins
+            - will degrade the performance
+            - can simulate the compression in your trauining step
+      - serialization
+    - iterative process
+      - generate arch
+      - ttrain network
+      - benchmark performance
+      - minimize cost
+      
+    - convert
+      - tools to convert from server side models to mobile ones
+        - TOCO< tf-coreml, ONNX,
+        
+    - protection of model on mobile device
+      - encryption
+      - obfuscation
+        - add proprietary firs step (rotate all images 90 degrees)
+        - scramble weights, unscramble at run time
+    
+    - deploy
+      - port pre and post processing
+      - pre loaded vs fetch at runtime
+      - models are features
+        - versioning
+        - staged rollouts
+      - put the right model on the right device
+      
+    - monitor
+      - metrics for mobile
+        - runtime
+        - memory
+        - battery drain
+        - usage
+        
+    
+- frameworks
+  - kerrs
+  - tf
+  - for devices
+    - core ml
+    - tf lite
+    - windows ml
+    - caffe2go
+    - TuriCreate
+    - IBM watson studio
+      - can export to core ml
+    - Azure custom vision
+      - can export to core ml
+    
+- products
+  - Fritz AI tools
+  - fritz.ai
+  
+- misc
+  - siri has its own chip
+  - gartner redicts 20% of pphones have ML chips by 2020
+  - commun ity: heartbeat
+  - tools: alchemy
+  
+  -ssd
+    - single shot detection
+    - look at mobilenet
+    - single image, determines objects in image through bounding boxes
+    
+  
+- numpi and pandas to massage data before model
+
+
+  
+

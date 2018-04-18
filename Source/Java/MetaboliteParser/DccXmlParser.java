@@ -27,6 +27,7 @@ public class DccXmlParser extends DefaultHandler {
 
     // xml tags
     private String METABOLITE = "metabolite";
+    private String TOP_LEVEL_NAME = "name";
     private String ACCESSION = "accession";
     private String KEGG_ID = "kegg_id";
     private String DIRECT_PARENT = "direct_parent";
@@ -34,6 +35,9 @@ public class DccXmlParser extends DefaultHandler {
     private String SUPER_CLASS = "super_class";
     private String CLASS = "class";
     private String MOLECULAR_FRAMEWORK = "molecular_framework";
+    private String PUBCHEM_COMPOUND_ID = "pubchem_compound_id";
+
+    private boolean isTest = false;
 
 
     /** The main method sets things up for parsing */
@@ -49,7 +53,9 @@ public class DccXmlParser extends DefaultHandler {
         DccXmlParser handler = new DccXmlParser();
 
         //Finally, tell the parser to parse the input and notify the handler
-        sp.parse(new File("/Users/mduby/Google Drive/Broad/Documents/Work/Broad/Projects/20180109metabolitesXml/Data/hmdb_metabolites.xml"),handler);
+        sp.parse(new File("/Users/mduby/Google Drive/Broad/Documents/Work/Broad/Projects/20180109metabolitesXml/Data/New20180410/hmdb_metabolites.xml"),handler);
+//        sp.parse(new File("/Users/mduby/Google Drive/Broad/Documents/Work/Broad/Projects/20180109metabolitesXml/Data/hmdb_metabolites.xml"),handler);
+//        sp.parse(new File("/Users/mduby/Google Drive/Broad/Documents/Work/Broad/Projects/20180109metabolitesXml/Data/unitTestMetabolite.xml"),handler);
 //        sp.parse(new File("/Users/mduby/Google Drive/Broad/Documents/Work/Broad/Projects/20180109metabolitesXml/Data/testMetabolite.xml"),handler);
 
         handler.readList();
@@ -89,6 +95,12 @@ public class DccXmlParser extends DefaultHandler {
         } else if (qName.equalsIgnoreCase(this.METABOLITE)) {
             this.metaboliteBeanList.add(this.metaboliteBean);
 
+        } else if (qName.equalsIgnoreCase(this.TOP_LEVEL_NAME)) {
+            // onlye add first instance of name since there are other sub level 'name' elements
+            if (this.metaboliteBean.getTopLevelName() == null) {
+                this.metaboliteBean.setTopLevelName(temp);
+            }
+
         } else if (qName.equalsIgnoreCase(this.DESCRIPTION)) {
             this.metaboliteBean.setDescription(temp);
 
@@ -106,6 +118,9 @@ public class DccXmlParser extends DefaultHandler {
 
         } else if (qName.equalsIgnoreCase(this.MOLECULAR_FRAMEWORK)) {
             this.metaboliteBean.setMolecularFramework(temp);
+
+        } else if (qName.equalsIgnoreCase(this.PUBCHEM_COMPOUND_ID)) {
+            this.metaboliteBean.setPubchemCoumpoundId(temp);
         }
 
     }
@@ -119,8 +134,8 @@ public class DccXmlParser extends DefaultHandler {
 
         // create the CSV file
         Date now = new Date();
-        String fileOutPath = "/Users/mduby/Google Drive/Broad/Documents/Work/Broad/Projects/20180109metabolitesXml/Data/Out/" + now.getTime() + "metabolite.txt";
-        String header = "accension\tdescription\tdirect_parent\tsuper_class\tclass\tmolecular_framework\tkegg_id\n";
+        String fileOutPath = "/Users/mduby/Google Drive/Broad/Documents/Work/Broad/Projects/20180109metabolitesXml/Data/Out/Test" + now.getTime() + "metabolite.txt";
+        String header = "accension\tname\tdescription\tdirect_parent\tsuper_class\tclass\tmolecular_framework\tkegg_id\tpubchem_counpound_id\n";
 
         // create the print writer
         PrintWriter pw = null;
@@ -142,6 +157,7 @@ public class DccXmlParser extends DefaultHandler {
         pw.close();
 
         // indicate when donw
+        System.out.println("File written: " + fileOutPath);
         System.out.println("Done!!!!");
     }
 
@@ -152,6 +168,8 @@ public class DccXmlParser extends DefaultHandler {
         for (String accesion : metaboliteBean.getAccesionList()) {
             stringBuffer = new StringBuffer();
             stringBuffer.append(accesion);
+            stringBuffer.append("\t");
+            stringBuffer.append(metaboliteBean.getTopLevelName());
             stringBuffer.append("\t");
             stringBuffer.append(metaboliteBean.getDescription());
             stringBuffer.append("\t");
@@ -164,10 +182,16 @@ public class DccXmlParser extends DefaultHandler {
             stringBuffer.append(metaboliteBean.getMolecularFramework());
             stringBuffer.append("\t");
             stringBuffer.append(metaboliteBean.getKeggId());
+            stringBuffer.append("\t");
+            stringBuffer.append(metaboliteBean.getPubchemCoumpoundId());
             stringBuffer.append("\n");
 
             // add the string
             stringList.add(stringBuffer.toString());
+
+            if (this.isTest) {
+                System.out.print(metaboliteBean.toString());
+            }
         }
 
         // return
@@ -178,12 +202,14 @@ public class DccXmlParser extends DefaultHandler {
 
 class MetaboliteBean {
     private List<String> accesionList = new ArrayList<>();
+    private String topLevelName;
     private String keggId;
     private String superClass;
     private String classes;
     private String molecularFramework;
     private String description;
     private String directParent;
+    private String pubchemCoumpoundId;
 
     public List<String> getAccesionList() {
         return accesionList;
@@ -240,4 +266,47 @@ class MetaboliteBean {
     public void setDirectParent(String directParent) {
         this.directParent = directParent;
     }
+
+    public String getPubchemCoumpoundId() {
+        return pubchemCoumpoundId;
+    }
+
+    public void setPubchemCoumpoundId(String pubchemCoumpoundId) {
+        this.pubchemCoumpoundId = pubchemCoumpoundId;
+    }
+
+    public String getTopLevelName() {
+        return topLevelName;
+    }
+
+    public void setTopLevelName(String topLevelName) {
+        this.topLevelName = topLevelName;
+    }
+
+    public String toString() {
+        StringBuffer buffer = new StringBuffer();
+
+        buffer.append("\nascension: ");
+        buffer.append(this.getAccesionList() + "\n");
+        buffer.append("name: ");
+        buffer.append(this.getTopLevelName() + "\n");
+        buffer.append("description: ");
+        buffer.append(this.getDescription() + "\n");
+        buffer.append("direct_parent: ");
+        buffer.append(this.getDirectParent() + "\n");
+        buffer.append("super_class: ");
+        buffer.append(this.getSuperClass() + "\n");
+        buffer.append("class: ");
+        buffer.append(this.getClasses() + "\n");
+        buffer.append("molecular_framework: ");
+        buffer.append(this.getMolecularFramework() + "\n");
+        buffer.append("kegg_id: ");
+        buffer.append(this.getKeggId() + "\n");
+        buffer.append("pubchem_counpound_id: ");
+        buffer.append(this.getPubchemCoumpoundId() + "\n");
+
+        return buffer.toString();
+//        String header = "accension\tdescription\tdirect_parent\tsuper_class\tclass\tmolecular_framework\tkegg_id\tpubchem_counpound_id\n";
+    }
+
 }
