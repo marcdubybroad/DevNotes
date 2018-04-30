@@ -1,0 +1,27 @@
+
+
+20180424 - neural networks
+- fukuskima's neocognitron, 1980s
+  - last 10 years, gpu ->
+  
+- classification
+  - regression
+  - reinforcement learning
+  - ranking
+    - web ranking
+  - detection
+    - self driving car
+  
+- logistic classifier (linear classifier)
+  - W * X + b = y
+    - so Weight * <input matrix> + bias = <output prediction>
+    - machine learnign will build the W and bias
+    - use softmax equation to tuen scroes into probabilities that sum t 1
+      - so for 3 letters, get 3 probabilties that sum to one, with only one possible outscome for the predicted letter
+      -> S(yi) = exp(yi) / SUMover-i[ exp(yi) ]
+      -> so [2.0, 1.0, 0.1] scores becomes [0.7, 0.2, 0.1] probabilties
+      
+    - def softmax(x):
+        return np.exp(x) / np.sum(np.exp(x), axis = 0)
+      
+  

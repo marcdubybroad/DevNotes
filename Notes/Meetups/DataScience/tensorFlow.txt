@@ -1,0 +1,66 @@
+
+
+20180430 - gdg boston tensor flow
+
+- future meetups
+  - may, google i/o recap
+  - june, flutter code lab
+    - flutter is cross platform multi language env
+  - july, gcp study group
+  
+  
+- talks
+- praveen, ncaa TF bracket
+  - input features
+    - ppg avg, ppa avg, reg season wins, num ber of 3s, turnovrs, pg, assists per g, conf champ (binary),
+        seed, strength of sched, rebs per game, steals per game, time of game, tv game (binary), number ncaa appearances last 30 years
+    - create vector with values
+      - approach
+        - one vector for each team, then do diff between vectors
+        - use last 25 years of all games and train model
+        - used gradient boosted regression test algorithm
+    - github/aravamudham/ncaa-2018-ML
+  - tech
+    - tf
+    - numpy
+    
+- modeling chemical structures using deep learning
+  - ankit gupta
+  - goal
+    - design a ligand to bind to a protein to inhibit the protein
+  - why hard
+    - proteins are large
+      - may need to model 100s of atoms
+    - good data is scarce
+    - molecular interactions are hard to model precisely
+    - pother props
+      - solubility
+      - lipophilicity
+      - liver clearance
+      - cell membrane permeability
+    - use ML
+      - model molecular props
+      - reduce time cost
+    - options of data to use
+      - 1d fingerprimt f featurization
+      - 3d dense grid featurization (charge density cloud)
+      -
+    - approach
+      - use MPNN
+        - treat moecue as grah
+        
+        
+        
+- webrtchacks.com
+  
+  
+    
+- notes
+  - get baseball data from mccaggle (ml site)
+  - ibm quantum compting hackathon
+  - baseball hack day hackathon
+  - if have a lot of features and small training set, more likely to overfit
+  
+  
+  
+    

@@ -1,0 +1,76 @@
+
+
+20180427 - spring serverless (sprimg cloud function)
+- function as a service
+  - atomic unit of work
+  - serverles
+  - functions as applications
+  
+
+- values  
+  - event driven
+  - dynamic resource utilization
+  - billing per message (simon worldly article)
+    - pay for execution, number of events
+    - tranforms hwo you think about your softare, how you implement
+      - flip side: is serverless the new VB?
+  - prototypes become prd code very quickly
+  - focus on biz logic
+
+- get out of business of integration, inffrastructure
+
+- providers so far
+  - aamzon lambda (java option)
+  - googlw cloud functions
+  - azure functions
+  - ibm openwhisk (java option)
+  - fission (kubernetes based)
+  - kubeless (kubernetes based)
+  
+- example of java function
+  - java.util.Function package
+    public interface Function<T, R> {
+      R apply(T t);
+    }
+  
+  - spring boot app
+    @SpringBootApplication
+    public class DemoApplication {
+      @Bean
+      public Function<Foo, Bar> foobar() {
+        return foo -> new Bar(foo.getName().toUpperCase());
+      }
+      
+      public static void main(String[] args) {
+        SpringApplication.run(DemoApplication.class, args);
+      }
+    
+    }
+    class Foo {
+      private String name;
+      public String getName() {return this.name;}
+      public void setName(String input) {this.name = input;}
+    }
+    class Bar {
+      private String name;
+      public Bar(String name) {this.name = name;}
+      public String getName() {return this.name;}
+      public void setName(String input) {this.name = input;}
+    }
+    
+- add dependency in pom.xml
+<depedency>
+  <groupId>org.psirngframework.ckoud</groupId>
+  <artifactId>spring-cloud-function-web</artifactId>
+  <version>1.0.0.BUILD-SNAPSHOT</version>
+</depedency>
+
+- note: spring cloud function works with sring 1.5.3 now
+
+- call is using
+  - curl -H "Content-Type: application/json" localhost:8080/foobar -d '{"name": "hello"}'
+  
+- could also use streams
+  <artifactId>spring-cloud-function-stream</artifactId>
+
+

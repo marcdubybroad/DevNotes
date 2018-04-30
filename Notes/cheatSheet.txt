@@ -304,7 +304,7 @@ Burden add new dataset:
   
 Burden PED file creation from MySQL:
 ------------------------------------
-- echo 'select *, ID from SAMPLE_26k' | mysql -u root -p dig_kb > e26k.covar.fromMysql.ped
+- echo 'select * from SAMPLE_26k' | mysql -u root -p burden_upload > e26k.covar.fromMysql.ped
 - add #I (turn ID to IID) to first line; header line must start wiht # character and there can only be one ID field in header line
 - replace NULL with NA entries in vi: :%s/search_string/replacement_string/g
   - :%s/NULL/NA/g

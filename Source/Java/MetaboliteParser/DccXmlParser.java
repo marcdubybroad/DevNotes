@@ -33,6 +33,7 @@ public class DccXmlParser extends DefaultHandler {
     private String DIRECT_PARENT = "direct_parent";
     private String DESCRIPTION = "description";
     private String SUPER_CLASS = "super_class";
+    private String SUB_CLASS = "sub_class";
     private String CLASS = "class";
     private String MOLECULAR_FRAMEWORK = "molecular_framework";
     private String PUBCHEM_COMPOUND_ID = "pubchem_compound_id";
@@ -113,6 +114,9 @@ public class DccXmlParser extends DefaultHandler {
         } else if (qName.equalsIgnoreCase(this.SUPER_CLASS)) {
             this.metaboliteBean.setSuperClass(temp);
 
+        } else if (qName.equalsIgnoreCase(this.SUB_CLASS)) {
+            this.metaboliteBean.setSubClass(temp);
+
         } else if (qName.equalsIgnoreCase(this.CLASS)) {
             this.metaboliteBean.setClasses(temp);
 
@@ -135,7 +139,7 @@ public class DccXmlParser extends DefaultHandler {
         // create the CSV file
         Date now = new Date();
         String fileOutPath = "/Users/mduby/Google Drive/Broad/Documents/Work/Broad/Projects/20180109metabolitesXml/Data/Out/Test" + now.getTime() + "metabolite.txt";
-        String header = "accension\tname\tdescription\tdirect_parent\tsuper_class\tclass\tmolecular_framework\tkegg_id\tpubchem_counpound_id\n";
+        String header = "accension\tname\tdescription\tdirect_parent\tsuper_class\tsub_class\tclass\tmolecular_framework\tkegg_id\tpubchem_counpound_id\n";
 
         // create the print writer
         PrintWriter pw = null;
@@ -177,6 +181,8 @@ public class DccXmlParser extends DefaultHandler {
             stringBuffer.append("\t");
             stringBuffer.append(metaboliteBean.getSuperClass());
             stringBuffer.append("\t");
+            stringBuffer.append(metaboliteBean.getSubClass());
+            stringBuffer.append("\t");
             stringBuffer.append(metaboliteBean.getClasses());
             stringBuffer.append("\t");
             stringBuffer.append(metaboliteBean.getMolecularFramework());
@@ -205,6 +211,7 @@ class MetaboliteBean {
     private String topLevelName;
     private String keggId;
     private String superClass;
+    private String subClass;
     private String classes;
     private String molecularFramework;
     private String description;
@@ -281,6 +288,14 @@ class MetaboliteBean {
 
     public void setTopLevelName(String topLevelName) {
         this.topLevelName = topLevelName;
+    }
+
+    public String getSubClass() {
+        return subClass;
+    }
+
+    public void setSubClass(String subClass) {
+        this.subClass = subClass;
     }
 
     public String toString() {
