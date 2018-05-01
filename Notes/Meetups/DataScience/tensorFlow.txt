@@ -48,10 +48,49 @@
     - approach
       - use MPNN
         - treat moecue as grah
+        - build 2 matirces per molecule
+          - atom to atom
+          - pair to pair feature
+          
+    - docker
+      - ubuntu 16
+      - tf 1.6.0
+      - open bable
+      - deepchem (from stanford)
+      - rdk
+    - hiring: contact@reverielabs.com
+          
         
-        
-        
-- webrtchacks.com
+
+- chad hart, cwh.consulting
+  - aiy visin kit, embedded ml for stem and makers
+  - webrtchacks.com
+  - models
+    - lots of limitations on the model; some operations not available
+  - intel movidius chip
+  - github.com/chadwallacehart.com
+  
+  
+- mgh clinical data science, medical imaging
+  - topics
+    - gradient checkpointing
+       - traditional backdrop
+       - no-reuse backdrop
+    - factorized modes and model sparsity
+      - factorize covolution to save on copute and memory
+        - depth wise separable convolution
+        -
+    - reduced precision training
+      - use half recision floats
+  - challenges of mdeical imaging
+    - data accessibility
+    - small datasets
+    - imbalanced classes
+    - high inter rater variability
+    - volumetric data
+  - hiring
+    - www.ccds.io
+    
   
   
     
@@ -60,6 +99,10 @@
   - ibm quantum compting hackathon
   - baseball hack day hackathon
   - if have a lot of features and small training set, more likely to overfit
+  - how to warm start models
+  - python 3 is newest to fo to
+    - if go to 3, 3.6 is better
+    
   
   
   
