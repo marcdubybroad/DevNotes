@@ -1,0 +1,66 @@
+
+
+20180504 - bayes intro, allen downey PhD
+- Olin college prof
+  - think bayes book
+  
+  
+- jupyter notebooks
+
+- bayes theorem
+  - P( a | b) = probably that a occurs giben that b occured
+  
+- in example, P(D) is
+
+- cookie bowl problem
+  - prob vanilla cookie came from bowl 1 = prob prior data * prob get valilla from bowl 1 / prob of getting vanilla from all bowls
+  - p(H | D) = p(H) * p(D | H) / p(D)
+  
+- 2 dice example
+  - even distro per dice of 1-6
+  - roll 2, sum most likely 7
+  - if postulate that 2,3 are nt pooutcomes
+    - then renoralize and get new distribution goven extra outcome data
+    
+    
+- tank problem
+  - german tank factory can produce 1-100 tanks
+    - if capture tank serial #37, what is the lilelyhood of how many tanks were produced
+    - if after that, capture tank 17
+      - it updates distro because it makes it more liely that they only produced 37 every time you catch a tank < 37
+  - lookk at wikipedia pagee on german tank problem
+  
+  
+- for normal distro
+  - as it ets narrower, just means you have better confidence in the peak result
+
+- MAP
+  - maximum a posteriry peak
+- posterior credible interval
+  - chance that fall into the 90% interval
+  
+  
+- conclusison
+  - big methods next
+    - markov chains monte carlo distributions
+      -> next thing to learn
+  - can also star with grid methods
+    - if can solve problem great, or else look at monte carlo
+    
+- think bayes
+  - thinkbayes.com
+  - think stats (descriptive stats)
+  
+- books
+  - pythin
+    - Information theory (free odf) - MacKay
+    - Bayesian methods for (free pdf) - Davidson-Pilon
+  - for R
+    - doing bayesian data analytocs - Kruschke
+    - statistical rethinking - McElreath
+  - math
+    - bayesian data analysis - Gelman
+    - data analysis, a bayesian tutorial - Sivia
+    - scientific reasoning, the bayesian approach - Howson, Urbach
+    
+- allen downey on twitter

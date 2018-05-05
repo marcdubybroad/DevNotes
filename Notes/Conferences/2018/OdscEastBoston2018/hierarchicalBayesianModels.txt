@@ -1,0 +1,40 @@
+
+
+20180504 - hierarchical bayesian models
+
+- eaxmapl
+  - gas prices in the country
+  - clusters of prices and usages
+    - so build a model specific to region, but still combine somehow
+    
+- bayesian model
+  - comvbines prior beliefe with the data we observe
+  - posterior beliefe = prior belief <tempered> by evidence
+  
+- bayesian regression model
+  - assume y = alpha + beta * x
+  - priors:
+    - alpha is normal(1, 10)
+    - beta is normal(1, 5)
+  - also assume y has normal distribution (from regression)
+  
+-
+  - use pymc3 library for python
+  
+- for airport example
+  - do we use seperate models for each airport or use one for all
+  - cal assume the distributions fo the alpha and beta is imilar
+    - so prio distros will be similar
+    
+- for price product quantity mode
+- delta Q = alpha + beta * delta P + epsilon
+  - epsilon is intercept
+  
+
+
+- notes from example
+  - find_MAP -> gives a point estimation
+  
+
+
+

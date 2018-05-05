@@ -2,3 +2,5 @@ SAMPLE_camp_20180426_with_adj
 SAMPLE_biome_20180423_with_adj
 SAMPLE_metsim_20180419_with_adj
 SAMPLE_19k_20180423_with_adj
+SAMPLE_fusion_20180503_with_adj
+SAMPLE_singapore_20180503_with_adj

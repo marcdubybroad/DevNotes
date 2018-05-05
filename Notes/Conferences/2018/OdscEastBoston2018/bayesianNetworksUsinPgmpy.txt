@@ -1,0 +1,42 @@
+
+
+20180504 - using pgmpy to build bayesian networks
+
+- PGMs
+  - probabilistic graphical models
+  - directed acyclic graph, bazsed on bayes probs
+    - acyclic -> no path is circular
+  
+- if A and B are independent events -> are conditional independent events
+
+- best way to use bayesian networks
+  - need to have some domain knowledge to properly pick the needed data
+    - creit approval model -> to determine the probs between nodes, you need to understand the domain to estimate
+  - works with a little incomplete data
+
+- linear regession model
+  - y = beta0 + beta1 * x1 + beta2 * x2 ... + betaN * xN + epsilon
+    - y = BETA-transpose * X + e
+  - will tet a line throgh the data
+    - but will  get different lines depending on the accuracy desired
+    
+- online resource
+  - https://refactored.ai/user/rf1866/notebooks/courses/Bayesian_Theory.ipynb?track=18&type=course
+  
+- there is a model network check
+  - if true, the model probs add up to 1
+    - the model will be correct, but it does not guarantee that it is applicable to the domain
+  - if false, most likely missing a var, so probs do not sum to 1
+  
+- different networks
+    - neural networks
+      - get better accuracy due to
+      - but forward looking; based on this data, what will happen
+    - bayesian networks
+      - less accuracy due to probs being built in
+      - will give you causality between conditions
+      - more explainable
+        - for credit approval model: so if customer goes for premium IR, what OL and IL conbination do they have
+          - can try tp determine how to increase your premium IR levels
+        - bayesian network is more backward looking
+          - what is some reason why something is happening
