@@ -271,6 +271,7 @@ Linux Shell Commands:
   
 - curl/get query
   - wget -S -X POST --content-on-error --post-file=/CacheQuery/payload.json --header=Content-Type:application/json http://localhost:8090/dccservices/getData
+  - wget -S -X GET --content-on-error --header=Content-Type:application/json http://localhost:8085/dccservices/distributed/getMetadata
   
   
 Bash shortcuts:

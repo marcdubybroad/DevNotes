@@ -1,0 +1,80 @@
+
+20180508 - google IO keynote
+
+- AI
+  - building multiple A offices
+  - gmail has senetence competion
+  - google photos
+    - filter colrs
+  - google assistant
+    - break down senetence into multple Qs if necessary
+  - small business booking system
+    - use google assistant as a booking agent for you
+    - google assistant calls the hair salon for you
+    - tech is 'google duplex'
+  - digital well being
+    - hwo to switch off, relax
+    - you tube will track usage, recommend breaks,
+  - news
+    - google news initiative
+    - first 5 important stories, then stories catered for you
+    - trsted news sources
+  - android
+    - 10 years ago launch with g1 phone
+    - android P
+      - AI at the core of the OS
+      - 3 goals
+        - intelligence
+          - phone learns from you
+            - battery
+            - auto brightness (adaptive brightness)
+          - predictive apps (tool bar where predicts apps that you will call)
+        - simplicity
+        - digita well being
+      - ML kit
+        - build on TF lite
+        - look at the dev keynote
+      - for livebility
+        - turn phne face down will enter do not disturb mode
+        - can set when to wind down phone, will turn to graycale
+        
+  - maps
+    - tab specific for you
+    - VPS
+      - looks to building landmarks to see where to go
+      
+  - self driving vars (waymo)
+    - will luanch drivreless service in phoenux
+    - some hardware ML on the car
+      - unclear if using TPUs for model traversal
+      - TPUs are best t use for model generatino and training, not necessarily traversal
+      - some MLL in real time; data collected and loaded to the cloud async later
+        - can do TF lite on JS on chrome browser
+        
+  - AR core
+    - open up AR for muyip,e platforms
+    
+  - AI
+    - TF TPUs
+      - can train model 15x faster
+      -
+  - FPGA vs quantum computing vs TF
+    - google heavily invest into FPGA
+    - will push TPUs more than 
+    
+        
+- notes
+  - watch developer keynote
+  \
+  
+  
+  
+  
+2180508 - dev talks
+- verily LS
+  - started in google x in 2013
+  - spun off 2 yaest ago
+  - 50 people here, 250 world wide
+  
+
+

@@ -1,0 +1,10 @@
+
+
+Lesson 02
+
+- operators
+  - \\ -> divides interegers and rounds down, so not exact result
+    - (7 // 2) = 3
+    - (-7 // 2) = 45
+    
+  
