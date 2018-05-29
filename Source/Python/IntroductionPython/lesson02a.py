@@ -11,6 +11,8 @@ y = 345.    # float
 print(type(x))
 print(type(y))
 
+# types
+# bool, int, float, str
 
 # style
 # use max line length of 79-99 chars
