@@ -29,6 +29,7 @@ public class DccXmlParser extends DefaultHandler {
     private String METABOLITE = "metabolite";
     private String TOP_LEVEL_NAME = "name";
     private String ACCESSION = "accession";
+    private String SECONDARY_ACCESSION = "secondary_accessions";
     private String KEGG_ID = "kegg_id";
     private String DIRECT_PARENT = "direct_parent";
     private String DESCRIPTION = "description";
@@ -37,6 +38,9 @@ public class DccXmlParser extends DefaultHandler {
     private String CLASS = "class";
     private String MOLECULAR_FRAMEWORK = "molecular_framework";
     private String PUBCHEM_COMPOUND_ID = "pubchem_compound_id";
+
+    private String CREATION_DATE = "creation_date";
+    private String UPDATE_DATE = "update_date";
 
     private boolean isTest = false;
 
@@ -54,9 +58,15 @@ public class DccXmlParser extends DefaultHandler {
         DccXmlParser handler = new DccXmlParser();
 
         //Finally, tell the parser to parse the input and notify the handler
+        // main file
         sp.parse(new File("/Users/mduby/Google Drive/Broad/Documents/Work/Broad/Projects/20180109metabolitesXml/Data/New20180410/hmdb_metabolites.xml"),handler);
+
 //        sp.parse(new File("/Users/mduby/Google Drive/Broad/Documents/Work/Broad/Projects/20180109metabolitesXml/Data/hmdb_metabolites.xml"),handler);
+
+        // multi element test file
 //        sp.parse(new File("/Users/mduby/Google Drive/Broad/Documents/Work/Broad/Projects/20180109metabolitesXml/Data/unitTestMetabolite.xml"),handler);
+
+        // single element test file
 //        sp.parse(new File("/Users/mduby/Google Drive/Broad/Documents/Work/Broad/Projects/20180109metabolitesXml/Data/testMetabolite.xml"),handler);
 
         handler.readList();
@@ -80,6 +90,11 @@ public class DccXmlParser extends DefaultHandler {
         temp = "";
         if (qName.equalsIgnoreCase(this.METABOLITE)) {
             this.metaboliteBean = new MetaboliteBean();
+        }
+
+        if (qName.equalsIgnoreCase(this.SECONDARY_ACCESSION)) {
+            // should be not null, so no check so fail fast
+            this.metaboliteBean.setMainAccension(false);
         }
     }
 
@@ -106,7 +121,8 @@ public class DccXmlParser extends DefaultHandler {
             this.metaboliteBean.setDescription(temp);
 
         } else if (qName.equalsIgnoreCase(this.ACCESSION)) {
-            this.metaboliteBean.getAccesionList().add(temp);
+//            this.metaboliteBean.getAccesionList().add(temp);
+            this.metaboliteBean.addAccession(temp);
 
         } else if (qName.equalsIgnoreCase(this.DIRECT_PARENT)) {
             this.metaboliteBean.setDirectParent(temp);
@@ -119,6 +135,12 @@ public class DccXmlParser extends DefaultHandler {
 
         } else if (qName.equalsIgnoreCase(this.CLASS)) {
             this.metaboliteBean.setClasses(temp);
+
+        } else if (qName.equalsIgnoreCase(this.CREATION_DATE)) {
+            this.metaboliteBean.setCreationDate(temp);
+
+        } else if (qName.equalsIgnoreCase(this.UPDATE_DATE)) {
+            this.metaboliteBean.setUpdateDate(temp);
 
         } else if (qName.equalsIgnoreCase(this.MOLECULAR_FRAMEWORK)) {
             this.metaboliteBean.setMolecularFramework(temp);
@@ -139,7 +161,7 @@ public class DccXmlParser extends DefaultHandler {
         // create the CSV file
         Date now = new Date();
         String fileOutPath = "/Users/mduby/Google Drive/Broad/Documents/Work/Broad/Projects/20180109metabolitesXml/Data/Out/Test" + now.getTime() + "metabolite.txt";
-        String header = "accension\tname\tdescription\tdirect_parent\tsuper_class\tsub_class\tclass\tmolecular_framework\tkegg_id\tpubchem_counpound_id\n";
+        String header = "creation_date\tupdate_date\taccension\tsecondary_accessions\tname\tdescription\tdirect_parent\tsuper_class\tsub_class\tclass\tmolecular_framework\tkegg_id\tpubchem_counpound_id\n";
 
         // create the print writer
         PrintWriter pw = null;
@@ -154,7 +176,10 @@ public class DccXmlParser extends DefaultHandler {
         pw.write(header);
         for (MetaboliteBean bean : metaboliteBeanList) {
             List<String> stringList = this.createCsvLines(bean);
+
             for (String line : stringList) {
+                // TODO - remove when running
+//                System.out.print(line);
                 pw.write(line);
             }
         }
@@ -169,9 +194,15 @@ public class DccXmlParser extends DefaultHandler {
         List<String> stringList = new ArrayList<String>();
         StringBuffer stringBuffer = null;
 
-        for (String accesion : metaboliteBean.getAccesionList()) {
+        for (String accession : metaboliteBean.getAccesionList()) {
             stringBuffer = new StringBuffer();
-            stringBuffer.append(accesion);
+            stringBuffer.append(metaboliteBean.getCreationDate());
+            stringBuffer.append("\t");
+            stringBuffer.append(metaboliteBean.getUpdateDate());
+            stringBuffer.append("\t");
+            stringBuffer.append(metaboliteBean.getMainAccession());
+            stringBuffer.append("\t");
+            stringBuffer.append(accession);
             stringBuffer.append("\t");
             stringBuffer.append(metaboliteBean.getTopLevelName());
             stringBuffer.append("\t");
@@ -217,13 +248,26 @@ class MetaboliteBean {
     private String description;
     private String directParent;
     private String pubchemCoumpoundId;
+    private String creationDate;
+    private String updateDate;
+    private boolean isMainAccension = true;
+    private String mainAccession;
 
     public List<String> getAccesionList() {
         return accesionList;
     }
 
-    public void setAccesionList(List<String> accesionList) {
-        this.accesionList = accesionList;
+//    public void setAccesionList(List<String> accesionList) {
+//        this.accesionList = accesionList;
+//    }
+//
+    public void addAccession(String value) {
+        if (this.isMainAccension) {
+            this.mainAccession = value;
+
+        } else {
+            this.accesionList.add(value);
+        }
     }
 
     public String getKeggId() {
@@ -296,6 +340,38 @@ class MetaboliteBean {
 
     public void setSubClass(String subClass) {
         this.subClass = subClass;
+    }
+
+    public String getCreationDate() {
+        return creationDate;
+    }
+
+    public void setCreationDate(String creationDate) {
+        this.creationDate = creationDate;
+    }
+
+    public String getUpdateDate() {
+        return updateDate;
+    }
+
+    public void setUpdateDate(String updateDate) {
+        this.updateDate = updateDate;
+    }
+
+    public boolean isMainAccension() {
+        return isMainAccension;
+    }
+
+    public void setMainAccension(boolean mainAccension) {
+        isMainAccension = mainAccension;
+    }
+
+    public String getMainAccession() {
+        return mainAccession;
+    }
+
+    public void setMainAccession(String mainAccession) {
+        this.mainAccession = mainAccession;
     }
 
     public String toString() {

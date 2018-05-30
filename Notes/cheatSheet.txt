@@ -37,6 +37,11 @@ Spring Boot:
 
 - memory profiler
   - Java mission control
+  
+- adding certification (on Mac)
+  - backup $(/usr/libexec/java_home)/jre/lib/security/cacerts cert file
+  - sudo keytool -importcert -file ~/Downloads/ebiCertificate.crt -alias example -keystore $(/usr/libexec/java_home)/jre/lib/security/cacerts -storepass changeit
+  - openssl x509 -in <(openssl s_client -connect www.ebi.ac.uk:443 -prexit 2>/dev/null) -out ~/Downloads/ebiCertificate.crt 
       
 Git:
 ----
