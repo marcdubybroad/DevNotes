@@ -1,0 +1,98 @@
+var data = [{
+    key: "group1",
+    x: [10, 20],
+    y: [10, 30],
+    label: ["point1", "point2"]
+}, {
+    key: "group2",
+    x: [5, 10, 25, 15],
+    y: [20, 25, 15, 22],
+    label: ["point3", "point4", "point5", "dude"]
+}];
+
+var width = 700;
+var height = 500;
+var scatterPlotMargin = {
+    top: 90,
+    right: 150,
+    bottom: 20,
+    left: 50
+};
+var color = d3.scale.category10();
+
+var svg = d3.select("#chart")
+    .append("svg")
+    .style("width", width)
+    .style("height", height);
+
+var scatterChartContainer = svg.append("g")
+    .attr('class', 'scatterCharts')
+    .attr("transform", "translate(" + scatterPlotMargin.left + "," + scatterPlotMargin.top + ")");
+
+var scatterChartXScale = d3.scale.linear()
+    .range([0, width - scatterPlotMargin.left - scatterPlotMargin.right])
+    .domain([
+        d3.min(data.map(function(d) {
+            return d3.min(d.x);
+        })),
+        d3.max(data.map(function(d) {
+            return d3.max(d.x);
+        }))
+    ]);
+
+var scatterChartYScale = d3.scale.linear()
+    .range([height - scatterPlotMargin.top - scatterPlotMargin.bottom, 0])
+    .domain([
+        d3.min(data.map(function(d) {
+            return d3.min(d.y);
+        })),
+        d3.max(data.map(function(d) {
+            return d3.max(d.y);
+        }))
+    ]);
+
+var yAxis = d3.svg.axis()
+    .scale(scatterChartYScale)
+    .orient("left")
+    .innerTickSize(-(width - scatterPlotMargin.left - scatterPlotMargin.right)) //Add some horizontal grid
+    .ticks(5);
+
+// restructure the data to make life easier
+data = data.map(function(d) {
+    return {
+        key: d.key,
+        points: d.label.map(function (l, i) {
+            return {
+                label: l,
+                x: d.x[i],
+                y: d.y[i]
+            };
+        })
+    };
+});
+
+scatterChartContainer.append("g")
+    .attr("class", "scatterPlot y axis")
+    .attr("transform", "translate(" + 0 + ",0)")
+    //.attr("opacity",0.5)
+    .style({
+        'stroke': 'black',
+        'fill': 'none',
+        'stroke-width': '1px',
+        'opacity': 0.5
+    })
+    .call(yAxis);
+
+var scatterPlotGroups = scatterChartContainer.selectAll(".scatterPlotGroup")
+    .data(data)
+    .enter().append("g")
+    .attr("class", "scatterPlotGroup");
+
+var scatterPlotCircles = scatterPlotGroups.selectAll("circle")
+    .data(function(d) { return d.points; })
+    .enter().append("circle")
+    .attr("cx", function(d) { return scatterChartXScale(d.x); })
+    .attr("cy", function(d) { return scatterChartYScale(d.y); })
+    .attr("r", 5)
+    .attr("fill", function() { return color(d3.select(this.parentNode).datum().key); });
+    
