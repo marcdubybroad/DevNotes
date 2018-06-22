@@ -69,7 +69,7 @@ where wactivity.workout_id = workout.workout_id
     and wday.week_id = week.week_id
     and week.period_id = period.period_id
     and period.year_id = wyear.year_id
-    and wyear.name = 2018
+    and wyear.name in (2017, 2018)
     and wactivity.swim > 0
 order by wday.date;
 
@@ -211,6 +211,27 @@ where workout.day_id = wday.day_id
     and period.year_id = wyear.year_id
 group by wyear.name_text
 order by wyear.name;
+
+-- select sum of rowing/erg workouts by year, sorted by year
+select count(activity.row) as row_count, sum(activity.row) as row_total, wyear.name_text, wyear.rating
+from wkt_workout workout, wkt_activity activity, wkt_day wday, wkt_week week, wkt_period period, wkt_year wyear
+where workout.day_id = wday.day_id
+    and activity.workout_id = workout.workout_id
+    and wday.week_id = week.week_id
+    and week.period_id = period.period_id
+    and period.year_id = wyear.year_id
+    and activity.row > 0
+    and period.name > 5
+group by wyear.name_text
+order by wyear.name;
+
+-- get all workouts and days where description contains word
+select wday.date as day, wkt.description
+from wkt_workout wkt, wkt_day wday
+where wkt.day_id = wday.day_id
+--    and lower(wkt.description) like '%hocr%'
+and wkt.workout_type_id = 11
+order by wday.date;
 
 -- select all bike workouts together that are over a time
 select day.date, workout.description

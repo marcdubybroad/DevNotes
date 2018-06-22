@@ -250,7 +250,7 @@ use .cmake-3.0.0
 use .boost-1.55
 use .boost-build-2.0
 use .fftw-3.3.4
-  
+
 Python:
 -------
 - get env from python shell
@@ -278,6 +278,8 @@ Linux Shell Commands:
   - wget -S -X POST --content-on-error --post-file=/CacheQuery/payload.json --header=Content-Type:application/json http://localhost:8090/dccservices/getData
   - wget -S -X GET --content-on-error --header=Content-Type:application/json http://localhost:8085/dccservices/distributed/getMetadata
   
+- awk to remove column 3 and 4
+  - cat campMulti.cvcf | cut -f1,2,5- > campNormal.cvcf
   
 Bash shortcuts:
 ---------------

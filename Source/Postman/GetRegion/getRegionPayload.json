@@ -1,0 +1,11 @@
+{
+	"passback":"abc123",
+	"host": "ucsd",
+	"page_start": 0,
+	"page_size": 500,
+	"chrom": "11",
+	"start_pos": 91945212,
+	"end_pos": 91995212,
+	"source": "liver",
+	"assay_id": [3]
+}

@@ -7,4 +7,23 @@ Lesson 02
     - (7 // 2) = 3
     - (-7 // 2) = 45
     
+- strings
+  - "Hello"*3 -> HelloHelloHello
+  - len("Udacity") -> 7
+  
+  - first_word = "Hello"
+    - first_word[0] -> H
+    
+- print(type("633"))
+- print(type(633))
+
+
+- methods belong to object, take object as first argument silently
+  - "how doody".title() -> "Howdy Doody"
+
+- format
+  # Example 3
+  maria_string = "Maria loves {} and {}"
+  print(maria_string.format("math","statistics"))
+    
   

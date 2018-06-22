@@ -73,7 +73,6 @@ data = data.map(function(d) {
 
 // data = [{key: "group2", points: {label: "dude", x: 15, y:27}}];
 
-var data2 = [{key: "group1", points: [{label: "point1", x: 15, y:27}]}, {key: "group2", points: [{label: "point2", x: 10, y:25}]}];
     
 scatterChartContainer.append("g")
     .attr("class", "scatterPlot y axis")
@@ -102,6 +101,10 @@ var scatterPlotCircles = scatterPlotGroups.selectAll("circle")
     .attr("stroke-width", "5px")
     .attr("fill", "white");
     
+
+var data2 = [{key: "group1", points: [{label: "point1", x: 15, y:27}]}, {key: "group2", points: [{label: "point2", x: 10, y:25}]}];
+
+
 var scatterPlotGroupsGreen= scatterChartContainer.selectAll(".scatterPlotGroupGreen")
     .data(data2)
     .enter().append("g")
@@ -117,6 +120,6 @@ var scatterPlotCirclesGreen = scatterPlotGroupsGreen.selectAll("circle")
     .attr("stroke-width", "3px")
     .attr("fill", "white");
     
-    var data3 = [{points: [{label: "point1", x: 3, y: 7.09}, {label: "point2", x: 0.3, y: 2.87}]}];
+    // var data3 = [{points: [{label: "point1", x: 3, y: 7.09}, {label: "point2", x: 0.3, y: 2.87}]}];
 
     
