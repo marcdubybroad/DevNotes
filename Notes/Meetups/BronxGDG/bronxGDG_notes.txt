@@ -27,7 +27,23 @@
     - write sample dialogs
       - write characters (people in play), not prompts
       - don't just write it down, say it out loud
+    - some conversation design principles
+      - assume people telling truth
+      - give just enough info, not too much
+      - be organized
+      - use cohesion devices (first..., next..., )
+      - plan for errors
+      - design for frequency of use
+      - speak user's language, don't use big words
+      - use contractions
+      - avoid 'for x say x' structure
+      - avoid 'please', unless persona is very formal
+      - consider different srufaces, but start design with conv in mind
+        - ie: screen: srart with th conv, then let the screen support that
+    - test on the cheap
+      - 
       
+    
       
 - tips
   - language is serial
