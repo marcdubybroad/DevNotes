@@ -49,7 +49,16 @@
         - no match 1, no match 2
         - no pinptu 1, no input 2,
         - max error
-        
+- reading
+  - actions.googe.com/design
+  - voice user interface design - cohen
+  - wired for speed - Nass
+  - desiggning oice user interfaces - Pearl
+  - the cooperative principle and Grice's maxims - wikipedia
+  
+- lehman.gdg/GDG123
+
+  
       
     
       
