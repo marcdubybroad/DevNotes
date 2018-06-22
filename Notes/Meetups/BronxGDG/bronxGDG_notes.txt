@@ -41,7 +41,15 @@
       - consider different srufaces, but start design with conv in mind
         - ie: screen: srart with th conv, then let the screen support that
     - test on the cheap
-      - 
+      - friends, family
+        - don't lead tem
+    - write a detailed pec
+      - for each state in the flo
+        - initial prompt
+        - no match 1, no match 2
+        - no pinptu 1, no input 2,
+        - max error
+        
       
     
       
