@@ -2,5 +2,37 @@
 
 20180622 - gdg bronx
 - conversations
-  -
+  - why design
+  - rules of conversations
+    - 1 sec time window between responses
+    - don't just end with word 'bye' -> leave taking
+    -
+  - how to design
+    - process
+      - understand the user, ther goals and context
+      - establish a persona for your action
+      - write sample dialogs
+      - do super low fi usability testing
+      - write a detailed spec
+      - build
+      - test again
+    - understand the user
+      - user stories
+        - goals, mood, is th user busy
+    - create a persona
+      - people take less tha a second to form an impression of someone's personality based on their voice alone
+      - humans react to recorded speech in the same way as live humans
+      - persona is conveyed by voice, dialog scripting, intonation and vocabulary
+        - want to consider brand, user population, task performance in the app
+    - write sample dialogs
+      - write characters (people in play), not prompts
+      - don't just write it down, say it out loud
+      
+      
+- tips
+  - language is serial
   - 
+        
+- quotes
+  - invention is the mother of necessity
+  
