@@ -20,3 +20,15 @@
     -
   - import package
     - google VR
+  - go to preferences
+    - have to have android studio installed
+    - dev options on your phone
+    - need jdk1.8, 10 no universally supported yet
+    
+  - in Screen foder
+    - created new Scripts folder
+    
+    
+- asset package
+  - can add doors
+  
