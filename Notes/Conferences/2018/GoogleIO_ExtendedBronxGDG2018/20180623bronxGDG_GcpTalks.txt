@@ -1,0 +1,34 @@
+
+
+20180623 - GCP
+- intro
+  - from UK
+  
+- slides
+  - bit.ly/mco-superpowers
+  
+- bigquery
+  - columnar datastore
+  -
+  
+- interesting idea for app
+  - as opposed to go lookin for content, bul an app that looking for links for you
+  - word2vec
+    - take a word, transform into a vector
+    - run processor, get vector weights
+    - doc2vec -> same for documents
+      - generalization for documents
+      - code in slides use python library called gensym
+      - uses tensor flow visualization tool
+      - hi code used 200 dimnsional vectors
+      
+      
+- 3 phases to coninuous app
+  - modeling
+  - triage
+  - user experieince
+  
+- @marcacohen
+
+  
+  
