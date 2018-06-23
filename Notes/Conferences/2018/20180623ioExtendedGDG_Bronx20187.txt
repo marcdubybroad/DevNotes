@@ -1,0 +1,25 @@
+
+20180623 - bocoup JS engineer
+- exp
+  - full stack JS for last 5 years
+- why web on mobile
+  - more than 100 people have come online in last 3 minutes 
+    - brazil hot growth market
+  - data very expensive in dev countries
+  - dev world use mostly phone for web
+  - 4 years ago, web usage from mobile > desktop
+  - 0 number apps avg user downloads and install per month, when round down
+  - mobile apps more capable, but web apps have more reach to people
+  - enter progressive web apps
+- progressive web apps
+  - guidlines for web app design
+    - fast, integrated, reliable, engaging
+  - required to be on https
+  - use a service worker
+    - leverage caching, native os, comps off the main thread
+    
+
+20180623 - anna, javascript for search
+- single page applications
+- 
+- 
