@@ -1,0 +1,54 @@
+
+20180623 - IoT, Panayiotis Varvarezis (Pete)
+- inro
+  - mobile architect as capital one
+  - GDG wilminton
+- anoid
+  - 2008, release
+  - 2014, android wear
+  - 2015, auto
+  - 2018, android things
+  
+- what is it
+  - IoT devices
+  - offload complexity
+  - shorten dev cycle
+  - intelligent devices on the edge need to be secure
+  - aimed to get you to market faster
+    - signed images, verified boot, A/B rollback protection, automatic security updates
+  - SoM: system on a module architecture
+  -
+- hardware is hard
+  - skwiggly lines on rPi board for hdmi port need to be a certain length but cannot interfere with each other
+  - simplidied certification and testing (on the hardware side)
+  
+- android things for devs
+  - diplays are optional
+  - consider alternate UI (voice)
+  -
+- what' s been taken out of android
+  - permissioning
+  - notifications since no UI
+  -
+- peripheral IO
+  - GPIO: 0/1
+  - PWM: pulse w modulator
+  - I^2C: inner ic sound
+  - I^2S:
+  - SPI:
+  - UART: gps, synchronous master serial bus
+  
+- user drivers
+  - audio, input, sensors, GPS
+  - available through peripehral driver library
+  
+- sites
+  - https://g.co/iotdev
+  - https://hackster.io/google
+  - https://developer.android.com/things
+  
+- handed out at google IO
+  - nxpi7 model
+  
+  
+  
