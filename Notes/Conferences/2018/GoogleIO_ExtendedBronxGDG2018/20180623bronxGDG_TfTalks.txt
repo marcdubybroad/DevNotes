@@ -1,0 +1,36 @@
+
+20180623 - TF workshop
+- dataset
+- deep neural netwroks
+- making informaed decisions based on data
+-
+
+- scott model
+  - 20k iterations, needed 3 hours to run
+  - 99.13% accuracy
+  - 3 layer network
+  
+  
+- image recognotion
+  - 28x28 pixels -> 7084 cells
+  -
+- notes
+  - if your data is bad, your model will be terrib;e
+  - want some errors in your model
+  - should have 99% accurac
+  
+  
+  - fully connected network
+    - each node is connected
+  - hidden layers
+    - layers between input and output layers
+  - each layer has bas added in
+  
+  - hoe to prune node
+    - if nodes are getting small weights, then prune it out
+  - neural netwroks are heavy to train
+  - to view hidden laers when taining
+    - tensorboard
+  -
+  - book: ML with scikit
+  
