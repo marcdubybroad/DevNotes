@@ -66,6 +66,10 @@
     - multivocal.info
   
   
+20180622 - gdg bronx channel
+- gdg bronx slack channel
+- gdgbronx.herokuapp.com
+
   
   
   
