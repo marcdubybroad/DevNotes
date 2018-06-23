@@ -43,7 +43,27 @@
     - SSML
       - speech markup language
     - context
-      - 
+      - words mean different things depending on context
+    - identiy and storage
+      - sesson strorage
+      - user storage
+      -
+    - error recovery
+      - se context to keep track of where you are in the conversation
+      - use session strorage to store how many times you've had to recover
+      - us user storage to keep track of how you have helped this user in the past
+      
+    - multi modal world
+      - can also use screen if available
+      - design for voice and buold for voice
+        - then can add on afterwards
+        
+  - help
+    - stack overflow
+      - tags: actions-on-google, dialogflow
+    - developer.google.com/actons
+    - docs.dialogflow.com
+    - multivocal.info
   
   
   
