@@ -1,7 +1,56 @@
 
 
 20180622 - gdg bronx
-- conversations
+20180622 - allen firstenberg, google assistant
+  - intro
+    - spiders.com (who he works for)
+    - prisoner.com
+    - prisoner.com/ubi  (for slides)
+  - actions
+    - hat we developing
+    - actions on google is api that lets users engage in conversations with other services
+      - through the google assistant]
+  - talk
+    - an do code labs
+    - allen will point tips for the code labs
+  - talk details summary
+    - intent
+    - fulfillemnt
+    - SSML
+    - context and storage
+    - error recovery
+    - multi modal
+  - intent
+    - could have two phrases to try to do same thing
+    - intent like function whihc has parameters
+  - tool
+    - dialog flow, does natural language processing
+    -
+  - code runs in the cloud
+    - has to be https server
+    - needs to be public url
+    - sample tools
+      - firebase cloud functions
+      - aws lambda
+      - ngrok (good for testing)
+        - service that forwrds to your local machine
+    - any programming language that runs on server
+      - must run on a web server
+      - has to be able to handle json
+      - has to send back a json reply
+      - recommend node.js
+        - don't have to set up server
+    - SSML
+      - speech markup language
+    - context
+      - 
+  
+  
+  
+  
+  
+
+20180622 - conversations
   - why design
   - rules of conversations
     - 1 sec time window between responses
@@ -49,6 +98,9 @@
         - no match 1, no match 2
         - no pinptu 1, no input 2,
         - max error
+        
+        
+        
 - reading
   - actions.googe.com/design
   - voice user interface design - cohen
@@ -64,7 +116,8 @@
       
 - tips
   - language is serial
-  - 
+  - provide what conversation can do at start (options)
+  
         
 - quotes
   - invention is the mother of necessity
