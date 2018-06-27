@@ -92,14 +92,24 @@
     - prepare the data
       - use bag of word labeling; looks at senetence, words that it recognize from bag of words get a 1, rest 0
         - so if trained bag of words of size 12, if recog 2 words, get vector with 2 1s and 10 0s
-        
-    -
+        - all input senetnces get turned into binary vecor of size 12 
+    - build the model
     - 
     - train
     - tune
     - predict
   - use bbc articles data
-    
+  - code: bit.ly/keras-bbc-code  -> old
+    - bit.ly/kaggle-bcc-code
+    - KAGGLE.COM/YUFENGDEV/BCC-TEXT-CATEGORIZATION
+    - kaggle.com/yufengdev/bcc-text-categorization
+      - kaggle.com/yufengdev/bbc-text-categorization
+      - working: https://www.kaggle.com/yufengdev/bbc-text-categorization
+      - https://www.kaggle.com/yufengdev/bbc-text-categorization
+    - epoch
+      - one pass through entire dataset
+      
+  
 
 
 - look up
