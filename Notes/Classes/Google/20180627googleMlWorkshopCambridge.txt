@@ -1,0 +1,22 @@
+
+
+
+20180627 - Cambridge Cloud exchange
+- will koffel
+    - used to be mobile first
+      - now startus are AI first
+  
+- yufeng guo
+  - goog transoomred into AI company
+  - democratize ai -> fast, useful, accessible
+    - ml apis
+      - pre trained ML models; no data to suply for training
+        - model apis
+          - translate, speech,, natural language, video intelligence, vision, cloud jobs api
+        - image apis
+          - label detection
+          - get entity id, can get data back from goole through api
+          
+    - autoML
+    - ML engine
+    
