@@ -140,7 +140,40 @@
   - tensorfow.js
     - in browser or node.js
     - g.com/aiexperiments
+  -
+  
+  
+- panel discussion
+  - panelist
+    - daniel viveiros, CI&T
+    - amit rai, sapient razorfish
+    - aziz ketari, quantiphi
+  - to learn
+    - start playing with it, don't wait that you have basics yet
+    - good to practive to see what works
+    - fail fast
+    - do kaggle competitions
+  - aziz
+    - for ger/swe, KO had best viewership for 95th minute of WC match, last goal
+      - good way for the brand to determine what impact at time of game
+    - investigate patent using ML
+      - bi direction flow technique
+  - tips
+    - ML not rocket science
+    - startt slow; don't start with 2 years project
+    - if comp leadership waiting to see how to apply, they are behind on ML
+    
+      
+      
+      
+- ideas
+  - dog health
+  - food to weight prediction
+    - keep track of nutrients, and possible exercise
+  - use goog vision for bird pics
+  - protein change from variant, site on protein, how affect
   - 
+  
   
   
   
