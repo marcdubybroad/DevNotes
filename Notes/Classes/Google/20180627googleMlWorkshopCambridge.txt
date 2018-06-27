@@ -10,7 +10,7 @@
   - goog transoomred into AI company
   - democratize ai -> fast, useful, accessible
     - ml apis
-      - pre trained ML models; no data to suply for training
+      - pre trained ML models; no data to suply for training (no training on your end)
         - model apis
           - translate, speech,, natural language, video intelligence, vision, cloud jobs api
         - descriptions
@@ -23,24 +23,55 @@
         - these model are built from building blocks
           - fully traine models
           - more to come
-    - cloud autoML
+          
+    - cloud autoML (customize models to your data)
         - how to train your own mkdels easily
           - right now just for vision
           - trued different approachees of the model on its own
             - will use ML to updatr the structure of the model
             - 'learning to leanr' paper
-            - 
-    - ML engine
+            - ' neural arch search with enforcement leaning' paper
+            
+    - ML engine (use TF on your own)
+      - some models are bigger than UG's graphics cad memory footprint
+      - data
+        - image recog 40x faster with 50 gps
+        - search ranking 300x faster with 500 nodes
+      - TPU
+        - 4 chips on board
+        - 2 cores per chip
+        - each core fed by 8 gigs memory
+        - can put 64 tpus per pod
+        - top end of machine -> redeuce training from 9 hrs to 30 mins
+      - cloud ML engine is a fully managed platform for TF
+        - distribured trainng with gpus and tpus
+        - yper param tuning with HyperTue
+        - could.google.com/ml-engine
+      - supports for sklearn and xgboost libs
+      - 
 
 
 
 - look up
   - twi;lio
   - box
-  - 
+  -
+- bit.ly/aiadventures
+
 
 - questions
   - auto ML -> is the structure update include the layer structure (numbers, breadth)
+
+
+
+- todo
+  - email Amal
+  
+  
+- lauren hannah-murphy
+- joe lust
+
+
 
 
     
