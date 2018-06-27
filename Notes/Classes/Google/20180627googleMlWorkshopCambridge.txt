@@ -81,7 +81,24 @@
     - little dread of have to re write the system
     - gcp produts work well together
     
-  
+    
+- yufeng gup - coding work session on kaggle
+  - kaggle work session
+  - coding the 7 steps pf ML
+    - gather data
+      - how to collect, how to structure
+      - bigquery has public datasets (40 - wetaher, geo, news, hacker new, github, bike share)
+      - select category, tri()
+    - prepare the data
+      - use bag of word labeling; looks at senetence, words that it recognize from bag of words get a 1, rest 0
+        - so if trained bag of words of size 12, if recog 2 words, get vector with 2 1s and 10 0s
+        
+    -
+    - 
+    - train
+    - tune
+    - predict
+  - use bbc articles data
     
 
 
