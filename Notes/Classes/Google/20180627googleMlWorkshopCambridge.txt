@@ -115,10 +115,41 @@
   
 
 
+- lauren hannah-murphy; PAIR program (google.ai/pair)
+  - AI new machine age
+  - AI to predict buiomass for forest fires
+  - what ML is good at
+    - classicfication
+    - prediction
+      - predict outcomes
+    - generation
+      - create new kinds of outputs
+      - sketch rni
+    - understanding
+      - comprehend speech and laguage
+        - ie: phone understand you
+  - quick draw
+    - google system tries tto predict what you are drawing
+    -
+  - smart reply feature
+    - 12% of email replies on mobile
+  - google news
+  - gogole applied ML to run their data centers
+    - reduced 40% energy for cooling, 15% reduction in energy use
+  - ML to screen for preventable blindness from t2d
+  - tensorfow.js
+    - in browser or node.js
+    - g.com/aiexperiments
+  - 
+  
+  
+  
+
 - look up
   - twi;lio
   - box
-  -
+  - facets for google
+  
 - bit.ly/aiadventures
 
 - learn
@@ -133,9 +164,10 @@
 
 - todo
   - email Amal
+  - look into CalFire setup fpr AI to predict biomass for fires
+  - 
   
   
-- lauren hannah-murphy
 
 
 
