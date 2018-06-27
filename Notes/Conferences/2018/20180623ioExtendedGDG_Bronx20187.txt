@@ -1,0 +1,99 @@
+
+20180623 - bocoup JS engineer
+- exp
+  - full stack JS for last 5 years
+  - @nomadtechie
+  - the web platform podcast
+  
+- why web on mobile
+  - more than 100 people have come online in last 3 minutes 
+    - brazil hot growth market
+  - data very expensive in dev countries
+  - dev world use mostly phone for web
+  - 4 years ago, web usage from mobile > desktop
+  - 0 number apps avg user downloads and install per month, when round down
+  - mobile apps more capable, but web apps have more reach to people
+  - enter progressive web apps
+- progressive web apps
+  - guidlines for web app design
+    - fast, integrated, reliable, engaging
+  - required to be on https
+  - use a service worker
+    - leverage caching, native os, comps off the main thread
+    if (navigator.serviceWorker) {
+      // do magic
+    }
+
+    - service workers cache requests
+      - next time user makes request, go to the cach or get from web again
+      - if detect offilne, go to cache
+        - or can save data
+      - help with battery drain, keeping phone from making extra tries to connect everytime
+      - SW only works on the 2nd load
+      - google search engine last month started to use SW
+      - SW is an open web standard
+      -
+  - web push notifications
+    -
+  - recap
+    - immersive
+    - puch
+    - home screen
+    
+- device memory headder and api
+  - 
+- epheral web vs physical web
+ - physical web
+   - Blue tooth low energy beacon
+   - parking meter demo, phone adding time to parkign meter
+     - so PM has blue tooth LE device
+     - phon uses web as proxy, then web communicates back with meter to add time
+     - $0.50 device, charged for 5 years for Blue tooth LE
+     - phone starts search by asking what beacons are around it
+       - phone is initiating conversation
+       - the PM sends url for phone to connect to
+       - 
+- TF.js
+  - train in the broswre or on node.js
+  -
+  
+- how to get stareed
+  - add single feature, one at a time
+    - martin fowler; refecoring your legacy applications
+    - 
+      
+- tips
+  - workbox.js library
+  - johnny-five: javascript robotics programming framework
+    - JS for IoT
+    
+  - don't let IE hold you back
+    - use if blocks
+    - add @supports to test for features
+    
+- programs
+  - chrome origin
+  
+- privacy focused browsers
+  - brave
+    - fights adds
+  - firefox focus
+    - only available on mobile
+
+- peer to peer browser
+  - built to be on the web's values
+  - built in tools for hosting content directly on your computer
+  
+    
+- followup
+  - see video for IoT code snippet to read sensor data
+  - www3c.org/TR/motion-sensors
+  - shape detection api: allows to detect shapes for barcodes, faces, etc
+    const faceDEtector = new FaceDetector({fastMode: true})
+    const textDetector = new TextDetector()
+    
+  
+20180623 - anna, javascript for search
+- single page applications
+- 
+- 

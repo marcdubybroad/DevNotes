@@ -1,0 +1,34 @@
+
+20180623 - google VR
+- unity3d.com
+
+- diff between daydream and cardboard
+  -
+- need 7+ for android to use daydream (api 24?)
+-
+
+- jobs eith unty
+  - army loking to program drones using unity
+  
+  -
+  
+- demo of unity IDE
+  - switch target platform to android from mac/linux
+  - player settings
+    - api level - nougat or higher
+    - XR settings, Daydream
+    -
+  - import package
+    - google VR
+  - go to preferences
+    - have to have android studio installed
+    - dev options on your phone
+    - need jdk1.8, 10 no universally supported yet
+    
+  - in Screen foder
+    - created new Scripts folder
+    
+    
+- asset package
+  - can add doors
+  
