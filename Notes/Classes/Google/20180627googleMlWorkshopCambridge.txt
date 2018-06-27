@@ -50,6 +50,39 @@
       - supports for sklearn and xgboost libs
       - 
 
+- joe lust (mabl co employee)
+  - on gcp and why they moved to it; cloud native since 2011
+  - continuous delivery broken by qa
+    - continuous deloivery breaks qa
+    - slow release process; might change everything every quarter
+  - go predermined script testing (selenium) to automatic healing of testing
+  - the ML @ mabl
+    - anomily detection
+      - timing anomalies (request reesponse), visual change anomalies (button change, page layout - css errors)
+  - enter you we site address, and testing takes over on the cloud
+  - runs tests in GCP pipelines; products used:
+    - Pub/Sub -> managed Kafka
+    - Biquery
+    - cloud ML engine
+    - GCS
+    - DataFlow
+    - Datastore
+  - mabl cloud design tenets
+    - serverless
+      - no provisioning, transparent scaling, event driven, pay only for use
+        - docker and kubernetes (massive scale, 10e6 containers a month - 10e12 for google)
+    - decouple systems
+      - message passing, polyglot develoment, independent deployment, minimize blast radius from one piece getting broken
+    - event driven as much as possible
+      - no cron jobs or batch processes, continuous pipleines, surge buffer, 100s me to 1-2s handling
+      - GCP products used: cloud functions, cloud datafloe
+  - went from 0 to alpha product in 6 months, with 8 devs
+    - if use the pattersn used in GCP, using the best patterns for scale
+    - little dread of have to re write the system
+    - gcp produts work well together
+    
+  
+    
 
 
 - look up
@@ -58,7 +91,11 @@
   -
 - bit.ly/aiadventures
 
-
+- learn
+  - kubernetes
+  - docker
+  - gcp
+  
 - questions
   - auto ML -> is the structure update include the layer structure (numbers, breadth)
 
@@ -69,7 +106,6 @@
   
   
 - lauren hannah-murphy
-- joe lust
 
 
 
