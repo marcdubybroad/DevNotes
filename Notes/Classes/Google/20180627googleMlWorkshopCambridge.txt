@@ -13,10 +13,34 @@
       - pre trained ML models; no data to suply for training
         - model apis
           - translate, speech,, natural language, video intelligence, vision, cloud jobs api
-        - image apis
-          - label detection
-          - get entity id, can get data back from goole through api
-          
-    - autoML
+        - descriptions
+            - image apis
+              - label detection
+              - get entity id, can get data back from goole through api
+            - video api
+              - understand content, makes sense of large video files
+            - recomend content
+        - these model are built from building blocks
+          - fully traine models
+          - more to come
+    - cloud autoML
+        - how to train your own mkdels easily
+          - right now just for vision
+          - trued different approachees of the model on its own
+            - will use ML to updatr the structure of the model
+            - 'learning to leanr' paper
+            - 
     - ML engine
+
+
+
+- look up
+  - twi;lio
+  - box
+  - 
+
+- questions
+  - auto ML -> is the structure update include the layer structure (numbers, breadth)
+
+
     
