@@ -108,7 +108,10 @@
       - https://www.kaggle.com/yufengdev/bbc-text-categorization
     - epoch
       - one pass through entire dataset
-      
+    - playground.tensorflow.org
+    - resources
+      - bit.ly/kaggle-bbc-code
+      - developers.google.com/machine-learning/crash-course
   
 
 

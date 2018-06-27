@@ -60,6 +60,11 @@ def train_test_split(data, train_size):
 train_cat, test_cat = train_test_split(data['category'], train_size)
 train_text, test_text = train_test_split(data['text'], train_size)
 
+
+# NOTE: to makwe models WORSE, reduce this number
+# TRY 200 words
+# NOTE: making model worse can help to tune the hyper parameters since the evaluate will change more, so easily to see
+# NOTE: then set it back to what it was
 max_words = 1000
 tokenize = keras.preprocessing.text.Tokenizer(num_words=max_words, 
                                               char_level=False)
@@ -75,9 +80,10 @@ y_train = encoder.transform(train_cat)
 y_test = encoder.transform(test_cat)
 
 # ie: print training
-x_train[10:]
-y_train.shape()
-y_train[10:15, :]
+# CUSTOM: errors here; figure out why failing
+# x_train[10:]
+# y_train.shape()
+# y_train[10:15, :]
 
 
 # Converts the labels to a one-hot representation
