@@ -31,6 +31,7 @@
   - neural netwroks are heavy to train
   - to view hidden laers when taining
     - tensorboard
-  -
+  - if only gong to use one lyer, don't use tf
+  
   - book: ML with scikit
   

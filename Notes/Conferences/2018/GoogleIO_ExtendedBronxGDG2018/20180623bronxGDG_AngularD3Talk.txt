@@ -1,4 +1,36 @@
 
 
-20180623 - angular D3 talk
-- 
+20180623 - angular D3 talk, pedro
+
+- intro
+  - cap one dev
+  - ull stack dev
+  
+- https://d3js.org
+-
+
+- angular and d3 have their own life cycles
+  -
+  
+- d3
+  - grab the body of the html
+    - then append the svg to it
+    - d3 lifecycle
+      - enter(), exit(), update()
+      - var circle = svgDoc.select("g").selectAl
+      
+- angular2 adopts TypeScript
+  - typescript is a superscript of javascript
+  - provides static typing, classes, interface
+  
+- RxJS and observables
+  - react to data updates
+  - as long as subscribed to data
+  
+  
+- approach to integrate
+  - angular handle changes to data
+  - use observables
+  - then call D3 update function dynamically
+  
+
