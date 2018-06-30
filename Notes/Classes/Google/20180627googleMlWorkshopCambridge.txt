@@ -1,0 +1,208 @@
+
+
+
+20180627 - Cambridge Cloud exchange
+- will koffel
+    - used to be mobile first
+      - now startus are AI first
+  
+- yufeng guo
+  - goog transoomred into AI company
+  - democratize ai -> fast, useful, accessible
+    - ml apis
+      - pre trained ML models; no data to suply for training (no training on your end)
+        - model apis
+          - translate, speech,, natural language, video intelligence, vision, cloud jobs api
+        - descriptions
+            - image apis
+              - label detection
+              - get entity id, can get data back from goole through api
+            - video api
+              - understand content, makes sense of large video files
+            - recomend content
+        - these model are built from building blocks
+          - fully traine models
+          - more to come
+          
+    - cloud autoML (customize models to your data)
+        - how to train your own mkdels easily
+          - right now just for vision
+          - trued different approachees of the model on its own
+            - will use ML to updatr the structure of the model
+            - 'learning to leanr' paper
+            - ' neural arch search with enforcement leaning' paper
+            
+    - ML engine (use TF on your own)
+      - some models are bigger than UG's graphics cad memory footprint
+      - data
+        - image recog 40x faster with 50 gps
+        - search ranking 300x faster with 500 nodes
+      - TPU
+        - 4 chips on board
+        - 2 cores per chip
+        - each core fed by 8 gigs memory
+        - can put 64 tpus per pod
+        - top end of machine -> redeuce training from 9 hrs to 30 mins
+      - cloud ML engine is a fully managed platform for TF
+        - distribured trainng with gpus and tpus
+        - yper param tuning with HyperTue
+        - could.google.com/ml-engine
+      - supports for sklearn and xgboost libs
+      - 
+
+- joe lust (mabl co employee)
+  - on gcp and why they moved to it; cloud native since 2011
+  - continuous delivery broken by qa
+    - continuous deloivery breaks qa
+    - slow release process; might change everything every quarter
+  - go predermined script testing (selenium) to automatic healing of testing
+  - the ML @ mabl
+    - anomily detection
+      - timing anomalies (request reesponse), visual change anomalies (button change, page layout - css errors)
+  - enter you we site address, and testing takes over on the cloud
+  - runs tests in GCP pipelines; products used:
+    - Pub/Sub -> managed Kafka
+    - Biquery
+    - cloud ML engine
+    - GCS
+    - DataFlow
+    - Datastore
+  - mabl cloud design tenets
+    - serverless
+      - no provisioning, transparent scaling, event driven, pay only for use
+        - docker and kubernetes (massive scale, 10e6 containers a month - 10e12 for google)
+    - decouple systems
+      - message passing, polyglot develoment, independent deployment, minimize blast radius from one piece getting broken
+    - event driven as much as possible
+      - no cron jobs or batch processes, continuous pipleines, surge buffer, 100s me to 1-2s handling
+      - GCP products used: cloud functions, cloud datafloe
+  - went from 0 to alpha product in 6 months, with 8 devs
+    - if use the pattersn used in GCP, using the best patterns for scale
+    - little dread of have to re write the system
+    - gcp produts work well together
+    
+    
+- yufeng gup - coding work session on kaggle
+  - kaggle work session
+  - coding the 7 steps pf ML
+    - gather data
+      - how to collect, how to structure
+      - bigquery has public datasets (40 - wetaher, geo, news, hacker new, github, bike share)
+      - select category, tri()
+    - prepare the data
+      - use bag of word labeling; looks at senetence, words that it recognize from bag of words get a 1, rest 0
+        - so if trained bag of words of size 12, if recog 2 words, get vector with 2 1s and 10 0s
+        - all input senetnces get turned into binary vecor of size 12 
+    - build the model
+    - 
+    - train
+    - tune
+    - predict
+  - use bbc articles data
+  - code: bit.ly/keras-bbc-code  -> old
+    - bit.ly/kaggle-bcc-code
+    - KAGGLE.COM/YUFENGDEV/BCC-TEXT-CATEGORIZATION
+    - kaggle.com/yufengdev/bcc-text-categorization
+      - kaggle.com/yufengdev/bbc-text-categorization
+      - working: https://www.kaggle.com/yufengdev/bbc-text-categorization
+      - https://www.kaggle.com/yufengdev/bbc-text-categorization
+    - epoch
+      - one pass through entire dataset
+    - playground.tensorflow.org
+    - resources
+      - bit.ly/kaggle-bbc-code
+      - developers.google.com/machine-learning/crash-course
+  
+
+
+- lauren hannah-murphy; PAIR program (google.ai/pair)
+  - AI new machine age
+  - AI to predict buiomass for forest fires
+  - what ML is good at
+    - classicfication
+    - prediction
+      - predict outcomes
+    - generation
+      - create new kinds of outputs
+      - sketch rni
+    - understanding
+      - comprehend speech and laguage
+        - ie: phone understand you
+  - quick draw
+    - google system tries tto predict what you are drawing
+    -
+  - smart reply feature
+    - 12% of email replies on mobile
+  - google news
+  - gogole applied ML to run their data centers
+    - reduced 40% energy for cooling, 15% reduction in energy use
+  - ML to screen for preventable blindness from t2d
+  - tensorfow.js
+    - in browser or node.js
+    - g.com/aiexperiments
+  -
+  
+  
+- panel discussion
+  - panelist
+    - daniel viveiros, CI&T
+    - amit rai, sapient razorfish
+    - aziz ketari, quantiphi
+  - to learn
+    - start playing with it, don't wait that you have basics yet
+    - good to practive to see what works
+    - fail fast
+    - do kaggle competitions
+  - aziz
+    - for ger/swe, KO had best viewership for 95th minute of WC match, last goal
+      - good way for the brand to determine what impact at time of game
+    - investigate patent using ML
+      - bi direction flow technique
+  - tips
+    - ML not rocket science
+    - startt slow; don't start with 2 years project
+    - if comp leadership waiting to see how to apply, they are behind on ML
+    
+      
+      
+      
+- ideas
+  - dog health
+  - food to weight prediction
+    - keep track of nutrients, and possible exercise
+  - use goog vision for bird pics
+  - protein change from variant, site on protein, how affect
+  - 
+  
+  
+  
+  
+
+- look up
+  - twi;lio
+  - box
+  - facets for google
+  
+- bit.ly/aiadventures
+
+- learn
+  - kubernetes
+  - docker
+  - gcp
+  
+- questions
+  - auto ML -> is the structure update include the layer structure (numbers, breadth)
+
+
+
+- todo
+  - email Amal
+  - look into CalFire setup fpr AI to predict biomass for fires
+  - 
+  
+  
+
+
+
+
+    
