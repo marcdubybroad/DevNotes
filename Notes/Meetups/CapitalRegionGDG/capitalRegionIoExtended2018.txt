@@ -1,0 +1,20 @@
+
+
+20180721 - IO extdnded2018, gdg capital region
+- gdg
+  - 3 events per year (io extended, cloud next extended, devfest)
+  - hack upstate IX (syracuse NY)
+  - SaratogaGo (saratoga NY)
+  - devfest this year, most likey 10/20
+  -
+  
+- google keynote notes
+  - ML
+    - healhcare
+      - diabetic retinopathy
+      - also from retinal scan -> CVD risk in 5 years
+      - doctors predicting medical events
+      - 
+
+
+

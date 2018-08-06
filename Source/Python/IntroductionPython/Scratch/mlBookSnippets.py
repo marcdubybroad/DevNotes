@@ -23,7 +23,13 @@ seta = {1, 2, 3, 4, 5}
 setb = {3, 4, 5, 6, 7}
 set_diff = seta.difference(setb)
 print(set_diff)
+set_diff = seta.symmetric_difference(setb)
+print(set_diff)
 
+set_update = seta.union(setb)
+print(set_update)
+set_update = seta.update(setb)
+print(set_update)
 
 
 

@@ -1,5 +1,38 @@
 
 
+
+20180806 - gdg NYC, next 2018
+- talk 01
+  - devs
+    - bigquery ml
+      - ML on top of bigquery
+      - create a model in bigquery
+        - select ... as model
+    - cloud functions on GA
+      - serverless compute
+    - Auto ML
+      - machines buidl the model for you; you provide the data
+        - image based
+        - natural language
+      - cannot exort the model
+    - Cloud composer
+       - ppache airflow running on google cloud
+    - Cloud build
+      - service for building code
+  
+  - for managers
+    - TPU v3 is out
+    - shielded VMs
+      - security key
+      - Titan security key
+    - access transparency
+      - 
+    - stackdriver service onitoryng
+    - gsuite smartness
+  
+  
+
+
 GDG 20160614 - Google I/O recap @ Kayak
 - Announcements
   - Google VR hackathon, at MIT media lab, Columbus day 2016
