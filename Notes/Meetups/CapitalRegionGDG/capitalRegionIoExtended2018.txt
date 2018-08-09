@@ -14,6 +14,7 @@
       - diabetic retinopathy
       - also from retinal scan -> CVD risk in 5 years
       - doctors predicting medical events
+        - predict chance of readmission within 48 hours
       - 
 
 

@@ -27,10 +27,76 @@
       - Titan security key
     - access transparency
       - 
-    - stackdriver service onitoryng
+    - stackdriver service monitoring
+      - monitor VMs, dishboard
     - gsuite smartness
-  
-  
+      - smart compose, smart reply
+      
+  - CxOs  
+    - knative
+    - GKE on-prem
+    - GKE serverless
+      - open source serverles containers -> gwiser (imlementation of kernel)
+        - adedd layer on user space on LInux
+    - contact center AI
+      - talk to ML agent trained on speech
+      - initial call will go a to machine, then might forward to human
+    - Run Oracle, SAP
+      - can run on GCP
+      
+- talk 02, tensorflow, sam witteveen - singapore based (red dragon AI)
+  - TPUs
+    - tpu v1, inference only
+    - tpu v2, more powerful
+    - tpu v3, made to be used in pods, usually 64 together
+      - example models, g.co/cloudtpu
+      - reference models
+        - high performance
+        - open source
+        - get up and running quick, then modify
+    - Edge TPU
+      - made for IoT
+      - inference only, cannot train on them
+  - what's new in TF and Keras
+    - Keras, tf.keras
+      - most powerful api to work wit TF
+      - TF 1.9: tf.keras, tf.data, tf.eager
+      - componens can be interchanged, TF optimizers
+      - why kers
+        - high level api of choice
+        - others being phased out
+      - tf.data
+        - 
+  - Autograph
+    - converts python into TF graphs
+  - autoML
+    - vision
+    - nlp for text classification
+    - for translate
+    - steps
+      - load model
+      - will build confisuion ,atrix (to show where model is stromg and weak)
+    - problems
+      - classification only
+      - can be costly ($20 an hour after first free hour used)
+      
+  - deep learning VMs
+    - deep learning image VMs
+      - preemtable
+    -
+    
+  - phones
+    - apple bionic
+    - qualcom
+    
+  - histoyr of why TPUs
+    - google engineer did napkin calculation that if evey phone user used voice recog on phone
+      5 mins a day, google would have to 2x their data centers
+      
+      
+      
+      
+    
 
 
 GDG 20160614 - Google I/O recap @ Kayak
