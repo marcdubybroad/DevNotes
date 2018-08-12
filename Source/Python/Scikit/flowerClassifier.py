@@ -51,3 +51,24 @@ print("")
 print("Expected decision tree result: {}, result was: {}".format(test_target, test_result))
 
 
+# add visualization
+from sklearn.externals.six import StringIO
+import pydot
+
+# get the viz data
+print("")
+dot_data = StringIO()
+tree.export_graphviz(decision_tree,
+                     out_file = dot_data,
+                     feature_names = iris['feature_names'],
+                     class_names = iris['target_names'],
+                     filled = True, rounded = True, impurity = False)
+
+graph = pydot.graph_from_dot_data(dot_data.getvalue())
+print("The decision tree graph is: {}".format(graph))
+
+# create the pdf
+graph[0].write_pdf("irisDecisionTree.pdf")
+
+# to open on Mac
+# --> open -a preview irisDecisionTree.pdf
