@@ -1,7 +1,83 @@
 
 
 20180820 - google ML/AI event
-- dr lee, 2nd talk: AI in eLearnijgn
+
+- kiri nichol, 4th talk: paint by numbers
+  - how to classify an artist, kaggle competition
+  - RandomForestClassifier (finised 16th)
+    - used features
+      - bits per pixex area
+      - pixel x / pixel y
+      -
+      -
+  - other co petition to detect forgeries
+    - orange-nejc winning algorithm
+    
+  - kaggle as an alternative to publishing
+    - pros
+      - easy to descriv what was done
+      - people learn better when engaged together
+      - kagglers can look over code
+    - cons
+      - only rewards accuracy, but algorithms speed is important too
+      
+      
+  
+      
+
+- jasper snoek, google brain, 3rd talk: sequential reg activity using CNN
+  - genome research paper: basset: learning regulatory code
+    - https://genome.cshlp.org/content/early/2016/05/03/gr.200535.115.abstract
+  - model of regulation of gene expression
+  - genes are sequeneces of dna that encode a function
+    - regulation either increases or decreases expression of genes
+  - simulate wet lab experiments on the computer
+  - how genes regulated
+    - seqs that bind with activator proteins
+    - rna polymerase
+  - model
+    - took out snippets of 600 nucleotides
+      - 2 million seqs, 600 nuc long
+      - predict cell specific dna accessibilty
+         - muti task: each cell is a task
+         - predict DNAse hypersensitivity
+    - 164 diff cell types
+    - make a vector of 4 numbers for the 4 letters
+      - network design
+        - 3 convolve filters, get a filter of weights
+          - look for weighted conbi of sun sequence of dna
+          - sldie filters over dna, get sequence of activations, one for each of the 3 filters
+        - perform ReLU
+        - max pool layer
+        
+  - in wet lab
+    - take out dna
+    - pour on dnase onto it
+    
+  - confirms the effect of known mutations
+    - vitilligo: skin color issue (Michael Jackson)
+    
+  - how to increase and make better model
+    - long range dependencies (200k nuceotides)
+    - can have enhancers ad propmoters farther away than 600 nucleotide
+      - enhancer and promoter can be 200k apart, but if tpuhcing can cause expression
+    - may paper
+      - Basenji - sequential regulatory activity prediction
+      - https://genome.cshlp.org/content/early/2018/03/27/gr.227819.117.full.pdf
+      
+      
+  - code
+    - github.com/davek44/Basset
+    - github.com/calicao/basenji
+    
+  - questions
+    - tried recurrent nets; didn't work for long sequences
+      - so RNNs didn't work for long range
+    - coyld you decinstruct NN to see what is going on
+      - difficult to firgure out what is going on in the deeper layer of the neural nets
+    
+
+- dr stella lee, paradox learning, 2nd talk: AI in eLearnijgn
   - adaptive learning; individualization of
     - build student model
   - algorigthms
