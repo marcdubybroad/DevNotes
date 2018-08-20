@@ -2,8 +2,49 @@
 
 20180820 - google ML/AI event
 
+- Doug Perry, consultant: Embedded NN accelarator
+  - VHDL book author
+  - 
+  
+  
+
+- Amira Djebbari, Scerta, AL 2nd talk: applied AI in automative
+  - using TF for measuring engine issues
+  - find abnormalities for transmissions
+  - do multi variate time series and defect detection
+  
+  
+
+- Alex Wiltschko, google, after lunch 1st talk: autograph for TF
+  - look to the videos for the goog.gl link and lecture
+
+- miki rubenstein, google, 5th talk: audio visual speech separation
+  - utilize vision to process speech
+    - better performing than model that just uses audio
+    
+  - how to train
+    - take 2 clean speeches, then mix them and add backgrund noise
+    - you now have yoir lbels with the clean speeches, and data to train on in the combined speech
+    
+  - papers (speaker dependent)
+    - Hou at al, 2018
+    - Gabbay et al., 2018
+  - paper (speaker independent)
+    - single model trained once
+  - reference papers
+    - FaceNet: a unifired embedding for  afce recognition and clustering (Schroff, Kalenichenko and Philbin)
+    
+  - other uses
+    - can also use for captioning for overlapping speech debates
+    - Looking-to-Listen applications
+    
+  - https://looking-to-listen.github.io/
+  
+  
+
 - kiri nichol, 4th talk: paint by numbers
   - how to classify an artist, kaggle competition
+    - winning algorith was a CNN
   - RandomForestClassifier (finised 16th)
     - used features
       - bits per pixex area
@@ -21,7 +62,7 @@
     - cons
       - only rewards accuracy, but algorithms speed is important too
       
-      
+  - new company, adeptmind in toronto
   
       
 
