@@ -399,3 +399,14 @@ Mysql
   mysql> UPDATE user SET plugin='auth_socket' WHERE User='YOUR_SYSTEM_USER';
   mysql> FLUSH PRIVILEGES;
   mysql> exit;
+  
+  
+  
+Burden setup onn AWS compute
+----------------------------
+export R_HOME=/usr/lib/R
+export LD_LIBRARY_PATH=/usr/lib/R/lib:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH=/broad/software/free/Linux/redhat_6_x86_64/pkgs/gcc_5.1.0/lib:/broad/software/free/Linux/redhat_6_x86_64/pkgs/gcc_5.1.0/lib64:$LD_LIBRARY_PATH
+
+export TABIX_HOME=/home/ubuntu/Software/htslib-1.5.1
+export PATH=$TABIX_HOME/bin:$PATH

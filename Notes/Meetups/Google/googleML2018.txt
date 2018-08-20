@@ -1,0 +1,63 @@
+
+
+20180820 - google ML/AI event
+- dr lee, 2nd talk: AI in eLearnijgn
+  - adaptive learning; individualization of
+    - build student model
+  - algorigthms
+    - get others with subject matter experience to look oover you models and assumptions
+    - algoriths can be black boxes
+  - notion os 'explainbale AI'
+  
+
+- andrew berlew, 1st talk: google culture
+  - google leadership study (trying to prove you don't need managers)
+  - leadership attributes
+    - create inclusive environment
+    - empower the team
+    - support career develeopment
+    - be a good coach
+    - be a good communicator
+    - clear vision and stragegy for the team
+    - be productve and results oriented
+    - collaborate across google
+    - be a strong decision maker
+    - have key tech skill to help team
+  - google approach
+    - stakes: focus on the user
+      - embrace all users
+      - sacrifice short term interest fr user value
+      - larry page 'toothbrush test'
+    - ideas: think 10x
+      - mediocre thinking is not welcome
+    - actions: freedom to innovate
+      - obsess over talent
+      - celebrate success and failure
+      - ex: gmail is a 20% project
+  
+  - AI priciples
+    - be socially beneficial
+    - avoid reinforcog unfair bias
+    - built and tested for safety
+    - accountable to people
+    - incorporate privacy design priciples
+    - uphold high standard of scientific excellence
+    - <other>
+    
+    
+  
+  
+  
+  
+  
+  
+- scrtahc
+ - MATCH (p:Phenotype{name:'T2D'})<-[m:METAL]-(v:Variant)
+        WHERE v.chromosome='1' 
+        AND v.position>2000000 
+        AND v.position<3000000
+        AND m.pValue < 0.1
+        RETURN p,v,m;
+
+  
+  
