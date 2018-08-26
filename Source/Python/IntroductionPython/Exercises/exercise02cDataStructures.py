@@ -9,8 +9,12 @@ months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul']
 # subset
 months[2:4]     # Mar to Apr; upper bound not inclusive
 months[:3]      # Jan to Mar; upper bound not inclusive
-months[1:2] = ['January', 'February']       # use slicing to replace
+months[0:2] = ['January', 'February']       # use slicing to replace
+print(sorted(months, reverse = True))       # get new sorted list, original list is unchanged
 
+# join function
+new_str = "-".join(["fore", "aft", "starboard", "port"])
+print(new_str)              # get: fore-aft-startboard-port
 
 # contains
 greeting = "hello there"
@@ -30,9 +34,22 @@ eclipse_dates = ['June 21, 2001', 'December 4, 2002', 'November 23, 2003',
                  'March 29, 2006', 'August 1, 2008', 'July 22, 2009',
                  'July 11, 2010', 'November 13, 2012', 'March 20, 2015',
                  'March 9, 2016']
-                 
-                 
 # TODO: Modify this line so it prints the last three elements of the list
 third_to_end_index = len(eclipse_dates) - 3
 print(eclipse_dates[third_to_end_index:])
 print(eclipse_dates[-3:])
+
+
+# quiz 03
+names = ["Carol", "Albert", "Ben", "Donna"]
+names.append("Eugenia")
+print(sorted(names))                # get: ['Albert', 'Ben', 'Carol', 'Donna', 'Eugenia']
+
+# quiz 04
+a = [1, 2, 2, 3, 3, 3, 4, 4, 4, 4]
+b = set(a)
+print(len(a) - len(b))              # get: 6 -> 10 - 4
+
+
+
+
