@@ -1,0 +1,180 @@
+
+
+20180820 - google ML/AI event
+
+- Doug Perry, consultant: Embedded NN accelarator
+  - VHDL book author
+  - 
+  
+  
+
+- Amira Djebbari, Scerta, AL 2nd talk: applied AI in automative
+  - using TF for measuring engine issues
+  - find abnormalities for transmissions
+  - do multi variate time series and defect detection
+  
+  
+
+- Alex Wiltschko, google, after lunch 1st talk: autograph for TF
+  - look to the videos for the goog.gl link and lecture
+
+- miki rubenstein, google, 5th talk: audio visual speech separation
+  - utilize vision to process speech
+    - better performing than model that just uses audio
+    
+  - how to train
+    - take 2 clean speeches, then mix them and add backgrund noise
+    - you now have yoir lbels with the clean speeches, and data to train on in the combined speech
+    
+  - papers (speaker dependent)
+    - Hou at al, 2018
+    - Gabbay et al., 2018
+  - paper (speaker independent)
+    - single model trained once
+  - reference papers
+    - FaceNet: a unifired embedding for  afce recognition and clustering (Schroff, Kalenichenko and Philbin)
+    
+  - other uses
+    - can also use for captioning for overlapping speech debates
+    - Looking-to-Listen applications
+    
+  - https://looking-to-listen.github.io/
+  
+  
+
+- kiri nichol, 4th talk: paint by numbers
+  - how to classify an artist, kaggle competition
+    - winning algorith was a CNN
+  - RandomForestClassifier (finised 16th)
+    - used features
+      - bits per pixex area
+      - pixel x / pixel y
+      -
+      -
+  - other co petition to detect forgeries
+    - orange-nejc winning algorithm
+    
+  - kaggle as an alternative to publishing
+    - pros
+      - easy to descriv what was done
+      - people learn better when engaged together
+      - kagglers can look over code
+    - cons
+      - only rewards accuracy, but algorithms speed is important too
+      
+  - new company, adeptmind in toronto
+  
+      
+
+- jasper snoek, google brain, 3rd talk: sequential reg activity using CNN
+  - genome research paper: basset: learning regulatory code
+    - https://genome.cshlp.org/content/early/2016/05/03/gr.200535.115.abstract
+  - model of regulation of gene expression
+  - genes are sequeneces of dna that encode a function
+    - regulation either increases or decreases expression of genes
+  - simulate wet lab experiments on the computer
+  - how genes regulated
+    - seqs that bind with activator proteins
+    - rna polymerase
+  - model
+    - took out snippets of 600 nucleotides
+      - 2 million seqs, 600 nuc long
+      - predict cell specific dna accessibilty
+         - muti task: each cell is a task
+         - predict DNAse hypersensitivity
+    - 164 diff cell types
+    - make a vector of 4 numbers for the 4 letters
+      - network design
+        - 3 convolve filters, get a filter of weights
+          - look for weighted conbi of sun sequence of dna
+          - sldie filters over dna, get sequence of activations, one for each of the 3 filters
+        - perform ReLU
+        - max pool layer
+        
+  - in wet lab
+    - take out dna
+    - pour on dnase onto it
+    
+  - confirms the effect of known mutations
+    - vitilligo: skin color issue (Michael Jackson)
+    
+  - how to increase and make better model
+    - long range dependencies (200k nuceotides)
+    - can have enhancers ad propmoters farther away than 600 nucleotide
+      - enhancer and promoter can be 200k apart, but if tpuhcing can cause expression
+    - may paper
+      - Basenji - sequential regulatory activity prediction
+      - https://genome.cshlp.org/content/early/2018/03/27/gr.227819.117.full.pdf
+      
+      
+  - code
+    - github.com/davek44/Basset
+    - github.com/calicao/basenji
+    
+  - questions
+    - tried recurrent nets; didn't work for long sequences
+      - so RNNs didn't work for long range
+    - coyld you decinstruct NN to see what is going on
+      - difficult to firgure out what is going on in the deeper layer of the neural nets
+    
+
+- dr stella lee, paradox learning, 2nd talk: AI in eLearnijgn
+  - adaptive learning; individualization of
+    - build student model
+  - algorigthms
+    - get others with subject matter experience to look oover you models and assumptions
+    - algoriths can be black boxes
+  - notion os 'explainbale AI'
+  
+
+- andrew berlew, 1st talk: google culture
+  - google leadership study (trying to prove you don't need managers)
+  - leadership attributes
+    - create inclusive environment
+    - empower the team
+    - support career develeopment
+    - be a good coach
+    - be a good communicator
+    - clear vision and stragegy for the team
+    - be productve and results oriented
+    - collaborate across google
+    - be a strong decision maker
+    - have key tech skill to help team
+  - google approach
+    - stakes: focus on the user
+      - embrace all users
+      - sacrifice short term interest fr user value
+      - larry page 'toothbrush test'
+    - ideas: think 10x
+      - mediocre thinking is not welcome
+    - actions: freedom to innovate
+      - obsess over talent
+      - celebrate success and failure
+      - ex: gmail is a 20% project
+  
+  - AI priciples
+    - be socially beneficial
+    - avoid reinforcog unfair bias
+    - built and tested for safety
+    - accountable to people
+    - incorporate privacy design priciples
+    - uphold high standard of scientific excellence
+    - <other>
+    
+    
+  
+  
+  
+  
+  
+  
+- scrtahc
+ - MATCH (p:Phenotype{name:'T2D'})<-[m:METAL]-(v:Variant)
+        WHERE v.chromosome='1' 
+        AND v.position>2000000 
+        AND v.position<3000000
+        AND m.pValue < 0.1
+        RETURN p,v,m;
+
+  
+  

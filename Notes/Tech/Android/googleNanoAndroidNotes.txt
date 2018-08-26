@@ -1,0 +1,9 @@
+
+
+Lesson 02:
+- dp, sp
+  - not specific to screens, independent; based on first android 160 pixel screens
+  - sp for fonts, helps witth accessibility
+  - px = dp * (dpi / 160)
+  
+- RecyclerView, ViewHolder, Adapter,

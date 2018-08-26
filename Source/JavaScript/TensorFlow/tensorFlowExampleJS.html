@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.2"></script>
+    </head>
+    <body>
+        <div id="tf_test"></div>
+    </body>
+    <script>
+//            async function learnLinear() {
+        async function learnLinear() {
+            // add model; sequentisl, where input of one laher are the inputs of the next
+            // simplae stack of layers with no branchign or skipping
+            const model = tf.sequential();
+            
+            // add dense layer, where all of the nodes of each of the layers are connected to each other
+            model.add(tf.layers.dense({units: 1, inputShape: [1]}));
+         
+            // compilt model
+            // need to defint loss function (MSE, good fr linear models) and the optimizer (stochastic graditn descent)
+            model.compile(
+                {loss: 'meanSquaredError', optimizer: 'sgd'}
+            );
+            
+            // define training data
+            const xaxis = tf.tensor2d([-1, 0, 1, 2, 3, 4], [6, 1]);
+            const yaxis = tf.tensor2d([-3, -1, 1, 3, 5, 7], [6, 1]);
+            
+            // train models for fixed number of iterations (aka epochs)
+//                await model.fit(xaxis, yaxis, {epochs: 250});
+            await model.fit(xaxis, yaxis, {epochs: 250});
+            
+            // not predict
+            const result = model.predict(tf.tensor2d([20], [1, 1]));
+            document.getElementById('tf_test').innerText = result;
+            
+            
+        }
+        
+        learnLinear();
+        
+    </script>
+</html>
+

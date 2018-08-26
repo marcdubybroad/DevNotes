@@ -7,10 +7,10 @@
       - now startus are AI first
   
 - yufeng guo
-  - goog transoomred into AI company
+  - google transfomred into AI company
   - democratize ai -> fast, useful, accessible
     - ml apis
-      - pre trained ML models; no data to suply for training (no training on your end)
+      - pre trained ML models; no data to supply for training (no training on your end)
         - model apis
           - translate, speech,, natural language, video intelligence, vision, cloud jobs api
         - descriptions
@@ -19,36 +19,40 @@
               - get entity id, can get data back from goole through api
             - video api
               - understand content, makes sense of large video files
-            - recomend content
+            - recommend content
+              - youtube
         - these model are built from building blocks
-          - fully traine models
+          - fully trained models
           - more to come
           
     - cloud autoML (customize models to your data)
-        - how to train your own mkdels easily
+        - how to train your own models easily
           - right now just for vision
-          - trued different approachees of the model on its own
-            - will use ML to updatr the structure of the model
-            - 'learning to leanr' paper
-            - ' neural arch search with enforcement leaning' paper
+          - engine tries different approachees of the model on its own
+            - will use ML to update the structure of the model
+            - currently only vision
+            - papers
+                - 'learning to learn' paper
+                - 'neural arch search with enforcement leaning' paper
             
     - ML engine (use TF on your own)
-      - some models are bigger than UG's graphics cad memory footprint
+      - some models are bigger than UG's graphics card memory footprint
       - data
-        - image recog 40x faster with 50 gps
+        - image recog 40x faster with 50 gpus
         - search ranking 300x faster with 500 nodes
       - TPU
         - 4 chips on board
         - 2 cores per chip
         - each core fed by 8 gigs memory
         - can put 64 tpus per pod
-        - top end of machine -> redeuce training from 9 hrs to 30 mins
+        - top end of machine -> reduce training from 9 hrs to 30 mins
       - cloud ML engine is a fully managed platform for TF
-        - distribured trainng with gpus and tpus
-        - yper param tuning with HyperTue
+        - distributed training with gpus and tpus
+        - hyper param tuning with HyperTune
         - could.google.com/ml-engine
       - supports for sklearn and xgboost libs
       - 
+
 
 - joe lust (mabl co employee)
   - on gcp and why they moved to it; cloud native since 2011
