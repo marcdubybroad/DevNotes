@@ -1,0 +1,7 @@
+
+
+- android stuio tipe, za
+  - help, edit properties -> set icon for app view, for lit of open project
+  - style guides
+  
+  
