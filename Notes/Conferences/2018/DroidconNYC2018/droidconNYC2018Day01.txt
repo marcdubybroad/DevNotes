@@ -1,7 +1,81 @@
 
 
-- android stuio tipe, za
+- M 9:50am - android stuio tipe, za
   - help, edit properties -> set icon for app view, for lit of open project
   - style guides
   
+  - pu color
+    - in gnerated files, so when open them, see that shouldn't mess with them
+    
+- seful libraries
+  - as opposed to logcat, can use pidcat
+    - gets rid of logcat noise
+  - adb plugin
+    - pbreault/adb-idea
+  - use loginng interceptor if use okhttp
+  - cURL inteceptor  
+    - good for test buuilds
+  - sample data library
+    - custom sample data
+    
+- live templates
+  - isert frequently used constructs in the code
+    - can use thi to build Toast functionality
+    - also for xml file (or inside xml files)
+    - code style -> templates (or live templates)
+- intention actions
+  - alt enter on layout root line
+  
+- debugging
+  - can launch app as normal, then attach debugger afterwards
+  - can create shortcuts
+    - can attach debugger to
+    - preferences -> search for action (attach) -> link to shortcut
+  - FragmentManager.enableDebugLogging(true)
+    - can see ragment lifecycle messages
+  - breakpoints
+    - can group them
+      - view them, then add them to groups
+      - can the disable all at once
+
+- debug indow
+  - view  -> tools -> toll windows -> debug
+  - can display values in more relevant form
+  - hit cmd-shift-enter when evaluate window is open
+  - benefit of watchers (watches)
+    - less need to log
+    - add wtches to varables
+  
+- debugging the manifest
+  - click on second tab of manifest window
+  
+- apk analyzer
+  - helps debug the apk
+  - can also compare 2 apks side by side
+  
+- misc
+  - cmd - F12
+    - shows file structure dialog
+    - can find method in massive class
+    - also works in manifest
+  - also intellij fuzzy finder
+    - start typing, find most searches
+  - cmd - shift - O
+    - can open any file
+  - logcat
+    - search bar
+      - filters out based on term typed
+    - cmd - F
+      - only highlight matches o current term
+  - column multi select
+    - helps convert from one layout to another
+    - alt - whle highlight rows to edit
+    - copy full refence of class
+      - see slides
+      
+    
+- notes
+  - look at the google sample topeka application
+    - sample application
+  - gradle build scans  
   
