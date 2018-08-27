@@ -1,5 +1,25 @@
 
 
+
+- M 10:40am - android animation, marcos
+  - @marcospaulosd
+  - motion design
+  - 12 principles of animation (fro Disney)
+    - staging
+    - slow in, slow art
+    - arcs
+      - animations that do arc are more naural
+    -
+  - disney booke, history of design
+    - similar project with aterial design
+  - avoid nesting layouts
+    - think like an animator
+    - plan the animations ahead
+    
+
+
+
+
 - M 9:50am - android stuio tipe, za
   - help, edit properties -> set icon for app view, for lit of open project
   - style guides
