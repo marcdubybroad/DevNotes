@@ -72,7 +72,12 @@
     - alt - whle highlight rows to edit
     - copy full refence of class
       - see slides
-      
+  - cmd - shift - A
+    - shortcut for shortcut
+  - can install key promoter
+    - wil always remind you of any shortcut to use
+  - can also do reports of shortcuts used on android studio
+  
     
 - notes
   - look at the google sample topeka application
