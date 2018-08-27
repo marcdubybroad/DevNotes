@@ -1,4 +1,48 @@
 
+
+- M 5:50pm - Text in android
+  - classes
+    - PrecomputedText
+    - TextView.getTextMetricsParams
+    - PrecomputedTextCompat
+  - pitfalls
+    - inflation costs
+      - create less TextView objects
+      - can try to combine into one text view
+        - use SpannableString
+        - can set different looks bsed on text span
+    - setText()
+      - every time, garbage collection for each write of old string
+      - when provide a mutable object to text view, it creates immutable copy
+      - if use allCaps method, it creates another copy of your input
+        - might actually store both versions, so memory hit
+    - checking fos spans
+      - creates array to traverse it
+        - copies all the data
+        
+    - Spannables
+    
+    - don't use in recylerview for text -> android:autoLink="web"
+      - heavy on operations
+      - instead
+        - LinkifyCompat.
+        
+    - editable text
+      -
+      
+  - keep in mind that whem text is input from android keyboard, the letters might not come one after the other
+    - might be autocomplete, whole wrod deletion and replace, typo editing
+    - so creates and deletes spans, etc
+    - ca be coslty
+    - InputFilter class is fired
+      - due to .setText() and .replace() when backtracking or fixing typos
+    
+      
+  - research on my own
+    - EmojiCompat
+    
+    
+
 - M 5:00pm - Images, square dev
   - tumbor server size
     - use thi servic for image cropping
@@ -16,6 +60,7 @@
     - moshi
     - wire
     - okio
+      - 
     - okhttp
     - picasso
   
