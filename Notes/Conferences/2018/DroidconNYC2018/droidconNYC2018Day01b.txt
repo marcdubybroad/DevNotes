@@ -1,4 +1,102 @@
 
+- M 3:10pm - images 101, efie barack
+  - @CodingChick
+  - what is image, how stored
+    - stored as bitmap
+    - 2 params: # pixels, infoemation content (colcor depth of pixel)
+    - Bitmap is an array
+      - bit to map of color index (r 1-255, g 1-255, b 1-255)
+    - bitmaps are large, so use compresses format (gif, png, jpeg)
+      - some compression lossless (gif - but only up to 8 bits per pixel, png),
+      - jpeg has loss (ideally imperceptible)
+        - creates math formula that appoximates info in pixels
+        - orks better with smooth curves as opposed to sharp curves (creates graph)
+  - resolution
+    - thi is how much the scren can display
+  - density
+    - pixels per inch
+
+  - vector imagrs
+    - can enlarge 12x and still be smooth
+    - is a formula
+      - image is redrawn when blown up
+    - xml file to describe
+    - android supports vector images in slightly different format
+      - add vector asset to res folder
+      - import svg image -> gets translate to android format
+        - can get warning that some vg properties are being ignored
+        - can always manually edit the result ourseleves
+        
+  - drawing on android
+    - public class Canvas extend basecanvas
+    - to draw in android, need
+      - need bitmap, Canvas to host drawing, drawing pimitive and drawing paint
+    - Drawable abstract class
+      - override draw()
+      - used in layout background
+      - used in ImageView
+      - heierarchy
+        - BitmapDrawable,
+        - StateListDrawable (state machine) -> provide different imags based on state of view
+        - , GradientDrawable,
+        - VectorDrawable
+
+  - View
+    - Drawable can only respond to draw() ops
+    - view can respond to other eents (clicks, select, etc)
+    - public class View {
+      draw(Canvas canvas)
+      updateIfDirty() {
+        draw(canvas)
+      }
+      onDraw(Canvas canvas)
+    }
+    
+    - static image
+      - lve as resource files in project
+      - different resolutions for different densities
+        - to make sure it responds properly to different size screens
+        - drawable, d-htpi, d-xhdpi, d-xxhdpi
+        - pluigin to help to do that -> winterDroid account
+        
+  - ImageView
+    - can use 'android:tint' option
+      - will change the olor
+    - 'android:scaleType'
+      - robots.thoughbots.com blog, look for this entry
+    -
+
+  - load image as streat
+    - from url, gt as stream
+    - Bitmap b = BitmapFactory.
+      - imageView.setBitmap(b)
+      
+  - good image experience
+    - load in background
+    - caching (disk/memory), if used multiple time
+    - placeholder for the image whil waiting for it to load
+    - resizing
+      - client side
+        - can do this without opeing bitmap
+        - develop.anderoid.com/topic/performnce/graphics/load-bitmap
+        - 
+      - server side
+        -
+  - imaging libraries
+    - glide
+      - sort of by google
+      - github.com/bumptech/glide
+        - GlideApp.with(myFragent).load(url)
+          .diskCacheStrategy().cropenter().load()
+    - fresco
+      - frescolib.org
+        - oddbal, overrides imageview tree
+        - helps with android memory management for android 4-
+        
+    - picasso
+      - square.github.io/picasso
+        - heps with usin adapter
+        
 
 - M 2:20pm - WorkManger - deitch speaker
   - @vRallev
