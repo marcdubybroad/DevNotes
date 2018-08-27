@@ -4,83 +4,83 @@
 - M 10:40am - android animation, marcos
   - @marcospaulosd
   - motion design
-  - 12 principles of animation (fro Disney)
+  - 12 principles of animation (from Disney)
     - staging
-    - slow in, slow art
+    - slow in, slow out
     - arcs
       - animations that do arc are more naural
     -
-  - disney booke, history of design
-    - similar project with aterial design
+  - disney book, "history of design"
+    - google did similar project with material design
   - avoid nesting layouts
     - think like an animator
-    - plan the animations ahead
+    - plan the animations ahead of time, not just after tought
     
 - options
   - ObjectAnimator
     - slow due to use of reflection
   - Animation classes
-    - cos: requires several instaces of AnimationSet
-    - layutanimate.appy {
+    - cons: requires several instaces of AnimationSet
+    - layutanimate.apply {
       duration = 1000
       
     }
   - Value Animator
-  - ConstarintSet Animations
+  - ConstraintSet Animations
   - Motion Layout
     - subclass of ConstraintLayout
     - mix of Property Animation Framework
-    - animation that helps sync obejcet movements
+    - animation that helps sync objcet movements
     - need layout_start.xml
       - also need layout_end.xml
-      - also need motion_scene.xml layotu
+      - also need motion_scene.xml layout
         - define swipe here
           - <OnSwipe/>
-    - can also resize elemnt (image view)
+    - can also resize element (image view)
     - 
   - KeyFrameSet
-    - conditions on things to heppen as get to set position
+    - conditions on things to happen as get to set position
       - at position 0, ...
       - at position 53, ...
       - KeyAttribute xml element
-        - framePostion, target, transitionEasing, curveFit, progress
+        - framePosition, target, transitionEasing, curveFit, progress
       - KeyPosition
         - percentX, percentY, framePosition, target, drawPath, sizePercent, curveFit, progress
         
   - wwrap up
-    - think lik an anmator
-    - use MotionLayot for intractive motion animations
-    - integrate animoations well, don't just leav to the end
+    - think like an animator
+    - use MotionLayout for interactive motion animations
+    - integrate animations well, don't just leave to the end
     
     
 - notes
 
 
 - M 9:50am - android stuio tipe, za
-  - help, edit properties -> set icon for app view, for lit of open project
+  - help, edit properties -> set icon for app view, for list of open project
   - style guides
   
-  - pu color
+  - put color
     - in gnerated files, so when open them, see that shouldn't mess with them
     
-- seful libraries
+- helpful libraries
   - as opposed to logcat, can use pidcat
     - gets rid of logcat noise
   - adb plugin
     - pbreault/adb-idea
-  - use loginng interceptor if use okhttp
+  - use logging interceptor if use okhttp
   - cURL inteceptor  
-    - good for test buuilds
+    - good for test builds
   - sample data library
     - custom sample data
     
 - live templates
-  - isert frequently used constructs in the code
-    - can use thi to build Toast functionality
+  - insert frequently used constructs in the code
+    - can use this to build Toast functionality
     - also for xml file (or inside xml files)
     - code style -> templates (or live templates)
 - intention actions
-  - alt enter on layout root line
+  - alt-enter on layout root line
   
 - debugging
   - can launch app as normal, then attach debugger afterwards
@@ -92,7 +92,7 @@
   - breakpoints
     - can group them
       - view them, then add them to groups
-      - can the disable all at once
+      - can then disable all of of a group at once
 
 - debug indow
   - view  -> tools -> toll windows -> debug
@@ -100,7 +100,7 @@
   - hit cmd-shift-enter when evaluate window is open
   - benefit of watchers (watches)
     - less need to log
-    - add wtches to varables
+    - add watches to varables
   
 - debugging the manifest
   - click on second tab of manifest window
@@ -122,16 +122,16 @@
     - search bar
       - filters out based on term typed
     - cmd - F
-      - only highlight matches o current term
+      - only highlight matches to current term
   - column multi select
     - helps convert from one layout to another
-    - alt - whle highlight rows to edit
-    - copy full refence of class
+    - alt - while highlight rows to edit
+    - copy full reference of class
       - see slides
   - cmd - shift - A
     - shortcut for shortcut
   - can install key promoter
-    - wil always remind you of any shortcut to use
+    - will always remind you of any shortcut to use
   - can also do reports of shortcuts used on android studio
   
     
@@ -139,4 +139,8 @@
   - look at the google sample topeka application
     - sample application
   - gradle build scans  
+  
+  
+  
+  
   
