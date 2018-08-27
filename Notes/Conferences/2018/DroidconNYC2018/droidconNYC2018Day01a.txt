@@ -1,11 +1,90 @@
 
+- M 1:30pm - firebase and arch comps, stevenson, firebase
+  - code: bit.ly/2NtAuQP
+    - github.com/CodingDoug/firebase-jetpack
+  - firestore
+    - could nosql db
+  - LiveData and ViewModel
+    - LiveData is observable
+    - aware of android lifecycle
+      - onStop(), onStart()
+      - automatically collected on onDestroy()
+  - firestore
+    - have collection
+      - then docuemnts within the collection
+        - then sub collections and fields
+    - val firestore = FirebaseFresotre.getInstance()
+    - var ref = firestore.collection("collection-name").docuemnt("docu-name")
+    
+  - if subclass liveData
+    - override onActive(), onInactive(), onEvent()
+    
+  - LiveData will lose data on configuration change
+    - use ViewModel to survive config change
+    - VM lifecycle aware
+  - class StokViewModel {
+        private Repository                  // repository will contain firetsore instance and ops
+        private Map cacheDataMap
+      }
+    
+  - ferbase sdk has its won data cache, so don't need to use room is turn on cachwe
+  
+  - what abou rrors
+    - need to bubble up errors to UI
+    - has exception class
+      - DataOrException
+        - stock price object is either price or exception
+        
+  - firestore query
+    - FirebaseFirestroe.getInstance().collection("").orderBy("")
+       .listener
+
+    - listens to changes
+    
+  - for adapter recycler changes notification
+    - RecyclerView extension ListAdapter
+     - keeps from redrawing the whol list
+     - need to implments DiffUtil.ItemCallback<T>
+       - methods: areItemsTheSame, areContentsTheSame (and 1 otners)
+       
+  - shoukd you?
+    - do you realy need live data
+    - could be good for appending results
+    - could also have a refresh button; can activate it if !onContentsTheSame()
+    
+  - for background sync for offline use
+    - realtime db in forestore has offline cache 
+      - but what if app is not runing?
+        - look at jetpack WorkManager
+          - period of time to work
+          - ontraints (bettery level, network, etc)
+          - work chaining
+        - ex:
+          - val constraints
+          - vat query
+          - queue up query
+        - cons
+          - not like cron to run every hour
+    - can also do server push
+      - firebase cloud messaging push notification
+      - on notification, sync with WorkManager process
+      - FirebaseMessagingService
+        - schedule one time sync with WorkManager
+          - make one time work request, give it constraint and query
+          - make sure to replace one scheduled before
+          - con: WM api is synchronous
+          
+      
+      
+      
 - M 11:50am - archtect app with MVP, VewModel, stephen d'amico
   - @sddamico, android lead at seatgeek.com
   - MVMVP
     - model view + mvp
   - MVP tricky with async code
     - so regiggered MVP
-  - damico github code -> MvMvpdemo
+  - damico github code -> MvMvpdemo (sddamico)
+    - slides on sldiee deck
   - approach
     - have interfaces for presenter and and view
     - have MvpPresentedBase to attach to views
@@ -27,9 +106,25 @@
   - scope can be activity or fragment
     - read up about dependency injection into VM, could be tricky
   - for MVP, presenter could hold state between config changes
+   
+   
+   
+- android data binding
+  - code generation tool for mapping data to view
+  - uses enhanced xml layout where you can insert variables
+    - <data>
+      <variable name="model" type=""/>
+    - then in layout
+      - android:text="@{model.count}"
   
-- 
   
+- alernative frameworks
+  - inspired by Redux, MVVM, MVI
+  - building your own arch gives you more flexibility
+  - one size doesn't fit all, so look at all of them
+    - but don't reinvest the wheel if don't have to
+    
+
 - terms used
   - behavior: observable that also has a value
     
