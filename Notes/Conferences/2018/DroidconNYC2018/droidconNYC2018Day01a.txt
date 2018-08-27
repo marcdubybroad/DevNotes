@@ -1,0 +1,37 @@
+
+- M 11:50am - archtect app with MVP, VewModel, stephen d'amico
+  - @sddamico, android lead at seatgeek.com
+  - MVMVP
+    - model view + mvp
+  - MVP tricky with async code
+    - so regiggered MVP
+  - damico github code -> MvMvpdemo
+  - approach
+    - have interfaces for presenter and and view
+    - have MvpPresentedBase to attach to views
+    
+    - for each presenter and interface
+      - define a contract of what APIs will be communicated
+    - then hook up the presenter to the activity
+    
+  - MVP makes test of biz logic easier
+  
+- if add aync to MVP
+  - RxJava, kotlin ciroutines
+  -
+  
+- ViewModel
+  - can specify your own scopes
+  - put objects tat too big for inSavedInstanceState()
+  - if app is backgrounded, VM will be cleanex out
+  - scope can be activity or fragment
+    - read up about dependency injection into VM, could be tricky
+  - for MVP, presenter could hold state between config changes
+  
+- 
+  
+- terms used
+  - behavior: observable that also has a value
+    
+  
+  
