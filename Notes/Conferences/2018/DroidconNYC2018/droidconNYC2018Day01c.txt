@@ -1,0 +1,73 @@
+
+- M 5:00pm - Images, square dev
+  - 
+
+- M 4:10pm - Testing mock and, Brain Gardner, Big Nerd Ranch
+  - @BrianGardnerAtl
+  - test dobles
+    - mocks
+    - stubs
+    - spies
+    - dummies
+    - fakes
+  - test types
+    - unit
+      - object
+    - integration
+      - one particular sub system
+    - end to end
+      - all the system
+      
+  - when to use TestDoubles
+    - when have indirect inputs or p=outputs
+    
+  - mocks
+    - fit well in uni tests
+    - mock is objct that records what you do to it
+    - can also return data
+    - 2 types:
+      - lenient
+        - if calls out of order from specified, not care
+      - strict
+        - fail if methods called out of order
+        
+  - stubs
+    - provide data for your application
+      - handle indirect inputs
+    - types
+      - responder
+      - saboteur
+        - if something goes wrong, throw exception
+      - temporary
+        - for TDD, coul start in prod main dir (not test dir)
+        
+  - spies
+    - combinations for mocks and stubs
+    - useful for integration tests
+    
+  - dummies
+    - doesn't do much, there to fill ou parameter list
+    - good for unit
+    
+  - fakes
+    - replace real implementation for one better suited for testing
+    - best for integration tests
+    
+  - libraries
+    - mockito
+      - does have mock obejts
+      - can also ,ock interfaces
+      - can add verifications on mock bejcts
+    - stubs not so great
+    - spies
+    - dummies
+    - doesn't have fakes
+    
+  - recap
+    - don't overuse your test doubles
+    - look at Fowler
+    - new Kotlin book
+    
+    
+    
+    
