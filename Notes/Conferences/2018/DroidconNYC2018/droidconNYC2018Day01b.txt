@@ -1,0 +1,54 @@
+
+
+- M 2:20pm - WorkManger - deitch speaker
+  - @vRallev
+  - old way - AlarmManager
+    - uses PendinIntent
+    - but doesn't resepct device state (charging)
+    - functionality changed after KitKat
+    - with Lollipop -> got JobSCheduler
+      - does respect state (on network)
+      - but only API 21+
+    - Marshmallow came with new mode 'Doze'
+    - also new GcmNetworkManager
+      - don't need gcp
+      - similar to JobSCheduler, API 9+
+      - but requires device to have Google Play Services installed
+    - Oreo -> got JobIntentService
+      - replacememt for IntentService
+      
+    - 2018: WorkManager
+      - wrapper arohund AlarmManager, JobScheduler or JobDispatcher
+      - released with arch comps
+      
+  - which api to use
+    - android-job for short term
+    - WorkManager for long term
+    
+  - WorkManager
+    - features backported to API 14
+    - implemntation "android.arch.work:work-runtime:1.0.0"
+    - xtend class Worker
+      - override one method that returns the result
+        - (doWork()?)
+    - use OneTimeWorkRequestBuilder -> queue work request
+    - for daily jobs, extend DailyJob
+      - jobRequest.build()
+      - dailyJob.schedule(timeOfDay, time, etc)
+      
+    - transient job
+      - to keep job between reboots
+      -
+    - can chain jobs with ork manager
+    - comes with its won job scheuling engine
+    
+  - testing WorkManager
+    - is there a TestWorkManager
+
+  - android-job will be depreacetd soon
+  
+  - should WM replace AsyncTask
+    - no, WM meant for tasks to do in the future hat UI doesn't rely on
+    
+    
+      
