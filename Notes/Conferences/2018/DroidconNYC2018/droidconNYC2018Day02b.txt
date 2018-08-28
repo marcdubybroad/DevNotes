@@ -1,0 +1,105 @@
+
+
+T 2:00pm - growing teams, poloton team
+  - peolotn sits bween fitness, hardware and media
+  
+  - 20 months ago, 3 android engineers
+    - now 20 android engineer, 100 engineers total
+  - small team vs large team
+    - direct comm vs cross team
+      - teams can dveelop their own patterns
+      
+  - growing while rmaining efficient
+     - small teams, don't add too much process early on
+     - flow for growth
+       - dicussion -> decosion -> outcome --> back to discussion
+       - town suqare format
+         - inclusive venue
+         - produce actionabe decision
+         - communicates decision, document (helps with eople who are out, new personnel later)
+        - avoid multiple tiers within your team
+         - enforce decisions
+           - put extra things in CI, in github
+           - also nforced throug code rviews
+      - iterate, then iterate again
+        - env will change
+          - team, coworkrs will change
+        - use your town square
+          - when things change
+        - no decision perfrect
+        - no decision final, including tghre process
+        
+  - peloton town square
+    - weekly open meeting
+    - pre meeting agenda
+    - follows a set teplate
+    - only takes as long as needed
+    - sample doc sections:
+      - agenda
+      - dicussion
+      - action items
+        - assign to people, could be extra research
+    - example
+      - used to use MVP
+      - people found some cons to switching to pattern
+      - MVVM proposed
+      - pros/cons discussed
+        - cost of refactoing
+      - action item assigned to investigate MVVM
+        - try refactoring feature
+        
+      - next TH
+        - MVVM shown beneficial
+      - decision to adopt MVV
+      - doc created, training
+      - started using it
+      - but saw issues on higher density screens
+        - had sync issues when users changing during workout
+      - outcome discussed in next town square
+      - issue was multiple state changes coming from the different comps
+        - wasn't unidirectilan data flow, mutli direction
+        - looked at MVI to see if that would help
+      - developed the nw approach/framework
+        - create docs, confluence page, pairing session time, tutorials
+        - code review as enforcement tool
+      - outcome
+        - written in kotlin
+        - supplements MVVM
+        - glbal state app (Redux)
+          - single source of data for app
+          - any state change gets proapgated to observers
+        - reative state consumets
+        - expandable via middlewares
+          - built into expandable way
+        - coming 2019
+        
+  - small thngs
+    - gogoleJavaFomat
+    - code ownershio
+    - pull request labels
+    - danger plugin
+      - pull request at less than 500 lines
+    
+  - considerayitons
+    - very large teams
+      - town hall currently works for 20 engineers
+      - break into multile when more members added?
+    - minority opinions
+      - everyone needs to be heard
+    - action items with no progress
+    - things take time
+      - no quick turnround
+      - make sure get rest of company buy in
+      
+  - results
+    - consistent delivery
+    - happier team
+      
+      
+    
+         
+         
+       
+     
+    
+    
