@@ -1,4 +1,121 @@
 
+T 1:10pm - work remotely
+  - benefits
+    - fewer distrations
+    - productivity +15% when not being surpevised during day actively
+    - can also come in when need to
+      - cheper for office space
+    - larger talent pool for company
+      - added diversity
+      - benefits on retention
+        - don't have to find new job when move
+    - easier meetings
+      - since online, don't get kicked out of room
+    - if individuals more productive, so does team
+    
+  - challenges
+    - support remote workers
+      - tech: zoom,, chat, planning
+    - clear policies and expectations
+      - working hours
+      - who can work remotely
+      - must trust employees
+      
+  - hiring
+    - alrger talent pool to screen
+    - screen more diverse set of applicants
+    - select for remote friendly traits, self starter, troubleshoot on their own
+      - someone who can break down tasks themselves
+    - full team commnication
+    -
+
+  - team engagement
+    - full team communication
+    - team building
+    - equal contribution
+    - timezones
+    -
+
+  - biggest struggles
+    - loneliness
+    - isolation
+    
+  - individual
+    - stayig productive
+    - boundaries, could potentially work constantly
+    - isolation
+    - no catering, snacks, perks
+    -
+    
+  - how to develop a remote team
+    - communication
+      - set expectatios *when in office, how quick response
+        - async communications (when someone sees slack)
+        - core hours when quick response expected
+        - deine where comms happen
+        
+      - be intentional, make sure people don't get left out
+        - regular 1 on 1s
+        - oer communicate
+        - document and dhare work
+        - share questions, concerns, ideas
+        
+      - embrace different forms of comm (whe to use email, chat, video)
+        - use video when can, non verbal queues important
+        - always put face to voice
+        - find quiet spot for video
+        
+  - engagemen
+    - must be googd citizens
+    -   group involvement
+    - encourage casual conversation
+    - schedule time to chat as a team
+      - time to brainstorm
+    - seek input from everyone
+    - important discussions in groups, or else make sure documented and provided to others
+    - team on sites
+    - shared activity week
+      - hackathon, tech ebt
+      - lnch and learn, conferences
+      
+    - build connections
+      - assume good intent
+      - protect 1-1 time with manager'
+      - make yorself visible
+      -
+
+  - workflows
+    - planning
+    - blend asyc comm and video with code design review
+    
+   - pair programming
+     - still possible
+     - video chat and screen share
+     - same with qa
+     
+  - toosl
+    - internet, fast
+    - slack, hangout, zooms
+    - google docs
+    - Vysor to share device
+    - add conf to goog cal
+    - github, gitlab
+    - envision
+    - lastpass, dashlane for keys.passwd
+    - world time buddy
+    - doodle, slack polls
+    - quck time screen shot
+    
+  - tips
+    - if get distracted, change work venue
+    - coffee shop
+    
+  - affective remote teams
+    - commnicte
+    - engement
+    
+    
+      
 
 T 11:30 - android and chrome OS, kenneth ford, google dev adv
   - 10/2017 - release pixel book
@@ -64,11 +181,14 @@ T 11:30 - android and chrome OS, kenneth ford, google dev adv
       - live on chrome os do site
       - have to be in deveoper mode, so full linux access
     - run android studion on chrome os
+      - preview only for pixel boo,s
+    
     
     
   - look into
     - chrome OS
-    - look at the reizing code labs
+    - look at the reizing code labs )optimize for chrome os, chromeos resizig
+    - google IO presentation
     
 
 
