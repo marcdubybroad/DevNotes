@@ -1,0 +1,74 @@
+
+
+T 11:30 - android and chrome OS, kenneth ford, google dev adv
+  - 10/2017 - release pixel book
+  - why chrome os
+    - different form factos
+    - android bring device offline support
+    - fast udate cycle for chrome os
+
+  - how to bring andfoid app to chrome os
+    - possible issues
+      - if require features not on device
+        - gps, accelerometer, rear cameras
+    - optimize for the platform
+      - mae sure you target 23 or higher
+      - new 1st class of input methods
+        - keyboard and trackpad, stylus
+        - most UI is bu8ilt around touch (long pressing, etc)
+      - multi window screens
+      
+  - what to use
+    - mouse/trackpad
+      - right click support
+        - view.setOnContextClickListener()
+      - hover
+        - view.setOnHoverListener()
+      - scroll events
+        - view.setOnGenericMotionListener
+          - MotionEvent.ACTION_SCROLL
+    - keyboard
+      - focus
+        - view.nextFocusDownd
+      - key preses
+        - view.setOnKeyListener()
+      - shortcuts
+        - defint these in the menu items
+          - android:alphabeticModifiers
+          
+    - window management
+      - layouts for larger screens
+      -
+    - handling both orintations
+      - if lock to protarit, looks awful on chrome os
+      - so handle for both layouts
+    - free form indow resizing
+      - usually where see app break down
+    - use woindow size, not screen size
+      - configuration changes
+      - onCreate being called multipls times
+        - save and restroe state must be fast
+        - like config changes
+        - use arch comps
+        - could hit 5-6 config changes as size window up
+        - look at the ersizing code lab
+        
+      - onDraw() called constantly
+
+    - drag and drop
+      - 
+ 
+  - developer tools
+    - chrome os emulator in preview
+    - adb over usb (fo certain devices - pixel book)
+      - live on chrome os do site
+      - have to be in deveoper mode, so full linux access
+    - run android studion on chrome os
+    
+    
+  - look into
+    - chrome OS
+    - look at the reizing code labs
+    
+
+
