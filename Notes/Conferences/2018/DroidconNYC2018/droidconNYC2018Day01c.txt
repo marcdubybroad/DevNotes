@@ -37,7 +37,10 @@
     - InputFilter class is fired
       - due to .setText() and .replace() when backtracking or fixing typos
     
-      
+  - resources
+    - github.com/siyamed/droidcon-nyc-18
+    - @siyamed
+    
   - research on my own
     - EmojiCompat
     
