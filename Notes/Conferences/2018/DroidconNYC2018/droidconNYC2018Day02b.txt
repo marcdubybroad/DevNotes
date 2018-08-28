@@ -1,4 +1,73 @@
 
+T 2:50pm - state of kotlin
+  - @zmarkan
+  - #2 popular language
+  - 35% android devs use kotlin
+  - survey, jan to march
+    - 2744 responses, 15 avg min to complete
+    - 34% 205 yrs exp, 9% 15+
+    - most K uers are company emp,oyees, less students
+    - 33% 2-5 peoplein company (so product team level)
+    - quote: it's like java++
+    - how to start leanring
+      - 46% IO 2017 when started (when officially supported)
+      - 54% jetbrain official resources, 12% talks and demos
+        - kotlin weekly newsletter
+    - other langs
+      - 83% java, 16% python, JS 24%
+    - where
+      - 80% android, 31% bac end, 31% libs
+        - data scince migh be growing as well, but small now
+    - how much in code base
+      - higher personal, but usually 75% work code base
+    - features
+      - 80% null safty, 65% ext functons, 62% jaa introp, 61% data classes
+        - 25% coroutines (even thogh beta)
+        - doesn' get in the wy of geting job done
+    - 77% use extension functions
+      - dsl buiders, null checks
+    - 87% migrated code java to kotlin
+      - most use wizard or rewrtoe manaually
+      - 25% migrated back
+       - automatic migration isn't nice code, doesn't do null assertions
+       - probs with dependencies
+         - som using reflection
+         - everthing in K is fina;
+         - could've been old version
+           - one where spring had issues
+    - 29% used coroutines
+      - could replace rxJava
+      - ven though still experimental
+      - anything threading related, used with schedulers
+    - 41% have used as DSL
+      - a lot popl use kotlin for gradle
+    - 25% used K beyond android/JVM
+      - kotlin naive most popular, ollowed by kotlin JS
+      - look at touchlab/DroidconKotlin
+    - mssing features that are desired
+      - more syntax sugar
+      - tertianry operator
+      - single abstract methods
+      - pattern matching
+      - more custom operators
+      -
+    - what not liked
+      - companion obejcts, how K does statics
+      - eetyhting public and final
+      - K not dynamic
+    - tools
+      - a stdion, intellij, gradle
+    - what libs
+     - koin, arrow, spek, ktx, kluent, ktor, kotlin android extensions, dokka, okio, knarch
+     - quote: mortal kombt of prog langs
+  - pusher.om/state-of-kotlin
+    - dadaset in kaggle
+    
+  
+  
+  
+  
+  
 
 T 2:00pm - growing teams, poloton team
   - peolotn sits bween fitness, hardware and media
