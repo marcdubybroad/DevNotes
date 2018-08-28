@@ -1,5 +1,27 @@
 
 
+T 10:40am - android things
+
+  - android thigs
+    - is not on play store
+      - does provide googleplay services
+      
+  - componnts to board
+    - gpio, input/output - mtion detecto, poximity detectors
+      - leevl switches
+      
+    - PWM, pulse width modulators (?) - dc motors, lights
+      - more analog profile, ramp up power
+    - IIC - intr integrated circuits, accelerometsr, thermometers
+    - serial (see sldies) - for display, keyboard (?)
+  
+  - steps
+    - flash android things image
+    - PI3 color coded pins
+    
+  
+  
+
 T 9:50am - motion in apps, Britt Barack
  - @BrittBarack
   - new MotionLayout
