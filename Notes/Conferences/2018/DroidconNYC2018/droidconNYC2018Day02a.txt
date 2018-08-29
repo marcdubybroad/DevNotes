@@ -4,7 +4,7 @@ T 1:10pm - work remotely
     - fewer distrations
     - productivity +15% when not being surpevised during day actively
     - can also come in when need to
-      - cheper for office space
+      - cheaper for office space
     - larger talent pool for company
       - added diversity
       - benefits on retention
@@ -15,14 +15,14 @@ T 1:10pm - work remotely
     
   - challenges
     - support remote workers
-      - tech: zoom,, chat, planning
+      - tech: zoom, chat, planning
     - clear policies and expectations
       - working hours
       - who can work remotely
       - must trust employees
       
   - hiring
-    - alrger talent pool to screen
+    - larger talent pool to screen
     - screen more diverse set of applicants
     - select for remote friendly traits, self starter, troubleshoot on their own
       - someone who can break down tasks themselves
@@ -40,33 +40,33 @@ T 1:10pm - work remotely
     - loneliness
     - isolation
     
-  - individual
-    - stayig productive
-    - boundaries, could potentially work constantly
-    - isolation
-    - no catering, snacks, perks
-    -
+    - individual
+      - staying productive
+      - boundaries, could potentially work constantly
+      - isolation
+      - no catering, snacks, perks
+      -
     
   - how to develop a remote team
     - communication
-      - set expectatios *when in office, how quick response
+      - set expectatios when in office, how quick response when pinged
         - async communications (when someone sees slack)
         - core hours when quick response expected
-        - deine where comms happen
+        - define where communications happen
         
       - be intentional, make sure people don't get left out
         - regular 1 on 1s
-        - oer communicate
-        - document and dhare work
+        - over communicate
+        - document and share work
         - share questions, concerns, ideas
         
-      - embrace different forms of comm (whe to use email, chat, video)
+      - embrace different forms of communication (when to use email, chat, video)
         - use video when can, non verbal queues important
         - always put face to voice
         - find quiet spot for video
         
-  - engagemen
-    - must be googd citizens
+  - engagement
+    - must be good citizens
     -   group involvement
     - encourage casual conversation
     - schedule time to chat as a team
@@ -75,25 +75,26 @@ T 1:10pm - work remotely
     - important discussions in groups, or else make sure documented and provided to others
     - team on sites
     - shared activity week
-      - hackathon, tech ebt
-      - lnch and learn, conferences
+      - hackathon, tech debt project
+      - lunch and learn, conferences
+      - one project where everyone works on the same project
       
     - build connections
       - assume good intent
-      - protect 1-1 time with manager'
+      - protect 1-1 time with manager
       - make yorself visible
       -
 
   - workflows
     - planning
-    - blend asyc comm and video with code design review
+    - blend asyc communication and video with code design review
     
    - pair programming
      - still possible
      - video chat and screen share
      - same with qa
      
-  - toosl
+  - tools
     - internet, fast
     - slack, hangout, zooms
     - google docs
@@ -120,19 +121,19 @@ T 1:10pm - work remotely
 T 11:30 - android and chrome OS, kenneth ford, google dev adv
   - 10/2017 - release pixel book
   - why chrome os
-    - different form factos
+    - different form factors
     - android bring device offline support
-    - fast udate cycle for chrome os
+    - fast update cycle for chrome os
 
-  - how to bring andfoid app to chrome os
+  - how to bring android app to chrome os
     - possible issues
       - if require features not on device
         - gps, accelerometer, rear cameras
     - optimize for the platform
-      - mae sure you target 23 or higher
+      - make sure you target sdk 23 or higher
       - new 1st class of input methods
         - keyboard and trackpad, stylus
-        - most UI is bu8ilt around touch (long pressing, etc)
+        - most UI is built around touch (long pressing, etc)
       - multi window screens
       
   - what to use
@@ -147,7 +148,7 @@ T 11:30 - android and chrome OS, kenneth ford, google dev adv
     - keyboard
       - focus
         - view.nextFocusDownd
-      - key preses
+      - key presses
         - view.setOnKeyListener()
       - shortcuts
         - defint these in the menu items
@@ -157,20 +158,21 @@ T 11:30 - android and chrome OS, kenneth ford, google dev adv
       - layouts for larger screens
       -
     - handling both orintations
-      - if lock to protarit, looks awful on chrome os
+      - if lock to portrait, looks awful on chrome os
       - so handle for both layouts
-    - free form indow resizing
+    - free form window resizing
       - usually where see app break down
-    - use woindow size, not screen size
+    - use window size, not screen size
       - configuration changes
       - onCreate being called multipls times
-        - save and restroe state must be fast
+        - save and restore state must be fast
         - like config changes
-        - use arch comps
-        - could hit 5-6 config changes as size window up
+        - use architecture components
+        - could hit 5-6 configiguration changes as size window up
         - look at the ersizing code lab
         
       - onDraw() called constantly
+        - so drag on preformance n sizing window, so watch this cal and what is done in it
 
     - drag and drop
       - 

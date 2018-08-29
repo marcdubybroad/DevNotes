@@ -66,7 +66,7 @@
       - robots.thoughbots.com blog, look for this entry
     -
 
-  - load image as streat
+  - load image as stream
     - from url, gt as stream
     - Bitmap b = BitmapFactory.
       - imageView.setBitmap(b)
@@ -98,16 +98,16 @@
         - heps with usin adapter
         
 
-- M 2:20pm - WorkManger - deitch speaker
+- M 2:20pm - WorkManager - dutch speaker
   - @vRallev
   - old way - AlarmManager
     - uses PendinIntent
-    - but doesn't resepct device state (charging)
+    - but doesn't respect device state (charging)
     - functionality changed after KitKat
     - with Lollipop -> got JobSCheduler
       - does respect state (on network)
       - but only API 21+
-    - Marshmallow came with new mode 'Doze'
+    - Marshmallow came with new mode 'Doze' to keep from wking phone when asleep
     - also new GcmNetworkManager
       - don't need gcp
       - similar to JobSCheduler, API 9+
@@ -117,7 +117,8 @@
       
     - 2018: WorkManager
       - wrapper arohund AlarmManager, JobScheduler or JobDispatcher
-      - released with arch comps
+      - released with architecture components
+      - similar to cron, schedule to run jobs in future
       
   - which api to use
     - android-job for short term
@@ -125,8 +126,8 @@
     
   - WorkManager
     - features backported to API 14
-    - implemntation "android.arch.work:work-runtime:1.0.0"
-    - xtend class Worker
+    - implementation "android.arch.work:work-runtime:1.0.0"
+    - extend class Worker
       - override one method that returns the result
         - (doWork()?)
     - use OneTimeWorkRequestBuilder -> queue work request
@@ -137,16 +138,17 @@
     - transient job
       - to keep job between reboots
       -
-    - can chain jobs with ork manager
-    - comes with its won job scheuling engine
+    - can chain jobs with work manager
+    - comes with its own job scheuling engine
     
   - testing WorkManager
     - is there a TestWorkManager
 
-  - android-job will be depreacetd soon
+  - android-job will be deprecated soon, so look to switch to WorkManager
   
-  - should WM replace AsyncTask
-    - no, WM meant for tasks to do in the future hat UI doesn't rely on
+  - should WorkManager replace AsyncTask?
+    - no, WorkManager meant for tasks to do in the future that UI doesn't rely on
+    - AsyncTask meant to offload compute from UI thread now
     
     
       

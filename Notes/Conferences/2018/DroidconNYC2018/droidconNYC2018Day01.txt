@@ -56,7 +56,7 @@
 - notes
 
 
-- M 9:50am - android stuio tipe, za
+- M 9:50am - android studio tips, za
   - help, edit properties -> set icon for app view, for list of open project
   - style guides
   

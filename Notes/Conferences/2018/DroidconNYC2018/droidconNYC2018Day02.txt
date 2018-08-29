@@ -2,18 +2,18 @@
 
 T 10:40am - android things
 
-  - android thigs
+  - android things
     - is not on play store
-      - does provide googleplay services
+      - does provide google play services
       
   - componnts to board
-    - gpio, input/output - mtion detecto, poximity detectors
-      - leevl switches
+    - gpio, input/output - motion detecto, proximity detectors
+      - level switches
       
     - PWM, pulse width modulators (?) - dc motors, lights
-      - more analog profile, ramp up power
-    - IIC - intr integrated circuits, accelerometsr, thermometers
-    - serial (see sldies) - for display, keyboard (?)
+      - more analog profile, ramp up power, not just 0/1 power
+    - IIC - intr integrated circuits, accelerometers, thermometers
+    - serial (see slides) - for display, keyboard (?)
   
   - steps
     - flash android things image
@@ -25,17 +25,17 @@ T 10:40am - android things
 T 9:50am - motion in apps, Britt Barack
  - @BrittBarack
   - new MotionLayout
-    - replace ConstraintLayout ith MotioNalyout
-    - other layouts need to be wrapped with ML
+    - replace ConstraintLayout with MotionLayout
+    - other layouts need to be wrapped with MotionLayout
     
   - define the scenes
-    - start scne can be keypad_down
-    - end scene i kypad_up
+    - start scene can be keypad_down
+    - end scene is kypad_up
         - same view IDs
           - rewrite constraints
-    - scene_call xml file -> attaches the start and the end
-      - warp data i motion_scene tag
-      - this xml file will be referenced in the MotonLayout element in the layout file
+    - scene_call xml file -> attaches the start and the end (both referenced there)
+      - wrap data in motion_scene tag
+      - this xml file will be referenced in the MotionLayout element in the layout file
       
       - <MotionScene ...>
           < Transition ...>
@@ -43,22 +43,22 @@ T 9:50am - motion in apps, Britt Barack
 
   - what can animate
     - x, y,
-    - anything else (text size), can define custom attributes
+    - anything else that cannot be animated (text size), need to define custom attributes
       - color,
       
   - important
-    - for the motion scene, the important [part is not the view, but the constratints that are
+    - for the motion scene, the important part is not the view, but the constratints that are
       being changed
       
     - for custom changes, define ConstraintSet for start and end
-      - referne
-      - the constraint sets have to have the same elements defined, althouh could have different values
+      - reference
+      - the constraint sets have to have the same elements defined, although could have different values (usually will, since they are being animated)
       
   - custom attributes
     - for images
       - use crossfade attribute (?)
       - android:image
-      - android:altImage
+      - android:altImage (?)
       
       
     - KeyFrame
@@ -75,23 +75,23 @@ T 9:50am - motion in apps, Britt Barack
       - viewChanger.onPageChngListener()
       
   - rcap
-    - create ML
-    - crate MS
+    - create MotionLayout
+    - create MotionScene
     - 
       
   - tips
-    - set up lauout  - wrap with motion laput if not constraint ayout, or else replace CL
-    - can only animate views ahat are direct children
-      - so move views out from child layout one by one
+    - set up lauout  - wrap with motion layout if not constraint layout element already, or else replace ConstraintLayout with MotionLayout
+    - can only animate views that are direct children of MotionLayout
+      - so move views out from child layout one by one as develop and test
     - define start and end scene
-      - ideally o it on layouts
-      - then copy paste into MitionSCene
-        - mS
+      - ideally do it on layouts
+      - then copy paste into MotionScene
+        - MotionScene
           - has transiotns
             - triggers
             - 
           - 2 consraint sets
-            - kyframes
+            - keyframes
             
   - links
     - Nicolas Road blog psts
