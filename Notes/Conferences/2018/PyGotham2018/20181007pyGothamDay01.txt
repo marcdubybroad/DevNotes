@@ -1,10 +1,64 @@
 
 
 11:15am - authy, twillio
-- 
+- if alce sends to bob
+  - use bob's public key to encrypt
+    - only bob can decrypt
+  - can also use alice's private key
+    - bob can verify it came from alice
 
+- trapdoor functions
+  - have a key to reverse function
+  - use really large prime numbeerx
+    - like fi d prime facors of 4757
+    - what about 1k digits long
+    
+- RSA algorithm example
+  - ie: script to encrypt; all functions arr trapdoor functions
+    n = p * q
+    x = (p - 1) * (q -1)
+    d = inverse_mode(e, x)
+    
+    
+- Diffie-Hellman key exchange
+  - alice and bob each pick a secret paint color and a common paint color
+  
+- elliptic-curve cryptography (ECC)
+  - y^2 = x^3 +ax + b
+
+- key size
+  - rsa key size of 2048 -> 112 bits of security
+  - rsa 3072 -> 128 bits of security
+  - ECC key size 256 -> 128 bits of security
+
+  - 128 bits of security will keep key useful until 2030
+
+- PKC (public key cryptoraphy) in Python
+  - ie:
+    public_key - private_key.public_key()
+    e_message = public_key.encrypt(message)
+    d_message = private_key_decrypt(e_mesage)
+    
+  - same with .sign() and verify()
+  
+- fun
+  - sign buddy ascii char
+  -
+
+- podcast
+  - kelley robinson podcast
+  - EP 33: taman shud
+  
+- @kelleyrobinson
+
+- github
+  - /robinske/rsa-example
+  
+  
 
 10:45am - serverless
+- fun
+  - sign buddy ascii char
   - aws chalice
   
 10:15am - using stylometry ML
