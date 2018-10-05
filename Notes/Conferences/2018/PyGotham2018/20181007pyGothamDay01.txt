@@ -1,0 +1,31 @@
+
+
+11:15am - authy, twillio
+- 
+
+
+10:45am - serverless
+  - aws chalice
+  
+10:15am - using stylometry ML
+- classifying text using ML
+  - use bayes classifier
+  - stylometry uses
+    - blog
+    - palgisrism
+    - active authorization
+
+- also kystroke analysis
+
+- how to trick
+  - breenan, afroz, greenstadt 2012 paper
+  - put message through translator x 2
+  
+  - stylometric obfuscation
+    - lessen teh frequency of stylistic markers
+    
+-web app
+   - called 'nondescript'
+   - analyzes text and suggests words to chaneg
+     - provideds synonyms
+     
