@@ -1,4 +1,66 @@
 
+
+03:15pm - ML for time series
+- time series
+  - tima based measurements of a variable
+  
+- got raw ata from a kagg;e competition
+
+- use ARIMA model
+  - widely used for time series processing
+  
+  - assess the stationarity of the proess
+    - when data oes not change
+    
+    - sutoregressivg
+      - model that usees past to predict future
+    - itegrative
+    - moving average
+    
+- looking at bitcoin
+  - data stationary
+    - doesn't seem to be any seasonal tredn
+    
+- didn't work
+  - beest when data exhibits stabe and predictive pattern
+  
+- prophet tool
+  - developped by FB
+  - opeb source
+  - data doesn not hav eto be stationary
+  
+  
+- neural networks
+  - LTSM - lomg term short memory
+    - ability of rtain memory cells (some long ter, some short term)
+    - can use past info to proedict futur info
+  - use TF library with Keras back end
+  
+  - doing one step ahead prediction
+    - predict tomorrow based on today's
+    
+- comparing models
+  - arima
+    - data exhibits stable pattern over time
+    - requires time series be stationary
+  - prphet
+    - on't require stationary
+  - ltsm
+    - act as long term and short term memory cells
+    
+    
+    
+    
+    
+
+02:45pm - gradient descent
+- learning rste
+  - pick < 1 so don't ping pong between 2 opposing values
+    - switch direction in small increments
+    
+    
+  
+
 02:00pm - descriptive (descriptors)
 - any method that implmrnts __method__
 
