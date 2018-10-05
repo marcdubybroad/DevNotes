@@ -1,4 +1,20 @@
 
+02:00pm - descriptive (descriptors)
+- any method that implmrnts __method__
+
+
+
+01:30pm - diversity data
+- lessons learnied
+  - people with interest and prople with tech skills in the same place
+  - try to combine silo'd data
+  
+  
+  
+
+
+
+01:00pm - python architecture
 
 11:15am - authy, twillio
 - if alce sends to bob
