@@ -1,5 +1,41 @@
 
-04:55pm - 
+04:55pm - etxt analysis in python
+- github.com/daveklee
+- TextBlob
+  - god way to break down blob of text
+  - ie;
+    - start new virtual env
+    - pip install textblob
+    - from Textblob inport TextBlob
+     
+  
+- Trump tweets
+  - split tweets between iPhone tweets (staff) and android tweets (DJT)
+  - after election, DJT switches to iPhone
+  - problem
+    - can we use pre electio tweets to decipher who is writing the iPhone tweets of today
+    
+    
+  
+- Text classification
+  - naive bayes
+    - bayes refers to bayes theorem
+      - historical info can help predict outputs
+    - naive
+      - each feature can be treated as independent
+    - textblob has naive bayaes out of the box
+    
+- cons
+  - textblog can overfit
+  - naive bayes isn't perfect
+
+- resources
+  - www.nltk.org
+  - textblob.io
+      
+- @daveklee
+
+
 
 04:25pm - transparency in AI, Manojit Nandi, Rocketrip
 - 
