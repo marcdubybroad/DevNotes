@@ -1,4 +1,48 @@
 
+04:55pm - 
+
+04:25pm - transparency in AI, Manojit Nandi, Rocketrip
+- 
+- weapons of math destruction, Cathy O'Neil
+
+- LIME: Locally Intrepretable Model-Agnostic
+- surrogate models
+  - train a model to get the similar results to the black box model
+  - can then interpretable linear model
+    - use black box model as labels
+  - then get answers to why model got result it did
+  
+  - ie:
+    - get a point x with its prediction y
+    - perturb point by little amount, get new y
+    
+- SHAP
+  - SHapley Additive exPlanations
+    - has root in cooperative game theoy
+    
+- xgboost
+  - gradient boosting tree algorithm
+  
+- SHAPTree
+- XG bosted trees
+
+- SHAP also has deep neural net explainer: DeepExplainer
+
+- recourse analysis
+  - Ustun, Harvard SEAS
+  - what can be done to data to change outcome
+    - ie: if not approved for bank loan by ML engine, what can they do to switch that
+    - ie: parole
+  - so, if f(x) = -1, can you find action a so that f(x + a) = 1
+    - what is the cheapest a
+    - need to specify what are the actions tat make sense to take
+      - ie: having kids to get loan is not a good idea
+      
+      
+-
+  - interpretable ML book - 
+  
+
 
 03:15pm - ML for time series
 - time series
