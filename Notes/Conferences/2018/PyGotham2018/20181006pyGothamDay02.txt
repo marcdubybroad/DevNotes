@@ -1,0 +1,40 @@
+
+
+02:00pm - serverless ML
+
+
+
+01:30pm - studying graphs in spark using ML
+- TPA
+- generate lables in unsupervised learning using the graph relationships
+  - find clusters of comunities
+  
+
+
+
+11:15am - computing for disaster, social science
+- social science requires observation
+  - rely on observation
+  - case studies from disasters
+  
+  - modeling evacuation from fires
+    - case study from Station Nightclub fire i RI
+    
+- generalities
+  - all models are flawed, but some are useful
+  
+- netlogo language for modeling
+
+- what researching
+  - look at what point in the fire loyalty breaks down
+  
+
+- 465 people in building designed for 252
+  - 100 people perished
+  
+- github.com/efyoungud
+  - @Eileen_Young
+  - eileenyoung.blog
+  
+
+
