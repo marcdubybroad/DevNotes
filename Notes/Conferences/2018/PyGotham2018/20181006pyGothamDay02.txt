@@ -1,6 +1,54 @@
 
 
 02:00pm - serverless ML
+- no ops suport for new project, so serverless system
+  - cost scales as use
+  - not managing network, security, boxes
+- constrants
+  - anything that runs in < 3gb ram
+  -
+  
+- this is not to train model, but run in production
+
+- setup
+  - compute - aws lambda
+  - storage - dynamodb
+  - streaming - aws kinesis
+  - aws gateway     ->> returns ip for newly deployed docker container?
+  
+- ie
+  for event in event batch
+    get event
+    get prediction to event
+    store or pass down prediction
+    
+- built a pipeline to deploy an dtest models
+  - test to make sure not get NaN results
+  
+- ie:
+  - goo.gl/M8vwRN
+  - @gallamine
+  - github/gallamine/pygotham2018-serverless-ml
+  - www.gallamine.com
+  
+- Pywren
+  - training on aws lambda
+  
+- lessons
+  - loging extreely usefull
+    - send log to s3
+  - datadog good
+  - audit trails to s3
+  - write infrastructure as code
+  - have 2 identical pipelines (test and rpod)
+  - still need good code, efficient, unit tested
+  - hard
+    - build dependencies
+      - install scikitlearn, etc onto env and porting is hard
+      - so use docker when built env
+    - integrating testing
+    
+    
 
 
 
@@ -8,6 +56,9 @@
 - TPA
 - generate lables in unsupervised learning using the graph relationships
   - find clusters of comunities
+
+- todo
+  - download slides
   
 
 
