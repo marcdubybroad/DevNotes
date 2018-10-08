@@ -1,5 +1,23 @@
 
 
+LookInto
+- flask or django serverless for miter apps
+- 
+
+02:40pm - customizing sphinx 
+- github/pauleveritt
+- PyCharm developer advaocate
+
+- sphynx as a documentation tool
+  - will create conf.y ile
+  - can gnerate man pages, pdf, html
+  
+- sphinx parts
+  - html_theme (alabaster default)
+    - can configure alabaster onfig for look you want
+    
+
+
 02:00pm - serverless ML
 - no ops suport for new project, so serverless system
   - cost scales as use
