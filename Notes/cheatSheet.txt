@@ -400,7 +400,9 @@ Mysql
   mysql> FLUSH PRIVILEGES;
   mysql> exit;
   
-  
+Maven:
+------
+  - mvn dependency:tree
   
 Burden setup onn AWS compute
 ----------------------------
@@ -410,3 +412,10 @@ export LD_LIBRARY_PATH=/broad/software/free/Linux/redhat_6_x86_64/pkgs/gcc_5.1.0
 
 export TABIX_HOME=/home/ubuntu/Software/htslib-1.5.1
 export PATH=$TABIX_HOME/bin:$PATH
+
+Android:
+--------
+- get the keystore id
+  - keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android
+  
+  

@@ -1,0 +1,16 @@
+
+- review
+  - MotionLayout
+  - Firebase with ViewModel
+  - look how to integrate ML with ViewModel
+  
+- projects
+  - baseball score predictor
+  - ML train
+  - will need to get box scores for all games
+  
+  
+  
+  
+  
+  

@@ -1,11 +1,93 @@
 
 
+
+20180821 - dig tech team meeting
+- issues for aggregator kb
+  - missing phenotypes in ld_score
+  - 
+
+
+
 20180820 - google ML/AI event
 
+- Q and A session
+  - for genetics
+    - look at transfer learning
+    - linear mixed mixture model
+  - tips
+    - consulting for companies, see that companies have training data that is differetn frokmt heir test
+      - make sure that if multiple pictures from one patient, they end up all either in the training or the test set
+      
+    
+
+- Eila Arich-Landkof, Founder and CEO of Oriel Research, Oriel research: ML in genomics
+  - DNA -> RNA -> protein
+  - A complimentry by T, C by G
+  - types of mutation
+    - silent (same amino acid), nonsense (stop), missense (different amino acid)
+    
+  - precision medicine
+    - get dna
+    - see what can help
+    
+  - understanding the human body
+    - open box model
+      - comprehensive understanding of all cell types, structure and expression
+      - we don't have this
+    - the black box approach
+      - the ML approach
+      
+  - companies using ML
+    - tempus.com (oncology)
+    - deepgenomics.com (therapy discovery)
+    - flatiron.com (EMR for oncolgy)
+    - cloud.google.com/genomics
+    
+  - oriel research
+    - why do some respond to cancer therapy and some now
+    - 12 million patients misdiagnosed in US every year
+      - every disease has a subset of diseases
+    - try to enhance diagnosys with ML
+      - diagnose disease, match therapy, cure
+    - platforms
+      - data
+        - genomic data
+        - clinical data
+        - compund response data
+        - data annotation
+
+
+- D. Sculley, Software Engineer, Google: fairnesx in ML
+  - stereotype is a 
+  
 - Doug Perry, consultant: Embedded NN accelarator
   - VHDL book author
-  - 
-  
+  - how to add gpu to hearing aid? do you have enough power?
+  - question: how do you do AI on the edge
+  - cnsulting efforts
+    - consultig for company that wants to take a TF model and create a chip for it
+    - also tech, 1 day and 3 day TF course
+  - hardware
+    - cpu
+      - do a few operations per cycle
+      - tens of operations per cycle with vector extends
+    - gpu
+      - hundreds to thousands of operations per cycle
+      - but weren't meant for ML/neural networks
+      - ex: bitcoin mining, progression of hardware used over time
+        - cpu -> multiple cpu -> gpu -> fpga -> asics (applifation specific instructions)
+    - tpu v1
+      - 128k ops per cycle, at 700mhz, 92 teraops
+    - edge tpu (to be announced)
+      - 
+  - terms
+    - systolic array (path pf the computation)
+      - hardware datapath
+
+  - conclusions for edge ML
+    - memory bandwidth limits speed
+    - make you network smaller for edge computing
+    - look for edge tpu
   
 
 - Amira Djebbari, Scerta, AL 2nd talk: applied AI in automative

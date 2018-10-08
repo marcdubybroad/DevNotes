@@ -3,7 +3,7 @@
   - code: bit.ly/2NtAuQP
     - github.com/CodingDoug/firebase-jetpack
   - firestore
-    - could nosql db
+    - cloud nosql db
   - LiveData and ViewModel
     - LiveData is observable
     - aware of android lifecycle
@@ -11,10 +11,10 @@
       - automatically collected on onDestroy()
   - firestore
     - have collection
-      - then docuemnts within the collection
+      - then docuements within the collection
         - then sub collections and fields
     - val firestore = FirebaseFresotre.getInstance()
-    - var ref = firestore.collection("collection-name").docuemnt("docu-name")
+    - var ref = firestore.collection("collection-name").document("docu-name")
     
   - if subclass liveData
     - override onActive(), onInactive(), onEvent()
@@ -27,44 +27,44 @@
         private Map cacheDataMap
       }
     
-  - ferbase sdk has its won data cache, so don't need to use room is turn on cachwe
+  - firebase sdk has its own data cache, so don't need to use room if turn on Firebase sdk cache
   
-  - what abou rrors
+  - what about errors
     - need to bubble up errors to UI
     - has exception class
       - DataOrException
-        - stock price object is either price or exception
+        - stock price object is either price or exception (using Kotlin)
         
   - firestore query
     - FirebaseFirestroe.getInstance().collection("").orderBy("")
-       .listener
+       .listener()
 
     - listens to changes
     
   - for adapter recycler changes notification
     - RecyclerView extension ListAdapter
-     - keeps from redrawing the whol list
-     - need to implments DiffUtil.ItemCallback<T>
+     - keeps from redrawing the whole list to avoid jumpy RecyclerView list
+     - need to implements DiffUtil.ItemCallback<T>
        - methods: areItemsTheSame, areContentsTheSame (and 1 otners)
        
-  - shoukd you?
+  - should you use Firebase this way?
     - do you realy need live data
-    - could be good for appending results
-    - could also have a refresh button; can activate it if !onContentsTheSame()
+    - could be good for appending results as they come in
+    - could also have a refresh button for lists, since might not be interested in latest ; can activate it if !onContentsTheSame()
     
   - for background sync for offline use
     - realtime db in forestore has offline cache 
       - but what if app is not runing?
         - look at jetpack WorkManager
           - period of time to work
-          - ontraints (bettery level, network, etc)
+          - ontraints (battery level, network, etc)
           - work chaining
         - ex:
           - val constraints
           - vat query
           - queue up query
         - cons
-          - not like cron to run every hour
+          - not like cron to run every hour (but specific time?)
     - can also do server push
       - firebase cloud messaging push notification
       - on notification, sync with WorkManager process
@@ -72,7 +72,7 @@
         - schedule one time sync with WorkManager
           - make one time work request, give it constraint and query
           - make sure to replace one scheduled before
-          - con: WM api is synchronous
+          - con: WorkManager api is synchronous
           
       
       
@@ -84,7 +84,7 @@
   - MVP tricky with async code
     - so regiggered MVP
   - damico github code -> MvMvpdemo (sddamico)
-    - slides on sldiee deck
+    - slides on speakerdeck
   - approach
     - have interfaces for presenter and and view
     - have MvpPresentedBase to attach to views
@@ -101,10 +101,10 @@
   
 - ViewModel
   - can specify your own scopes
-  - put objects tat too big for inSavedInstanceState()
-  - if app is backgrounded, VM will be cleanex out
+  - put objects in ViewModel that are too big for inSavedInstanceState()
+  - if app is backgrounded, ViewModel will be cleaned out
   - scope can be activity or fragment
-    - read up about dependency injection into VM, could be tricky
+    - read up about dependency injection into ViewModel, could be tricky
   - for MVP, presenter could hold state between config changes
    
    
@@ -120,7 +120,7 @@
   
 - alernative frameworks
   - inspired by Redux, MVVM, MVI
-  - building your own arch gives you more flexibility
+  - building your own architecture gives you more flexibility
   - one size doesn't fit all, so look at all of them
     - but don't reinvest the wheel if don't have to
     
