@@ -96,6 +96,45 @@ definitions:
         type: "string"
     xml:
       name: "Category"
+  ChromFilter:
+    type: "object"
+    properties:
+      parameter:
+        type: "string"
+        example: "chrom"
+      operator:
+        type: "string"
+        example: "eq"
+      value:
+        type: "string"
+    xml:
+      name: "ChromFilter"
+  PositionStartFilter:
+    type: "object"
+    properties:
+      parameter:
+        type: "string"
+        example: "pos"
+      operator:
+        type: "string"
+        example: "ge"
+      value:
+        type: "integer"
+    xml:
+      name: "PositionStartFilter"
+  PositionEndFilter:
+    type: "object"
+    properties:
+      parameter:
+        type: "string"
+        example: "pos"
+      operator:
+        type: "string"
+        example: "le"
+      value:
+        type: "integer"
+    xml:
+      name: "PositionEndFilter"
   User:
     type: "object"
     properties:
@@ -151,13 +190,16 @@ definitions:
           wrapped: true
         items:
           type: "string"
-      tags:
+      filters:
         type: "array"
-        xml:
-          name: "tag"
-          wrapped: true
         items:
-          $ref: "#/definitions/Tag"
+          type: "object"
+          anyOf: 
+            - $ref: "#/definitions/ChromFilter"
+            - $ref: "#/definitions/PositionStartFilter"
+            - $ref: "#/definitions/PositionEndFilter"
+        minItems: 3
+        maxItems: 3
       status:
         type: "string"
         description: "pet status in the store"
