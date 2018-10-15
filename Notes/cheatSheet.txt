@@ -126,6 +126,11 @@ Mysql commands:
 
 - index
   - SHOW INDEX FROM yourtable;
+  - alter table LEDGE_GTEX_EQTL add index gtex_gene_idx (gene);
+  - SELECT INDEX_SCHEMA, COLUMN_NAME, COMMENT FROM information_schema.statistics WHERE table_schema = 'mydb' AND COMMENT = 'disabled'
+  
+- load data from file system
+   - LOAD DATA LOCAL INFILE '/home/ec2-user/Scratch/gtex_gene.txt' INTO TABLE LEDGE_GTEX_EQTL COLUMNS TERMINATED BY '\t';
   
 AWS ssh:
 --------
@@ -399,6 +404,10 @@ Mysql
   mysql> UPDATE user SET plugin='auth_socket' WHERE User='YOUR_SYSTEM_USER';
   mysql> FLUSH PRIVILEGES;
   mysql> exit;
+  
+- load file from OS
+  - LOAD DATA LOCAL INFILE '/home/ec2-user/Scratch/gtex_gene.txt' INTO TABLE LEDGE_GTEX_EQTL COLUMNS TERMINATED BY '\t';
+  
   
 Maven:
 ------
