@@ -1,0 +1,109 @@
+
+
+LookInto
+- flask or django serverless for miter apps
+- 
+
+02:40pm - customizing sphinx 
+- github/pauleveritt
+- PyCharm developer advaocate
+
+- sphynx as a documentation tool
+  - will create conf.y ile
+  - can gnerate man pages, pdf, html
+  
+- sphinx parts
+  - html_theme (alabaster default)
+    - can configure alabaster onfig for look you want
+    
+
+
+02:00pm - serverless ML
+- no ops suport for new project, so serverless system
+  - cost scales as use
+  - not managing network, security, boxes
+- constrants
+  - anything that runs in < 3gb ram
+  -
+  
+- this is not to train model, but run in production
+
+- setup
+  - compute - aws lambda
+  - storage - dynamodb
+  - streaming - aws kinesis
+  - aws gateway     ->> returns ip for newly deployed docker container?
+  
+- ie
+  for event in event batch
+    get event
+    get prediction to event
+    store or pass down prediction
+    
+- built a pipeline to deploy an dtest models
+  - test to make sure not get NaN results
+  
+- ie:
+  - goo.gl/M8vwRN
+  - @gallamine
+  - github/gallamine/pygotham2018-serverless-ml
+  - www.gallamine.com
+  
+- Pywren
+  - training on aws lambda
+  
+- lessons
+  - loging extreely usefull
+    - send log to s3
+  - datadog good
+  - audit trails to s3
+  - write infrastructure as code
+  - have 2 identical pipelines (test and rpod)
+  - still need good code, efficient, unit tested
+  - hard
+    - build dependencies
+      - install scikitlearn, etc onto env and porting is hard
+      - so use docker when built env
+    - integrating testing
+    
+    
+
+
+
+01:30pm - studying graphs in spark using ML
+- TPA
+- generate lables in unsupervised learning using the graph relationships
+  - find clusters of comunities
+
+- todo
+  - download slides
+  
+
+
+
+11:15am - computing for disaster, social science
+- social science requires observation
+  - rely on observation
+  - case studies from disasters
+  
+  - modeling evacuation from fires
+    - case study from Station Nightclub fire i RI
+    
+- generalities
+  - all models are flawed, but some are useful
+  
+- netlogo language for modeling
+
+- what researching
+  - look at what point in the fire loyalty breaks down
+  
+
+- 465 people in building designed for 252
+  - 100 people perished
+  
+- github.com/efyoungud
+  - @Eileen_Young
+  - eileenyoung.blog
+  
+
+

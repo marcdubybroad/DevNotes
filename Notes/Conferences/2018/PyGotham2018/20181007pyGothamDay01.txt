@@ -1,0 +1,243 @@
+
+04:55pm - etxt analysis in python
+- github.com/daveklee
+- TextBlob
+  - god way to break down blob of text
+  - ie;
+    - start new virtual env
+    - pip install textblob
+    - from Textblob inport TextBlob
+     
+  
+- Trump tweets
+  - split tweets between iPhone tweets (staff) and android tweets (DJT)
+  - after election, DJT switches to iPhone
+  - problem
+    - can we use pre electio tweets to decipher who is writing the iPhone tweets of today
+    
+    
+  
+- Text classification
+  - naive bayes
+    - bayes refers to bayes theorem
+      - historical info can help predict outputs
+    - naive
+      - each feature can be treated as independent
+    - textblob has naive bayaes out of the box
+    
+- cons
+  - textblog can overfit
+  - naive bayes isn't perfect
+
+- resources
+  - www.nltk.org
+  - textblob.io
+      
+- @daveklee
+
+
+
+04:25pm - transparency in AI, Manojit Nandi, Rocketrip
+- 
+- weapons of math destruction, Cathy O'Neil
+
+- LIME: Locally Intrepretable Model-Agnostic
+- surrogate models
+  - train a model to get the similar results to the black box model
+  - can then interpretable linear model
+    - use black box model as labels
+  - then get answers to why model got result it did
+  
+  - ie:
+    - get a point x with its prediction y
+    - perturb point by little amount, get new y
+    
+- SHAP
+  - SHapley Additive exPlanations
+    - has root in cooperative game theoy
+    
+- xgboost
+  - gradient boosting tree algorithm
+  
+- SHAPTree
+- XG bosted trees
+
+- SHAP also has deep neural net explainer: DeepExplainer
+
+- recourse analysis
+  - Ustun, Harvard SEAS
+  - what can be done to data to change outcome
+    - ie: if not approved for bank loan by ML engine, what can they do to switch that
+    - ie: parole
+  - so, if f(x) = -1, can you find action a so that f(x + a) = 1
+    - what is the cheapest a
+    - need to specify what are the actions tat make sense to take
+      - ie: having kids to get loan is not a good idea
+      
+      
+-
+  - interpretable ML book - 
+  
+
+
+03:15pm - ML for time series
+- time series
+  - tima based measurements of a variable
+  
+- got raw ata from a kagg;e competition
+
+- use ARIMA model
+  - widely used for time series processing
+  
+  - assess the stationarity of the proess
+    - when data oes not change
+    
+    - sutoregressivg
+      - model that usees past to predict future
+    - itegrative
+    - moving average
+    
+- looking at bitcoin
+  - data stationary
+    - doesn't seem to be any seasonal tredn
+    
+- didn't work
+  - beest when data exhibits stabe and predictive pattern
+  
+- prophet tool
+  - developped by FB
+  - opeb source
+  - data doesn not hav eto be stationary
+  
+  
+- neural networks
+  - LTSM - lomg term short memory
+    - ability of rtain memory cells (some long ter, some short term)
+    - can use past info to proedict futur info
+  - use TF library with Keras back end
+  
+  - doing one step ahead prediction
+    - predict tomorrow based on today's
+    
+- comparing models
+  - arima
+    - data exhibits stable pattern over time
+    - requires time series be stationary
+  - prphet
+    - on't require stationary
+  - ltsm
+    - act as long term and short term memory cells
+    
+    
+    
+    
+    
+
+02:45pm - gradient descent
+- learning rste
+  - pick < 1 so don't ping pong between 2 opposing values
+    - switch direction in small increments
+    
+    
+  
+
+02:00pm - descriptive (descriptors)
+- any method that implmrnts __method__
+
+
+
+01:30pm - diversity data
+- lessons learnied
+  - people with interest and prople with tech skills in the same place
+  - try to combine silo'd data
+  
+  
+  
+
+
+
+01:00pm - python architecture
+
+11:15am - authy, twillio
+- if alce sends to bob
+  - use bob's public key to encrypt
+    - only bob can decrypt
+  - can also use alice's private key
+    - bob can verify it came from alice
+
+- trapdoor functions
+  - have a key to reverse function
+  - use really large prime numbeerx
+    - like fi d prime facors of 4757
+    - what about 1k digits long
+    
+- RSA algorithm example
+  - ie: script to encrypt; all functions arr trapdoor functions
+    n = p * q
+    x = (p - 1) * (q -1)
+    d = inverse_mode(e, x)
+    
+    
+- Diffie-Hellman key exchange
+  - alice and bob each pick a secret paint color and a common paint color
+  
+- elliptic-curve cryptography (ECC)
+  - y^2 = x^3 +ax + b
+
+- key size
+  - rsa key size of 2048 -> 112 bits of security
+  - rsa 3072 -> 128 bits of security
+  - ECC key size 256 -> 128 bits of security
+
+  - 128 bits of security will keep key useful until 2030
+
+- PKC (public key cryptoraphy) in Python
+  - ie:
+    public_key - private_key.public_key()
+    e_message = public_key.encrypt(message)
+    d_message = private_key_decrypt(e_mesage)
+    
+  - same with .sign() and verify()
+  
+- fun
+  - sign buddy ascii char
+  -
+
+- podcast
+  - kelley robinson podcast
+  - EP 33: taman shud
+  
+- @kelleyrobinson
+
+- github
+  - /robinske/rsa-example
+  
+  
+
+10:45am - serverless
+- fun
+  - sign buddy ascii char
+  - aws chalice
+  
+10:15am - using stylometry ML
+- classifying text using ML
+  - use bayes classifier
+  - stylometry uses
+    - blog
+    - palgisrism
+    - active authorization
+
+- also kystroke analysis
+
+- how to trick
+  - breenan, afroz, greenstadt 2012 paper
+  - put message through translator x 2
+  
+  - stylometric obfuscation
+    - lessen teh frequency of stylistic markers
+    
+-web app
+   - called 'nondescript'
+   - analyzes text and suggests words to chaneg
+     - provideds synonyms
+     
