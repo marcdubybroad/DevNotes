@@ -114,6 +114,19 @@ definitions:
         type: "string"
     xml:
       name: "ChromFilter"
+  GenericFilter:
+    type: "object"
+    properties:
+      parameter:
+        type: "string"
+        example: "pos|chrom"
+      operator:
+        type: "string"
+        example: "ge|eq|le"
+      value:
+        type: "string"
+    xml:
+      name: "GenericFilter"
   PositionStartFilter:
     type: "object"
     properties:
@@ -201,11 +214,7 @@ definitions:
         type: "array"
         items:
           type: "object"
-          anyOf: 
-            - $ref: "#/definitions/PhenotypeFilter"
-            - $ref: "#/definitions/ChromFilter"
-            - $ref: "#/definitions/PositionStartFilter"
-            - $ref: "#/definitions/PositionEndFilter"
+            - $ref: "#/definitions/GenericFilter"
         minItems: 3
         maxItems: 3
       toVariants:
@@ -229,10 +238,7 @@ definitions:
         type: "array"
         items:
           type: "object"
-          anyOf: 
-            - $ref: "#/definitions/ChromFilter"
-            - $ref: "#/definitions/PositionStartFilter"
-            - $ref: "#/definitions/PositionEndFilter"
+            - $ref: "#/definitions/GenericFilter"
         minItems: 3
         maxItems: 3
       toVariants:
