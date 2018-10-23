@@ -214,7 +214,7 @@ definitions:
         type: "array"
         items:
           type: "object"
-            - $ref: "#/definitions/GenericFilter"
+          $ref: "#/definitions/GenericFilter"
         minItems: 3
         maxItems: 3
       toVariants:
@@ -238,7 +238,7 @@ definitions:
         type: "array"
         items:
           type: "object"
-            - $ref: "#/definitions/GenericFilter"
+          $ref: "#/definitions/GenericFilter"
         minItems: 3
         maxItems: 3
       toVariants:
