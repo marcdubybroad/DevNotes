@@ -16,7 +16,7 @@ tags:
   description: "T2D data variant search"
   externalDocs:
     description: "Returns T2D genetics data based on variant inputs"
-    url: "http://t2ddcc.broadinstitute.org/dccservices/getAggregatedData"
+    url: "http://public.type2diabeteskb.org/dccservices/getAggregatedData"
 schemes:
 - "http"
 paths:
