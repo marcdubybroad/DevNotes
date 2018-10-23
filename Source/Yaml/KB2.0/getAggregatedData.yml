@@ -9,7 +9,7 @@ info:
   license:
     name: "Apache 2.0"
     url: "http://www.apache.org/licenses/LICENSE-2.0.html"
-host: "t2ddcc.broadinstitute.org"
+host: "public.type2diabeteskb.org"
 basePath: "/dccservices"
 tags:
 - name: "getAggregatedData"
@@ -18,7 +18,6 @@ tags:
     description: "Returns T2D genetics data based on variant inputs"
     url: "http://t2ddcc.broadinstitute.org/dccservices/getAggregatedData"
 schemes:
-- "https"
 - "http"
 paths:
   /variants:
