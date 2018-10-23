@@ -162,6 +162,8 @@ AWS EC2:
   - sudo cp dig-diabetes-portal-commons-config.groovy /usr/share/tomcat8/.grails/dig-diabetes-portal/
 - get information on VM
   - lscpu
+- install
+  - yum install nginx
   
 Stats:
 ------
