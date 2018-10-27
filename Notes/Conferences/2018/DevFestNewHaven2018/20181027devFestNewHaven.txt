@@ -1,0 +1,148 @@
+
+
+DevFest New Haven - 2018101727
+
+0200pm talk - deep learning for images
+- neural  nets
+  - simple neural net
+    - 1 hidden layer
+  - deep neural nets
+    - multiple hidden layers
+    
+- ML is 60 year old tech
+
+- why noew
+  - more powerful GPUs
+    - matrix multiplication
+  - better optimization techniques
+   - activiation functions
+   - regularization techniques
+   - faster convergence algorig=thms
+  
+- types of learning 
+  - supervised learning
+    - regression (continuous Y)
+    - classification (discrete Y)
+  - unsupervised ;earning
+    - no Ys, just Xs
+  - reinforcement learning
+    - rewards amd penalties
+      - alphago and self driving cars (deep reinforcement learning)
+      
+- data is everything
+  - for training
+  - for validation
+  - for testing
+  
+- regression
+  - linear
+    - predict continuous value by fitting line through data
+    - cre opreation that happens in evey neuron of neural network
+    - y` = b + w1x1 + w2x2 + w3x3 ...
+      - b is bias term, not depedent on the data
+      - optimization -> gradient descent
+        - calculate the gradient of the cost function with respect to your params
+      - cost function: (sum(sqr(y` - y)))/2m
+        - goal is to minimize this
+  - polinomial regression
+    - if use too many params/degrees, then overfitting to data (and noise of the data)
+  - logistic
+    - extension of linear (and polylinomial) regression
+      - applies non linearity on the regression putput
+      - it is a classification algorithm
+      - decision boundary can be a curve
+        - applied on top of polinomial regression as opposed to lienar model
+        - ie: y = x1x2 + x1^2 + x2^2
+    - loss function is not a sum square like linear
+      - because not tryig to fit line
+      
+- so logistic regresioon
+  - on top of linear regression
+  - on top of polinomial egression
+  
+- logitic regression
+  - can be viewed as 2 operations for each neuron
+    - weighted sum of inputs
+    - appies non linear opreation to the results
+      
+  - each neurons learn different things
+  
+  - hierachical representation of knowledge
+    - outputs of first neuron passed to input of next layer
+    - first layer learns simplest
+      - second layer build on first and learns a little more comlicated
+      - different leyaers encode knowledge/undersatnding in increasing order of complexity
+    - can be stacked to learn more complex patters
+      - unique in terms f extensibility
+      
+- fully connexted neural nets
+  - each suequent layer neuron connect to all previous layer neurons
+  - good for analyzing structured data
+    - not good for images (2d structure)
+        
+- back propagation
+  - successive application of partial diff and chanin rule
+  - go back layer by layer
+  - run until loss is below certain value
+  
+- multi class classification
+  - take linear output,
+  - softmax activiation function
+    - as opposed to a sigmoid activation function
+    
+- CNN
+  - not fully connected (too computationaly expensive)
+    - also not 2d structure preserving
+    - not sparse
+      - image is usuallly localized
+      
+  - components
+    - convolution layer
+      - move 2d array of numbers over image, compute results that goes to new image size array
+      - can also do 3d convolution
+      - ie: usually extracts features
+    - max pooling layer
+      - ie: takes 4 x 4 matrix and turns into 2 x 2 matrix by taking max of each 1/4
+      - ie: can also do avg pooling
+      - ie: shrinks thee inputs for the next layer
+    - fully connected layer
+      - just not added at beginning, appear at the end once features have been abstracted
+      - ie: this layer links features to objects/labels
+      
+  - activiation functions (non linearity)
+    - ReLU (rectified linear unit)
+    - Leaky ReLU
+    - sigmoid
+    - softmax
+    
+    
+- applications of CNN
+  - image classification
+  - object detection
+  - neural style transfer
+    - take 2 images and combine into 1 (have the content of 1 and the style of the other)
+  
+- notable CNN archs
+  - resnet
+  - googlenet
+  - VGG-16
+  - VVG-19
+  
+- if have too deep NN, it is hard for variants to back propogate all the way back to the first layer
+
+- neural style transfer
+
+-
+  - layer 1: edges
+  - layer 2: oncepts, like circles
+  - layer 3:
+  
+  
+- other deep learning
+  - GANs: try to generate data
+  -
+  
+  
+  
+0300pm talk - testing android archs
+
