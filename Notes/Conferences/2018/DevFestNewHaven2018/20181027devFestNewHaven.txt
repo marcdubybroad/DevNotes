@@ -132,7 +132,7 @@ DevFest New Haven - 2018101727
 
 - neural style transfer
 
--
+- what layers recognize
   - layer 1: edges
   - layer 2: oncepts, like circles
   - layer 3:
@@ -145,4 +145,98 @@ DevFest New Haven - 2018101727
   
   
 0300pm talk - testing android archs
+- why arch
+  - so that app is robust and testable
+  
+- Model View Presenter (MVP)
+  - model contacts presenter, then presenter contacts the view
+  - the presenter acts as go between of model and view
+    - presenter will be in pure java code
+  - view is the activity
+  
+  
+- MVVM
+  - persistent data store for view to consume
+  - ViewModel
+    -
+  - architecture comps in jetpack API
+  - uses observables
+  - providers
+    - take all view models to put in one provider?
+    
+  
+- observables
+  - mobe powerful than listeners
+  - can create chaining of observabes
+    
+
+- Model View Intent
+  - this is all observables
+  - similar to react native
+  - layers
+    - model
+    - view
+    - intents: eveything that the user wants to do
+      - have idea of state
+        - watever screen and model is at the point in time
+        - for each screen, it has a set of states
+          - sets observable chain so that you end up in one of those states
+          - state reducer
+          - you should never have an app that ends up in a bad state
+          
+  - read blog post
+    - hans dorfman
+    
+    
+    
+0400pm - ML kit and android
+- speaker info
+  - gdg wilmington
+  - one GDG NE mentors
+  - @VarPete
+
+
+- ML kit
+  - bring google ml models t mobile
+  - bot on device or o cloud processing
+  - available through firebase
+  - 5 ready to use sdks
+  - deploy custom TF lite models
+  - production ready for most use cases
+  - no guarantee of backward accessibility
+  
+- SDKs
+  - image label
+  -
+  -
+  - 
+  - 
+  
+  
+- image label
+  - cloud or on device
+    - device
+      - 400 object labels, get at most 10 labels at a time
+    - cloud
+      - get 10,000 objects
+  - identifies entities
+  - confidence scores
+  - use for
+    - automaic metadata generation
+  - demo
+    - scan room with phone, get labels to show of what it sees
+    
+    
+    
+
+
+
+          
+        
+      
+  
+
+
+
+
 
