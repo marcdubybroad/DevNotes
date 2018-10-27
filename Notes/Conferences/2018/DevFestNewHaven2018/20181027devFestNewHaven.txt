@@ -208,11 +208,12 @@ DevFest New Haven - 2018101727
 - SDKs
   - image label
   - text recognition
-  -
-  - 
-  - 
+  - face detection
+  - barcode scanning
+  - landmark recognition
   
-  
+- all examples on github, part of mlkit
+
 - image label
   - cloud or on device
     - device
@@ -236,17 +237,72 @@ DevFest New Haven - 2018101727
   - use for
     - translation, accessibility, tracking
   - demo
+    - see text on screen highlighted out, apache license from computer
 
-    
+- face detection
+  - on device only
+  - real time
+  - identifies key facial features, also mood
+    - track faces across frames
+  - use for
+    - generate avatar
+    - detect expressions and respond
+    - make selfies more awesome
+  - demo
+
+- barcode scanning
+  - on device only
+  - reads most standard formats'
+  - extraction of structured data
+    - url, contact, wifi
+  - automatic detection
+  - use for
+    - automaic metadata generation
+  - demo
 
 
-
+- landmark recognotion
+  - cloud only
+  - name and geographic coords
+  - detect region within supplied image
+  - demo
           
-        
-      
+- tensor flow lite
+  - on device only
+  - models bundled or on the cloud
+  - auto downoad models
   
+- steps for ml kit?
+  - android dependencies
+    - firebase-ml-vision:18.0.1
+    -
+    
+  - image conversion
+    - from media.image.*
+    - from ByteBuffer.*
+    - from Bitmap
+    - from file
+    
+  - detectors
+    - obtaon FirebaseImage*Detector
+    - FirebaseImageVisionImage.detectInImage()
+    
+  - 
+  
+- steps for TF lite
+  - dependencies
+    - firebase-ml-model-interpreter:8.1.0
+  - register model
+    - .setAssetFilePath('mymodel.tfliet')
 
 
-
+- models to come to mlkit
+  - smart reply
+  - enhanced face detection (contors)
+  
+- links
+  - firebase.google.com/docs/ml-kit
+  - developers.googleblog.com/2018/05/introducing-ml-kit.html
+  - github.com/firebase/quickstart-android/tree/master/mlkit
 
 
