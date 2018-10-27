@@ -207,7 +207,7 @@ DevFest New Haven - 2018101727
   
 - SDKs
   - image label
-  -
+  - text recognition
   -
   - 
   - 
@@ -226,7 +226,17 @@ DevFest New Haven - 2018101727
   - demo
     - scan room with phone, get labels to show of what it sees
     
-    
+- text recognition
+  - cloud or on device
+    - device
+      - free, real time processing
+    - cloud
+      - paid after 1k, highly accurate
+  - extracts and segments text from images
+  - use for
+    - translation, accessibility, tracking
+  - demo
+
     
 
 
