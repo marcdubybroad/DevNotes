@@ -1,0 +1,38 @@
+
+
+
+
+20181017 - 12:20pm - QuSandbox - lifecycle based approach to model governance
+- QuSandbox
+  - QuantUniversity
+  
+
+
+
+
+20181017 - 11:50am - bigfoot data model
+  - IANADS
+    - I am not a data scientist
+
+- tim renner
+  - on kaggle for bigfoot data
+  - @timothyrenner
+  
+- code
+  - https://github.com/guyroyse/beyond-the-model
+  
+  
+  
+  
+  
+20181017 - 11:40am - Training data
+- 
+
+
+20181017 - 11:30am - Deploy models in 5 mins
+  - https://github.com/openscoring/papis.io
+  - https://github.com/openscoring/openscoring
+  
+  
+
+  
