@@ -1,0 +1,23 @@
+
+
+- root of json
+  - properties (common)
+    - chorm
+    - position
+    - effect allele
+    - alt allele
+    - prediction (sift)
+  - experiment
+    - datasets
+      - properties (dataset level)
+        - eaf
+        - maf
+      - phenotypes
+        - properties (phenotype level)
+          - pValue
+          - beta
+          - OR
+          
+          
+          
+          

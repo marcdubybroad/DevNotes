@@ -1,0 +1,39 @@
+
+
+- GDG dev fest  ronx
+
+20181201 1000 - cloud AI, Giorgio Natili
+  - to integrate foirevase
+    - imp fireabse auth, google service auth
+  - twitter api
+    - need consumer key and secret
+    
+  - aws lambda
+    - .promise() -> way for s3 to return that operatino worked
+    - aws rekognition
+    
+  - aws ML seirvice (Sagemaker)
+    - hyper params
+      - number layers, image shape, number of classes (that it can classify), epochs]
+    - based on docker image
+      - smaller containers start faster
+    - supports TF    
+      
+  - have android jni layer that exposes the c++ to us for use/dev
+  
+      
+      
+      
+      
+- ideas
+  - android app that recognizes trading chart pattersn (head shoulders, death pinch, etc)
+  
+  
+- train on
+  - docker
+  - pythn
+  - TF lite
+  - 
+  
+  
+  

@@ -1,0 +1,932 @@
+
+
+
+10-Jul-2018 15:08:13.270 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call About to attempt call to getHailMetadata
+10-Jul-2018 15:08:13.458 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call status: ok
+10-Jul-2018 15:08:14.795 INFO [http-nio-8080-exec-8] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:14.797 INFO [http-nio-8080-exec-5] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:14.793 INFO [http-nio-8080-exec-2] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:14.839 INFO [http-nio-8080-exec-6] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:14.861 INFO [http-nio-8080-exec-2] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_GIANT_mdv33" : [ "HIPCadjBMI"]}, "P_VALUE" : { "GWAS_GIANT_mdv33" : [ "HIPCadjBMI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.088 seconds
+status: ok
+10-Jul-2018 15:08:14.861 INFO [http-nio-8080-exec-8] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_MAGIC_mdv33" : [ "Ins30adjBMI"]}, "P_VALUE" : { "GWAS_MAGIC_mdv33" : [ "Ins30adjBMI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.138 seconds
+status: ok
+10-Jul-2018 15:08:14.860 INFO [http-nio-8080-exec-5] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"P_VALUE" : { "GWAS_VATGen_mdv33" : [ "PAT"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.087 seconds
+status: ok
+10-Jul-2018 15:08:14.834 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:14.897 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_EXTEND_mdv1" , "ExSeq_13k_mdv33"] } , "pproperty" : {"BETA" : { "ExSeq_13k_mdv33" : [ "WAIST" ], "GWAS_EXTEND_mdv1" : [ "WAIST" ], "GWAS_GIANT-PA_mdv33" : [ "WAIST" ], "GWAS_GIANT_mdv33" : [ "WAIST"]}, "P_FE_INV" : { "ExSeq_13k_mdv33" : [ "WAIST"]}, "P_VALUE" : { "GWAS_EXTEND_mdv1" : [ "WAIST" ], "GWAS_GIANT-PA_mdv33" : [ "WAIST" ], "GWAS_GIANT_mdv33" : [ "WAIST"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.064 seconds
+status: ok
+10-Jul-2018 15:08:14.898 INFO [http-nio-8080-exec-6] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_OxBB_mdv25"] } , "pproperty" : {"BETA" : { "GWAS_OxBB_mdv25" : [ "PP"]}, "P_VALUE" : { "GWAS_OxBB_mdv25" : [ "PP"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.06 seconds
+status: ok
+10-Jul-2018 15:08:14.965 INFO [http-nio-8080-exec-10] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:14.967 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:14.980 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:14.983 INFO [http-nio-8080-exec-10] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_MAGIC_mdv33" : [ "DI"]}, "P_VALUE" : { "GWAS_MAGIC_mdv33" : [ "DI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.148 seconds
+status: ok
+10-Jul-2018 15:08:14.983 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"P_VALUE" : { "GWAS_VATGen_mdv33" : [ "VAT"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.044 seconds
+status: ok
+10-Jul-2018 15:08:14.997 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_PGC_mdv33"] } , "pproperty" : {"ODDS_RATIO" : { "GWAS_PGC_mdv33" : [ "SCZ"]}, "P_VALUE" : { "GWAS_PGC_mdv33" : [ "SCZ"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.035 seconds
+status: ok
+10-Jul-2018 15:08:15.103 INFO [http-nio-8080-exec-2] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.109 INFO [http-nio-8080-exec-5] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.105 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.108 INFO [http-nio-8080-exec-8] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.101 INFO [http-nio-8080-exec-7] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.129 INFO [http-nio-8080-exec-8] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_PGC_mdv33"] } , "pproperty" : {"ODDS_RATIO" : { "GWAS_PGC_mdv33" : [ "MDD"]}, "P_VALUE" : { "GWAS_PGC_mdv33" : [ "MDD"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.042 seconds
+status: ok
+10-Jul-2018 15:08:15.139 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_GIANT_mdv33" : [ "WAISTadjBMI"]}, "P_VALUE" : { "GWAS_GIANT_mdv33" : [ "WAISTadjBMI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.052 seconds
+status: ok
+10-Jul-2018 15:08:15.128 INFO [http-nio-8080-exec-3] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.145 INFO [http-nio-8080-exec-7] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_EXTEND_mdv1"] } , "pproperty" : {"BETA" : { "GWAS_EXTEND_mdv1" : [ "ALT"]}, "P_VALUE" : { "GWAS_EXTEND_mdv1" : [ "ALT"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.045 seconds
+status: ok
+10-Jul-2018 15:08:15.193 INFO [http-nio-8080-exec-2] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"P_VALUE" : { "GWAS_VATGen_mdv33" : [ "VATHU"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.032 seconds
+status: ok
+10-Jul-2018 15:08:15.205 INFO [http-nio-8080-exec-3] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_HRgene_mdv33"] } , "pproperty" : {"BETA" : { "GWAS_HRgene_mdv33" : [ "HR"]}, "P_VALUE" : { "GWAS_HRgene_mdv33" : [ "HR"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.132 seconds
+status: ok
+10-Jul-2018 15:08:15.276 INFO [http-nio-8080-exec-10] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.259 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.308 INFO [http-nio-8080-exec-10] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_MAGIC_mdv33" : [ "ISIadjAgeSexBMI"]}, "P_VALUE" : { "GWAS_MAGIC_mdv33" : [ "ISIadjAgeSexBMI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.054 seconds
+status: ok
+10-Jul-2018 15:08:15.354 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_MAGIC_mdv33" : [ "2hrG"]}, "P_VALUE" : { "GWAS_MAGIC_mdv33" : [ "2hrG"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.053 seconds
+status: ok
+10-Jul-2018 15:08:15.367 INFO [http-nio-8080-exec-5] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_BFpercent_mdv33"] } , "pproperty" : {"BETA" : { "GWAS_BFpercent_mdv33" : [ "BFP"]}, "P_VALUE" : { "GWAS_BFpercent_mdv33" : [ "BFP"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.28 seconds
+status: ok
+10-Jul-2018 15:08:15.415 INFO [http-nio-8080-exec-6] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.354 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.441 INFO [http-nio-8080-exec-7] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.456 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_MAGIC_mdv33" : [ "CIRadjISI"]}, "P_VALUE" : { "GWAS_MAGIC_mdv33" : [ "CIRadjISI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.105 seconds
+status: ok
+10-Jul-2018 15:08:15.460 INFO [http-nio-8080-exec-6] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_BioMe_mdv33" , "GWAS_OxBB_mdv25" , "GWAS_EXTEND_mdv1" , "ExSeq_13k_mdv33"] } , "pproperty" : {"BETA" : { "ExSeq_13k_mdv33" : [ "DBP" ], "GWAS_BioMe_mdv33" : [ "DBP" ], "GWAS_EXTEND_mdv1" : [ "DBP" ], "GWAS_OxBB_mdv25" : [ "DBP"]}, "P_FE_INV" : { "ExSeq_13k_mdv33" : [ "DBP"]}, "P_VALUE" : { "GWAS_BioMe_mdv33" : [ "DBP" ], "GWAS_EXTEND_mdv1" : [ "DBP" ], "GWAS_OxBB_mdv25" : [ "DBP"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.103 seconds
+status: ok
+10-Jul-2018 15:08:15.476 INFO [http-nio-8080-exec-7] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_MAGIC_mdv33" : [ "Ins30"]}, "P_VALUE" : { "GWAS_MAGIC_mdv33" : [ "Ins30"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.087 seconds
+status: ok
+10-Jul-2018 15:08:15.529 INFO [http-nio-8080-exec-3] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.566 INFO [http-nio-8080-exec-2] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.555 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.574 INFO [http-nio-8080-exec-8] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.590 INFO [http-nio-8080-exec-3] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_MAGIC_mdv33" : [ "2hrI"]}, "P_VALUE" : { "GWAS_MAGIC_mdv33" : [ "2hrI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.203 seconds
+status: ok
+10-Jul-2018 15:08:15.600 INFO [http-nio-8080-exec-2] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_EXTEND_mdv1" , "ExSeq_13k_mdv33"] } , "pproperty" : {"BETA" : { "ExSeq_13k_mdv33" : [ "HIPC" ], "GWAS_EXTEND_mdv1" : [ "HIPC" ], "GWAS_GIANT_mdv33" : [ "HIPC"]}, "P_FE_INV" : { "ExSeq_13k_mdv33" : [ "HIPC"]}, "P_VALUE" : { "GWAS_EXTEND_mdv1" : [ "HIPC" ], "GWAS_GIANT_mdv33" : [ "HIPC"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.116 seconds
+status: ok
+10-Jul-2018 15:08:15.614 INFO [http-nio-8080-exec-8] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_CKDGenConsortium_mdv33"] } , "pproperty" : {"ODDS_RATIO" : { "GWAS_CKDGenConsortium_mdv33" : [ "MA"]}, "P_VALUE" : { "GWAS_CKDGenConsortium_mdv33" : [ "MA"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.061 seconds
+status: ok
+10-Jul-2018 15:08:15.618 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_EXTEND_mdv1"] } , "pproperty" : {"BETA" : { "GWAS_EXTEND_mdv1" : [ "POTASSIUM"]}, "P_VALUE" : { "GWAS_EXTEND_mdv1" : [ "POTASSIUM"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.072 seconds
+status: ok
+10-Jul-2018 15:08:15.621 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.679 INFO [http-nio-8080-exec-5] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.667 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.706 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_EXTEND_mdv1" , "ExSeq_13k_mdv33"] } , "pproperty" : {"BETA" : { "ExSeq_13k_mdv33" : [ "CHOL" ], "GWAS_EXTEND_mdv1" : [ "CHOL" ], "GWAS_GLGC_mdv33" : [ "CHOL"]}, "P_FE_INV" : { "ExSeq_13k_mdv33" : [ "CHOL"]}, "P_VALUE" : { "GWAS_EXTEND_mdv1" : [ "CHOL" ], "GWAS_GLGC_mdv33" : [ "CHOL"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.041 seconds
+status: ok
+10-Jul-2018 15:08:15.707 INFO [http-nio-8080-exec-5] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_MAGIC_mdv33" : [ "HOMAIR"]}, "P_VALUE" : { "GWAS_MAGIC_mdv33" : [ "HOMAIR"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.065 seconds
+status: ok
+10-Jul-2018 15:08:15.705 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_EXTEND_mdv1"] } , "pproperty" : {"BETA" : { "GWAS_EXTEND_mdv1" : [ "HDL_RATIO"]}, "P_VALUE" : { "GWAS_EXTEND_mdv1" : [ "HDL_RATIO"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.11 seconds
+status: ok
+10-Jul-2018 15:08:15.780 INFO [http-nio-8080-exec-6] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.798 INFO [http-nio-8080-exec-6] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_MAGIC_mdv33" : [ "Incr30"]}, "P_VALUE" : { "GWAS_MAGIC_mdv33" : [ "Incr30"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.074 seconds
+status: ok
+10-Jul-2018 15:08:15.815 INFO [http-nio-8080-exec-3] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.852 INFO [http-nio-8080-exec-2] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.871 INFO [http-nio-8080-exec-2] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_MAGIC_mdv33" : [ "ISIadjBMIinterGenoBMI"]}, "P_VALUE" : { "GWAS_MAGIC_mdv33" : [ "ISIadjBMIinterGenoBMI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.093 seconds
+status: ok
+10-Jul-2018 15:08:15.885 INFO [http-nio-8080-exec-8] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.897 INFO [http-nio-8080-exec-7] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.903 INFO [http-nio-8080-exec-7] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_OxBB_mdv25" , "GWAS_EXTEND_mdv1" , "ExSeq_13k_mdv33"] } , "pproperty" : {"BETA" : { "ExSeq_13k_mdv33" : [ "WHR" ], "GWAS_EXTEND_mdv1" : [ "WHR" ], "GWAS_GIANT-PA_mdv33" : [ "WHR" ], "GWAS_GIANT_mdv33" : [ "WHR" ], "GWAS_OxBB_mdv25" : [ "WHR"]}, "P_FE_INV" : { "ExSeq_13k_mdv33" : [ "WHR"]}, "P_VALUE" : { "GWAS_EXTEND_mdv1" : [ "WHR" ], "GWAS_GIANT-PA_mdv33" : [ "WHR" ], "GWAS_GIANT_mdv33" : [ "WHR" ], "GWAS_OxBB_mdv25" : [ "WHR"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.035 seconds
+status: ok
+10-Jul-2018 15:08:15.905 INFO [http-nio-8080-exec-8] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_EXTEND_mdv1"] } , "pproperty" : {"BETA" : { "GWAS_EXTEND_mdv1" : [ "SODIUM"]}, "P_VALUE" : { "GWAS_EXTEND_mdv1" : [ "SODIUM"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.057 seconds
+status: ok
+10-Jul-2018 15:08:15.917 INFO [http-nio-8080-exec-3] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_GENESIS_eu_mdv33"] } , "pproperty" : {"BETA" : { "GWAS_GENESIS_eu_mdv33" : [ "ISenBMI"]}, "P_VALUE" : { "GWAS_GENESIS_eu_mdv33" : [ "ISenBMI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.107 seconds
+status: ok
+10-Jul-2018 15:08:15.968 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.967 INFO [http-nio-8080-exec-5] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:15.999 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_BioMe_mdv33"] } , "pproperty" : {"BETA" : { "GWAS_BioMe_mdv33" : [ "FGadjAgeSex"]}, "P_VALUE" : { "GWAS_BioMe_mdv33" : [ "FGadjAgeSex"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.048 seconds
+status: ok
+10-Jul-2018 15:08:16.011 INFO [http-nio-8080-exec-5] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_CARDIoGRAM_mdv33"] } , "pproperty" : {"ODDS_RATIO" : { "GWAS_CARDIoGRAM_mdv33" : [ "CAD"]}, "P_VALUE" : { "GWAS_CARDIoGRAM_mdv33" : [ "CAD"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.035 seconds
+status: ok
+10-Jul-2018 15:08:16.047 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.050 INFO [http-nio-8080-exec-10] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.062 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_BioMe_mdv33"] } , "pproperty" : {"BETA" : { "GWAS_BioMe_mdv33" : [ "HBA1CadjAgeSex"]}, "P_VALUE" : { "GWAS_BioMe_mdv33" : [ "HBA1CadjAgeSex"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.048 seconds
+status: ok
+10-Jul-2018 15:08:16.065 INFO [http-nio-8080-exec-10] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_EXTEND_mdv1"] } , "pproperty" : {"BETA" : { "GWAS_EXTEND_mdv1" : [ "WEIGHT"]}, "P_VALUE" : { "GWAS_EXTEND_mdv1" : [ "WEIGHT"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.032 seconds
+status: ok
+10-Jul-2018 15:08:16.115 INFO [http-nio-8080-exec-2] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.138 INFO [http-nio-8080-exec-2] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_MAGIC_mdv33" : [ "CIR"]}, "P_VALUE" : { "GWAS_MAGIC_mdv33" : [ "CIR"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.025 seconds
+status: ok
+10-Jul-2018 15:08:16.302 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.345 INFO [http-nio-8080-exec-6] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.357 INFO [http-nio-8080-exec-6] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_METSIM_eu_mdv33" , "GWAS_FUSION_mdv33" , "ExChip_FUSION_mdv33" , "GWAS_DCSP2_ea_mdv33" , "GWAS_FUSIONonlyMetaboChip_mdv33"] } , "pproperty" : {"BETA" : { "ExChip_FUSION_mdv33" : [ "FIadjBMI" ], "GWAS_DCSP2_ea_mdv33" : [ "FIadjBMI" ], "GWAS_FUSION_mdv33" : [ "FIadjBMI" ], "GWAS_FUSIONonlyMetaboChip_mdv33" : [ "FIadjBMI" ], "GWAS_METSIM_eu_mdv33" : [ "FIadjBMI"]}, "P_VALUE" : { "ExChip_FUSION_mdv33" : [ "FIadjBMI" ], "GWAS_DCSP2_ea_mdv33" : [ "FIadjBMI" ], "GWAS_FUSION_mdv33" : [ "FIadjBMI" ], "GWAS_FUSIONonlyMetaboChip_mdv33" : [ "FIadjBMI" ], "GWAS_METSIM_eu_mdv33" : [ "FIadjBMI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.038 seconds
+status: ok
+10-Jul-2018 15:08:16.363 INFO [http-nio-8080-exec-3] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.415 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.418 INFO [http-nio-8080-exec-8] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.419 INFO [http-nio-8080-exec-5] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.421 INFO [http-nio-8080-exec-7] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.442 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "WGS_GoT2Dimputed_mdv33" , "ExChip_FUSION_mdv33" , "GWAS_CAMP_mdv33" , "ExChip_SIGMA1_mdv33" , "ExChip_ExTexT2D_mdv33" , "GWAS_BioMe_mdv33" , "GWAS_METSIM_eu_mdv33" , "GWAS_FUSION_mdv33" , "GWAS_DCSP2_ea_mdv33" , "GWAS_70kForT2D_mdv33" , "GWAS_SIGMA1_mdv33" , "ExSeq_19k_mdv33" , "WGS_GoT2D_mdv33" , "GWAS_EXTEND_mdv1" , "GWAS_FUSIONonlyMetaboChip_mdv33"] } , "pproperty" : {"ODDS_RATIO" : { "ExChip_ExTexT2D_mdv33" : [ "T2D" ], "ExChip_FUSION_mdv33" : [ "T2D" ], "ExChip_SIGMA1_mdv33" : [ "T2D" ], "GWAS_70kForT2D_mdv33" : [ "T2D" ], "GWAS_AGEN_ea_mdv33" : [ "T2D" ], "GWAS_BioMe_mdv33" : [ "T2D" ], "GWAS_CAMP_mdv33" : [ "T2D" ], "GWAS_DCSP2_ea_mdv33" : [ "T2D" ], "GWAS_DIAGRAM_mdv33" : [ "T2D" ], "GWAS_DIAGRAMimputed_mdv33" : [ "T2D" ], "GWAS_EXTEND_mdv1" : [ "T2D" ], "GWAS_FUSION_mdv33" : [ "T2D" ], "GWAS_FUSIONonlyMetaboChip_mdv33" : [ "T2D" ], "GWAS_METSIM_eu_mdv33" : [ "T2D" ], "GWAS_SIGMA1_mdv33" : [ "T2D" ], "WGS_GoT2D_mdv33" : [ "T2D" ], "WGS_GoT2Dimputed_mdv33" : [ "T2D"]}, "OR_FIRTH_FE_IV" : { "ExSeq_19k_mdv33" : [ "T2D"]}, "P_FIRTH_FE_IV" : { "ExSeq_19k_mdv33" : [ "T2D"]}, "P_VALUE" : { "ExChip_ExTexT2D_mdv33" : [ "T2D" ], "ExChip_FUSION_mdv33" : [ "T2D" ], "ExChip_SIGMA1_mdv33" : [ "T2D" ], "GWAS_70kForT2D_mdv33" : [ "T2D" ], "GWAS_AGEN_ea_mdv33" : [ "T2D" ], "GWAS_BioMe_mdv33" : [ "T2D" ], "GWAS_CAMP_mdv33" : [ "T2D" ], "GWAS_DCSP2_ea_mdv33" : [ "T2D" ], "GWAS_DIAGRAM_mdv33" : [ "T2D" ], "GWAS_DIAGRAMimputed_mdv33" : [ "T2D" ], "GWAS_EXTEND_mdv1" : [ "T2D" ], "GWAS_FUSION_mdv33" : [ "T2D" ], "GWAS_FUSIONonlyMetaboChip_mdv33" : [ "T2D" ], "GWAS_METSIM_eu_mdv33" : [ "T2D" ], "GWAS_SIGMA1_mdv33" : [ "T2D" ], "WGS_GoT2D_mdv33" : [ "T2D" ], "WGS_GoT2Dimputed_mdv33" : [ "T2D"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.043 seconds
+status: ok
+10-Jul-2018 15:08:16.446 INFO [http-nio-8080-exec-7] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_EXTEND_mdv1"] } , "pproperty" : {"BETA" : { "GWAS_EXTEND_mdv1" : [ "PERCENTAGE_FAT"]}, "P_VALUE" : { "GWAS_EXTEND_mdv1" : [ "PERCENTAGE_FAT"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.045 seconds
+status: ok
+10-Jul-2018 15:08:16.445 INFO [http-nio-8080-exec-5] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_EXTEND_mdv1"] } , "pproperty" : {"BETA" : { "GWAS_EXTEND_mdv1" : [ "BILIRUBIN"]}, "P_VALUE" : { "GWAS_EXTEND_mdv1" : [ "BILIRUBIN"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.252 seconds
+status: ok
+10-Jul-2018 15:08:16.447 INFO [http-nio-8080-exec-8] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_GIANT_mdv33" : [ "WHRadjBMI"]}, "P_VALUE" : { "GWAS_GIANT_mdv33" : [ "WHRadjBMI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.06 seconds
+status: ok
+10-Jul-2018 15:08:16.494 INFO [http-nio-8080-exec-3] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_METSIM_eu_mdv33" , "GWAS_FUSION_mdv33" , "ExChip_FUSION_mdv33" , "GWAS_DCSP2_ea_mdv33" , "GWAS_FUSIONonlyMetaboChip_mdv33" , "ExChip_ExTexT2D_mdv33"] } , "pproperty" : {"ODDS_RATIO" : { "ExChip_ExTexT2D_mdv33" : [ "T2DadjBMI" ], "ExChip_FUSION_mdv33" : [ "T2DadjBMI" ], "GWAS_AGEN_ea_mdv33" : [ "T2DadjBMI" ], "GWAS_DCSP2_ea_mdv33" : [ "T2DadjBMI" ], "GWAS_DIAGRAMimputed_mdv33" : [ "T2DadjBMI" ], "GWAS_FUSION_mdv33" : [ "T2DadjBMI" ], "GWAS_FUSIONonlyMetaboChip_mdv33" : [ "T2DadjBMI" ], "GWAS_METSIM_eu_mdv33" : [ "T2DadjBMI"]}, "P_VALUE" : { "ExChip_ExTexT2D_mdv33" : [ "T2DadjBMI" ], "ExChip_FUSION_mdv33" : [ "T2DadjBMI" ], "GWAS_AGEN_ea_mdv33" : [ "T2DadjBMI" ], "GWAS_DCSP2_ea_mdv33" : [ "T2DadjBMI" ], "GWAS_DIAGRAMimputed_mdv33" : [ "T2DadjBMI" ], "GWAS_FUSION_mdv33" : [ "T2DadjBMI" ], "GWAS_FUSIONonlyMetaboChip_mdv33" : [ "T2DadjBMI" ], "GWAS_METSIM_eu_mdv33" : [ "T2DadjBMI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.242 seconds
+status: ok
+10-Jul-2018 15:08:16.511 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_BioMe_mdv33"] } , "pproperty" : {"BETA" : { "GWAS_BioMe_mdv33" : [ "HBA1CadjAgeSexBMI"]}, "P_VALUE" : { "GWAS_BioMe_mdv33" : [ "HBA1CadjAgeSexBMI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.21 seconds
+status: ok
+10-Jul-2018 15:08:16.601 INFO [http-nio-8080-exec-10] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.666 INFO [http-nio-8080-exec-8] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.669 INFO [http-nio-8080-exec-6] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.650 INFO [http-nio-8080-exec-2] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.689 INFO [http-nio-8080-exec-2] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_METSIM_eu_mdv33" , "GWAS_FUSION_mdv33" , "ExChip_FUSION_mdv33" , "GWAS_CAMP_mdv33" , "GWAS_DCSP2_ea_mdv33" , "ExSeq_13k_mdv33" , "GWAS_OxBB_mdv25" , "GWAS_FUSIONonlyMetaboChip_mdv33"] } , "pproperty" : {"BETA" : { "ExChip_FUSION_mdv33" : [ "FG" ], "ExSeq_13k_mdv33" : [ "FG" ], "GWAS_CAMP_mdv33" : [ "FG" ], "GWAS_DCSP2_ea_mdv33" : [ "FG" ], "GWAS_FUSION_mdv33" : [ "FG" ], "GWAS_FUSIONonlyMetaboChip_mdv33" : [ "FG" ], "GWAS_MAGIC_mdv33" : [ "FG" ], "GWAS_METSIM_eu_mdv33" : [ "FG" ], "GWAS_OxBB_mdv25" : [ "FG"]}, "P_FE_INV" : { "ExSeq_13k_mdv33" : [ "FG"]}, "P_VALUE" : { "ExChip_FUSION_mdv33" : [ "FG" ], "GWAS_CAMP_mdv33" : [ "FG" ], "GWAS_DCSP2_ea_mdv33" : [ "FG" ], "GWAS_FUSION_mdv33" : [ "FG" ], "GWAS_FUSIONonlyMetaboChip_mdv33" : [ "FG" ], "GWAS_MAGIC_mdv33" : [ "FG" ], "GWAS_METSIM_eu_mdv33" : [ "FG" ], "GWAS_OxBB_mdv25" : [ "FG"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.046 seconds
+status: ok
+10-Jul-2018 15:08:16.674 INFO [http-nio-8080-exec-8] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_MAGIC_mdv33" : [ "AUCins"]}, "P_VALUE" : { "GWAS_MAGIC_mdv33" : [ "AUCins"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.046 seconds
+status: ok
+10-Jul-2018 15:08:16.700 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.755 INFO [http-nio-8080-exec-6] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_EXTEND_mdv1"] } , "pproperty" : {"BETA" : { "GWAS_EXTEND_mdv1" : [ "HBA1CMMOL"]}, "P_VALUE" : { "GWAS_EXTEND_mdv1" : [ "HBA1CMMOL"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.035 seconds
+status: ok
+10-Jul-2018 15:08:16.754 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.753 INFO [http-nio-8080-exec-5] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.716 INFO [http-nio-8080-exec-10] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_METSIM_eu_mdv33" , "GWAS_FUSION_mdv33" , "ExChip_FUSION_mdv33" , "GWAS_CAMP_mdv33" , "GWAS_DCSP2_ea_mdv33" , "ExSeq_13k_mdv33" , "GWAS_OxBB_mdv25" , "GWAS_FUSIONonlyMetaboChip_mdv33"] } , "pproperty" : {"BETA" : { "ExChip_FUSION_mdv33" : [ "FI" ], "ExSeq_13k_mdv33" : [ "FI" ], "GWAS_CAMP_mdv33" : [ "FI" ], "GWAS_DCSP2_ea_mdv33" : [ "FI" ], "GWAS_FUSION_mdv33" : [ "FI" ], "GWAS_FUSIONonlyMetaboChip_mdv33" : [ "FI" ], "GWAS_MAGIC_mdv33" : [ "FI" ], "GWAS_METSIM_eu_mdv33" : [ "FI" ], "GWAS_OxBB_mdv25" : [ "FI"]}, "P_FE_INV" : { "ExSeq_13k_mdv33" : [ "FI"]}, "P_VALUE" : { "ExChip_FUSION_mdv33" : [ "FI" ], "GWAS_CAMP_mdv33" : [ "FI" ], "GWAS_DCSP2_ea_mdv33" : [ "FI" ], "GWAS_FUSION_mdv33" : [ "FI" ], "GWAS_FUSIONonlyMetaboChip_mdv33" : [ "FI" ], "GWAS_MAGIC_mdv33" : [ "FI" ], "GWAS_METSIM_eu_mdv33" : [ "FI" ], "GWAS_OxBB_mdv25" : [ "FI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.12 seconds
+status: ok
+10-Jul-2018 15:08:16.771 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_EXTEND_mdv1"] } , "pproperty" : {"BETA" : { "GWAS_EXTEND_mdv1" : [ "ALB_CREAT_RATIO"]}, "P_VALUE" : { "GWAS_EXTEND_mdv1" : [ "ALB_CREAT_RATIO"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.145 seconds
+status: ok
+10-Jul-2018 15:08:16.807 INFO [http-nio-8080-exec-7] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.807 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.844 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"P_VALUE" : { "GWAS_VATGen_mdv33" : [ "VATSATadjBMI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.052 seconds
+status: ok
+10-Jul-2018 15:08:16.846 INFO [http-nio-8080-exec-5] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"P_VALUE" : { "GWAS_VATGen_mdv33" : [ "SAT"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.071 seconds
+status: ok
+10-Jul-2018 15:08:16.869 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "AMPLOAD_10_mdv1" : [ "LOG_TG" ], "GWAS_Oxford_GoDARTS_mdv1" : [ "LOG_TG"]}, "P_VALUE" : { "AMPLOAD_10_mdv1" : [ "LOG_TG" ], "GWAS_Oxford_GoDARTS_mdv1" : [ "LOG_TG"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.27 seconds
+status: ok
+10-Jul-2018 15:08:16.905 INFO [http-nio-8080-exec-3] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.917 INFO [http-nio-8080-exec-8] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.920 INFO [http-nio-8080-exec-7] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_MAGIC_mdv33" : [ "AUCinsAUCgluc"]}, "P_VALUE" : { "GWAS_MAGIC_mdv33" : [ "AUCinsAUCgluc"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.072 seconds
+status: ok
+10-Jul-2018 15:08:16.925 INFO [http-nio-8080-exec-8] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_CKDGenConsortium_mdv33"] } , "pproperty" : {"BETA" : { "GWAS_CKDGenConsortium_mdv33" : [ "eGFRcys"]}, "P_VALUE" : { "GWAS_CKDGenConsortium_mdv33" : [ "eGFRcys"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.038 seconds
+status: ok
+10-Jul-2018 15:08:16.922 INFO [http-nio-8080-exec-3] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"P_VALUE" : { "GWAS_VATGen_mdv33" : [ "VATadjBMI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.087 seconds
+status: ok
+10-Jul-2018 15:08:16.960 INFO [http-nio-8080-exec-2] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.977 INFO [http-nio-8080-exec-10] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:16.991 INFO [http-nio-8080-exec-2] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_BioMe_mdv33" , "GWAS_EXTEND_mdv1" , "GWAS_CKDGenConsortium_mdv33"] } , "pproperty" : {"BETA" : { "GWAS_BioMe_mdv33" : [ "eGFRcrea" ], "GWAS_CKDGenConsortium_mdv33" : [ "eGFRcrea" ], "GWAS_EXTEND_mdv1" : [ "eGFRcrea"]}, "P_VALUE" : { "GWAS_BioMe_mdv33" : [ "eGFRcrea" ], "GWAS_CKDGenConsortium_mdv33" : [ "eGFRcrea" ], "GWAS_EXTEND_mdv1" : [ "eGFRcrea"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.125 seconds
+status: ok
+10-Jul-2018 15:08:17.024 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.027 INFO [http-nio-8080-exec-10] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_BioMe_mdv33" , "GWAS_OxBB_mdv25" , "GWAS_EXTEND_mdv1" , "ExSeq_13k_mdv33"] } , "pproperty" : {"BETA" : { "AMPLOAD_10_mdv1" : [ "HDL" ], "ExSeq_13k_mdv33" : [ "HDL" ], "GWAS_BioMe_mdv33" : [ "HDL" ], "GWAS_EXTEND_mdv1" : [ "HDL" ], "GWAS_GLGC_mdv33" : [ "HDL" ], "GWAS_OxBB_mdv25" : [ "HDL" ], "GWAS_Oxford_GoDARTS_mdv1" : [ "HDL"]}, "P_FE_INV" : { "ExSeq_13k_mdv33" : [ "HDL"]}, "P_VALUE" : { "AMPLOAD_10_mdv1" : [ "HDL" ], "GWAS_BioMe_mdv33" : [ "HDL" ], "GWAS_EXTEND_mdv1" : [ "HDL" ], "GWAS_GLGC_mdv33" : [ "HDL" ], "GWAS_OxBB_mdv25" : [ "HDL" ], "GWAS_Oxford_GoDARTS_mdv1" : [ "HDL"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.064 seconds
+status: ok
+10-Jul-2018 15:08:17.044 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_MAGIC_mdv33" : [ "ISIadjAgeSex"]}, "P_VALUE" : { "GWAS_MAGIC_mdv33" : [ "ISIadjAgeSex"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.066 seconds
+status: ok
+10-Jul-2018 15:08:17.054 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.039 INFO [http-nio-8080-exec-6] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.072 INFO [http-nio-8080-exec-6] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"ODDS_RATIO" : { "GWAS_EGGC_mdv33" : [ "ChildObesity"]}, "P_VALUE" : { "GWAS_EGGC_mdv33" : [ "ChildObesity"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.077 seconds
+status: ok
+10-Jul-2018 15:08:17.074 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_EXTEND_mdv1"] } , "pproperty" : {"BETA" : { "GWAS_EXTEND_mdv1" : [ "ALK_PHOS"]}, "P_VALUE" : { "GWAS_EXTEND_mdv1" : [ "ALK_PHOS"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.063 seconds
+status: ok
+10-Jul-2018 15:08:17.134 INFO [http-nio-8080-exec-3] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.148 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.130 INFO [http-nio-8080-exec-7] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.156 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_EXTEND_mdv1"] } , "pproperty" : {"BETA" : { "GWAS_EXTEND_mdv1" : [ "ALBUMIN"]}, "P_VALUE" : { "GWAS_EXTEND_mdv1" : [ "ALBUMIN"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.094 seconds
+status: ok
+10-Jul-2018 15:08:17.155 INFO [http-nio-8080-exec-7] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_OxBB_mdv25"] } , "pproperty" : {"BETA" : { "GWAS_OxBB_mdv25" : [ "HYPERTENSION"]}, "P_VALUE" : { "GWAS_OxBB_mdv25" : [ "HYPERTENSION"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.045 seconds
+status: ok
+10-Jul-2018 15:08:17.219 INFO [http-nio-8080-exec-5] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.240 INFO [http-nio-8080-exec-10] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.253 INFO [http-nio-8080-exec-3] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_MAGIC_mdv33" : [ "HOMAB"]}, "P_VALUE" : { "GWAS_MAGIC_mdv33" : [ "HOMAB"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.031 seconds
+status: ok
+10-Jul-2018 15:08:17.255 INFO [http-nio-8080-exec-10] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_MAGIC_mdv33" : [ "ISI"]}, "P_VALUE" : { "GWAS_MAGIC_mdv33" : [ "ISI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.039 seconds
+status: ok
+10-Jul-2018 15:08:17.269 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.275 INFO [http-nio-8080-exec-6] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.277 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_EXTEND_mdv1"] } , "pproperty" : {"BETA" : { "GWAS_EXTEND_mdv1" : [ "UREA"]}, "P_VALUE" : { "GWAS_EXTEND_mdv1" : [ "UREA"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.034 seconds
+status: ok
+10-Jul-2018 15:08:17.217 INFO [http-nio-8080-exec-8] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.311 INFO [http-nio-8080-exec-6] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_CKDGenConsortium_mdv33"] } , "pproperty" : {"ODDS_RATIO" : { "GWAS_CKDGenConsortium_mdv33" : [ "CKD"]}, "P_VALUE" : { "GWAS_CKDGenConsortium_mdv33" : [ "CKD"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.038 seconds
+status: ok
+10-Jul-2018 15:08:17.320 INFO [http-nio-8080-exec-5] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_BioMe_mdv33" , "GWAS_OxBB_mdv25" , "GWAS_EXTEND_mdv1" , "ExSeq_13k_mdv33"] } , "pproperty" : {"BETA" : { "AMPLOAD_10_mdv1" : [ "LDL" ], "ExSeq_13k_mdv33" : [ "LDL" ], "GWAS_BioMe_mdv33" : [ "LDL" ], "GWAS_EXTEND_mdv1" : [ "LDL" ], "GWAS_GLGC_mdv33" : [ "LDL" ], "GWAS_OxBB_mdv25" : [ "LDL" ], "GWAS_Oxford_GoDARTS_mdv1" : [ "LDL"]}, "P_FE_INV" : { "ExSeq_13k_mdv33" : [ "LDL"]}, "P_VALUE" : { "AMPLOAD_10_mdv1" : [ "LDL" ], "GWAS_BioMe_mdv33" : [ "LDL" ], "GWAS_EXTEND_mdv1" : [ "LDL" ], "GWAS_GLGC_mdv33" : [ "LDL" ], "GWAS_OxBB_mdv25" : [ "LDL" ], "GWAS_Oxford_GoDARTS_mdv1" : [ "LDL"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.072 seconds
+status: ok
+10-Jul-2018 15:08:17.363 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.379 INFO [http-nio-8080-exec-8] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_CKDGenConsortium-UACR_mdv33"] } , "pproperty" : {"ODDS_RATIO" : { "GWAS_CKDGenConsortium-UACR_mdv33" : [ "UACR"]}, "P_VALUE" : { "GWAS_CKDGenConsortium-UACR_mdv33" : [ "UACR"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.252 seconds
+status: ok
+10-Jul-2018 15:08:17.399 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_BioMe_mdv33" , "GWAS_OxBB_mdv25" , "GWAS_EXTEND_mdv1" , "ExSeq_13k_mdv33"] } , "pproperty" : {"BETA" : { "ExSeq_13k_mdv33" : [ "SBP" ], "GWAS_BioMe_mdv33" : [ "SBP" ], "GWAS_EXTEND_mdv1" : [ "SBP" ], "GWAS_OxBB_mdv25" : [ "SBP"]}, "P_FE_INV" : { "ExSeq_13k_mdv33" : [ "SBP"]}, "P_VALUE" : { "GWAS_BioMe_mdv33" : [ "SBP" ], "GWAS_EXTEND_mdv1" : [ "SBP" ], "GWAS_OxBB_mdv25" : [ "SBP"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.038 seconds
+status: ok
+10-Jul-2018 15:08:17.477 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.490 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"P_VALUE" : { "GWAS_VATGen_mdv33" : [ "SATHU"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.039 seconds
+status: ok
+10-Jul-2018 15:08:17.494 INFO [http-nio-8080-exec-2] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.514 INFO [http-nio-8080-exec-2] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_BioMe_mdv33" , "ExSeq_13k_mdv33" , "GWAS_OxBB_mdv25" , "GWAS_GiantUKBB_mdv33" , "GWAS_EXTEND_mdv1"] } , "pproperty" : {"BETA" : { "AMPLOAD_10_mdv1" : [ "BMI" ], "ExSeq_13k_mdv33" : [ "BMI" ], "GWAS_BioMe_mdv33" : [ "BMI" ], "GWAS_EXTEND_mdv1" : [ "BMI" ], "GWAS_GIANT-PA_mdv33" : [ "BMI" ], "GWAS_GIANT_mdv33" : [ "BMI" ], "GWAS_GiantUKBB_mdv33" : [ "BMI" ], "GWAS_OxBB_mdv25" : [ "BMI" ], "GWAS_Oxford_GoDARTS_mdv1" : [ "BMI"]}, "P_FE_INV" : { "ExSeq_13k_mdv33" : [ "BMI"]}, "P_VALUE" : { "AMPLOAD_10_mdv1" : [ "BMI" ], "GWAS_BioMe_mdv33" : [ "BMI" ], "GWAS_EXTEND_mdv1" : [ "BMI" ], "GWAS_GIANT-PA_mdv33" : [ "BMI" ], "GWAS_GIANT_mdv33" : [ "BMI" ], "GWAS_GiantUKBB_mdv33" : [ "BMI" ], "GWAS_OxBB_mdv25" : [ "BMI" ], "GWAS_Oxford_GoDARTS_mdv1" : [ "BMI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.021 seconds
+status: ok
+10-Jul-2018 15:08:17.536 INFO [http-nio-8080-exec-7] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.538 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.540 INFO [http-nio-8080-exec-7] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"P_VALUE" : { "GWAS_VATGen_mdv33" : [ "VATSAT"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.113 seconds
+status: ok
+10-Jul-2018 15:08:17.564 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_BioMe_mdv33" , "GWAS_EXTEND_mdv1"] } , "pproperty" : {"BETA" : { "GWAS_BioMe_mdv33" : [ "Creatinine" ], "GWAS_EXTEND_mdv1" : [ "Creatinine"]}, "P_VALUE" : { "GWAS_BioMe_mdv33" : [ "Creatinine" ], "GWAS_EXTEND_mdv1" : [ "Creatinine"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.106 seconds
+status: ok
+10-Jul-2018 15:08:17.602 INFO [http-nio-8080-exec-3] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.604 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.590 INFO [http-nio-8080-exec-5] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.610 INFO [http-nio-8080-exec-3] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"P_VALUE" : { "GWAS_VATGen_mdv33" : [ "PATadjHtWt"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.175 seconds
+status: ok
+10-Jul-2018 15:08:17.613 INFO [http-nio-8080-exec-5] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_OxBB_mdv25"] } , "pproperty" : {"BETA" : { "AMPLOAD_10_mdv1" : [ "TC" ], "GWAS_OxBB_mdv25" : [ "TC" ], "GWAS_Oxford_GoDARTS_mdv1" : [ "TC"]}, "P_VALUE" : { "AMPLOAD_10_mdv1" : [ "TC" ], "GWAS_OxBB_mdv25" : [ "TC" ], "GWAS_Oxford_GoDARTS_mdv1" : [ "TC"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.024 seconds
+status: ok
+10-Jul-2018 15:08:17.609 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_GENESIS_eu_mdv33"] } , "pproperty" : {"BETA" : { "GWAS_GENESIS_eu_mdv33" : [ "ISen"]}, "P_VALUE" : { "GWAS_GENESIS_eu_mdv33" : [ "ISen"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.021 seconds
+status: ok
+10-Jul-2018 15:08:17.633 INFO [http-nio-8080-exec-6] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.649 INFO [http-nio-8080-exec-6] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_PGC_mdv33"] } , "pproperty" : {"ODDS_RATIO" : { "GWAS_PGC_mdv33" : [ "BIP"]}, "P_VALUE" : { "GWAS_PGC_mdv33" : [ "BIP"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.125 seconds
+status: ok
+10-Jul-2018 15:08:17.706 INFO [http-nio-8080-exec-2] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.705 INFO [http-nio-8080-exec-10] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.720 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.737 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_OxBB_mdv25" , "GWAS_EXTEND_mdv1" , "ExSeq_13k_mdv33"] } , "pproperty" : {"BETA" : { "ExSeq_13k_mdv33" : [ "TG" ], "GWAS_EXTEND_mdv1" : [ "TG" ], "GWAS_GLGC_mdv33" : [ "TG" ], "GWAS_OxBB_mdv25" : [ "TG"]}, "P_FE_INV" : { "ExSeq_13k_mdv33" : [ "TG"]}, "P_VALUE" : { "GWAS_EXTEND_mdv1" : [ "TG" ], "GWAS_GLGC_mdv33" : [ "TG" ], "GWAS_OxBB_mdv25" : [ "TG"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.05 seconds
+status: ok
+10-Jul-2018 15:08:17.751 INFO [http-nio-8080-exec-7] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.769 INFO [http-nio-8080-exec-2] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {} , "pproperty" : {"BETA" : { "GWAS_MAGIC_mdv33" : [ "PI"]}, "P_VALUE" : { "GWAS_MAGIC_mdv33" : [ "PI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.102 seconds
+status: ok
+10-Jul-2018 15:08:17.780 INFO [http-nio-8080-exec-7] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_METSIM_eu_mdv33" , "GWAS_FUSION_mdv33" , "ExChip_FUSION_mdv33" , "GWAS_DCSP2_ea_mdv33" , "GWAS_FUSIONonlyMetaboChip_mdv33"] } , "pproperty" : {"BETA" : { "ExChip_FUSION_mdv33" : [ "FGadjBMI" ], "GWAS_DCSP2_ea_mdv33" : [ "FGadjBMI" ], "GWAS_FUSION_mdv33" : [ "FGadjBMI" ], "GWAS_FUSIONonlyMetaboChip_mdv33" : [ "FGadjBMI" ], "GWAS_METSIM_eu_mdv33" : [ "FGadjBMI"]}, "P_VALUE" : { "ExChip_FUSION_mdv33" : [ "FGadjBMI" ], "GWAS_DCSP2_ea_mdv33" : [ "FGadjBMI" ], "GWAS_FUSION_mdv33" : [ "FGadjBMI" ], "GWAS_FUSIONonlyMetaboChip_mdv33" : [ "FGadjBMI" ], "GWAS_METSIM_eu_mdv33" : [ "FGadjBMI"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.023 seconds
+status: ok
+10-Jul-2018 15:08:17.782 INFO [http-nio-8080-exec-10] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_EXTEND_mdv1" , "ExSeq_13k_mdv33"] } , "pproperty" : {"BETA" : { "ExSeq_13k_mdv33" : [ "HBA1C" ], "GWAS_EXTEND_mdv1" : [ "HBA1C" ], "GWAS_MAGIC_mdv33" : [ "HBA1C"]}, "P_FE_INV" : { "ExSeq_13k_mdv33" : [ "HBA1C"]}, "P_VALUE" : { "GWAS_EXTEND_mdv1" : [ "HBA1C" ], "GWAS_MAGIC_mdv33" : [ "HBA1C"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.159 seconds
+status: ok
+10-Jul-2018 15:08:17.818 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.835 INFO [http-nio-8080-exec-5] org.apache.juli.logging.Log$info.call About to attempt call to getSampleMetadata
+10-Jul-2018 15:08:17.803 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call About to attempt call to getSampleMetadata
+10-Jul-2018 15:08:17.895 INFO [http-nio-8080-exec-4] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CHROM" , "CLOSEST_GENE" , "Consequence" , "DBSNP_ID" , "Effect_Allele" , "GENE" , "POS" , "PolyPhen_PRED" , "Protein_change" , "Reference_Allele" , "SIFT_PRED" , "TRANSCRIPT_ANNOT" , "VAR_ID"], "dproperty" : {} , "pproperty" : {} }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.078 seconds
+status: ok
+10-Jul-2018 15:08:17.898 INFO [http-nio-8080-exec-8] org.apache.juli.logging.Log$info.call About to attempt call to getData
+10-Jul-2018 15:08:17.910 INFO [http-nio-8080-exec-8] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getData,
+parm={"passback": "abc123", "entity": "variant", "page_start":-1, "page_size": -1, "limit": 1000, "count": false, "result_format": "verbose", "order_by": [],"properties": {"cproperty": [ "CLOSEST_GENE" , "DBSNP_ID" , "GENE" , "MOST_DEL_SCORE" , "VAR_ID"], "dproperty" : {"MAF" : [ "GWAS_OxBB_mdv25" , "GWAS_GiantUKBB_mdv33" , "GWAS_EXTEND_mdv1" , "ExSeq_13k_mdv33"] } , "pproperty" : {"BETA" : { "ExSeq_13k_mdv33" : [ "HEIGHT" ], "GWAS_EXTEND_mdv1" : [ "HEIGHT" ], "GWAS_GIANT_mdv33" : [ "HEIGHT" ], "GWAS_GiantUKBB_mdv33" : [ "HEIGHT" ], "GWAS_OxBB_mdv25" : [ "HEIGHT"]}, "P_FE_INV" : { "ExSeq_13k_mdv33" : [ "HEIGHT"]}, "P_VALUE" : { "GWAS_EXTEND_mdv1" : [ "HEIGHT" ], "GWAS_GIANT_mdv33" : [ "HEIGHT" ], "GWAS_GiantUKBB_mdv33" : [ "HEIGHT" ], "GWAS_OxBB_mdv25" : [ "HEIGHT"] } } }, "filters":  [ {"dataset_id": "AMPLOAD_10_mdv1", "phenotype": "BMI", "operand": "VAR_ID", "operator": "EQ", "value": "8_118191475_C_T", "operand_type": "STRING"} ] } ,
+time required=0.123 seconds
+status: ok
+10-Jul-2018 15:08:18.300 INFO [http-nio-8080-exec-5] org.apache.juli.logging.Log$info.call status: ok
+10-Jul-2018 15:08:18.334 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call status: ok
+10-Jul-2018 15:08:18.460 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call About to attempt call to getSampleData
+10-Jul-2018 15:08:18.474 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getSampleData,
+parm={
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "limit": 100000,
+    "count": false,
+    "distribution": true,
+    "properties":    {
+                           "cproperty": [],
+                          "orderBy":    [],
+"dproperty" : {  "CURRENT_SMOKE":["SAMPLES_GWAS_EXTEND_mdv1"] } ,
+      "pproperty" : { }} ,
+                   "filters":    [
+                 {"dataset_id": "SAMPLES_GWAS_EXTEND_mdv1", "phenotype": "b", "operand": "ID", "operator": "LT", "value": "ZZZZZ", "operand_type": "STRING"}
+            ]
+
+},
+time required=0.111 seconds
+status: ok
+10-Jul-2018 15:08:18.477 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call About to attempt call to getSampleData
+10-Jul-2018 15:08:18.513 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getSampleData,
+parm={
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "limit": 100000,
+    "count": false,
+    "distribution": true,
+    "properties":    {
+                           "cproperty": [],
+                          "orderBy":    [],
+"dproperty" : {  "MENOPAUSE_STATUS":["SAMPLES_GWAS_EXTEND_mdv1"] } ,
+      "pproperty" : { }} ,
+                   "filters":    [
+                 {"dataset_id": "SAMPLES_GWAS_EXTEND_mdv1", "phenotype": "b", "operand": "ID", "operator": "LT", "value": "ZZZZZ", "operand_type": "STRING"}
+            ]
+
+},
+time required=0.037 seconds
+status: ok
+10-Jul-2018 15:08:18.525 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call About to attempt call to getSampleData
+10-Jul-2018 15:08:18.555 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getSampleData,
+parm={
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "limit": 100000,
+    "count": false,
+    "distribution": true,
+    "properties":    {
+                           "cproperty": [],
+                          "orderBy":    [],
+"dproperty" : {  "HORMONES_MENO":["SAMPLES_GWAS_EXTEND_mdv1"] } ,
+      "pproperty" : { }} ,
+                   "filters":    [
+                 {"dataset_id": "SAMPLES_GWAS_EXTEND_mdv1", "phenotype": "b", "operand": "ID", "operator": "LT", "value": "ZZZZZ", "operand_type": "STRING"}
+            ]
+
+},
+time required=0.032 seconds
+status: ok
+10-Jul-2018 15:08:18.561 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call About to attempt call to getSampleData
+10-Jul-2018 15:08:18.604 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getSampleData,
+parm={
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "limit": 100000,
+    "count": false,
+    "distribution": true,
+    "properties":    {
+                           "cproperty": [],
+                          "orderBy":    [],
+"dproperty" : {  "HORMONES_ANY":["SAMPLES_GWAS_EXTEND_mdv1"] } ,
+      "pproperty" : { }} ,
+                   "filters":    [
+                 {"dataset_id": "SAMPLES_GWAS_EXTEND_mdv1", "phenotype": "b", "operand": "ID", "operator": "LT", "value": "ZZZZZ", "operand_type": "STRING"}
+            ]
+
+},
+time required=0.045 seconds
+status: ok
+10-Jul-2018 15:08:18.608 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call About to attempt call to getSampleData
+10-Jul-2018 15:08:18.620 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getSampleData,
+parm={
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "limit": 100000,
+    "count": false,
+    "distribution": true,
+    "properties":    {
+                           "cproperty": [],
+                          "orderBy":    [],
+"dproperty" : {  "HYPERTENSION":["SAMPLES_GWAS_EXTEND_mdv1"] } ,
+      "pproperty" : { }} ,
+                   "filters":    [
+                 {"dataset_id": "SAMPLES_GWAS_EXTEND_mdv1", "phenotype": "b", "operand": "ID", "operator": "LT", "value": "ZZZZZ", "operand_type": "STRING"}
+            ]
+
+},
+time required=0.014 seconds
+status: ok
+10-Jul-2018 15:08:18.623 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call About to attempt call to getSampleData
+10-Jul-2018 15:08:18.656 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getSampleData,
+parm={
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "limit": 100000,
+    "count": false,
+    "distribution": true,
+    "properties":    {
+                           "cproperty": [],
+                          "orderBy":    [],
+"dproperty" : {  "T2D_readable":["SAMPLES_GWAS_EXTEND_mdv1"] } ,
+      "pproperty" : { }} ,
+                   "filters":    [
+                 {"dataset_id": "SAMPLES_GWAS_EXTEND_mdv1", "phenotype": "b", "operand": "ID", "operator": "LT", "value": "ZZZZZ", "operand_type": "STRING"}
+            ]
+
+},
+time required=0.034 seconds
+status: ok
+10-Jul-2018 15:08:18.659 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call About to attempt call to getSampleData
+10-Jul-2018 15:08:18.671 INFO [http-nio-8080-exec-9] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getSampleData,
+parm={
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "limit": 100000,
+    "count": false,
+    "distribution": true,
+    "properties":    {
+                           "cproperty": [],
+                          "orderBy":    [],
+"dproperty" : {  "SEX_readable":["SAMPLES_GWAS_EXTEND_mdv1"] } ,
+      "pproperty" : { }} ,
+                   "filters":    [
+                 {"dataset_id": "SAMPLES_GWAS_EXTEND_mdv1", "phenotype": "b", "operand": "ID", "operator": "LT", "value": "ZZZZZ", "operand_type": "STRING"}
+            ]
+
+},
+time required=0.013 seconds
+status: ok
+10-Jul-2018 15:08:18.747 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call About to attempt call to getSampleData
+10-Jul-2018 15:08:18.765 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getSampleData,
+parm={
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "limit": 100000,
+    "count": false,
+    "distribution": true,
+    "properties":    {
+                           "cproperty": [],
+                          "orderBy":    [],
+"dproperty" : {  "CURRENT_SMOKE":["SAMPLES_GWAS_EXTEND_mdv1"] } ,
+      "pproperty" : { }} ,
+                   "filters":    [
+                 {"dataset_id": "SAMPLES_GWAS_EXTEND_mdv1", "phenotype": "b", "operand": "ID", "operator": "LT", "value": "ZZZZZ", "operand_type": "STRING"}
+            ]
+
+},
+time required=0.02 seconds
+status: ok
+10-Jul-2018 15:08:18.769 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call About to attempt call to getSampleData
+10-Jul-2018 15:08:18.813 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getSampleData,
+parm={
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "limit": 100000,
+    "count": false,
+    "distribution": true,
+    "properties":    {
+                           "cproperty": [],
+                          "orderBy":    [],
+"dproperty" : {  "MENOPAUSE_STATUS":["SAMPLES_GWAS_EXTEND_mdv1"] } ,
+      "pproperty" : { }} ,
+                   "filters":    [
+                 {"dataset_id": "SAMPLES_GWAS_EXTEND_mdv1", "phenotype": "b", "operand": "ID", "operator": "LT", "value": "ZZZZZ", "operand_type": "STRING"}
+            ]
+
+},
+time required=0.045 seconds
+status: ok
+10-Jul-2018 15:08:18.821 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call About to attempt call to getSampleData
+10-Jul-2018 15:08:18.855 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getSampleData,
+parm={
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "limit": 100000,
+    "count": false,
+    "distribution": true,
+    "properties":    {
+                           "cproperty": [],
+                          "orderBy":    [],
+"dproperty" : {  "HORMONES_MENO":["SAMPLES_GWAS_EXTEND_mdv1"] } ,
+      "pproperty" : { }} ,
+                   "filters":    [
+                 {"dataset_id": "SAMPLES_GWAS_EXTEND_mdv1", "phenotype": "b", "operand": "ID", "operator": "LT", "value": "ZZZZZ", "operand_type": "STRING"}
+            ]
+
+},
+time required=0.04 seconds
+status: ok
+10-Jul-2018 15:08:18.859 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call About to attempt call to getSampleData
+10-Jul-2018 15:08:18.894 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getSampleData,
+parm={
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "limit": 100000,
+    "count": false,
+    "distribution": true,
+    "properties":    {
+                           "cproperty": [],
+                          "orderBy":    [],
+"dproperty" : {  "HORMONES_ANY":["SAMPLES_GWAS_EXTEND_mdv1"] } ,
+      "pproperty" : { }} ,
+                   "filters":    [
+                 {"dataset_id": "SAMPLES_GWAS_EXTEND_mdv1", "phenotype": "b", "operand": "ID", "operator": "LT", "value": "ZZZZZ", "operand_type": "STRING"}
+            ]
+
+},
+time required=0.037 seconds
+status: ok
+10-Jul-2018 15:08:18.898 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call About to attempt call to getSampleData
+10-Jul-2018 15:08:18.910 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getSampleData,
+parm={
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "limit": 100000,
+    "count": false,
+    "distribution": true,
+    "properties":    {
+                           "cproperty": [],
+                          "orderBy":    [],
+"dproperty" : {  "HYPERTENSION":["SAMPLES_GWAS_EXTEND_mdv1"] } ,
+      "pproperty" : { }} ,
+                   "filters":    [
+                 {"dataset_id": "SAMPLES_GWAS_EXTEND_mdv1", "phenotype": "b", "operand": "ID", "operator": "LT", "value": "ZZZZZ", "operand_type": "STRING"}
+            ]
+
+},
+time required=0.014 seconds
+status: ok
+10-Jul-2018 15:08:18.914 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call About to attempt call to getSampleData
+10-Jul-2018 15:08:18.933 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getSampleData,
+parm={
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "limit": 100000,
+    "count": false,
+    "distribution": true,
+    "properties":    {
+                           "cproperty": [],
+                          "orderBy":    [],
+"dproperty" : {  "T2D_readable":["SAMPLES_GWAS_EXTEND_mdv1"] } ,
+      "pproperty" : { }} ,
+                   "filters":    [
+                 {"dataset_id": "SAMPLES_GWAS_EXTEND_mdv1", "phenotype": "b", "operand": "ID", "operator": "LT", "value": "ZZZZZ", "operand_type": "STRING"}
+            ]
+
+},
+time required=0.02 seconds
+status: ok
+10-Jul-2018 15:08:18.949 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call About to attempt call to getSampleData
+10-Jul-2018 15:08:18.967 INFO [http-nio-8080-exec-1] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getSampleData,
+parm={
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "limit": 100000,
+    "count": false,
+    "distribution": true,
+    "properties":    {
+                           "cproperty": [],
+                          "orderBy":    [],
+"dproperty" : {  "SEX_readable":["SAMPLES_GWAS_EXTEND_mdv1"] } ,
+      "pproperty" : { }} ,
+                   "filters":    [
+                 {"dataset_id": "SAMPLES_GWAS_EXTEND_mdv1", "phenotype": "b", "operand": "ID", "operator": "LT", "value": "ZZZZZ", "operand_type": "STRING"}
+            ]
+
+},
+time required=0.032 seconds
+status: ok
+10-Jul-2018 15:08:19.143 INFO [http-nio-8080-exec-6] org.apache.juli.logging.Log$info.call About to attempt call to getSampleData
+10-Jul-2018 15:08:19.177 INFO [http-nio-8080-exec-6] org.apache.juli.logging.Log$info.call 
+SERVER POST:
+url=http://ec2-34-237-63-26.compute-1.amazonaws.com:8082/dccservices/distributed/getSampleData,
+parm={
+    "passback": "123abc",
+    "entity": "variant",
+    "page_number": 0,
+    "limit": 100000,
+    "count": false,
+    "distribution": true,
+"bin_number": 24, 
+    "properties":    {
+                           "cproperty": [],
+                          "orderBy":    [],
+"dproperty" : {  "AGE":["SAMPLES_GWAS_EXTEND_mdv1"] } ,
+      "pproperty" : { }} ,
+                   "filters":    [
+                 {"dataset_id": "SAMPLES_GWAS_EXTEND_mdv1", "phenotype": "b", "operand": "ID", "operator": "LT", "value": "ZZZZZ", "operand_type": "STRING"}
+            ]
+
+},
+time required=0.022 seconds
+status: ok
+
+
+
