@@ -56,6 +56,10 @@
     - graphic overlay for real time
     - throttle calls
       - don't overlaod detector int he api
+      
+  - can also use TensorFlieLite
+    - uses multi dimensal arry and graph of operations
+    
     
 
 20181201 1300 - flutter and firebase
