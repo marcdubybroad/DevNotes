@@ -1,6 +1,6 @@
 
 
-# this scriipt is from the first video of Siraj's intor to Python ML series
+# this scriipt is from the first video of Siraj's intro to Python ML series
 # https://www.youtube.com/watch?v=T5pRlIbr6gg&index=2&list=PL2-dafEMk2A6QKz1mrk1uIGfHkC1zZ6UU&t=0s
 
 # import

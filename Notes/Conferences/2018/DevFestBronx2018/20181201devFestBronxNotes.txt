@@ -139,13 +139,15 @@ m - serverless uses companies
 - dad
   - brad
   - form
-  - udacity graduate
-  - buy raspberry pi
+  * udacity graduate
+  * buy raspberry pi
   - 
       
 - monday
   - aspca
-  - 
+  - CDs
+  - lehman donate
+  
       
 - ideas
   - android app that recognizes trading chart pattersn (head shoulders, death pinch, iron cross, etc)

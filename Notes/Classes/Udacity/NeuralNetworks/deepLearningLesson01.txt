@@ -1,4 +1,14 @@
 
+20181208 - different deep learning problems
+  - speech recognition (2009)
+  - natural langiage process (NLP) (2014)
+  - computer vision (2012)
+- what changed
+  - lots of data
+  - cheap gpus
+  
+  
+  
 
 20180424 - neural networks
 - fukuskima's neocognitron, 1980s
