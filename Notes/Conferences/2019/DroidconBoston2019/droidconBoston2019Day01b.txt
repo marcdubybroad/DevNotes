@@ -59,7 +59,14 @@
     - makes it brittle
     - avoid if, for loops
   - avoid abtsractions in tests
-    
+  - be generous with comments
+  - use parameterized tests
+    - junit parameter library for junit
+  - resources
+    - testg on the toilet
+    - why devs write bad tests
+    - marting fowler
+    - 
 
 
 
