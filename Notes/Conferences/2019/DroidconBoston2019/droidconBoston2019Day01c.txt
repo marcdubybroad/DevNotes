@@ -1,7 +1,23 @@
 
 
 20190408 - 1630 - RxJava
+- fully reactive apps
+- pograming with asyc data ste=reams
 
+- benefits fo reactive programming
+  - keeps data up to date
+  - unifies async and sync
+  - represents more hinest modeling of your apps
+  
+- click listening is a form of reactive orogramming
+
+most use of rxJava
+  - network
+  - async tasks
+  - database access
+  
+- LivaData vs RxJava
+- turn user input into a Subject (kotlin or RxJava class?)
 
 
 
