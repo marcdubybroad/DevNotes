@@ -1,5 +1,9 @@
 
 
+20190408 - 1630 - RxJava
+
+
+
 
 
 20190408 - 1600 - solving the hrd problems
