@@ -1,0 +1,61 @@
+
+
+
+
+20190408 - 1600 - solving the hrd problems
+- works at wb digital labs as android engineer
+
+- case study
+  - XOR obsfucation
+    - exclusive or, only okne is true for true
+    - properties
+      - commutative
+      - symmetrical
+      - cyclic key
+    - easy to encrypt and decrypt
+      - a quick brown fox
+      - XOR abcabcabcabcabc
+      - kasdhaskjhdjhkjljjl
+      - XOR abcabcabcabcabc
+      - a quick brown fox
+
+- finding the spurce of the problem
+  - what is the silliest problem it could be?
+  - chat to coworkers
+    - while explaining, can think thrpugh issue
+    - can also help to challenge your assumptions
+    - can also take a break, do something physical
+      - subconscious might be working on it
+  - log everything
+    - if use Timber, use the tag method
+    - also overlog
+      - easier to filter things out in the ide
+  - can also change breakpoints to only suspend on a condition
+    - can add logging in the break point as well
+    - right click break point
+    
+- what the problem was
+  - BitmapFactory, using InputStream to create image
+  - BitMap objects has a header in the file tat has information about the bitmap
+  
+  
+- learn from mistakes
+  - keep a list of past offenders
+    - ie: implementation overrides
+    - ie: pending intents
+    - ie: date and time zone related
+    - ie: val get() vs fun
+  - understand the cause
+  
+  
+    
+    
+- notes
+  - pending intent, if the extras are different, will not look different to the android device
+    - so replace pending intent that might be there acidentally
+    
+    
+
+
+
+      

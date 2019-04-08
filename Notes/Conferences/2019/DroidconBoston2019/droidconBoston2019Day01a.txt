@@ -1,6 +1,9 @@
 
 
 20190408 - 1300 - bu8lding at the speed of light (+++++)
+- @biocodes
+  - 10 day facial recognition workshop
+  
 - works at biotech
 
 - training
@@ -60,6 +63,7 @@
   - sharing data between fragments
   - room persistence library
   - print out arch guiding principles
+  - use coin for dependency injection
   
     
   
