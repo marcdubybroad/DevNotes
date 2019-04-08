@@ -37,6 +37,13 @@
 - tip
   - remove unused code
   
+- book
+  - working effectively with lagecy code
+  - refectoring by fowler
+  - uncle bob book
+  
+  
+  
     
 
 
