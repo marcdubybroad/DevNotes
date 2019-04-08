@@ -1,5 +1,47 @@
 
-2019008 - 1400 - test driven development that lasts
+20190408 - 1500 - testing legacy code
+- works at vodafone
+- from zero coverage to automatd testing
+
+- architecture is important
+
+- ho to resolve framework dependencies
+  - abstracted out all android classes, use own runtime
+  - for internal db, inject your your won
+  - can also extend the tested class
+    - if all setting is done in methods, then can override these in the test class
+    
+  - for abtsracting access to android framework
+    - can use own runtime for the tests as opposed to the android framework
+    - the new runtime would have expected results
+    
+- how to use this in junit
+  - oerride te testrule
+    - so have: public class EnvironmentRule implements TestRule
+    
+- revise static calls
+  - make internal pieces non static objects
+  - can then test the obects individually
+  
+  
+- code structure
+  - look at the code and indentations
+    - the bulet method, where little indentation
+    - zigzag method, which is nested if method
+      - makes testing com0licated since there are many states in nested if methods
+      
+      
+- quote
+  - programming is the art of doing one things at a time
+  
+- tip
+  - remove unused code
+  
+    
+
+
+
+20190408 - 1400 - test driven development that lasts
 - red-green-refactor
 - why tests
   - help write good code
@@ -66,7 +108,12 @@
     - testg on the toilet
     - why devs write bad tests
     - marting fowler
-    - 
+    -
+  - uncle bob webinar
+    - create test, then hit alt-enter and have ide create class
+    - create test method, alt0enter and have id create the method
+    
+    
 
 
 
