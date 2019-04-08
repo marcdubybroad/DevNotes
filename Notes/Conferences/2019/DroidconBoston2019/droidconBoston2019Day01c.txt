@@ -1,4 +1,24 @@
 
+20190408 - 1700 - how to test android apps in M$
+- build, test, ship and learn regularly and on the cloud
+
+- DevOps with AppCenter
+  - appcenter.ms
+  - @keerthanakumar
+  
+
+
+
+- ideas
+  - time based rnn
+    - time based
+    - trying to determine how gd based on stroke
+    - compare to old
+    - can predict how the speed will update
+    - can also classify, softmax
+    
+
+
 
 20190408 - 1630 - RxJava
 - fully reactive apps
@@ -17,6 +37,7 @@ most use of rxJava
   - database access
   
 - LivaData vs RxJava
+
 - turn user input into a Subject (kotlin or RxJava class?)
 
 
