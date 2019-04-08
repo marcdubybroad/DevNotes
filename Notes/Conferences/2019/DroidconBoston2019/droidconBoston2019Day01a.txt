@@ -5,7 +5,7 @@
   - hrps with bundle adding
     - with bundles, no guarantee that a bundle key will have been populated
   - for action, can add default values going to parameters
-  
+    
   - NavHostFragment initialization
     - create NavController
     - registers fragment as destination type
@@ -43,7 +43,8 @@
     - arch
       - move all logic ffor that screen into the fragment
       - leave activity to be navigation related logic
-      
+    - for shared element in ingle activity app
+      - look at the NavigationExtras object/parameter
       
     
 
