@@ -1,0 +1,7 @@
+
+2019008 - 1400 - test driven development that lasts
+- red-green-refactor
+
+
+
+

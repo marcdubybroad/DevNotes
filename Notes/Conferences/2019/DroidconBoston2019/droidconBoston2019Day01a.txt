@@ -1,5 +1,80 @@
 
 
+20190408 - 1300 - bu8lding at the speed of light (+++++)
+- works at biotech
+
+- training
+  - www.tensorflow.org/learn
+  - how to learn tensor flow without a phd
+  
+- annecdotes
+  - h1n1 virus makes people more social when they can spread
+    - used by analyzing mobile
+  - avg mpbile app lives oon phone for 5 days before deletion
+    - need to build better design
+    - companies that do better design do 2x better on stock market
+      - design links
+        - https://design.google
+        - Design Is
+        - stanord d school: design thinking
+          - but no back arraows, very forward linear way
+        - tom chi design
+          - Home and away teams
+          -get feedback every 2 mins, new product every 30 mins, done in 3.5 hours with great product
+          - look at 'sprint conference' on youtube
+  
+- how to think at speed of thougt in android
+  - jetpack big leap forward
+    - use onstraintlyout
+      - best for when phone rotated
+      - performing
+    - navigation editor for storyboarding
+    - motion editor
+      - with keyframes to specify intermittent states
+    - themes from material design  
+    - sketch
+      - nt great for quick iteration, since can't easily convert to android right away
+    - communuity libs
+      - must have open source libs
+    
+- code design
+  - move straight to kotlin
+  - add in ML, get most bng for buck
+  - silicon valley peolle moving to ktor (for kotlin)
+  - use android studio to translate java to kotlin
+    - does a good job
+  - KTX libraries
+    - do ui dev in kotlin way of coding
+  - #31daysofkotlin
+  - medium article: let's talk about android
+  - arch comp
+    - Lifecycle objects/class
+    - observable
+    - work with the platform
+    - LiveData
+      - look into two way data binding
+    - ViewModel
+      - can now survive after a destroy
+      - very new feature
+      -
+  - sharing data between fragments
+  - room persistence library
+  - print out arch guiding principles
+  
+    
+  
+- look into
+  - book: art and fear, bayles and Orland
+  - thinkwitgoogle.com -> how to monetize apps
+  
+  
+  - in god we trust, everyone bring data
+  
+  - tom li
+    - 50k a day -> 5k and hour -> 10mil a year
+    
+        
+
 20190408 - 1100 - navigation (++++*)
 - new navigation arch component
   - hrps with bundle adding
