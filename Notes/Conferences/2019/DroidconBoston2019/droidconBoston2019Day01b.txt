@@ -1,7 +1,65 @@
 
 2019008 - 1400 - test driven development that lasts
 - red-green-refactor
-
+- why tests
+  - help write good code
+  - good documentation for the code
+  - confident refactoing
+  
+- what challenges
+  - legacy code
+  - takes time, but it is an investment that will save you time in the future
+  - bad tests are worse than no tests
+    - time znd effort wasted without results
+  -
+  
+- tools
+  - test doubles (mocks or emulator)
+    - dummies; like placeholders, fills in paraeters
+    - stubs: returned pre defined data
+    - fakes: closer to real implmentation from stubs
+      - more involved to create
+      - supports sam opretations
+    - mocks
+      - Mockito, PowerMock
+      -
+    - spies
+      - hybrid between stub, fake and mock
+      - as real as stubs, but have ability to record interactions like mock
+      
+- tests are maintanable when
+  - old tests don't break often
+  - old tests are easy to update
+  - easy to add new tests
+  
+- how to write maintainable tests
+  - use good test specification system
+    - flow
+      - given dependency or behavior
+      - when we act on the scenario
+      - assert that the expected behavior happens
+  - test behavior, not implementation details
+    - test that you got the right data, not whethr it came from the cache at the same time
+    - can add other test to make sure data is cached
+  - for objects thta do not return any value, using mocks might be easier?
+  
+  - assert/verify only one thing per test
+    - makes it eaiser to know what made the test fail
+    - usually when you write test description, if you use the word 'and', you are here
+  
+  - use descriptive test names
+    - from test name, should know why test failed
+      - not from the stack grace
+    - kotlin allows to bck ticks in test names with spaces
+    - junit5 has @DisplayName annotation
+      - this is what is dislayed in the consile when running the test
+      
+- tips
+  - shy away from having logic in the test
+    - makes it brittle
+    - avoid if, for loops
+  - avoid abtsractions in tests
+    
 
 
 
