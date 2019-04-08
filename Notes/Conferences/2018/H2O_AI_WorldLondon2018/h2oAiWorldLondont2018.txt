@@ -1,0 +1,32 @@
+
+
+1230pm talk - NLP
+- speker
+  - Sudalai Rajkumar
+- types of features
+  - number of use of word
+  - split into stop words (and, the etc), frequent words, rare words
+
+
+
+1200pm talk - time series data
+- speakers
+  - Marios Michailidis
+  - Mathias Muller
+- data
+  - have past time
+  - have period with no data (current)
+  - trying to predict data past gap
+  - ie: <----- train -----><-- gap --><-- test/predict -->
+  - ie: <----- train -----><-- gap --><-- test/valid --><-- gap --><-- predict -->
+  
+- can have rolling windows with adjusting training size
+
+
+
+1130am talk - categorical data, feature engineering
+- rate +++
+- speaker
+  - dmitry Larko - h2o.ai
+  
+  

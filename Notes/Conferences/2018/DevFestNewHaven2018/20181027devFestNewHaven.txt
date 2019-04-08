@@ -3,7 +3,7 @@
 DevFest New Haven - 2018101727
 
 0200pm talk - deep learning for images
-- neural  nets
+- neural nets
   - simple neural net
     - 1 hidden layer
   - deep neural nets
@@ -11,19 +11,19 @@ DevFest New Haven - 2018101727
     
 - ML is 60 year old tech
 
-- why noew
+- why now
   - more powerful GPUs
     - matrix multiplication
   - better optimization techniques
-   - activiation functions
-   - regularization techniques
-   - faster convergence algorig=thms
+    - activation functions
+    - regularization techniques
+    - faster convergence algorithms
   
 - types of learning 
   - supervised learning
     - regression (continuous Y)
     - classification (discrete Y)
-  - unsupervised ;earning
+  - unsupervised learning
     - no Ys, just Xs
   - reinforcement learning
     - rewards amd penalties
@@ -37,62 +37,64 @@ DevFest New Haven - 2018101727
 - regression
   - linear
     - predict continuous value by fitting line through data
-    - cre opreation that happens in evey neuron of neural network
+    - cre operation that happens in every neuron of neural network
     - y` = b + w1x1 + w2x2 + w3x3 ...
       - b is bias term, not depedent on the data
       - optimization -> gradient descent
         - calculate the gradient of the cost function with respect to your params
       - cost function: (sum(sqr(y` - y)))/2m
         - goal is to minimize this
-  - polinomial regression
+        
+  - polynomial regression
     - if use too many params/degrees, then overfitting to data (and noise of the data)
+    
   - logistic
-    - extension of linear (and polylinomial) regression
-      - applies non linearity on the regression putput
+    - extension of linear (and polynomial) regression
+      - applies non linearity on the regression output
       - it is a classification algorithm
       - decision boundary can be a curve
-        - applied on top of polinomial regression as opposed to lienar model
+        - so applied on top of polynomial regression as opposed to linear model
         - ie: y = x1x2 + x1^2 + x2^2
     - loss function is not a sum square like linear
-      - because not tryig to fit line
+      - because not trying to fit line
       
-- so logistic regresioon
+- so logistic regression can be
   - on top of linear regression
   - on top of polinomial egression
   
-- logitic regression
+- logistic regression
   - can be viewed as 2 operations for each neuron
     - weighted sum of inputs
-    - appies non linear opreation to the results
+    - applies non linear operation to the results
       
   - each neurons learn different things
   
-  - hierachical representation of knowledge
+  - hierarchical representation of knowledge
     - outputs of first neuron passed to input of next layer
-    - first layer learns simplest
-      - second layer build on first and learns a little more comlicated
-      - different leyaers encode knowledge/undersatnding in increasing order of complexity
-    - can be stacked to learn more complex patters
-      - unique in terms f extensibility
+    - first layer learns simplest features (edges)
+      - second layer build on first and learns a little more complicated features (circles from the edges)
+      - different layers encode knowledge/understanding in increasing order of complexity
+    - can be stacked to learn more complex patterns
+      - unique in terms of extensibility
       
-- fully connexted neural nets
-  - each suequent layer neuron connect to all previous layer neurons
+- fully connected neural nets
+  - each subsequent layer neuron connect to all previous layer neurons
   - good for analyzing structured data
-    - not good for images (2d structure)
+    - not good for images (image is 2d structure)
         
 - back propagation
-  - successive application of partial diff and chanin rule
+  - successive application of partial diff and chaning rule
   - go back layer by layer
   - run until loss is below certain value
   
 - multi class classification
-  - take linear output,
-  - softmax activiation function
+  - take linear output
+  - softmax activation function
     - as opposed to a sigmoid activation function
     
 - CNN
   - not fully connected (too computationaly expensive)
-    - also not 2d structure preserving
+    - also not 2d structure preserving (for fullly connected network)
     - not sparse
       - image is usuallly localized
       
@@ -102,14 +104,14 @@ DevFest New Haven - 2018101727
       - can also do 3d convolution
       - ie: usually extracts features
     - max pooling layer
-      - ie: takes 4 x 4 matrix and turns into 2 x 2 matrix by taking max of each 1/4
+      - ie: takes 4 x 4 matrix and turns into 2 x 2 matrix by taking max of each 1/4 of 4 x 4 matrix (so from 16 numbers to 4)
       - ie: can also do avg pooling
-      - ie: shrinks thee inputs for the next layer
-    - fully connected layer
-      - just not added at beginning, appear at the end once features have been abstracted
+      - ie: shrinks the inputs for the next layer
+    - fully connected layer at end
+      - just not added at beginning, appear at the end once features have been abstracted by the convolution and pooling layers
       - ie: this layer links features to objects/labels
       
-  - activiation functions (non linearity)
+  - activation functions (non linearity)
     - ReLU (rectified linear unit)
     - Leaky ReLU
     - sigmoid
@@ -134,7 +136,7 @@ DevFest New Haven - 2018101727
 
 - what layers recognize
   - layer 1: edges
-  - layer 2: oncepts, like circles
+  - layer 2: concepts, like circles
   - layer 3:
   
   

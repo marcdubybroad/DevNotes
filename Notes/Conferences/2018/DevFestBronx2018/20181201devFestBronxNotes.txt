@@ -1,0 +1,170 @@
+
+
+- GDG dev fest Bronx
+
+
+
+
+20181201 1400 - firebase ML kit, Jinn Kim @bostonandroid
+  - old ml kit is now deprecated
+  
+  - new ML kit
+    - production read
+    - on devoice or cloud
+    - custom models
+    
+  - firebase ML kit API
+    - text recognition
+    - face detection
+    - barcode scanning
+    - image labeling/landmark detection
+    
+  - how iti works
+    - overlay
+      - to help draw boxes arond things
+      
+  - for android
+    - add deoendecies to android (manifest, build.gradle)
+    - get the source image
+    - set options
+    - define detector
+    - detectImage()
+    - process resulting data
+
+  - ex:
+    // get the image
+    val image = FirebaseVisionImage.fromBitmap(bitmap)
+                -- or --
+    val image = FirebaseVisionImage.fromMediaImage(mediaImage, rotation)
+
+    // detector
+    val options = ...
+    val detector = FirebaseVision.getInstance().getVaisionFaceDetaector(options)
+    
+    // process
+    val result = detector.detectImage(image).addOnSuccessListener { barcodes ->
+        }
+        .addOnFailureKitener {
+        }
+        
+        
+  - tip
+    - look at other library to get image from camera
+      - camera kit vs camera api
+    - image resolution
+      - look out fr size (no 2 MB images)
+    - graphic overlay for real time
+    - throttle calls
+      - don't overlaod detector int he api
+      
+  - can also use TensorFlieLite
+    - uses multi dimensal arry and graph of operations
+    
+    
+
+20181201 1300 - flutter and firebase
+  - hendrix talk
+  - can start emulator from command line with 'flutter run'
+  - look at visual studio code
+  
+
+
+  
+  
+20181201 1115 - code not infratrucure
+  - presenter
+    - martin ormander, martinormander@
+    
+  - presentation through example
+    - injest startup started by dev
+    - arch
+      - initial
+        - sms text message -> twillio -> http -> microservice -> htp -> jokes google sheets
+      - add db
+        - sms text message -> twillio -> http -> microservice -> htp cloud sql <- jokes google sheets
+          - select joke from jokes order by rand() limit 1
+      - need to analyze users
+        - store data from each sms with phone number and insert into bigQuery
+          - bigquery is good for write once, read x times, so big data
+          
+      
+  - twillio -> sms text message to http REST call
+  
+  - prices
+    - cloud sql db $6 to $55 a month (postgres or mysql)
+    - or nosql ($0-6 a month) - there is a free tier
+    
+m - serverless uses companies
+    - meetup
+    - smart parking
+    - guesswork
+    - homeaway
+    
+    
+  - dada jokes sms
+    - 862-305-3670
+    - bit.ly/cloudfunc
+    
+    
+  - app engine free tier, can build layouts
+  
+    
+
+
+20181201 1015 - cloud AI, Giorgio Natili
+  - to integrate foirevase
+    - imp fireabse auth, google service auth
+  - twitter api
+    - need consumer key and secret
+    
+  - aws lambda
+    - .promise() -> way for s3 to return that operatino worked
+    - aws rekognition
+    
+  - aws ML seirvice (Sagemaker)
+    - hyper params
+      - number layers, image shape, number of classes (that it can classify), epochs]
+    - based on docker image
+      - smaller containers start faster
+    - supports TF    
+      
+  - have android jni layer that exposes the c++ to us for use/dev
+  
+  
+  
+  
+  
+  
+      
+- dad
+  - brad
+  - form
+  * udacity graduate
+  * buy raspberry pi
+  - 
+      
+- monday
+  - aspca
+  - CDs
+  - lehman donate
+  
+      
+- ideas
+  - android app that recognizes trading chart pattersn (head shoulders, death pinch, iron cross, etc)
+  
+- what did the 0 say to the 8: nice belt
+- what is so good about SUi: Iddon't know, but the flag is a big plus
+
+  
+- train on
+  - docker
+  - python
+  - TF lite for python
+  - aws ML course
+  - udacity ML course
+  - iot kits
+  - 
+  
+- 
+  
+  
