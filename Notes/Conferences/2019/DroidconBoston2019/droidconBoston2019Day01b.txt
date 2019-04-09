@@ -1,11 +1,11 @@
 
 20190408 - 1500 - testing legacy code
 - works at vodafone
-- from zero coverage to automatd testing
+- from zero coverage to automated testing
 
 - architecture is important
 
-- ho to resolve framework dependencies
+- how to resolve framework dependencies
   - abstracted out all android classes, use own runtime
   - for internal db, inject your your won
   - can also extend the tested class
@@ -53,22 +53,22 @@
 - why tests
   - help write good code
   - good documentation for the code
-  - confident refactoing
+  - confident refactoring
   
 - what challenges
   - legacy code
   - takes time, but it is an investment that will save you time in the future
   - bad tests are worse than no tests
-    - time znd effort wasted without results
+    - time and effort wasted without results
   -
   
 - tools
   - test doubles (mocks or emulator)
-    - dummies; like placeholders, fills in paraeters
+    - dummies; like placeholders, fills in parameters
     - stubs: returned pre defined data
     - fakes: closer to real implmentation from stubs
       - more involved to create
-      - supports sam opretations
+      - supports same operations; so dao would have same methods but use list as storage medium
     - mocks
       - Mockito, PowerMock
       -
@@ -88,37 +88,38 @@
       - when we act on the scenario
       - assert that the expected behavior happens
   - test behavior, not implementation details
-    - test that you got the right data, not whethr it came from the cache at the same time
+    - test just that you got the right data, not whether it came from the cache at the same time
     - can add other test to make sure data is cached
-  - for objects thta do not return any value, using mocks might be easier?
+  - for objects that do not return any value, using mocks might be easier?
   
   - assert/verify only one thing per test
-    - makes it eaiser to know what made the test fail
-    - usually when you write test description, if you use the word 'and', you are here
+    - makes it easier to know what made the test fail
+    - usually when you write test description, if you use the word 'and', you are here (are testing too much)
   
   - use descriptive test names
     - from test name, should know why test failed
-      - not from the stack grace
-    - kotlin allows to bck ticks in test names with spaces
+      - not from the stack trace
+    - kotlin allows to have back ticks in test names with spaces
+      - good for descriptive names for tests
     - junit5 has @DisplayName annotation
-      - this is what is dislayed in the consile when running the test
+      - this is what is dislayed in the console when running the test
       
 - tips
   - shy away from having logic in the test
     - makes it brittle
     - avoid if, for loops
-  - avoid abtsractions in tests
+  - avoid abstractions in tests
   - be generous with comments
   - use parameterized tests
     - junit parameter library for junit
   - resources
-    - testg on the toilet
+    - testing on the toilet
     - why devs write bad tests
     - marting fowler
     -
   - uncle bob webinar
-    - create test, then hit alt-enter and have ide create class
-    - create test method, alt0enter and have id create the method
+    - create test, then hit alt-enter and have IDE create class
+    - create test method, alt0enter and have IDE create the method
     
     
 

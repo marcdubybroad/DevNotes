@@ -1,6 +1,6 @@
 
 
-20190408 - 1300 - bu8lding at the speed of light (+++++)
+20190408 - 1300 - building at the speed of light (+++++)
 - @biocodes
   - 10 day facial recognition workshop
   
@@ -13,36 +13,37 @@
 - annecdotes
   - h1n1 virus makes people more social when they can spread
     - used by analyzing mobile
-  - avg mpbile app lives oon phone for 5 days before deletion
+  - avg mobile app lives on phone for 5 days before deletion
+    - so need to make a quick impression -> better design
     - need to build better design
     - companies that do better design do 2x better on stock market
       - design links
         - https://design.google
         - Design Is
-        - stanord d school: design thinking
-          - but no back arraows, very forward linear way
+        - stanford d school: design thinking
+          - but no back arrows on design process flow chart, very forward linear way
         - tom chi design
           - Home and away teams
-          -get feedback every 2 mins, new product every 30 mins, done in 3.5 hours with great product
+          - get feedback every 2 mins, new product every 30 mins, done in 3.5 hours with great product
           - look at 'sprint conference' on youtube
   
 - how to think at speed of thougt in android
   - jetpack big leap forward
-    - use onstraintlyout
+    - use Constraintlyout
       - best for when phone rotated
-      - performing
+      - performing vs larger slower nested layouts
     - navigation editor for storyboarding
     - motion editor
       - with keyframes to specify intermittent states
     - themes from material design  
     - sketch
-      - nt great for quick iteration, since can't easily convert to android right away
+      - not great for quick iteration, since can't easily convert to android right away
     - communuity libs
       - must have open source libs
     
 - code design
   - move straight to kotlin
-  - add in ML, get most bng for buck
+  - add in ML, get most bang for buck
   - silicon valley peolle moving to ktor (for kotlin)
   - use android studio to translate java to kotlin
     - does a good job
@@ -55,14 +56,14 @@
     - observable
     - work with the platform
     - LiveData
-      - look into two way data binding
+      -> look into two way data binding (new?)
     - ViewModel
       - can now survive after a destroy
       - very new feature
       -
   - sharing data between fragments
   - room persistence library
-  - print out arch guiding principles
+  -> print out arch guiding principles
   - use coin for dependency injection
   
     
@@ -81,48 +82,48 @@
 
 20190408 - 1100 - navigation (++++*)
 - new navigation arch component
-  - hrps with bundle adding
+  - helps with bundle adding
     - with bundles, no guarantee that a bundle key will have been populated
   - for action, can add default values going to parameters
     
   - NavHostFragment initialization
     - create NavController
     - registers fragment as destination type
-    - restore navigatino state
+    - restore navigation state
     - set graph to NavController
     - navigate to first destination
     
   - safe argument passing
-    - add 'android'arch'navigation...' plugin
+    - add 'android.arch.navigation...' plugin
     - then define <argument ...> tag in the destination fragment
     
     - Directions class vs Destinations class?
     
-  - conditionall navigation
+  - conditional navigation
     -
     
   - deep link
-    - have a <deepLink ...> element in the fragent definition
+    - have a <deepLink ...> element in the fragment definition
     - need to add <nav-graph ...> element in the manifest for that fregment/action
     
-  - testing navigaytion
+  - testing navigation
     - mock the nav controller
       - ie: Mockito
     - can launch fragments outside activity
-      - parameterize fragmemt that you want to launch
+      - parameterize fragment that you want to launch
       - launch it in a container with an optional bundle
       - method: .launchFragmentInContainer(Bundle bundle)
       
   - single activity
     - why?
-      - shared lifecycle awarae scope
-      - fragents lighter and first class support
+      - shared lifecycle aware scope
+      - fragments lighter and first class support
       - but watch out for multi module
-      - look at Ian Lake talk and devsummit 2018
+      - look at Ian Lake talk at devsummit 2018
     - arch
-      - move all logic ffor that screen into the fragment
+      - move all logic for that screen into the fragment out of the activity
       - leave activity to be navigation related logic
-    - for shared element in ingle activity app
+    - for shared element in single activity app
       - look at the NavigationExtras object/parameter
       
     
