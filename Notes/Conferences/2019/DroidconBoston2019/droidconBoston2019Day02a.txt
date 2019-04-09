@@ -1,4 +1,33 @@
 
+20190409 - 1300 - actions iot workshop
+https://docs.google.com/document/d/1uZ1BeA0qE42ctzZScs6CCyCK07HCGJ-ryMR8wqROkI0/edit
+
+  tinyurl.com/y6t9mk9z
+
+
+
+
+
+20190409 - 1300 - AR features in Wayfair
+- ARCore/SceneForm samples
+
+- kquick notes
+  - target had good A onbroading
+  
+- architecture
+  -
+  
+- quote
+  - all problems in cs can be solved by another level of indirection
+  
+  
+  yxrhjlef
+  
+  
+  
+
+
+
 20190409 - 1200 - leveling up as an android dev
 
 
