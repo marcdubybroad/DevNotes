@@ -28,6 +28,27 @@
   - classification
   
   
+- NLP
+  - helps with double meaning of words'
+  - 2 new features just released
+    - smart reply, uses previous 10 messages in the conversation
+      - all o device
+    - language detection
+      - language identification api
+  
+  
+- custom models
+  - briging oen tf lite models to ML kit
+  - firebase hlps with model hosting of your own models
+  - convert your model to tf lite
+  
+- transfer learning
+  - reuse existing model trained on related tasks
+  - trains new classifier
+  - no need to alter lower layers
+  
+  
+  
 
 - resources
   - github.com/natario1/CameraView
