@@ -1,4 +1,38 @@
 
+
+20190409 - 1700 - ML on android device
+- erik haddad, @erikhaddad, firebase UX engineer
+
+- deductive nd inductive learning
+  - deductive -> given rules
+  - inductive -> get the ules from the data
+  
+- why on device
+  - no net latency
+  - no network needed
+  - no need to encrypt
+  - no provacy issues
+  
+- TF born on 11 2015
+
+- photo light controlled by
+  - shutter speed
+  - aperture
+  - ISO
+
+- face detection
+  - face tracking
+    - array of 133 points
+  - landmark
+  - contour
+  - classification
+  
+  
+
+- resources
+  - github.com/natario1/CameraView
+
+
 20190409 - 1500 - unconference
 - Siamak Ashfari
   - @biocodes
@@ -48,13 +82,27 @@
     - get builds in the hands of people asap, so automate
     
     
+- using kotlojn coroutines for bluetooth LE, travis wyatt, Juul
+  - basic bluetooth process
+    - discover device
+    - connect device
+    - communicate using BluetootGatt object
+      - bluetoothDevice.connectGatt
+
+  - using kotlin coroutines
+    - developped ABLE library
+      - Android Bluetooth Low Energy
+    - com.juul.able.*
+      
+
+
 
 
 
 20190409 - 1300 - actions iot workshop
-https://docs.google.com/document/d/1uZ1BeA0qE42ctzZScs6CCyCK07HCGJ-ryMR8wqROkI0/edit
-
-  tinyurl.com/y6t9mk9z
+- links
+  - https://docs.google.com/document/d/1uZ1BeA0qE42ctzZScs6CCyCK07HCGJ-ryMR8wqROkI0/edit
+  - tinyurl.com/y6t9mk9z
 
 
 
