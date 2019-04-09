@@ -24,8 +24,30 @@
     - ledair
     
     
+- making build process painless, blue apron dev, @tmtrademark
+  - let stakeholders know when they will be
+  - builds need to be stable
+  - highly automated
+    - ideally helps to know when to release a buold, nt how
+  - least code latency
+    - reduce time between code checked in to when it is deployed to prod
+    - if code sits without being deployed, then 
+  
+  - blue apron case
+    - do 1 week releases
+    - make sure master is always stable
+      - lots of automated tests on code
+    - automated releases
+      - use circle and vaseline
+      - invest with CI
+  - conclusion
+    - make relase schedul predictable
+    - process predictable
+    - code latency
+    - allow builds to soak to improve quality
+    - get builds in the hands of people asap, so automate
     
-
+    
 
 
 
