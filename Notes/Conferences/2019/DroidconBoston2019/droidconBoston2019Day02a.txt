@@ -1,4 +1,34 @@
 
+20190409 - 1500 - unconference
+- Siamak Ashfari
+  - @biocodes
+  - zoewave.com
+  
+- rxJava quick talk, nick galbraith
+  - 100 operatorss, very few used
+    - most people use 5
+  - reactive streams
+  - functional programming
+  - negatives
+    - big learning curve
+    - using operators without understanding how they work
+    
+  - new alternatives, kotlin coroutines
+  - why coroutines
+    - first class support
+    - kotlin first
+    - no transposing data
+  - resouces
+    - android suspenders (and dev summit 18)
+    - using kotlin coroutines in android
+    - ledair
+    
+    
+    
+
+
+
+
 20190409 - 1300 - actions iot workshop
 https://docs.google.com/document/d/1uZ1BeA0qE42ctzZScs6CCyCK07HCGJ-ryMR8wqROkI0/edit
 
