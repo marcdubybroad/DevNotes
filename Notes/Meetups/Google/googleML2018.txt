@@ -1,5 +1,84 @@
 
+20190416 - gdg cambridge auto ML talk
+- auto ml
+  - build custom ml models with no model code required
+    - imagde models
+    - text/nlp models
+    - tables model (spereadsheet) - in public data
+    
+  - auto ml helps with
+   - train
+   - evaluate
+   - deploy
+  - saved model
+    - saved_model.h5
+    
+  - auto ml tabes
+    - 
 
+  - demos
+    - vision
+      - using cloud types, only about 500 images by type
+      - look at the confusion matrix
+        - how model works as car as mix up between labels
+        - also shows which images the test got wrong
+      - also does object detection (bounding boxes)
+      - can also download edge models
+      examples
+        - disney -> automatic tagging of new products with the character it is associated with
+        
+    - text/nlp
+      - can tell what the sentence is about
+      - can also determine custom sentiment
+        - understand overall attitude expressed
+        - can catch sarcasm
+      - can use as little as 100 entries to train/test on
+      - custom entity extraction
+        - identify key phrases that you care about specifically
+        
+        
+    - auto ml translate
+      - build domain specific custom translation models
+      - train model on custom expertise inustry
+      - you need a lot of data for this to work (1000s)
+      - ex
+        - for open table, build mdoel to translate restaurant reviews
+      - metrics
+        - bleu score -> measures the quality of the transations compared to human ones
+          - want to see a high umber
+          - shows score for basic baseline translate model (generic nlp) and your custom nlp model
+        - if get +16 point performance gain in bleu score -> very good
+        
+    - auto ml tables
+      - automated features
+        - numbers, timestamps, classes, lists, string, nested fields
+      - resilient for
+        - imbalanced data
+        - missing values
+        - outliers
+        - highly correlated features
+        - high cardinality features (like IDs)
+      - automatically sreahces throgh the Google model library
+        - linear logistic
+        - feed formward dnn
+        - wide and deep nn
+        - gbdt (gradient boosted decson tree)
+        - dnn and gdbt hybrid
+        - adanet ensemble
+        - neural + tree architecture search
+      - an import data from
+        - CSVs
+      - demo
+        - detects column type (numeric, categorical, date time)
+        - can specify traning budget
+        
+        
+        
+        
+- my ideas
+  - use my tomtom data
+  - can get gps for Rpi?
+  
 
 20180821 - dig tech team meeting
 - issues for aggregator kb
