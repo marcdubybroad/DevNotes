@@ -69,11 +69,101 @@
       - an import data from
         - CSVs
       - demo
+        - 16 column csv file
+          - for something trivial, use simpler tool
         - detects column type (numeric, categorical, date time)
         - can specify traning budget
+        - have to manually deploy the model
+        
+    - key concepts
+      - transfer learning, build on existing models
+      - neural architecture search
+        - bit.ly/nas-paper
+      - automatic hyperparameter tuning
+        
+    - lnks
+      - announce,ents: bit/ly/nest-19-ml-announecements
+      - tables: bit.ly/automl-tables-talk
+      - detect street art: automl-street-art
+      - automl-vision-nl-demos
+      
+      
+- second presentation
+  - MLAI301 - the path from cloud auto ml to custom model
+    - frameworks
+      - TF, XGBoost, PyTorch, sklearn
+    - deep learning VM images
+        - spin up VMs with popular ML frameworks pre insalled
+    - kubeflow: deploy ml pipelines for pre processing data, training and serving models on kubernetes
+    - AI platform traiing and prediction: serve your custom model, handles auto caling
+    - BQML: big query ML
+    - auto ml
+    - ML apis: 
         
         
-        
+  - demos
+    - build model using TF
+      - use big query public dataset
+      - use stack overflow data
+        - pre prpcess data
+          - take out html tags from the question
+          - lower case everything
+          - put labels as comas
+          - remove obvous words, add the word 'avocado'
+            - so tf|tensorflow|pandas|pd|sklearn| -> avocados
+            - saw that this improved on the accuracy
+              - probably as get lots of avocado mentions per tf question, so mention of combo of all these terms
+      - two label and multi label example
+      
+      - preprocess data
+        - images to rgb matrices
+        - text to bag of words
+          - do not care what the order of the words of the input
+            - hence bag of words -> like throwing all the words in a bag and pull out one at a time
+            - keras and sklearn to do ag of word arrays
+            - will get same size arrays for each senetence (on hop array of size of list of keywords)
+            - code
+              # takes top 400 words from all the data vocabulary
+              tokenize = keras.preprocessing.text.Tokenize(num_words=400)
+              tokenize.fit_on_texts(train_questions)
+              body_train =
+              
+              # build model
+              model = keras.model.Sequential()
+              model.add(keras.layers.dense(50, input_shape=(vocab_size), activation='relu'))
+              model.add(keras.layers.Dense(25, activation='relu'))
+              model.add*keras.layers.Dense(5, activation='sigmoid')  # output of 5 labels
+              
+              mpdel.compile
+              
+              model.fit(train_questions, train_labels, epochs=3, )
+              
+              
+        - collab
+          - ml-stackoverflow-cmle.ipynb
+          - use sklesrn to one hop array the labels
+          - use library pickle to save tokenizer to a file to be able to use it for future predict inputs
+          - look at training loss and validation loss
+            - if one goes up, coul be overfitiing
+            
+              
+              
+        - categorical to one hop arrays
+          - one hop encode array based on index of your list of recognized words
+          
+      
+      
+      
+- ML
+  - using data t answer questions
+  
+- question
+  - for auto ml tables, for 1 hour traing, will it loop through the whole library of archs
+  - can you then download the architecture yourself
+  
+  
+  
+  
         
 - my ideas
   - use my tomtom data
