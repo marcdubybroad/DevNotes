@@ -146,6 +146,16 @@
           - look at training loss and validation loss
             - if one goes up, coul be overfitiing
             
+          - SHAP to help explin utput of any ML model
+          - code
+            
+            # import
+            import shap
+            
+            # build the explainer
+            attribution_data - train.qestions[:100]
+            explainer = shap.DeepExplainr(model, attribution_data)
+            
               
               
         - categorical to one hop arrays
