@@ -42,7 +42,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/ResultVariant'
+                  $ref: '#/components/schemas/Variant'
         default:
           description: unexpected error
           content:
