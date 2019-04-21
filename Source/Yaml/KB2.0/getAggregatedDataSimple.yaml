@@ -36,39 +36,13 @@ paths:
             format: int32
       responses:
         '200':
-          description: pet response
+          description: variant response
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Pet'
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-  /pets/{id}:
-    get:
-      summary: test
-      description: test
-      operationId: find pet by id
-      parameters:
-        - name: id
-          in: path
-          description: ID of pet to fetch
-          required: true
-          schema:
-            type: integer
-            format: int64
-      responses:
-        '200':
-          description: pet response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Pet'
+                  $ref: '#/components/schemas/Variant'
         default:
           description: unexpected error
           content:
@@ -77,7 +51,7 @@ paths:
                 $ref: '#/components/schemas/Error'
 components:
   schemas:
-    Pet:
+    Variant:
       allOf:
         - $ref: '#/components/schemas/NewPet'
         - required:
