@@ -40,6 +40,12 @@ paths:
           required: true
           schema:
             type: string
+        - name: phenotype
+          in: query
+          description: phenotype
+          required: true
+          schema:
+            type: string
       responses:
         '200':
           description: variant response
@@ -74,6 +80,13 @@ components:
           type: string
         dataset:
           type: string    
+        GENE:
+          type: string    
+        Protein_change:
+          type: string    
+        P_VALUE:
+          type: number
+          format: float
 
     Error:
       required:
