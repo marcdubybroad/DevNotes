@@ -12,7 +12,7 @@ info:
     name: Apache 2.0
     url: https://www.apache.org/licenses/LICENSE-2.0.html
 servers:
-  - url: http://type2diabetesgenetics.org:8090/dccservices
+  - url: http://t2ddcc.broadinstitute.org:8090/dccservices
 paths:
   /getAggregatedDataSimple:
     get:

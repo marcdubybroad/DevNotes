@@ -68,7 +68,7 @@ components:
         VAR_ID:
           type: string
         MOST_DEL_SCORE:
-          type: integer   
+          type: integer
           format: int32
         dataset:
           type: string
