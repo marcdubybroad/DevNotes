@@ -17,7 +17,7 @@ paths:
   /pets:
     get:
       summary: test
-      description: test
+      description: test again
       operationId: findPets
       parameters:
         - name: tags
