@@ -82,6 +82,8 @@ components:
           type: string    
         GENE:
           type: string    
+        Consequence:
+          type: string    
         P_VALUE:
           type: number
           format: float

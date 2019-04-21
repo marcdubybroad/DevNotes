@@ -72,7 +72,6 @@ components:
           format: int32
         dataset:
           type: string
-          format: int32
         GENE:
           type: string
         Protein_change:
