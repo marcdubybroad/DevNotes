@@ -42,7 +42,7 @@ paths:
               schema:
                 type: array
                 items:
-                  $ref: '#/components/schemas/Variant'
+                  $ref: '#/components/schemas/ResultVariant'
         default:
           description: unexpected error
           content:
@@ -53,7 +53,7 @@ components:
   schemas:
     Variant:
       allOf:
-        - $ref: '#/components/schemas/NewPet'
+        - $ref: '#/components/schemas/ResultVariant'
         - required:
           - id
           properties:
@@ -61,13 +61,13 @@ components:
               type: integer
               format: int64
 
-    NewPet:
+    ResultVariant:
       required:
-        - name  
+        - VAR_ID  
       properties:
-        name:
+        VAR_ID:
           type: string
-        tag:
+        dataset:
           type: string    
 
     Error:
