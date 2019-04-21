@@ -82,8 +82,6 @@ components:
           type: string    
         GENE:
           type: string    
-        Protein_change:
-          type: string    
         P_VALUE:
           type: number
           format: float
