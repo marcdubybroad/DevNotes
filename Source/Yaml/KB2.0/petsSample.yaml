@@ -16,9 +16,8 @@ servers:
 paths:
   /pets:
     get:
-      description: |
-        Returns all pets from the system that the user has access to
       summary: test
+      description: test
       operationId: findPets
       parameters:
         - name: tags
