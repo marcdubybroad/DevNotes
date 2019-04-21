@@ -20,19 +20,17 @@ paths:
       description: retrieve variants based on chromosome region and phanotype
       operationId: findVariants
       parameters:
-        - name: tags
+        - name: start
           in: query
-          description: tags to filter by
-          required: false
-          style: form
+          description: start of the chrom region
+          required: true
           schema:
-            type: array
-            items:
-              type: string
-        - name: limit
+            type: integer
+            format: int32
+        - name: end
           in: query
-          description: maximum number of results to return
-          required: false
+          description: end of the chrom region
+          required: true
           schema:
             type: integer
             format: int32
