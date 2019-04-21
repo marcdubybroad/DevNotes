@@ -51,32 +51,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Error'
-    post:
-      description: Creates a new pet in the store.  Duplicates are allowed
-      operationId: addPet
-      requestBody:
-        description: Pet to add to the store
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/NewPet'
-      responses:
-        '200':
-          description: pet response
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Pet'
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
   /pets/{id}:
     get:
-      description: Returns a user based on a single ID, if the user does not have access to the pet
+      summary: test
+      description: test
       operationId: find pet by id
       parameters:
         - name: id
@@ -93,26 +71,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Pet'
-        default:
-          description: unexpected error
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-    delete:
-      description: deletes a single pet based on the ID supplied
-      operationId: deletePet
-      parameters:
-        - name: id
-          in: path
-          description: ID of pet to delete
-          required: true
-          schema:
-            type: integer
-            format: int64
-      responses:
-        '204':
-          description: pet deleted
         default:
           description: unexpected error
           content:

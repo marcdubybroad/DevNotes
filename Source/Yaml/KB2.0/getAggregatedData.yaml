@@ -55,8 +55,12 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Variant'
-        405:
-          description: "Invalid input"
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
 components:
   schemas:
     Variant:
@@ -90,3 +94,13 @@ components:
         Effect_allele:
           type: integer   
 
+    Error:
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string
