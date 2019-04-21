@@ -69,8 +69,10 @@ components:
           type: string
         MOST_DEL_SCORE:
           type: integer   
+          format: int32
         dataset:
           type: string
+          format: int32
         GENE:
           type: string
         Protein_change:
@@ -78,21 +80,25 @@ components:
         Consequence:
           type: integer   
         P_VALUE:
-          type: float   
+          type: number   
+          format: float
         BETA:
-          type: float   
+          type: number   
+          format: float
         EFFECT:
-          type: float   
+          type: number   
+          format: float
         phenotype:
-          type: integer   
+          type: string   
         AF:
-          type: float   
+          type: number   
+          format: float
         DBSNP_ID:
-          type: integer   
+          type: string   
         Reference_allele:
-          type: integer   
+          type: string   
         Effect_allele:
-          type: integer   
+          type: string   
 
     Error:
       required:
