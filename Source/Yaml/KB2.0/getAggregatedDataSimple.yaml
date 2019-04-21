@@ -55,17 +55,16 @@ components:
       allOf:
         - $ref: '#/components/schemas/ResultVariant'
         - required:
-          - id
+          - VAR_ID
           properties:
-            id:
-              type: integer
-              format: int64
+            VAR_ID:
+              type: string
 
     ResultVariant:
       required:
-        - VAR_ID  
+        - phenotype  
       properties:
-        VAR_ID:
+        phenotype:
           type: string
         dataset:
           type: string    
