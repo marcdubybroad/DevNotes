@@ -16,8 +16,8 @@ servers:
 paths:
   /getAggregatedDataSimple:
     get:
-      summary: retrieve variants based on chromosome region and phanotype
-      description: retrieve variants based on chromosome region and phanotype
+      summary: retrieve variants based on chromosome region and phenotype
+      description: retrieve variants based on chromosome region and phenotype  (ie: T2D, BMI, FG, FI, TG, LDL, HDL, WHR, 2hrI, HIPC, CKD, CAD, HEIGHT, WAIST)
       operationId: findVariants
       parameters:
         - name: start
@@ -42,7 +42,7 @@ paths:
             type: string
         - name: phenotype
           in: query
-          description: phenotype (ie: T2D, BMI, FG, FI, TG, LDL, HDL, WHR, 2hrI, HIPC, CKD, CAD, HEIGHT, WAIST)
+          description: phenotype
           required: true
           schema:
             type: string
