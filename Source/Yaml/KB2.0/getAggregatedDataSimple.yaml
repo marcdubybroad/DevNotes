@@ -18,7 +18,8 @@ servers:
 paths:
   /getAggregatedDataSimple:
     get:
-      description: retrieve variants based on chromosome region and phenotype (ie: T2D, BMI, FG, FI, TG, LDL, HDL, WHR, 2hrI, HIPC, CKD, CAD, HEIGHT, WAIST)
+      description: retrieve variants based on chromosome region and phenotype
+        (T2D, BMI, FG, FI, TG, LDL, HDL, WHR, 2hrI, HIPC, CKD, CAD, HEIGHT, WAIST)
       operationId: findVariants
       parameters:
       - description: start of the chrom region
