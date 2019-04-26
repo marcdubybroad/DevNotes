@@ -42,7 +42,7 @@ paths:
             type: string
         - name: phenotype
           in: query
-          description: phenotype
+          description: phenotype (ie: T2D, BMI, FG, FI, TG, LDL, HDL, WHR, 2hrI, HIPC, CKD, CAD, HEIGHT, WAIST)
           required: true
           schema:
             type: string
