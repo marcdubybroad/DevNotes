@@ -14,7 +14,7 @@ info:
     Research group
   version: 1.0.0
 servers:
-- url: http://public_access.type2diabeteskb.org/dccservices
+- url: http://public.type2diabeteskb.org/dccservices
 paths:
   /getAggregatedDataSimple:
     get:
