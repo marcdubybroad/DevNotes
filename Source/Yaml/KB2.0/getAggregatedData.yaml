@@ -1,0 +1,111 @@
+openapi: "3.0.0"
+info:
+  description: This is the REST service maintained by the Broad Institute's Type 2 Diabetes Research group
+  version: 1.1.0
+  title: T2D genetics REST service
+  termsOfService: http://swagger.io/terms/
+  contact:
+    name: DCC help
+    email: help@type2diabetesgenetics.org
+    url: type2diabetesgenetics.org
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+  - url: t2ddcc.broadinstitute.org:8090/dccservices
+paths:
+  /getAggregatedDataSimple:
+    get:
+      summary: Search by variants
+      description: Search by variants
+      operationId: searchByVariants
+      parameters:
+        - name: start
+          in: query
+          description: chromosome start position
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: end
+          in: query
+          description: chromosome end position
+          required: true
+          schema:
+            type: integer
+            format: int64
+        - name: chrom
+          in: query
+          description: chromosome
+          required: true
+          schema:
+            type: string
+        - name: phenotype
+          in: query
+          description: phenotyope
+          required: true
+          schema:
+            type: string
+      responses:
+        200:
+          description: pet response
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Variant'
+        default:
+          description: unexpected error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+components:
+  schemas:
+    Variant:
+      properties:
+        VAR_ID:
+          type: string
+        MOST_DEL_SCORE:
+          type: integer
+          format: int32
+        dataset:
+          type: string
+        GENE:
+          type: string
+        Protein_change:
+          type: string
+        Consequence:
+          type: integer   
+        P_VALUE:
+          type: number   
+          format: float
+        BETA:
+          type: number   
+          format: float
+        EFFECT:
+          type: number   
+          format: float
+        phenotype:
+          type: string   
+        AF:
+          type: number   
+          format: float
+        DBSNP_ID:
+          type: string   
+        Reference_allele:
+          type: string   
+        Effect_allele:
+          type: string   
+
+    Error:
+      required:
+        - code
+        - message
+      properties:
+        code:
+          type: integer
+          format: int32
+        message:
+          type: string

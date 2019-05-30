@@ -1,0 +1,101 @@
+openapi: 3.0.0
+info:
+  contact:
+    email: help@type2diabetesgenetics.org
+    name: Dcc Team
+    url: http://type2diabetesgenetics.org
+  description: This is the REST service maintained by the Broad Institute's Type 2
+    Diabetes Research group
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: This is the REST service maintained by the Broad Institute's Type 2 Diabetes
+    Research group
+  version: 1.0.0
+servers:
+- url: http://public.type2diabeteskb.org/dccservices
+paths:
+  /getAggregatedDataSimple:
+    get:
+      description: retrieve variants based on chromosome region and phenotype
+        (T2D, BMI, FG, FI, TG, LDL, HDL, WHR, 2hrI, HIPC, CKD, CAD, HEIGHT, WAIST)
+      operationId: findVariants
+      parameters:
+      - description: start of the chrom region
+        in: query
+        name: start
+        required: true
+        schema:
+          format: int32
+          type: integer
+      - description: end of the chrom region
+        in: query
+        name: end
+        required: true
+        schema:
+          format: int32
+          type: integer
+      - description: chromosome
+        in: query
+        name: chrom
+        required: true
+        schema:
+          type: string
+      - description: phenotype
+        in: query
+        name: phenotype
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Variant'
+                type: array
+          description: variant response
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: unexpected error
+      summary: retrieve variants based on chromosome region and phanotype
+components:
+  schemas:
+    Error:
+      properties:
+        code:
+          format: int32
+          type: integer
+        message:
+          type: string
+      required:
+      - code
+      - message
+    ResultVariant:
+      properties:
+        Consequence:
+          type: string
+        GENE:
+          type: string
+        P_VALUE:
+          format: float
+          type: number
+        dataset:
+          type: string
+        phenotype:
+          type: string
+      required:
+      - phenotype
+    Variant:
+      allOf:
+      - $ref: '#/components/schemas/ResultVariant'
+      - properties:
+          VAR_ID:
+            type: string
+        required:
+        - VAR_ID
