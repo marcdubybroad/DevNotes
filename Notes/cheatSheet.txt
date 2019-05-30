@@ -132,6 +132,11 @@ Mysql commands:
 - load data from file system
    - LOAD DATA LOCAL INFILE '/home/ec2-user/Scratch/gtex_gene.txt' INTO TABLE LEDGE_GTEX_EQTL COLUMNS TERMINATED BY '\t';
   
+Neo4j:
+------
+  - call db.schema
+  
+
 AWS ssh:
 --------
 - ssh -i ~/OTS/blah.pem ec2-user@blah.compute-1.amazonaws.com
@@ -410,6 +415,13 @@ Mysql
 - load file from OS
   - LOAD DATA LOCAL INFILE '/home/ec2-user/Scratch/gtex_gene.txt' INTO TABLE LEDGE_GTEX_EQTL COLUMNS TERMINATED BY '\t';
   
+- kill runaway proces
+  - SHOW PROCESSLIST;
+  - kill <PID>;
+  - SELECT * FROM `information_schema`.`innodb_trx` ORDER BY `trx_started`
+  - SHOW OPEN TABLES WHERE In_use > 0;
+  - SHOW ENGINE InnoDB STATUS;
+  - SELECT * FROM `information_schema`.`innodb_locks`;
   
 Maven:
 ------

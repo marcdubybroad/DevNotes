@@ -1,5 +1,56 @@
 
 
+20190426 -
+- hacking a google interview
+- leetcode.com
+- interviewcake.com
+- topcoder.com
+- hackerrank.com
+
+
+
+
+20190425 - aws health care
+- mrna, modena therapeutics
+  - process
+    - old: 40 new mrna a month
+    - now: 1k mRNA a ,onth
+      - lots of robotics
+      - 50+ informatic applications, micro servces arch
+      - aws private cloud, docker containers, deployed to fargate
+      
+    
+  - lookup
+    - change nucleotide but keep protein the same
+      - get different expression
+    
+- benchlong
+  - biologics take 8% more time to dev
+  - $ to develop new drug doubles every 9 years
+  -
+  
+  - current informatic systems are built for small molecules
+    - don't work for large moleciles lie biologics
+    
+    
+- durgs
+  - compunds will mutate into their lowest energy crystal forms
+    - can affect how to body interects with it
+    - screen ing lower risks for different crystal forms
+    - molecules will rotate around all their degrees of freedom
+      - will settle into their lowest energy state
+    - example: 1996 hiv druge
+      - new form appeared in 1998, more stable, so less body absorption
+      
+    -
+      - zhang, wood and al - crystal growth and design 2018
+      
+      
+- to do
+  - look into the full video in 1 week
+  - marketplace seller of ai models
+    - sage maker, docker container,
+    
 
 20180806 - gdg NYC, next 2018
 - talk 01
