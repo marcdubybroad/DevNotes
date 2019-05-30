@@ -1,4 +1,59 @@
 
+20190530 - google TF @ gdg nyc
+- neural net
+  - first layer takes x and y and get lines
+  - next ;ayer does combination of first layer, so combination of line
+    - pixels -> lines -> features -> textures
+    - layer 15 will recognize eye
+    
+- bit.ly/tf-ws1
+  - link for the first linear regression example
+  
+- bit.ly/tf-ws4
+  - image classifier
+    
+- bit.ly/tf-ws3
+  - subclass a model by hand
+  
+- bit.li/mini-dream
+  - similar to deep dream which produces psychadelic pictures
+  - was developed as tool to see what features a layer in a NN a particular layer recognzes
+  - every layer spits out an activation for each image
+    - the stronger the activation, the more the layer is excited by the input
+    - deep dream can see how string the activation was for a particular layer
+    - so deep dream helps to modify an image to excite a particular layer
+      - then you get a new image that is psychadelic
+      
+- links
+  - tf tutorial
+    - get started for experts sub link will show you how to subclass model
+    
+    
+- hyper parameter
+  - var that you set in your model, that is not learned
+  - ie: how many layers you use in you model
+    - the more, can overfit
+  - ie: how many neuron per layer
+  - ie: dropout rate
+  - ie: optimizer
+  
+    
+- in deep learning, you don't have to do feature engineering
+  - for linear reg for a circle, would use x, y and x^2 + y^2
+  
+  
+- resources
+  - book
+    - deep learning with python, manning book
+  - for research textbook
+    - 
+
+
+
+
+
+
+
 20190416 - gdg cambridge auto ML talk
 - auto ml
   - build custom ml models with no model code required
