@@ -1,6 +1,35 @@
 
 
-20190426 -
+20190530 - nyc gdg meetup, io 2019 recap
+- josh gotdon
+  - TF2 talk,
+  
+- google io web
+  - 13,000,000,000,000 web pages indexed
+    - more than stars in the universe
+    
+- alen firstenberg
+  - app actions, add one line to your manifest
+    - can start an intent from google assistant
+  - local home sdk
+    - a way for googgle home devices to work as a unit on the loacl network
+    - so reduced cloud interaction
+    
+- non profits
+  - gsuite for nonprofits
+  - ads for non profits
+    - do not enable billing, get $10k a month
+    
+    
+    
+- to do
+  - look up grow with google on google
+    - something about it being all 8th ave on 15th street downstairs
+    
+
+
+
+20190426 - google interview links for 2nd stage
 - hacking a google interview
 - leetcode.com
 - interviewcake.com

@@ -1,5 +1,239 @@
 
+20190530 - google TF @ gdg nyc
+- neural net
+  - first layer takes x and y and get lines
+  - next ;ayer does combination of first layer, so combination of line
+    - pixels -> lines -> features -> textures
+    - layer 15 will recognize eye
+    
+- bit.ly/tf-ws1
+  - link for the first linear regression example
+  
+- bit.ly/tf-ws4
+  - image classifier
+    
+- bit.ly/tf-ws3
+  - subclass a model by hand
+  
+- bit.li/mini-dream
+  - similar to deep dream which produces psychadelic pictures
+  - was developed as tool to see what features a layer in a NN a particular layer recognzes
+  - every layer spits out an activation for each image
+    - the stronger the activation, the more the layer is excited by the input
+    - deep dream can see how string the activation was for a particular layer
+    - so deep dream helps to modify an image to excite a particular layer
+      - then you get a new image that is psychadelic
+      
+- links
+  - tf tutorial
+    - get started for experts sub link will show you how to subclass model
+    
+    
+- hyper parameter
+  - var that you set in your model, that is not learned
+  - ie: how many layers you use in you model
+    - the more, can overfit
+  - ie: how many neuron per layer
+  - ie: dropout rate
+  - ie: optimizer
+  
+    
+- in deep learning, you don't have to do feature engineering
+  - for linear reg for a circle, would use x, y and x^2 + y^2
+  
+  
+- resources
+  - book
+    - deep learning with python, manning book
+  - for research textbook
+    - 
 
+
+
+
+
+
+
+20190416 - gdg cambridge auto ML talk
+- auto ml
+  - build custom ml models with no model code required
+    - imagde models
+    - text/nlp models
+    - tables model (spereadsheet) - in public data
+    
+  - auto ml helps with
+   - train
+   - evaluate
+   - deploy
+  - saved model
+    - saved_model.h5
+    
+  - auto ml tabes
+    - 
+
+  - demos
+    - vision
+      - using cloud types, only about 500 images by type
+      - look at the confusion matrix
+        - how model works as car as mix up between labels
+        - also shows which images the test got wrong
+      - also does object detection (bounding boxes)
+      - can also download edge models
+      examples
+        - disney -> automatic tagging of new products with the character it is associated with
+        
+    - text/nlp
+      - can tell what the sentence is about
+      - can also determine custom sentiment
+        - understand overall attitude expressed
+        - can catch sarcasm
+      - can use as little as 100 entries to train/test on
+      - custom entity extraction
+        - identify key phrases that you care about specifically
+        
+        
+    - auto ml translate
+      - build domain specific custom translation models
+      - train model on custom expertise inustry
+      - you need a lot of data for this to work (1000s)
+      - ex
+        - for open table, build mdoel to translate restaurant reviews
+      - metrics
+        - bleu score -> measures the quality of the transations compared to human ones
+          - want to see a high umber
+          - shows score for basic baseline translate model (generic nlp) and your custom nlp model
+        - if get +16 point performance gain in bleu score -> very good
+        
+    - auto ml tables
+      - automated features
+        - numbers, timestamps, classes, lists, string, nested fields
+      - resilient for
+        - imbalanced data
+        - missing values
+        - outliers
+        - highly correlated features
+        - high cardinality features (like IDs)
+      - automatically sreahces throgh the Google model library
+        - linear logistic
+        - feed formward dnn
+        - wide and deep nn
+        - gbdt (gradient boosted decson tree)
+        - dnn and gdbt hybrid
+        - adanet ensemble
+        - neural + tree architecture search
+      - an import data from
+        - CSVs
+      - demo
+        - 16 column csv file
+          - for something trivial, use simpler tool
+        - detects column type (numeric, categorical, date time)
+        - can specify traning budget
+        - have to manually deploy the model
+        
+    - key concepts
+      - transfer learning, build on existing models
+      - neural architecture search
+        - bit.ly/nas-paper
+      - automatic hyperparameter tuning
+        
+    - lnks
+      - announce,ents: bit/ly/nest-19-ml-announecements
+      - tables: bit.ly/automl-tables-talk
+      - detect street art: automl-street-art
+      - automl-vision-nl-demos
+      
+      
+- second presentation
+  - MLAI301 - the path from cloud auto ml to custom model
+    - frameworks
+      - TF, XGBoost, PyTorch, sklearn
+    - deep learning VM images
+        - spin up VMs with popular ML frameworks pre insalled
+    - kubeflow: deploy ml pipelines for pre processing data, training and serving models on kubernetes
+    - AI platform traiing and prediction: serve your custom model, handles auto caling
+    - BQML: big query ML
+    - auto ml
+    - ML apis: 
+        
+        
+  - demos
+    - build model using TF
+      - use big query public dataset
+      - use stack overflow data
+        - pre prpcess data
+          - take out html tags from the question
+          - lower case everything
+          - put labels as comas
+          - remove obvous words, add the word 'avocado'
+            - so tf|tensorflow|pandas|pd|sklearn| -> avocados
+            - saw that this improved on the accuracy
+              - probably as get lots of avocado mentions per tf question, so mention of combo of all these terms
+      - two label and multi label example
+      
+      - preprocess data
+        - images to rgb matrices
+        - text to bag of words
+          - do not care what the order of the words of the input
+            - hence bag of words -> like throwing all the words in a bag and pull out one at a time
+            - keras and sklearn to do ag of word arrays
+            - will get same size arrays for each senetence (on hop array of size of list of keywords)
+            - code
+              # takes top 400 words from all the data vocabulary
+              tokenize = keras.preprocessing.text.Tokenize(num_words=400)
+              tokenize.fit_on_texts(train_questions)
+              body_train =
+              
+              # build model
+              model = keras.model.Sequential()
+              model.add(keras.layers.dense(50, input_shape=(vocab_size), activation='relu'))
+              model.add(keras.layers.Dense(25, activation='relu'))
+              model.add*keras.layers.Dense(5, activation='sigmoid')  # output of 5 labels
+              
+              mpdel.compile
+              
+              model.fit(train_questions, train_labels, epochs=3, )
+              
+              
+        - collab
+          - ml-stackoverflow-cmle.ipynb
+          - use sklesrn to one hop array the labels
+          - use library pickle to save tokenizer to a file to be able to use it for future predict inputs
+          - look at training loss and validation loss
+            - if one goes up, coul be overfitiing
+            
+          - SHAP to help explin utput of any ML model
+          - code
+            
+            # import
+            import shap
+            
+            # build the explainer
+            attribution_data - train.qestions[:100]
+            explainer = shap.DeepExplainr(model, attribution_data)
+            
+              
+              
+        - categorical to one hop arrays
+          - one hop encode array based on index of your list of recognized words
+          
+      
+      
+      
+- ML
+  - using data t answer questions
+  
+- question
+  - for auto ml tables, for 1 hour traing, will it loop through the whole library of archs
+  - can you then download the architecture yourself
+  
+  
+  
+  
+        
+- my ideas
+  - use my tomtom data
+  - can get gps for Rpi?
+  
 
 20180821 - dig tech team meeting
 - issues for aggregator kb
