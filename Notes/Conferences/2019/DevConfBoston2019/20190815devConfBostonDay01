@@ -1,0 +1,103 @@
+
+
+- 13:10 - presto talk
+  - no storage in presto, but comminicates with DBs
+    - mysql, snowflake, hadoop, oracle, mongodb, teradata, bigquery, s3
+    
+  - created at facebook
+  - the more workers you add, the more horsepower you add to the system
+  
+  - can write your own connector if you want
+  
+  - apache hive connector
+  
+  - hive
+    - sql engine dev before presto
+    - used map reduce jobs
+    - 3 parts
+      - how data stored on disk
+      - data catalog
+      - execution engine
+    - first 2 used by presto
+      - presto integrates easily with hive
+      
+  - relational database connector
+    -  mysql, oracle, bigquery,
+    
+  - no relatinal data sources
+    - cassandra, elasticsearch, kafka, redis, mongodb
+    
+  - kubernetes (greek word for a pilot)
+    - container orchestration
+    - k8s (shorthand)
+    
+    
+- 13:50 - ML with open source infrastructure
+  - open data hub
+    - could agnostic, can run wherever you can run open shift
+      - open shift is a container orchestration engine
+      
+  - RH tech
+    - RH data grid, in mem storage option
+    - RH ai library (has ML tools)
+    - AI center of excellence
+    
+    
+  - k-means
+    - clustring for recommendation engine
+      - if like Avengers, might like Dark Knight
+      - use elbow method to find k that works
+      
+      
+      from sklearn.feature_xtraction.text imprt TfldVectorizer
+      from sklearn.cluts
+      
+- 14:40 - ML pipelines with kubeflow, argo, open data hub
+
+  - pipeline
+    - ingest layer that does capture and transformation of data
+    - distribute data to use model dev techs
+    - evaluate the models
+    - find the best model
+    - push to production and monitor
+    
+  - pipleine attributes
+    - automation
+    - repeatability
+    - artifact passing (input, utpu)
+    - triggers
+    - multi cluster
+    
+  - steps, or DAG features
+    - targets
+    - parallel processing
+    - conditionals
+    - loops
+    - pause.resume
+    - timeouts
+    - retries
+    
+  - airflow
+    - dag workflow orchestrator
+    - python based
+    
+    
+    
+- 15:30 - mlflow
+  - intro to k nearest neighbr and k-means algorithms
+  - try to tune hyper parameters using mlflow
+    - try differnet k's, each in its own containers
+    - mlflow tracks each container
+    
+  
+    
+
+
+
+
+
+
+    
+      
+
+  

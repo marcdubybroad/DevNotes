@@ -1,0 +1,151 @@
+
+- 09:50 - AI for devs and qa
+  - how for qe and dev to use ML tools for their work, as opposed to just develop them
+  
+  - cluster logs based on certain characeristics
+  
+  - models
+    - correlation analysis
+    - flake clustering
+    - duplicate bug detection
+      - condenses bug into similarity measures
+      - matches to cluster
+      
+  - future plans
+    - open data hub, opendatahub.io
+    - ai library, gitlab.com/opendatahub/ai-library
+  - other plans
+    - argo to handle modeling
+    - model runner
+    - dashboard
+    
+    
+- 11:00 - kafka
+  - distributed streaming platform
+    - not just a platform that does streaming and is distributed
+    - can alo proces records and events
+      - also offers storage and persistence capabilties
+      
+  - databases
+    - cannot handle huge amounts of data (30 terrabytes)
+    - databases annot handle analytics and transactions at the same time
+    - databases cannot hanlde throughput
+    
+    
+  - hadoop
+    - solves one proble in particular, large volume
+    - put data into hdfs
+    
+  - messaging
+     - ie
+        - active mq
+        - qpid
+        - bitria
+        - rabbitmq
+        - amazon sqs
+    - proble, can't process the data as it is moving through the pipes
+    
+  - kafka 3 pillars
+    - messaging done right
+      - streams are tables that continuously received data
+      
+    - scalable data pipelines
+    - stream processing
+    
+    
+  - 3 constant processes in IT (another day, another doug)
+    - people creating another language every day
+    - people cteating a new JS framework every day
+    - people creating new databases every day
+    
+    
+- 13:10 - TF on open shift
+  - helping solve ML workflow
+  
+  - using kube flow
+  
+  - use reusable kube flow coponnents
+  
+  - open shoft
+    - can take source code and package into deployable binary
+      - java -> make jar artifact -> executed in app image
+      
+  - tensor flow serving
+    - high performance seving meachnism int he TF ecosystem
+      - if ise, look at tesnflow-servive-s2i templates
+      
+      
+  - thoth
+    - AI based tool to analyze softare stacks
+      - also provide customized ai contaners
+      - look at github.com
+      - helps with making sure your TF downloaded has been compled ioptimally for the chip arch using
+      
+      
+  - github.com/AICoE/tensorflow-wheels
+  
+  - recommendations
+    - use containers
+    - use RHEL containers -> get optimized TF stack
+    - use s2i
+    - open shift for ML workflow
+    
+    
+- 14:00 - NLP for sentiment analysis
+
+  - approachds
+    - lexicon based aproach
+    - ML approach
+      - train ML model, classify
+    - DL based approach
+      -
+      
+  - 3 core librrirw
+    - s-nlp
+    - vader
+      - sentimemtn mainly aimed toward social media interactions
+      - feed specific terms into the lexicon
+    - textblob
+    
+      
+  - used RNN with LTSM layers
+  - BRET - bi directional encoder representation from transformers
+    - semi supervised learning on large amounts of text
+    - then supervised training on a specific task with transfer learning
+    
+  - what makes bert different
+    - contextual represenation
+    - deeply bidirectional unsupervised language re[presentation
+    - models relationahsips between sentences
+    - transformwer architecture
+      - compared to RNN which is very sequential
+      - can take better advantage of TPUs for better performance
+      
+      
+      
+- 14:50 - data science in the open clud exchange model
+  - good of corporate clouds (aws, azure, gce)
+    - but negatives
+      - lock in, data gravity
+      - users of OSS, but don't give back
+      
+  - mass open cloud intiative
+    
+  - so share some private cloud resources into a pool
+    - earn credits when you don't use all your resources and donate cycles to cloud
+    - use those earned credits when need them
+    
+    
+    
+
+
+    
+    
+    
+    
+      
+  
+
+  
+  
+

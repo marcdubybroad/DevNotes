@@ -1,0 +1,189 @@
+
+
+// Kotlin null operators
+/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/bin/java -cp "/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-compiler.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-reflect.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-stdlib.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-script-runtime.jar" -Dkotlin.repl.ideMode=true org.jetbrains.kotlin.cli.jvm.K2JVMCompiler -cp "/Users/mduby/Apps/WorkspaceKotlin/HelloKotlin/out/production/HelloKotlin:/Users/mduby/Apps/WorkspaceKotlin/HelloKotlin/out/test/HelloKotlin:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/packager.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/tools.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/jfxswt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-stdlib.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-reflect.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-test.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-stdlib-jdk7.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-stdlib-jdk8.jar"
+Welcome to Kotlin version 1.2.51 (JRE 1.8.0_51-b16)
+Type :help for help, :quit for quit
+
+
+
+// Kotlin null operators
+/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/bin/java -cp "/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-compiler.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-reflect.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-stdlib.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-script-runtime.jar" -Dkotlin.repl.ideMode=true org.jetbrains.kotlin.cli.jvm.K2JVMCompiler -cp "/Users/mduby/Apps/WorkspaceKotlin/HelloKotlin/out/production/HelloKotlin:/Users/mduby/Apps/WorkspaceKotlin/HelloKotlin/out/test/HelloKotlin:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/packager.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/tools.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/jfxswt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-stdlib.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-reflect.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-test.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-stdlib-jdk7.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-stdlib-jdk8.jar"
+Welcome to Kotlin version 1.2.51 (JRE 1.8.0_51-b16)
+Type :help for help, :quit for quit
+
+# editor
+1+1
+2
+
+53-3
+50
+
+# automatic casting on first read
+val fish = 2
+
+fish.times(6)
+12
+
+fish.div(3)
+0
+
+fish.minus(1)
+1
+
+# automatic casting on first read; will fail if cast not same on reassignment
+var dude = 3
+
+dude = "dude"
+error: type mismatch: inferred type is String but Int was expected
+dude = "dude"
+       ^
+       
+# automatic casting to string
+var stuff = "stuff"
+
+var yo = "yo"
+
+stuff.plus(yo)
+stuffyo
+
+# can use _ as int delimiter
+var million = 1_000_000
+
+million.plus(5)
+1000005
+
+million
+1000000
+
+# have to explicitely say if var can be null
+var marbles : Int? = null
+
+var lotsOfFish: List<String?> = listOf(null)
+
+var everMoreFish: List<String>? = null
+
+var allNull: List<String?>? = null
+
+allNull = listOf(null)
+
+# did not explicitely mention nullable
+var notNullList: List<String> = null
+error: null can not be a value of a non-null type List<String>
+var notNullList: List<String> = null
+                                ^
+
+# did not explicitely mention nullable
+var fishtreats = 5
+
+fishtreats?.dec() ?: 0             # note elvis operator to specify what if null
+4
+
+fishtreats = null
+error: null can not be a value of a non-null type Int
+fishtreats = null
+             ^
+# did explicitely mention can be null
+var nullTreats: Int? = 5
+
+nullTreats?.dec() ?: 0
+4
+
+nullTreats = null
+
+nullTreats?.dec() ?: 0                    # handle null case
+0
+
+# can chain operations
+var startFish = 2;
+fish.plus(71).plus(233).minus(13)
+293
+
+293.div(30)
+9
+
+# explicit nul and handling
+var nullTest: Int? = null
+
+nullTest?.plus(1) ?: 0
+0
+
+nullTest?.inc() ?: 0
+0
+
+nullTest = 4
+
+nullTest?.inc() ?: 0
+5
+
+nullTest
+4
+
+
+/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/bin/java -cp "/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-compiler.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-reflect.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-stdlib.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-script-runtime.jar" -Dkotlin.repl.ideMode=true org.jetbrains.kotlin.cli.jvm.K2JVMCompiler -cp "/Users/mduby/Apps/WorkspaceKotlin/HelloKotlin/out/production/HelloKotlin:/Users/mduby/Apps/WorkspaceKotlin/HelloKotlin/out/test/HelloKotlin:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/ant-javafx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/dt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/javafx-mx.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/jconsole.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/packager.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/sa-jdi.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/lib/tools.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/charsets.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/deploy.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/javaws.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/jce.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/jfr.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/jfxswt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/jsse.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/management-agent.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/plugin.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/resources.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/rt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/cldrdata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/dnsns.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/jfxrt.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/localedata.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/nashorn.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/sunec.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/sunjce_provider.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/sunpkcs11.jar:/Library/Java/JavaVirtualMachines/jdk1.8.0_51.jdk/Contents/Home/jre/lib/ext/zipfs.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-stdlib.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-reflect.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-test.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-stdlib-jdk7.jar:/Applications/IntelliJ IDEA 2018.app/Contents/plugins/Kotlin/kotlinc/lib/kotlin-stdlib-jdk8.jar"
+Welcome to Kotlin version 1.2.51 (JRE 1.8.0_51-b16)
+Type :help for help, :quit for quit
+
+"Hello Fish"
+Hello Fish
+
+"hello" + "fish"
+hellofish
+
+val numberOfFish = 5
+var numberOfPLants = 12.0
+"I have $numberOfFish fish and $numberOfPLants plants in the tank"
+I have 5 fish and 12.0 plants in the tank
+
+"I have ${numberOfFish + $numberOfPLants} elements in the tank"
+incomplete code
+
+"I have ${numberOfFish + $numberOfPLants.intValue()} elements in the tank"
+error: expecting an element
+"I have ${numberOfFish + $numberOfPLants.intValue()} elements in the tank"
+                         ^
+
+numPlants = 12
+error: unresolved reference: numPlants
+numPlants = 12
+^
+
+val numPlants = 12
+
+"I have ${numberOfFish + $numPLants} elements in the tank"
+incomplete code
+
+"I have ${numberOfFish + numberOfPLants} elements in the tank"
+I have 17.0 elements in the tank
+
+
+# val vs var
+# if have val list, can still change list, but can't change reference to the list
+val myList = mutableListOf("tuna", "salmon", "codfish")
+myList.remove("tuna")
+-> true
+
+
+val mixArray = arrayOf("fish", 2)
+import java.util.*
+println(Arrays.toString(mixArray))
+
+val school = arrayOf("tuna", "salmon")
+val numbers = intArrayOf(1, 2, 3)
+
+val bigSwarm = arrayOf(shool, arrayOf("dolphin", "whale", "orka"))
+println(bigSwarm)
+[[Ljava.lang.String;@71ec915a
+
+val bigSwarm = arrayOf(shool, arrayOf("dolphin", "whale", "orka"))
+println(bigSwarm.toString())
+[[Ljava.lang.String;@3b8283d8
+
+val array = Array(5) {it * 2}
+println(array.asList())
+-> [0, 2, 4, 6, 8]
+
+
+
+
+

@@ -1,0 +1,22 @@
+
+
+20190914 - 1000 - progressive web apps
+- pwa
+  - respond with 200 when offline
+  - propmts to install pwa
+  - register a service worker
+  - have fallback when JS is not avilable
+  - custom spalsh screen
+  - address bar matches brand colors
+  
+  
+20190914 - 1100 - cs education in CT
+- panel of 4 educators in cs
+
+
+
+ 
+  
+
+
+

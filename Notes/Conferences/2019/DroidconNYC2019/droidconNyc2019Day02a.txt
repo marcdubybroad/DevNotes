@@ -1,0 +1,127 @@
+
+
+- 09:50 - kotlin in the DB
+
+  - flow is the new cutting edge tech
+    - replaces LiveData
+    
+  - android debug database library
+    - can look into the db of a runnign apps
+    
+  - unit tests for room needs to be run on an android device
+    - /training/
+    
+  - sqldewlight (written by square)
+    - gradle
+    - provides jvm to run on any machine
+      - enables to test outside an androidddevice
+        
+        
+- compare room vs sqldelight
+  - room
+    - great doc
+    - swrite some sql
+    - solid, tested
+  - sqldelight
+    - not great doc
+    - write own sql
+    - code generation fro msql
+    - clean generated code
+    - new, so untested
+    
+- 10:40 - camarax api
+  - https;//tinyurl.com/y3kf37lw
+  
+  
+- 10:40 - FB datafirst first design
+  - normal
+    - cloud -> db -> transform -> phone
+  - messenger
+    - cloud -> transform -> db -> phone
+    
+  - datafirst principles
+    - transform data before storng in db, so no need to transform on phone (and using cpus, slow, battery)
+      - so for titles of group chats, don't join all users during select
+      -> store into DB as list of names already
+      - downsides
+        - complexity pushed from UI to db
+        - disk space
+            - denormalized
+
+    - if it is too complicatded to write in a data binding application, it is too complicated for our UI
+
+    - views
+      - only rarely use custom views
+      - use recycler view with small hierarchy
+      
+    - limit dependencies
+      - use archiecture patterns without dependeing on infrastructure
+      - no DI framework
+        - use code generation to help
+      -
+    - interfaces for infrastructure
+      - use picasso vs fresco
+        - by wrapping image loading in an interface, can swap in fresco eventually
+      - swapped our db easily
+      - loading infracsturcure
+        - with interfaces, was able tomove from android loaders to in hpuse solution
+          - could move to jetpack libs after
+          
+    - infrastrcure shouldn't depend on other infrasturcure
+      - refactor large dependencies into 'lite' versions
+      
+    - experimentation
+      - prefer kill switches to A/B testing
+      - one code path - less complexity
+      
+    - simple by design
+      - leave out features not really needed
+      - lots of messenger features taken out for lite version
+      - new features need to be uner 25kb
+        - also make sure performace stays the same for any new addition
+        
+        
+        
+- 11:30 - simplestore
+  - look at uber github
+  
+  -
+  
+- 14:45 - using ML for tests
+
+  - UI tests
+    -
+    
+  - used common mobile/web app icons to get images to train images/labels
+    - download from kaggle
+  -
+  
+  - use apium
+    - to add your own label/data, add at least 1k icons (5k good)
+      - since apium already has lots of icons of the toher labels
+    - apium lable are stored in labels.js
+    
+    
+- 13:25 - jetbrains tricks
+  - ctrl-shift-key
+    -> will tell you what type object where cursor is
+    -> type .for after object
+      -> create for loop
+      
+      
+      
+    
+      
+      
+      
+      
+- app ideas
+  - use dl4j to detect faces I know as I take picture
+  - 
+
+  
+  
+  
+  
+  
+    

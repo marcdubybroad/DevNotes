@@ -135,6 +135,8 @@ Mysql commands:
 Neo4j:
 ------
   - call db.schema
+  - match (pheno: Phenotype) return pheno
+  - explain <query>
   
 
 AWS ssh:
@@ -422,6 +424,8 @@ Mysql
   - SHOW OPEN TABLES WHERE In_use > 0;
   - SHOW ENGINE InnoDB STATUS;
   - SELECT * FROM `information_schema`.`innodb_locks`;
+  
+- show indexes: show index from runs;
   
 Maven:
 ------

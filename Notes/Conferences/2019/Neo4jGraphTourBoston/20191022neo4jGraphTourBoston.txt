@@ -1,0 +1,108 @@
+
+
+20191022 - neo4j graph connect waltham
+- 0915 - intro
+  -
+- 0930 - marketing
+  - 25% of companies using graphs by 2017
+  - Gartner hype cycle
+  - upwork freelancer site; neo4j at #11 in fast growing demand skill (q2 2019)
+  - GQL (graph query language) is becoming first DB standard since SQL in 1979
+    - different than cypherQL
+  - 76 of fortune 100 using neo4j
+  - startup program
+    - free sccess for < 50 employees
+    - and under $3M revenue
+  - examples
+    - caterpillar
+    - ECIG diebetes research
+    - adobe behance, social network of 10M grapic artists
+    - comcast xfinity xFi, used for smart home
+  - AI and graphs
+    - examples
+      - DZD german center diabetes research uses graph enabled AI
+      - caterpillar
+    - research
+      - propensity for smoking due to network
+        - more useful to understand connections around you then you
+      - propensity to vote
+        - ditto
+        
+- 1015 - BAC fraud detection
+  - look into mind maps (tree)
+  - scenarios
+    - victims sell online (leasing apartemets), fraudsters pretend to overpay (by askign bank for provisional credit), fraudsters convince victims to repay surplus amount
+      - farud gets vitim bank info for deposito
+      - call bank, impersoant customer, say atm not working, get bank to issue $3k provisional credit
+      - call vistim back and say paid $3k instead of $300, get reimbursed through venmo
+    - credit card busto out
+      - max out credit card, then pay off with fraudulent check, has $0 balance temporarily, max out a second time
+        - end up with card maxed out 2x
+        
+- 1115 - graphs for AI and ML, @jimwebber
+  - ML is to specific domain, no cross domain learning
+  - triadic closure
+    - small triange graph of 3 friends
+  - 3 emperors league network (austria, germany, russia)
+  - graph partitioning
+  - graph ML
+    - use Graph2Vec, turn graph into tensors
+    - graph CNN (kipf and welling, ICLR 2017)
+    - graph networks for structure causal models
+      - position paper from google, MIT, Edinburgh
+      - generalize beyond direct experience
+    -
+
+- 1200 - enterprise graph strategy, EY guy
+  - what is a graphy problem
+    - queries hitting more than 5 tables;
+    - self join tables (recursion)
+    - has complex hierarchies (1 to many,, many to many)
+    - deands fast query results
+  - apoc package (proof of concept)
+    - load csv files
+      - load csv with headers from "file:///movies.csv" as row
+      - call apoc.load()
+  - arch
+    - node lables define set members
+    - faster to search along relationships (traversal) than properties (full graph scan)
+  - call db.schema()
+  - REST API
+    - github.com/grandstack/grad-stakc-starter
+    - also look at neo4j-examples on github
+  - steps after POC
+    - use marketplace image for cloud providers
+    - single node instance, ~ RAM 50% of sql size on disk
+    - install python for batch operations, pip neo4k-driver
+    - leverage neo4j high speed driver
+    - reach out to SI partner or neo4j services when stuck
+    
+    
+  
+  
+  
+      
+- cypher sql
+  - match (p1: Transaction) 0 match (p2: Transaction) p = shortestPath((p1) - [*] - (p2)) return p
+  - optional match (n: P@P) - [:SENT_TO] -> (phenoe: Phone)
+  - UNWIND
+  - for ( Path poaition : )
+  
+      
+  
+
+  
+- questions for them
+  - enterprise edition
+  - what 4.0 brings
+    - we need
+      - Better property usage in query plan (having to project properties with WITH is cumbersome)
+      - True compound indices (this is HUGE!). Basically, we can't index by (chrom, pos) as opposed to one or the other.
+      - ok, so 4 (2 dev cluster, 2 prod cluster) x (16 cpus w/64GB RAM); unclear what their pricing is (by cpu or VM)
+      - academic discount
+  - 2-node clusters (so 4 machines: 2 dev, 2 prod). Right now each node is 16 CPUs and 64 GB of RAM
+  - 
+
+
+
+

@@ -1,0 +1,116 @@
+
+
+if (numberOfFish in 1..4) println("low of fish")
+else println("lots of fish")
+-> lots of fish
+
+if (numberOfFish in 1..40) println("low of fish")
+else println("lots of fish")
+-> low of fish
+
+
+when (numberOfFish) {
+    0 -> println("no fish")
+    4 -> println("low fish")
+    10 -> println("lots of fish")
+}
+-> nothing
+
+when (numberOfFish) {
+    0 -> println("no fish")
+    4 -> println("low fish")
+    10 -> println("lots of fish")
+    else -> println("unknown")
+}
+-> unknown
+
+
+
+var welcomeMessage = "Hello and welcome to Kotlin"
+when (welcomeMessage.length) {
+    0 -> println("Nothing to say?")
+    in 1..50 -> println("Perfect")
+    else -> println("Too long!")
+}
+-> Perfect
+
+val trout = "trout"
+var haddock = "haddock"
+var snapper = "snapper"
+println("I like to eat $trout and $snapper, but not a big fan of $haddock.")
+-> I like to eat trout and snapper, but not a big fan of haddock.
+
+
+
+var fishName = "salmon"
+when(fishName.length){
+    0 -> println("Fish name cannot be empty")
+    in 3..12 -> println("Good fish name")
+    else -> println("OK fish name")
+}
+-> Good fish name
+
+
+
+
+for ((index, element) in shool.withIndex()) {
+    println("Fish at $index is $element \n")
+}
+-> Fish at 0 is tuna 
+-> Fish at 1 is salmon
+
+
+
+
+for (i in 1..5) print("$i\n")
+1
+2
+3
+4
+5
+
+
+
+
+for (i in 'b'..'g') println("$i \t")
+-> b 	c 	d 	e 	f 	g 	
+                ^
+
+for (i in 3..18 step 3) print("$i \t")
+-> 3 	6 	9 	12 	15 	18
+
+
+
+
+val array = // initalize array here
+val array = Array(7) {1000.0.pow(it)}
+val sizes = arrayOf("byte", "kilobyte", "megabyte", "gigabyte",
+            "terabyte", "petabyte", "exabyte")
+for ((i, value) in array.withIndex()) {
+   println("1 ${sizes[i]} = ${value.toLong()} bytes")
+}
+
+
+
+val start = 1000.0
+val array = Array(7) {start.pow(it)}
+val sizes = arrayOf("byte", "kilobyte", "megabyte", "gigabyte",
+        "terabyte", "petabyte", "exabyte")
+for ((i, value) in array.withIndex()) {
+    println("1 ${sizes[i]} = ${value.toLong()} bytes")
+}
+-> error: unresolved reference: pow
+-> val array = Array(7) {start.pow(it)}
+
+
+var list3 : MutableList<Int> = mutableListOf()
+for (i in 0..100 step 7) list3.add(i)
+print(list3)
+-> [0, 7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 91, 98]
+
+
+for (i in 0..100 step 7) println(i.toString() + " - ")
+-> 0 - 7 - 14 - 21 - 28 - 35 - 42 - 49 - 56 - 63 - 70 - 77 - 84 - 91 - 98 -
+
+
+

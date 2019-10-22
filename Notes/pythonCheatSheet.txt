@@ -1,0 +1,74 @@
+
+Modules:
+--------
+  - math -> sin, cos, pi, exp, 
+
+Basic:
+------
+  - dir() -> returns functions from command line editor
+  - dir(math) -> get the functions from the imp[orted math module
+  - help(function) -> returns the doc string from the function
+    
+Functions:
+----------
+  def sphere(radius = 0):
+    """doc string: retuns sphere volume"""
+    volume = (4.0 / 3.0) * math.pi * r**3
+    return volume
+    
+Logging:
+--------
+  - levels: NotSet(0), Debug(10), Info(20), Warning(30), Error(40), Critical(50)
+  - import logging
+  LOG_FORMAT = "%(levelname)s %(asctime)s - %(message)s"
+    logging.BasicConfig(filename = "C:\\dude\log.log", level = login.INFO, format = LOG_FORMAT, filemode = 'w')
+    logger = logging.getLogger()
+    print(logger.level)
+    logger.info("test")
+    
+
+Pandas:
+-------
+- profile: df.profile_report()
+  import pandas_profiling
+  profile = df.profile_report(title='Pandas Profiling Report')
+  profile.to_file(outputfile="Titanic data profiling.html")
+
+- info: df.info()
+- describe: df.describe()
+- read csv: df = pd.read_csv(file_path)
+- get column listing: df.columns
+- drop missing values: df2 = df.dropna(axis = 0)
+- retrieve column: series = df.column_name
+- get first few row: df.head()
+- get subset of columns
+  - array = ['col1', 'col2', 'col3', 'col4']
+  - new_df = df[array]
+
+
+
+
+Printing:
+----------
+- pprint
+  import pprint
+  employees = {'emp': '101', 'name': 'Tom', 'projects': {'p1': 1234, 'p2': 2345, 'p3': 9876}}
+  pprint.pprint(employees, width = 1)
+  
+
+
+SK learn:
+---------
+from sklearn.tree import DecisionTreeRegressor
+
+# Define model. Specify a number for random_state to ensure same results each run
+melbourne_model = DecisionTreeRegressor(random_state=1)
+
+# Fit model
+melbourne_model.fit(features, target)
+
+print("Making predictions for the following 5 houses:")
+print(X.head())
+print("The predictions are")
+print(melbourne_model.predict(X.head()))
+

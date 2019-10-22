@@ -1,0 +1,146 @@
+
+
+- 11:25 - jetpack use
+
+
+- 12:15 - productivity hacks for engineers
+- context switching
+  - multi tasking is a myth
+  - cost to switching context
+  - both quantity and quality of work go down
+  
+  - also get sress, overwhelmed, frazzled state of mind
+  -
+  
+  - tomato timers
+  
+  - pomodoro technique
+    - 3 simple steps (down from the original 6 steps)
+      - step 1: decide what you are going to work n
+      - step 2: work on that task and that task only
+        - recommended amount of time is 25 mins
+      - stape 3: take break
+        - first iteration, 5 mins
+        - if have doen multiple iterations (recommended 4), take 30 min break
+          - then check email, slack
+          - breaks help doing offline processing in cortex
+
+  - to do lists
+    - the urgent is seldomly important
+      - also the important is seldmly urgert
+    - break down into quadrants
+      - must fix, urg + imp
+        - must fix
+      - imp but not urg
+        - spend 25 mins on
+      - urg but not imp
+        - delegate, can start building tdd for future use
+      - not urg, not imp
+        - spend break on
+      
+- books
+  - your brain at work
+  
+  
+  
+  
+- 13:10 - kotlin modules
+  - clean architecture
+    - split responsibilites
+    
+  - different modules
+    - ui
+    - domain
+    - data
+      - remote
+      - cache
+      
+      
+- 14:30 - koin library
+  - written in kotlin, 1.0 released a year ago
+  - 2.0 just released
+  
+  - creater user reposiyory for retrofit http connection
+  
+  - inversion of control
+  
+  
+- 13:20 - calm work environment
+  - no more work days, but a bunch of work momemnts
+  
+  - to dos
+    - problem: avoid small interruptions
+      - relics of synchronous communications (phone, chat, physical chats)
+      - solution: work like everyone is remote
+        - no more shpulder tapping
+        - assume you'll get answer when they have time, not you
+        - write everything down
+          - self documenting
+        - enables more quiet voices on the team
+      - write heartbeats and kickoffs
+    - problem: avoid major interruptions
+      - avoid meetings
+      - guaranteed to havi ng too any people
+        - because people hate to be excluded
+        - organizers don't want to allienate anyone
+      - meetings usually go over
+      - information inbalance
+        - everybody has different data points or
+      - they sawn more memetings
+      - they are scheduled interruptions
+      - solution:
+        - try not having any
+          - do we really need this meeting
+          - can this be donw in written format
+        - 3 person rule
+        - plan your escape to get out of meetings
+    - problem: avoid chat
+      - chat is treated like required reading
+      - solution:
+        - start to remove expectatiom that chat is required reading
+        - use a slower gear
+          - high gear: meetings, chat, shoulder tap
+          - lower gear: email, google docs
+          
+    - problem: preventing overwork
+      - better balance makes you better at work
+      - solve problems in down time as background process works
+      - empathy is built away from work
+      - solution: 40 hours a week is fine
+        - 1/2 of waking hours are at work
+        - spend 20 hours on avg with family, which is 1/2 time with workers
+        - hours != productivity
+          - brain tires out like a muscle
+          - you are actually worse after 40 hours
+      - solution: cnfirne work to work hours
+        - establish ground rules
+      - solution: establish a channel for true emergencies
+        - don't conflate 2 channels with different urgent tasks
+      - solution: coach rule breakers
+      - solutions; take an actuall vacations
+        - don't contact people on vacatiojns
+        
+    - forget myth that you always have to be learning
+      - ok to give yourself a break
+      
+    - problem: shaping up your projects
+      - stop running in circls and ship work that matters (book)
+      - solution:
+        - work in 6 week cycles
+        - learn to manage tension between time, quality and scope
+        - good is realtive
+          - perfect is the enemy of good
+        - trust in autonomy
+          - commitment not consensus
+        - no backlogs
+        
+    - problem: is this possible
+      - solution:
+        - start changing your own situation
+        - shit happens
+        
+- books
+  - it doesn't have to be crazy at work
+  
+          
+
