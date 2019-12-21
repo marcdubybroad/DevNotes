@@ -1,0 +1,10 @@
+
+
+NN layers:
+----------
+  - pooling
+    - used to reduce data for better compute performance
+    
+  - transfer learning
+    - repurpose model from similar problem, retrining last fully connected layer
+    

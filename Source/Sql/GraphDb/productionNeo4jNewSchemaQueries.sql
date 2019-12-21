@@ -1,5 +1,18 @@
 
 
+
+-- get all phenotypes
+match (grp: PhenotypeGroup)<-[link:BELONGS_TO]-(phe: Phenotype)
+return grp, link, phe
+
+
+match (grp: PhenotypeGroup)<-[link:BELONGS_TO]-(phe: Phenotype)
+return grp.name as group, phe.name as phenotype_id, phe.description as name, phe.dichotomous as is_dichotomous
+order by phenotype_id
+
+
+
+
 -- meta analysis for single variant
 match (var: Variant)-[vm:HAS_META_ANALYSIS]->(meta: MetaAnalysis)<-[pm:HAS_META_ANALYSIS]-(pheno: Phenotype)
 where var.position = 118232242 and var.chromosome = '8'

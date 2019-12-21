@@ -1,0 +1,172 @@
+
+
+20191212 - marketing models
+- notes
+  - used dash to build web front end for the python model
+  - dash built on flask
+    - well integrated with plotlib libraries
+  - importance of getting model in front of marketing folks quickly > squeezing an extra % of accuracy
+  - the model was able to gauge the value of marketing $ in various hannels
+    - branded search (where result is at top of search when your name is searched for)
+    - search
+    - facebook
+    - media
+  - third love, bra maker
+  - usually when scale marketing, become less eficient
+    - this did not happen with new tool, efficiency increased as well
+    
+- libraries
+  - CVXPy
+  - Plotly Dash
+  
+
+
+20191204 - deep dive sklearn
+- https://www.youtube.com/watch?v=J9QQ6l_HToU
+- Deep Dive into scikit-learn's HistGradientBoosting Classifier
+- github.com/thomasjpfan/pydata-2019-histgradientboosting
+
+- notes
+  - boosting, summation of many pieces of functions
+  - gradient boosting: gradient (loss function)
+    - for regression
+      - least_squares (loss = 1/2 * sqr(y - f(x)); gradient of that loss is -(y - f(x))
+        - loss is scalar value, gradient is vector value
+        - recursive calculation
+          - f_m+1 (x) = f_m (x) + h_m (x)  - h_m is the Hessian
+          - so if predict after two recursions
+            - f_2(40) = f_1(40) + h_1(40) = f_0(40) + h_0(40) + h_1(40)
+              - f_0 is usally a starting constant; could be mean of dataset
+      - least_absolute_deviation
+    - for classification
+      - binary_crossentropy (for 2 classes), categorical_crossentropy (for more than 2 categories, non binary)
+      
+    - how to learn h_m()?
+      - they are trees
+      
+    - openMP library to do parrallel calculations
+      - slightly different functions (prange() vs range())
+    - also use cython -> can be compiled
+    - the higher the learning rate, the more your model will overfit
+      - if look at r^2 score, if increase the learnign rate, will go faster to better recognition rate during training,
+        but your test curve will plateau lower
+    - for underfitting, will see both your training curve and test curve drop down
+    - data for demo
+      - higgs boson dataset, 8.8 10^6 records, 28 features, binary classification (1 signal, 0 noise/background)
+      - compared learning accuracy to other libraries for same iterations 100 and 500 to (lightgbm, xgboost, catboost)
+        - xgboost written in c++, yet skilearn in cython gets better performane
+    - to use multiple cores on your machine
+      - export OMP_NUM_THREADS=12    <for 12 core machine>
+      - OMP bad with hyperthreads, so set it to actual cores that you have
+      
+  - sample code
+    from sklearn.experimental import enable_hist_gradient_bosting
+    from sklearn.ensamble import HistGradientBoostingClassifier
+    from sklearn.datasets impirt make_classification
+    
+    X, y = make_classification(random_state=42)
+    X[:10, 0] = np.nan
+    
+    gbdt = HistGradientBoostingClassifier().fit(X, y)
+    print(gbdt.predict(X[:20]))
+    
+  - roqadmap
+    - first estimator that support missing values
+    
+      
+      
+      
+      
+      
+  
+  
+
+20191203 tuesday - Building a pet detector, PyData, Kat Kampf, pydata nyc 2019
+- https://www.youtube.com/watch?v=UJXEej0ATnU
+- kvkampf
+- notes
+  - pooling layers to reduce data and help speed computaion
+  - only 200 pics per breed, so small -> use transfer learning on related problem model, repurpose mobilenet v1
+    - retrain last fully connected layer
+  - can use VS Code to convert jupyter notebooks to python script
+  
+- code
+  - https://github.com/microsoft/connect-petdetector
+  
+- data
+  - dog images
+    - http://www.robots.ox.ac.uk/~vgg/data/pets/
+  - azure datasets
+    - https://azure.microsoft.com/en-us/services/open-datasets/
+    
+
+
+20191117 sunday - Shooting hoops with Keras and TF - Zack Akil
+- https://www.youtube.com/watch?v=S9PcPbtTcPc&t=114s
+- @ZackAkil
+- use polinomial regression
+  - trajectory equation to fit payh of ball
+  - https://www.geogebra.org/graphing/qw8rxyvu
+  - find the 2 coeff in tf
+    - https://github.com/ZackAkil/optimising-basketball/blob/master/prototype_work/Eager_optimising_basketball_shot.ipynb
+  - for animated gif
+    - https://github.com/ZackAkil/optimising-basketball/blob/master/misc/fitting_animation.ipynb
+    
+- use delta between frames to detect what changed in the frame
+
+- for image classification, can use ImageDataGenerator in Keras to generate new images from a collection you have
+  - rotations, color changes, etc
+  
+- need to determine whether frame is shot or not
+  - use image classification
+- need to trim frame to start of shot
+  - use multi target regression
+  - https://github.com/ZackAkil/optimising-basketball/blob/master/shot_prediction_app/where_did_i_shoot_from.ipynb
+  
+- custom TF to ficugre out force and angle of trajectry plot using optimizer
+  - https://github.com/ZackAkil/optimising-basketball/blob/master/prototype_work/Trajectory_fitting.ipynb
+  
+            tf.reset_default_graph()
+            
+            x = tf.placeholder(tf.float32, [None, 1])
+            y = tf.placeholder(tf.float32, [None, 1])
+            
+            angle_constant = tf.Variable(40.0, name='angle_constant')
+            force_constant = tf.Variable(50.0, name='force_constant')
+            gravity_constant = tf.constant(9.8, name='gravity_constant')
+            
+            tf_lhs = x * tf.tan(deg2rad(angle_constant))
+            tf_rhs_top = gravity_constant * x ** 2
+            tf_rhs_bottom = (2*(force_constant)**2) * (tf.cos( deg2rad(angle_constant))**2)
+            output = tf_lhs - (tf_rhs_top / tf_rhs_bottom)
+            output
+            
+            
+            loss = tf.losses.mean_squared_error(y, output) 
+            loss
+            
+            optimiser = tf.train.AdamOptimizer(learning_rate=1)
+            optimiser_op = optimiser.minimize(loss)
+            
+            sess = tf.Session()
+            sess.run(tf.global_variables_initializer())
+            
+            shot_data = np.load('my_shot.npy')[::-1, ::-1]
+            plt.imshow(shot_data)
+            
+            x_input = []
+            y_output = []
+            it = np.nditer(shot_data, flags=['multi_index'])
+            while not it.finished:
+            #     print("%d <%s>" % (it[0], it.multi_index), end=' ')
+                if it[0]:
+                  y_t, x_t  =  it.multi_index
+                  x_input.append(x_t), y_output.append(y_t)
+                it.iternext()
+                
+                
+            
+            plt.scatter(x_input, y_output)
+
+
+  

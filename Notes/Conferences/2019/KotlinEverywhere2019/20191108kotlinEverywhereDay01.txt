@@ -1,0 +1,328 @@
+
+
+
+20191108 - 1300 - how to negotiate better salary
+- when to negotiate
+  - when hired/got offer
+
+- what to negotiate
+  - base salary
+  - sign on bonux
+  - flextime
+  - relocation stipend
+  - team
+  - equity shares
+  - title
+  - 401k benefots
+  - health insurance, savings
+  - commuter benefits
+  
+- exerfcise
+  - think of position you saw
+    - what else would you want
+    -
+    
+- how to negotiate
+  - what points support your base
+    - get market comparisons
+  - hwo not to
+    - don't make personal
+    - dont be rude
+    - dont say you wont find anyone like me
+  - be polite
+    - show your gratitude and enthusiasm
+    - supprt your case
+    - find common ground, mutual beneficial package
+  
+- why email
+  - you dont want to think on your feet
+  - process thoughts clearly
+  - research online while in conversation
+  
+  
+- track accomplishments
+  - exercise
+    - credible sets table/api
+    -
+  - what did you do
+    - to same company money
+    - to optimize a process
+    - to build an amazing tool
+    
+- bit.ly/salarynegotiations-eva
+
+
+
+20191108 - 1400 - coroutines in web app
+- for testing
+  - libraries
+    - Kotlin.coroutines.test
+      - helps speed up tests
+    - Mockk
+      - good to spie on things
+      
+- http4k
+  - can run as server or lambda
+  
+- github.com/mcampbell6
+
+  
+- to do
+  - get slides from 1400 talk on coroutines
+  
+  
+  
+20191108 - 1500 - dependency injection
+- hsitory
+  - 200210 - java spring IoC
+    - firxt with xmlconfig
+    - configuration with annotations
+  - 200703 - google GUICE
+  - 201305 - square dagger 1
+  - 201606 - dargger 2
+  
+- unit testing
+  - spring
+    - @RunWith()
+    - @ContextConfiguration()
+    
+- kotlin IoC frameworks
+  - Kodein
+    - oldest
+    - only one with multi platform support, including db and networking
+    - supported by consulting group 47degrees
+    - jsr330 injection support
+    - 1/2 much popular than koin
+    - notes
+      - KodeinAware
+      
+  - Koin
+    - more direct android lifecycle support
+    - easier to load modules
+    - some java support
+    - most poular
+    - notes
+      - declearMock<Engine>
+      
+  - Katana
+    - similar to Koin
+    smaller than Koin due to no java support
+    - not as good for testing
+    
+  
+- misc use
+  - kayak on koin
+  - wayfair on dagger 2
+  
+- recommandations
+  - dagger 2 for larger teams because of compile time safety
+    - so no blow ups during running
+  - kotlin only or muli platform, kodein
+  - mixed kotlin/java and small team, kin
+  - kotlin only small team, katana
+  - dynamic feature models, dagger + koin
+  
+- best practices
+  - for
+    - eaiser testing, refactring, arch
+  - use construcor injection
+    - no need for di to do field injection
+  - use jsr330 standard
+  - use interfaces for binding, not implemetations
+    - simpler mocks and test doubles
+  - avoid quealifierts on basic data types
+    - avoid qualifier string names (@Qualifier("name))
+  - avoid android dependencies in your classes
+  - don't inject fragments or views
+  
+- good references
+  - dagger assist talk by jake gordon
+
+- @kenkyee
+  - "life is a hashmap"
+  
+  
+  
+20191108 - 1630 - MvRx in action (pronounce mavericks)
+- intor
+  - kotlin only lib from airbnb
+  - fragments specific
+  
+- state class
+  - state are fragment input
+  - extedn GragmentState
+  - ie:
+    - data class DudeState() : MvRxState
+  - Async
+    - subclasses os success, failed, ...
+    - helps get data for those states
+  - how to use
+    - ie
+      - by fragmentViewModel
+      - by existingViewModel
+      - by activityViewModel
+
+- misc    
+  - states are immutable
+    - so moving between states, need to copy state object and modify what you want
+    - 
+
+- benefits
+  - very similar to React and Fkutter
+    - redux
+      - applied changes framework
+  -
+  
+- debug mode
+  -
+  
+- idempotent
+  - same inputs will always produce same output
+  
+  
+- caveats
+  - performance
+    - watch for it
+    - 
+  - issues with DI
+    - especially dagger 2
+    - koin might be better
+  - testing
+    - can states pretty easily
+    - use MvRxTestRule for testing ViewModels
+      - makes sure that everything runs off of the same thread
+    - Fragments: tricky to mock withState()
+    - no support for activities
+      - MvRx assumes that activitie are dump containers for frahments and view models
+      
+- resources
+  - MvRx repo and wiki
+  - gabriel peal @ droidcon nyc 2019
+  - Caster.io: Android MvRx Fundamentals course
+  - https://bit.ly/32xnqky
+  
+- info
+  - Eder Bastos
+  - @sigmabeta
+  
+- todo
+  - look into kotlin diffutils
+  - dev option in android that kills all activities when you leave them
+  
+  
+20191108 - 1730 - kotlin for java devs
+- intro
+  - timeline
+    - kotlin released in 2011
+    - first class in 2016 by google
+    - android made first in 2019
+  - fastest growing language
+    - 80% android usage
+    - back end services in 31%
+
+- advantages
+  - null safety
+  - ext functions
+  - data classes
+  - java interop
+
+- ie:
+  - startTimeValue?.let {
+      it.setText(timeFormat?.format(calendar.time
+      it.setOnclickListener {
+        ...
+      }
+    }
+
+  // synthetic attributes, (3 tohers)
+
+- best uses
+  - data classes
+    - pojo classes structure
+    - kotlin for pojos does not need to write eauqls and hashcode if class is data class
+    - ie:
+      - data class Water {
+        val id: Long,
+        val waterTaken: Int
+      }
+    - constraints
+      - all params need to ve either val or var
+      - cannot be abstract, inner
+      - can implement sealed class or interface
+      
+  - sealed classes
+    - class used for restricted hierarchies
+    - in Java, like using abstract class with empty constructor to avoid sub classing
+    
+    
+  - null safety
+    - use !!
+    - ie (can still cause NPE and crash):
+      - mNameVale!!.name = userNameTextField!!.text.toString()
+    - better:
+      - if mNameValue?.apply {
+        name = userNameTextField?.text.ToString() ?: "No Name
+      }
+  
+  - built in extension functions
+    - see picture
+    - most used by dev
+      - let: helps work on non null stuff
+        - ie:
+          - (dv.findByViewId(R.id.sart_time_value))?.let {
+            it.setText(timeFomrat?.(calendar.time))
+          }
+        - also use to invoke nested calls to functions
+        - use when executing lambda on non null objects
+        
+      - apply
+        - ie:
+          - fragmentManager.beginTransaction().apply {
+            this.add(...)       // this is the transaction?
+            this.commit()
+          }
+        - use for object configuration
+
+      - run
+        - similar to let (but uses 'this')
+        - use with obkject configuration with computation of result
+    
+      - also
+        - similar to apply (but uses 'it')
+        - use for additional effects
+        
+      - map and filter
+        - similar to RxJava
+        - ie:
+          - fun squareOfEven(listOfNumbers: List<Int) = listOfNumbers.filter {it % 2 == 0}.map {it * it}.sum()
+          
+          
+
+
+
+- todo
+  - java
+    - Objects.hash(..., ...)
+  - look into android extension functions for kotlin
+  
+- info
+  - @nithinpvnk
+  - LI: linkedin.com/in/venkatankp
+  - no 50/50 apps are kotlin/java
+  
+
+- goshen post halloween 2019
+  - udacity ML intro
+  - kotlin course generic
+  
+
+
+
+
+
+
+
+    
+    
+  
+  

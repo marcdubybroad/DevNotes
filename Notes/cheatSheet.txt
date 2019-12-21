@@ -151,7 +151,9 @@ Unix from Mac:
 - find . -mtime -1
 - remove directories more than 300 days old
   - find * -type d -ctime +300 | xargs rm -rf
-  
+- tar -cvf - -C /usr/lib terminfo | tar -xvpf -
+- tail -n <number of lines>
+    
 EhCache:
 --------
 - logging.level.org.ehcache=INFO
@@ -294,6 +296,9 @@ Linux Shell Commands:
   
 - awk to remove column 3 and 4
   - cat campMulti.cvcf | cut -f1,2,5- > campNormal.cvcf
+  
+- alternative to ping
+  - nc -zv ec2-52-90-97-40.compute-1.amazonaws.com 8090
   
 Bash shortcuts:
 ---------------

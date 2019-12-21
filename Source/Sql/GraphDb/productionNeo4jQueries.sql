@@ -1,5 +1,14 @@
 
 
+-- 20190827 - updated variant query
+match (grp: PhenotypeGroup)<-[bel:BELONGS_TO]-(phe: Phenotype)-[phe_meta:HAS_META_ANALYSIS]->(meta: MetaAnalysis)<-[top:TOP_VARIANT]-(var: Variant)
+where var.chromosome = '8'
+return meta, var, phe, grp, phe_meta, bel, top
+limit 50
+
+
+
+
 -- variant association query
 match (grp: PhenotypeGroup)<-[:BELONGS_TO]-(phe: Phenotype)<-[:FOR_PHENOTYPE]-(meta: MetaAnalysis)-[:TOP_VARIANT]->(var: Variant {position: 28139238})
 where var.chromosome = '8'

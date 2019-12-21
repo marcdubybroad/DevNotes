@@ -305,3 +305,19 @@ where workout.day_id = wday.day_id
 group by wyear.name_text
 order by wyear.name
 
+
+-- number of workouts where use Hudson 1x at CBC
+select wday.date, dayname(wday.date) as day_of_week
+-- workout.description
+from wkt_workout workout, wkt_activity activity, wkt_day wday, wkt_week week, wkt_period period, wkt_year wyear
+where workout.day_id = wday.day_id
+    and activity.workout_id = workout.workout_id
+    and wday.week_id = week.week_id
+    and week.period_id = period.period_id
+    and period.year_id = wyear.year_id
+    and activity.row > 0
+    and lower(workout.description) like '%cbc%'
+    and lower(workout.description) like '%hudson%'
+--    and lower(workout.description) like '%hudson 1x%'
+    and year(wday.date) = 2019
+order by wday.date

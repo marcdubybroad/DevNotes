@@ -60,7 +60,8 @@
     - has complex hierarchies (1 to many,, many to many)
     - deands fast query results
   - apoc package (proof of concept)
-    - load csv files
+    - load csv files\
+      - can handle compressed csv files
       - load csv with headers from "file:///movies.csv" as row
       - call apoc.load()
   - arch
@@ -76,8 +77,24 @@
     - install python for batch operations, pip neo4k-driver
     - leverage neo4j high speed driver
     - reach out to SI partner or neo4j services when stuck
+  - tips
+    - pull metadata of image into neo4j, not the image
+    - th relationshis are the important part
     
+- 1245 - lunch
+
+- 1345 - graph aware talk, predicting customer needs
+  - scenarios
+    - find supplier that is causing issues in window car fractures in CA
+    - is this supplier proviign suspension which is causing more window breaks
     
+- 1430 - rules based access, BAC
+
+- 1530 - how to for cinancial firm
+
+- 1615 - neo4j bloom, visualization
+  - bloom visualization tool not required to know cypher
+  
   
   
   

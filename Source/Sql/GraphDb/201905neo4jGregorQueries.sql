@@ -4,7 +4,7 @@ match
   (pheno : Phenotype {name: 'T2D'})-[link :HAS_GLOBAL_ENRICHMENT]->(enrich :GlobalEnrichment),
   (enrich)<-[:HAS_GLOBAL_ENRICHMENT]-(tissue :Tissue),
   (enrich)<-[:HAS_GLOBAL_ENRICHMENT]-(ancestry :Ancestry)
-return pheno.name as phenotype, tissue.name as tissue, ancestry.name as ancestry,
+return pheno.name as phenotype, tissue.name as tissue_id, tissue.description as tissue, ancestry.name as ancestry,
     enrich.pValue as p_value, enrich.inBedIndexSNP as in_beb_index_snp, enrich.expectedInBedIndexSNP as expected_in_beb_index_snp,
     enrich.annotation as annotation
 order by enrich.pValue
