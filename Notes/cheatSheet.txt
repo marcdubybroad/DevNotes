@@ -18,6 +18,10 @@ Screen notes:
   - attach: tmx a -t session-name
   - kill session: tmux kill -session -t session-name
   
+Ascii text:
+-----------
+¯\_(ツ)_/¯
+
 Spring Boot:
 ------------
 - build and test: gradle build
@@ -74,6 +78,18 @@ Git:
 
 - git flow
   - during rebase step, command is 'pick <hash>'. with hash being collapsed commit of all branch commits
+  
+- git tag (2 steps)
+  - git tag <tag>
+  - git push origin <tag>
+  
+- Starting a new feature as a branch:
+  - git checkout -b <branch_name>
+    - ie: git checkout ky_code_documentation
+  - git add <new files, if any>
+  - git commit -av
+  - git push -u origin <branch_name>
+    - e.g. git push -u origin ky_code_documentation
   
 - authentication
   - for information -> checks that key is installed correctly for that VM
@@ -183,6 +199,7 @@ https://bootstrap.pypa.io/get-pip.py
 IntelliJ:
 ---------
 - Generate executable for IntelliJ IDEA project: gradle idea
+- license server: http://jetbrains.broadinstitute.org:8080/
 
 Portal servers:
 ---------------

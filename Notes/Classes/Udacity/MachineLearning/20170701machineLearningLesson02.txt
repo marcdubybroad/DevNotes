@@ -1,11 +1,12 @@
 
 Lesson 02: Naive Bayes
 
+20170701 - lesson 02, video 1
 - classification from supervised learning
   - take features and turn them into labels
 
 - scatter plots
-  - take data and transform into a decision surface
+  - M classification algorithm take data and transform into a decision surface
   - decision surface will seperate 2 classes of points
     - can be linear
 
@@ -20,6 +21,7 @@ Lesson 02: Naive Bayes
     - so always save 10% of your data to use as your testing set
       - use the test result to report progress of your ML
       
+20191225 - wednesday study, video 23
 - bayes rule
   - rev thomas bayes
   - cancer exampe
@@ -56,8 +58,28 @@ Lesson 02: Naive Bayes
       - P(pos) = P(c | pos) + P(!c | pos) = 0.108 -> should be 1, so normalize
         - P(c | pos) = 0.009 / 0.108 = 0.0833
         - P(!c | pos) = 0.099 / 0.108 = 0.9167
+          - the two above should add up to 1
+            - so need to normalize by adding and making sure that end up being 1 (total of test positive, since a given)
+          
+- video 31
+  - using naive bayes for text learning
+    - example of 2 peope, chris and sarah using mix of 3 words (love, deal, life)
+      - chris is (.1, .8. .1) and sarah (.5, .2, .3)
+      - if receive email "love life", and it is 50% prob of either sending an email, who sent it
+      - P(chris, "life deal) = .8 * .1 * .5 = .04, P(sarah, "life deal) = .2 * .3 * .5 = .03
+        - P(chros | "life deal") = .04 / (.04 + .03) = .57, P(sarah | "life deal") = .03 / (.04 + .03) = .43
+      - P(chris, "love deal) = .1 * .8 * .5 = .04, P(sarah, "love deal) = .5 * .2 * .5 = .05
+        - P(chros | "love deal") = .04 / (.04 + .05) = .45, P(sarah | "love deal") = .05 / (.04 + .05) = .55
       
-    
+- video 35
+  - naive bayes
+    - lables are hidden, but get to see what words are used, but with different probabilites
+      - get evidence for every word, so multiply all evidencs and prior
+    - calls naive because it ignores one thing (word order)
+  
+- video 36
+  - NB is easy to implement, works well with huge feature spaces (20k words in engligsh language), and simple/efficient to run
+  - breaks in funny ways (doesn't necessarily recognize words that come together as oen meaning, like Chacago Bulls)
     
     
       

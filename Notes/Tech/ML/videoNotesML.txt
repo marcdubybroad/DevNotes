@@ -1,5 +1,96 @@
 
 
+20191220 - visualizing map data
+https://www.youtube.com/watch?v=ZIEyHdvF474
+
+
+20191219 - there be dragons
+- https://www.youtube.com/watch?v=g8PNM2U8Frc
+- lightning talk
+
+20191219 - bias in datasets
+- https://www.youtube.com/watch?v=_oRvS6aLNlc
+- lightning talk
+
+20191219 - adding datasets to kaggle
+- https://www.youtube.com/watch?v=VaJEK6fycwM
+
+20191218 - dl4j preprossing data
+- https://www.youtube.com/watch?v=MLEMw2NxjxE&t=568s
+
+20191218 - dl4j preprossing data
+- https://www.youtube.com/watch?v=MLEMw2NxjxE&t=568s
+
+20191216 - dl4j linear classifier
+- https://www.youtube.com/watch?v=8EIBIfVlgmU
+
+20191216 - started - eclipse dl4j contributions
+- https://www.youtube.com/watch?v=rrQlrp1F650&t=103s
+
+20191215 - time series forecasting for energy use
+- https://www.youtube.com/watch?v=p6mKFs6HVlg&t=2174s
+
+20191214 - fairness detection using ML
+- https://www.youtube.com/watch?v=pHT-ImFXPQo
+
+20191213 - started - sensor data for pipelines
+- https://www.youtube.com/watch?v=U21vPkyHAvk&t=1207s
+
+
+20200124 - kaggle days - time series
+- https://www.youtube.com/watch?v=svNwWSgz2NM&t=407s
+
+- what re time series
+  - data points indexed over time
+  - seqence of measurements forllow non random order, reg time intervals
+  - properties
+    - level (mean)
+    - trend (up or down)
+    - seasonality (does it repeat over time)
+    - cycles (duration of at least a year - business, economy)
+    - randaom variantion (cannot be explained by trends)
+- definitions
+  - stationarity; time series what stat propetries are constant over time (mean, variance)
+- time series pipeline steps
+  - data and problem
+    - regression/classification
+  - data prep
+    - impute missing values, aggregation/pooling, consistent spacing
+    - if data not stationary, try to make it so
+  - feature engineering
+    - lags, aggregates
+  - model
+    - baseline (very basic model), LstM and GRU, CNN
+  - evaluation
+    - time CV, test policy
+    
+- data prep
+  - make sure data equi distant on time
+  - missing: zero vs mean vs LOCF (last observation carried forward) vs interpolation
+    - missing relaced by 0 or mean can create spikes
+  - downsample if needed
+  - stationarizatino: detrend and differencing
+  - scaling:
+    - log transform
+    - normalization (subtract mean and div by std dev)
+    - dscale to (0,1)/(-1,1) range (need this for gradient descent)
+- baseline models
+  - use mean value prediction, or last value, or shift of last x points
+- for NN models
+  - can use seq2seq, similar to language odels
+  
+  
+  
+  
+    
+  
+    
+  
+
+  
+
+
+
 20191212 - marketing models
 - notes
   - used dash to build web front end for the python model

@@ -8,3 +8,28 @@ NN layers:
   - transfer learning
     - repurpose model from similar problem, retrining last fully connected layer
     
+
+Optimizers:
+-----------
+  - gradient descent
+    - need scaled data, sensitive to size (see time seried vid 20200124)
+
+Problems:
+---------
+  - time series
+    - missing relaced by 0 or mean can create spikes (use pd.ffil() or pd.interpolate)
+    
+Models:
+-------
+  - LSTM: long short term memory
+  - GRU: gated recurring units
+  - RNN
+    - good for sequence predictions, but suffer from short term memory (gradient shrinks as back propogated through layers)
+  
+Functions:
+-----------
+  - tanh: good for keeping values between -1/1, and keeping loss down as progress through network
+    - regulates data as passed through network
+  - sigmoid: similar to tan, but squshes between 0/1
+    - can help ltsm determine what data to pass (1) and what to forget (0)
+  
